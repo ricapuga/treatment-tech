@@ -1,11 +1,12 @@
 import { sql } from "drizzle-orm";
-import { withTenant } from "./db/rls";
+import { withTenant, type Tx } from "./db/rls";
 
 export type AuditAction =
   | "login"
   | "logout"
   | "view_dashboard"
   | "view_case"
+  | "create_patient"
   | "create_case"
   | "update_case"
   | "sign_document"
@@ -31,23 +32,31 @@ interface AuditEntry {
  * DELETE aplicado en drizzle/sql/0001_rls_and_roles.sql) — ni siquiera app_user puede
  * alterar un registro después de escrito.
  *
- * Se ejecuta DENTRO de la misma transacción con tenant que la operación que audita,
+ * Debe correr DENTRO de la misma transacción con tenant que la operación que audita,
  * para que un rollback de la operación también revierta el registro de auditoría
- * (evita bitácoras huérfanas de operaciones que en realidad fallaron).
+ * (evita bitácoras huérfanas de operaciones que en realidad fallaron). Por eso existe
+ * `recordAuditTx` (recibe una tx ya abierta, mismo patrón que
+ * `assignCaseNumberTx` en lib/rules/case-number.ts) para flujos que ya están dentro de
+ * un `withTenant()` — ej. crear paciente+caso+etapas en una sola transacción y que la
+ * entrada de auditoría viva o muera con esa misma transacción. `recordAudit` sigue
+ * disponible para el caso de uso aislado (login/logout, donde no hay otra operación
+ * con la que compartir transacción).
  */
+export async function recordAuditTx(tx: Tx, entry: AuditEntry) {
+  await tx.execute(sql`
+    INSERT INTO audit_log (tenant_id, user_id, action, entity, entity_id, details, ip)
+    VALUES (
+      ${entry.tenantId}::uuid,
+      ${entry.userId}::uuid,
+      ${entry.action},
+      ${entry.entity},
+      ${entry.entityId ?? null},
+      ${JSON.stringify(entry.details ?? {})}::jsonb,
+      ${entry.ip ?? null}::inet
+    )
+  `);
+}
+
 export async function recordAudit(entry: AuditEntry) {
-  return withTenant(entry.tenantId, async (tx) => {
-    await tx.execute(sql`
-      INSERT INTO audit_log (tenant_id, user_id, action, entity, entity_id, details, ip)
-      VALUES (
-        ${entry.tenantId}::uuid,
-        ${entry.userId}::uuid,
-        ${entry.action},
-        ${entry.entity},
-        ${entry.entityId ?? null},
-        ${JSON.stringify(entry.details ?? {})}::jsonb,
-        ${entry.ip ?? null}::inet
-      )
-    `);
-  });
+  return withTenant(entry.tenantId, (tx) => recordAuditTx(tx, entry));
 }

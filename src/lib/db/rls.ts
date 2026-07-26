@@ -40,9 +40,15 @@ const dbWithPool = local
   ? drizzleNodePg(new PgPool({ connectionString: url }), { schema })
   : drizzleNeonServerless(new NeonPool({ connectionString: url }), { schema });
 
+// Tipo del handle de transacción que entrega withTenant() — se exporta para que
+// código que compone varias operaciones en UNA sola transacción (ej. crear
+// paciente + caso + etapas atómicamente) pueda tipar su función interna sin usar
+// `any` (regla de CLAUDE.md: TS strict sin any).
+export type Tx = Parameters<Parameters<typeof dbWithPool.transaction>[0]>[0];
+
 export async function withTenant<T>(
   tenantId: string,
-  fn: (tx: Parameters<Parameters<typeof dbWithPool.transaction>[0]>[0]) => Promise<T>
+  fn: (tx: Tx) => Promise<T>
 ): Promise<T> {
   if (!tenantId) {
     throw new Error(

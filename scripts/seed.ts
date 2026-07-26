@@ -96,18 +96,23 @@ async function main() {
       },
     ];
 
+    const roster: Array<(typeof rosterInput)[number] & { businessUserId: string }> = [];
     for (const person of rosterInput) {
-      await tx.insert(schema.users).values({
-        tenantId: tenant.id,
-        email: person.email,
-        name: person.name,
-        credentials: person.credentials,
-        role: person.role,
-        locale: "en",
-      });
+      const [row] = await tx
+        .insert(schema.users)
+        .values({
+          tenantId: tenant.id,
+          email: person.email,
+          name: person.name,
+          credentials: person.credentials,
+          role: person.role,
+          locale: "en",
+        })
+        .returning();
+      roster.push({ ...person, businessUserId: row.id });
     }
 
-    return { archer, roster: rosterInput };
+    return { archer, roster };
   });
 
   const seedPassword = process.env.SEED_PASSWORD ?? "DevOnly-ChangeMe-123";
@@ -116,9 +121,18 @@ async function main() {
   // src/lib/auth.ts) — sin esto el login no tiene contra qué autenticar. Se enlazan
   // con el perfil de negocio de arriba por email, fuera de la transacción anterior:
   // Better Auth maneja su propia sesión/transacción internamente vía signUpEmail.
+  // tenantId/businessUserId van en la cuenta de Better Auth (additionalFields, ver
+  // src/lib/auth.ts) para que getCurrentSession() sepa el tenant SIN consultar una
+  // tabla con RLS antes de tener tenant_id — ver comentario en auth.ts.
   for (const person of roster) {
     await auth.api.signUpEmail({
-      body: { email: person.email, password: seedPassword, name: person.name },
+      body: {
+        email: person.email,
+        password: seedPassword,
+        name: person.name,
+        tenantId: tenant.id,
+        businessUserId: person.businessUserId,
+      },
     });
   }
 

@@ -32,6 +32,20 @@ export const auth = betterAuth({
   session: {
     expiresIn: 60 * 60 * 12, // 12h — blueprint M1 paso 5
   },
+  user: {
+    // Por qué la sesión carga tenantId/businessUserId directamente, en vez de
+    // buscar el email en la tabla `users` de negocio al vuelo: esa tabla SÍ tiene
+    // RLS (tenant_isolation), y para leerla hace falta ya saber el tenant_id —
+    // problema de huevo y gallina. Estos dos campos viven en la tabla `user` de
+    // Better Auth (sin RLS, no es PHI) y se fijan una sola vez, al crear la cuenta
+    // (ver scripts/seed.ts). Con eso, `getCurrentSession()` (src/lib/session.ts)
+    // conoce el tenant SIN tocar ninguna tabla con PHI, y solo entonces usa
+    // withTenant() para traer el perfil de negocio real (rol, nombre, activo).
+    additionalFields: {
+      tenantId: { type: "string", required: true, input: true },
+      businessUserId: { type: "string", required: true, input: true },
+    },
+  },
   secret: process.env.BETTER_AUTH_SECRET,
   baseURL: process.env.BETTER_AUTH_URL,
   // nextCookies() DEBE ser el último plugin (lo exige better-auth): sin él, llamar

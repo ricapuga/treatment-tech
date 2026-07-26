@@ -160,6 +160,60 @@ partes:
      por eso no lleva entrada en `DEVIATIONS.md`. Es una mejora de UI acumulativa
      sobre el mismo esqueleto de M1.
 
+## Milestone 2 (adelantado sin esperar cuentas pendientes) — arrancó 2026-07-26
+
+Blueprint dice M2 = semanas 2-3, pero los pasos 3-6 (CRUD de pacientes, `lib/case-number.ts`
+ya existía de antes, hub del expediente v1) no dependen de Neon/Vercel/AWS reales —
+igual que el resto de este avance, se construyó y probó contra Postgres local.
+
+### Hecho
+- [x] **Sesión real conectada de punta a punta** (antes solo login sin nada detrás):
+  - `src/lib/auth.ts`: `user.additionalFields` agrega `tenantId`/`businessUserId` a la
+    cuenta de Better Auth — resuelve un problema real de huevo-y-gallina (la tabla de
+    negocio `users` tiene RLS; no se puede saber el tenant leyéndola sin ya saber el
+    tenant). Migración `drizzle/0002_aberrant_romulus.sql` generada y aplicada;
+    `scripts/seed.ts` actualizado para pasar ambos campos al crear cada cuenta.
+  - `src/lib/session.ts` (nuevo): `getCurrentSession()`/`requireSession()` — sesión de
+    Better Auth + perfil de negocio real (rol, nombre, activo) en una sola llamada.
+  - `(app)/layout.tsx`: ya no es placeholder — redirige a `/login` sin sesión válida
+    (defensa en profundidad además del proxy), muestra nombre/tenant real, logout real.
+- [x] **Admisión completa** (`src/lib/actions/admissions.ts` + `/cases/new`): paciente
+  + caso + número de caso (RN-1) + etapas iniciales (`case_stages`, orden de
+  `src/lib/rules/case-stages.ts`, derivado de `nav_graph.json`) en UNA transacción —
+  si el LOI no tiene mapeo resuelto en RN-2, no se crea nada a medias.
+- [x] **Admissions Control** (`/cases`): lista con filtros de ubicación/estatus/mes y
+  saldo (vía la vista `case_balances`, RN-5).
+- [x] **Hub del expediente v1** (`/cases/[id]`): CaseHeader, programas requeridos
+  derivados de LOI (RN-2, nunca duplicados como columna), StageMap, saldo, consents
+  (vacío por ahora — se llena desde intake, aún sin curar).
+- [x] Refactor sin cambio de comportamiento para permitir transacciones compuestas:
+  `assignCaseNumberTx`/`recordAuditTx` (reciben una `tx` ya abierta) — `assignCaseNumber`/
+  `recordAudit` originales siguen existiendo como envoltorio de conveniencia. Se
+  exporta `Tx` desde `lib/db/rls.ts` para tipar esto sin `any`.
+- [x] Verificado con Playwright, en navegador real, flujo completo: login → nueva
+  admisión (dos pacientes seguidos, case_number 001/002 sin huecos ni duplicados,
+  igual que probó `tests/rules/case-number.test.ts` pero ahora por la UI real) → hub
+  del caso con programas/etapas/saldo correctos → lista de admisiones con datos reales.
+- [x] `tests/rules/case-stages.test.ts` (3 tests) — 34 pruebas totales en verde.
+
+### Bug real encontrado y corregido
+`sql\`WHERE case_id = ANY(${caseIds}::uuid[])\`` con el driver `pg` NO pasa el array de
+JS como un solo parámetro de tipo array de Postgres — drizzle lo expande en parámetros
+separados por coma, produciendo SQL inválido (`ANY(($1, $2)::uuid[])`). Encontrado
+corriendo `/cases` de verdad (typecheck y tests no lo atrapan, porque el error solo
+existe en tiempo de ejecución contra Postgres). Corregido con
+`IN (${sql.join(caseIds.map(id => sql\`${id}::uuid\`), sql\`, \`)})` — el patrón correcto
+de drizzle para `IN` dinámico con SQL crudo. Queda como nota de código en
+`src/app/(app)/cases/page.tsx` para no repetir el error si se agrega otra consulta así.
+
+### Pendiente de M2 (curación de contenido, no de plomería)
+- [ ] Paso 1-2: curar `form_schemas` (`forms_1_7`) contra `build-inputs/` y el motor
+  `<SchemaForm/>` — es contenido a revisar con Jorge, no algo a inventar.
+- [ ] Intake con firma (`SignaturePad`) + subida a almacenamiento — depende de que se
+  confirme DigitalOcean Spaces o, en su defecto, AWS (ver ADR-017).
+- [ ] Ledger manual (cargos/pagos) y Stripe Checkout — el saldo ya se calcula bien
+  (case_balances) contra cero movimientos; falta la UI para crear movimientos.
+
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,
   no solo al final — así se atraparon los dos bugs de esta sesión.
