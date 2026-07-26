@@ -1,6 +1,8 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { nextCookies } from "better-auth/next-js";
 import { db } from "./db/client";
+import * as authSchema from "./db/auth-schema";
 
 /**
  * Better Auth — ver ADR-002. Self-hosted (no Clerk/Auth0) para no meter PHI de
@@ -21,6 +23,7 @@ import { db } from "./db/client";
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
     provider: "pg",
+    schema: authSchema,
   }),
   emailAndPassword: {
     enabled: true,
@@ -31,4 +34,10 @@ export const auth = betterAuth({
   },
   secret: process.env.BETTER_AUTH_SECRET,
   baseURL: process.env.BETTER_AUTH_URL,
+  // nextCookies() DEBE ser el último plugin (lo exige better-auth): sin él, llamar
+  // auth.api.signInEmail() desde una Server Action (src/app/login/actions.ts) autentica
+  // correctamente pero nunca escribe la cookie de sesión — el login "funciona" y aun
+  // así el usuario queda deslogueado. Con el plugin, la cookie se aplica automáticamente
+  // vía next/headers al correr dentro de una Server Action o Route Handler.
+  plugins: [nextCookies()],
 });

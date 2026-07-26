@@ -15,16 +15,46 @@ Milestone 1 en curso. Ver `PROGRESS.md` para el detalle exacto de qué está hec
 falta (la mayor parte de lo que falta depende de cuentas de terceros que aún no
 existen — Vercel, Neon, AWS, Stripe, Resend, Upstash).
 
-## Arrancar en local
+## Arrancar en local — con Postgres local (sin esperar a Neon)
+
+La app corre completa contra un Postgres normal mientras no exista la cuenta de Neon
+(login real incluido) — ver `src/lib/db/driver-detect.ts` y DEVIATIONS.md. El orden
+importa: las tablas de Better Auth y el script de RLS/roles deben existir ANTES de
+sembrar datos.
 
 ```bash
-cp .env.example .env.local   # completar con las llaves reales una vez existan las cuentas
+# 1. Postgres local con una base vacía (ejemplo con el Postgres del sistema):
+createdb treatment_tech_dev
+psql -d treatment_tech_dev -c "CREATE EXTENSION IF NOT EXISTS pgcrypto;"
+
+# 2. .env.local — ver .env.example. DATABASE_URL_MIGRATIONS = tu rol owner local;
+#    DATABASE_URL = la del rol app_user (se crea en el paso 4, con la password que
+#    pongas en 0001_rls_and_roles.sql).
+cp .env.example .env.local
+
 pnpm install
-pnpm db:generate && pnpm db:migrate   # requiere DATABASE_URL_MIGRATIONS (owner)
-# correr a mano drizzle/sql/0001_rls_and_roles.sql contra la misma DB (crea app_user + policies)
+
+# 3. Tablas: negocio (schema.ts) + Better Auth (auth-schema.ts, generado por su CLI).
+pnpm db:generate && pnpm db:migrate
+
+# 4. RLS, roles y grants — DESPUÉS de las tablas, incluidas las de Better Auth.
+#    Reemplaza <APP_USER_PASSWORD> por una contraseña real antes de correr esto.
+psql -d treatment_tech_dev -f drizzle/sql/0001_rls_and_roles.sql
+
+# 5. Seed: tenant + Archer + roster + cuentas reales de Better Auth (login funcional).
 pnpm db:seed
+
 pnpm dev
 ```
+
+Con eso, `/login` acepta las cuentas sembradas (ver la salida de `pnpm db:seed` para la
+contraseña) y `/dashboard` incluye un simulador de las reglas RN-2/RN-3 — útil para
+mostrar que la lógica de Jorge quedó bien capturada sin tener que leer código.
+
+## Arrancar contra Neon real (producción/preview)
+
+Mismo flujo, pero `DATABASE_URL`/`DATABASE_URL_MIGRATIONS` apuntan a Neon en vez de
+localhost — el driver cambia solo, no hay nada que tocar a mano.
 
 ## Comandos
 

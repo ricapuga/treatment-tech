@@ -82,6 +82,35 @@ Con esos dos fixes:
 
 **Total de pruebas automatizadas ahora: 31, todas en verde** (`pnpm test`).
 
+### Hecho (2026-07-26, tercera pasada — la app corre completa en local, con login real)
+- [x] **`src/lib/db/client.ts` y `src/lib/db/rls.ts` ahora eligen driver por entorno**
+      (`src/lib/db/driver-detect.ts`): Neon en producción, `pg`/`node-postgres` cuando
+      `DATABASE_URL` apunta a localhost. Esto permitió correr TODA la app —no solo
+      pruebas aisladas— contra Postgres local, incluyendo Better Auth. Ver DEVIATIONS.md.
+- [x] Tablas de Better Auth generadas de verdad (`pnpm dlx @better-auth/cli generate` →
+      `src/lib/db/auth-schema.ts`: `user`, `session`, `account`, `verification`) y
+      agregadas al `schema` de `drizzle.config.ts` — antes solo existían en teoría.
+- [x] **Bug real encontrado y corregido en `scripts/seed.ts`**: insertaba `locations` y
+      `users` sin pasar por `withTenant()` — Postgres lo rechazó con "new row violates
+      row-level security policy" al correrlo de verdad. Mismo error habría ocurrido
+      contra Neon en producción. Corregido: ahora respeta la misma disciplina que el
+      resto de la app. El seed también crea cuentas reales de Better Auth para el
+      roster (antes solo creaba el perfil de negocio, sin nada contra qué autenticar).
+- [x] **Login real conectado**: `src/app/login/actions.ts` (Server Action →
+      `auth.api.signInEmail`) + `src/app/login/login-form.tsx`. Se agregó el plugin
+      `nextCookies()` a `src/lib/auth.ts` — sin él, el login autentica pero nunca
+      escribe la cookie de sesión (footgun conocido de Better Auth + Server Actions).
+- [x] **Verificado de extremo a extremo con Playwright, en un navegador real**: visitar
+      `/dashboard` sin sesión redirige a `/login` → llenar el formulario con la cuenta
+      real de Jorge (sembrada) → sesión creada → `/dashboard` renderiza. Screenshot
+      guardado y revisado.
+- [x] **Simulador de reglas en el dashboard** (`src/app/(app)/dashboard/rules-demo.tsx`):
+      selecciona LOI + horas, muestra los programas requeridos (RN-2) y las sesiones
+      calculadas (RN-3) usando el mismo código de `src/lib/rules/` que ya tiene pruebas.
+      No es parte del producto final — se reemplaza cuando exista el hub real del
+      expediente en M2 — pero es lo primero que se puede mostrar en pantalla, hoy,
+      sin esperar ninguna cuenta.
+
 ### Pendiente para cerrar M1 (bloqueado por credenciales que Ricardo debe crear)
 - [ ] Paso 2: cuentas Vercel Pro (BAA), Neon (Scale + HIPAA + BAA), AWS (BAA en Artifact),
       Stripe (test), Resend, Upstash — ver checklist entregado aparte.

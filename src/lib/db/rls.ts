@@ -1,33 +1,44 @@
-import { Pool } from "@neondatabase/serverless";
-import { drizzle } from "drizzle-orm/neon-serverless";
+import { Pool as NeonPool } from "@neondatabase/serverless";
+import { Pool as PgPool } from "pg";
+import { drizzle as drizzleNeonServerless } from "drizzle-orm/neon-serverless";
+import { drizzle as drizzleNodePg } from "drizzle-orm/node-postgres";
 import { sql } from "drizzle-orm";
 import * as schema from "./schema";
+import { isLocalPostgres } from "./driver-detect";
 
 /**
  * withTenant — la ÚNICA forma permitida de tocar tablas con PHI.
  *
  * Por qué existe este archivo (no es un detalle de implementación, es la pieza que
  * hace que RLS realmente aísle datos — ver hallazgo de la auditoría de arquitectura):
- * Neon usa connection pooling en modo transacción. Un `SET app.tenant_id = ...` de
- * sesión normal NO persiste de una query a la siguiente bajo ese modo — cada query
- * puede aterrizar en una conexión física distinta. La única forma correcta es:
+ * bajo connection pooling (Neon en modo transacción, y también el pool estándar de
+ * `pg` en local), un `SET app.tenant_id = ...` de sesión normal NO persiste de una
+ * query a la siguiente — cada query puede aterrizar en una conexión física distinta.
+ * La única forma correcta es:
  *
  *   1) abrir una transacción real (múltiples statements, misma conexión física),
  *   2) como PRIMER statement de esa transacción, `SET LOCAL app.tenant_id = '<uuid>'`,
  *   3) ejecutar la operación real dentro de la MISMA transacción,
  *   4) commit (automático al resolver el callback) / rollback (automático si lanza).
  *
- * Por eso este archivo usa el driver de Pool (WebSocket, conexión con estado) vía
- * drizzle-orm/neon-serverless — NO el cliente HTTP de client.ts, que es sin estado
- * y no puede sostener SET LOCAL entre statements.
+ * Driver: `drizzle-orm/neon-serverless` (Pool WebSocket, con estado) en producción
+ * contra Neon real; `drizzle-orm/node-postgres` (Pool estándar) SOLO cuando
+ * DATABASE_URL apunta a localhost — mismo patrón que client.ts, ver driver-detect.ts.
+ * Ambos exponen `.transaction()` con la misma forma (BEGIN real + tx.execute()), así
+ * que la lógica de negocio que usa withTenant() (case-number.ts, audit.ts, etc.) no
+ * necesita saber cuál de los dos está corriendo debajo.
  *
  * Toda Server Action, toda API route, todo script (seed, generate-schemas) que lea
  * o escriba una tabla con tenant_id DEBE pasar por withTenant(). Nunca usar `db` de
  * client.ts para leer/escribir PHI.
  */
 
-const pool = new Pool({ connectionString: process.env.DATABASE_URL! });
-const dbWithPool = drizzle(pool, { schema });
+const url = process.env.DATABASE_URL!;
+const local = isLocalPostgres(url);
+
+const dbWithPool = local
+  ? drizzleNodePg(new PgPool({ connectionString: url }), { schema })
+  : drizzleNeonServerless(new NeonPool({ connectionString: url }), { schema });
 
 export async function withTenant<T>(
   tenantId: string,

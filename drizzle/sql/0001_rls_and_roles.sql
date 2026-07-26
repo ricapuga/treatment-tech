@@ -37,6 +37,22 @@ GRANT EXECUTE ON FUNCTION app_current_tenant_id() TO app_user;
 GRANT USAGE ON SCHEMA public TO app_user;
 GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO app_user;
 GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO app_user;
+
+-- Tablas de Better Auth (user/session/account/verification, generadas por
+-- `pnpm dlx @better-auth/cli generate` — ver src/lib/db/auth-schema.ts) necesitan
+-- DELETE además de SELECT/INSERT/UPDATE (logout borra la fila de session; limpieza
+-- de tokens de verification vencidos). Estas 4 tablas NO llevan RLS ni tenant_id —
+-- son metadata de autenticación, no PHI clínico (ver comentario en src/lib/auth.ts).
+GRANT SELECT, INSERT, UPDATE, DELETE ON account, session, "user", verification TO app_user;
+
+-- Blindaje a futuro: si se agregan tablas nuevas más adelante (ej. la tabla de
+-- twoFactor cuando se active el plugin de 2FA de Better Auth, blueprint M1 paso 5),
+-- que no dependan de correr este script de GRANTs a mano otra vez. Solo aplica a
+-- tablas creadas por el MISMO rol que ejecuta este ALTER DEFAULT PRIVILEGES — o sea,
+-- correr este archivo con el mismo rol owner que corre las migraciones de drizzle-kit.
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO app_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT USAGE, SELECT ON SEQUENCES TO app_user;
+
 REVOKE UPDATE, DELETE ON audit_log FROM app_user; -- bitácora inmutable también para la app
 REVOKE UPDATE, DELETE ON audit_log FROM PUBLIC;
 

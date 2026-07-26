@@ -27,7 +27,11 @@ if (!migrationsUrl) {
 }
 
 export default defineConfig({
-  schema: "./src/lib/db/schema.ts",
+  // schema.ts: las 19 tablas clínicas/de negocio del blueprint. auth-schema.ts: las
+  // tablas de Better Auth (user/session/account/verification), generadas por
+  // `pnpm dlx @better-auth/cli generate` a partir de src/lib/auth.ts — no se editan
+  // a mano, se regeneran si auth.ts cambia (ej. al agregar el plugin de 2FA).
+  schema: ["./src/lib/db/schema.ts", "./src/lib/db/auth-schema.ts"],
   out: "./drizzle",
   dialect: "postgresql",
   dbCredentials: {

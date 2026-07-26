@@ -45,3 +45,36 @@ withTenant()
 - **Impacto:** ninguno negativo esperado. Si en producción el uso de WebSockets desde
   funciones serverless de Vercel da problemas de cold-start o límites de conexión, es un
   ítem a vigilar en M5 (hardening) — no bloquea M1-M4.
+
+## 2026-07-26 — Selección de driver por entorno (Neon vs Postgres local) en client.ts y rls.ts
+- **Blueprint decía:** driver de Neon (HTTP en client.ts, Pool WebSocket en rls.ts) —
+  correcto y sin cambios para producción.
+- **Qué se hizo:** se agregó `src/lib/db/driver-detect.ts` (`isLocalPostgres()`, detecta
+  por hostname si `DATABASE_URL` apunta a `localhost`/`127.0.0.1`) y ambos archivos ahora
+  eligen entre el driver de Neon (producción) y `drizzle-orm/node-postgres` + `pg` (SOLO
+  cuando el host es local). Esto permite correr la aplicación COMPLETA — incluido Better
+  Auth, `withTenant()`, y el login real — contra Postgres local, sin esperar la cuenta de
+  Neon. `pg` se movió a `dependencies` (no `devDependencies`) porque ahora lo importa
+  código de producción, aunque la rama que lo ejecuta nunca corre contra Neon real.
+- **Por qué:** mientras la cuenta de Neon estaba pendiente, se pudo validar de extremo a
+  extremo (login real, sesión real, RLS real) en vez de solo con pruebas aisladas.
+- **Impacto:** ninguno en producción — contra cualquier host que no sea localhost, el
+  comportamiento es idéntico al original (driver de Neon). Verificar una vez que exista
+  DATABASE_URL de Neon real que `isLocalPostgres()` regrese `false` para ese host (debería,
+  ya que el hostname de Neon nunca es localhost/127.0.0.1).
+
+## 2026-07-26 — `scripts/seed.ts`: bug real corregido — insertaba fuera de `withTenant()`
+- **Qué pasaba:** la primera versión de `seed.ts` insertaba `locations` y `users`
+  directamente vía el cliente `db` (app_user), sin pasar por `withTenant()`. Contra Postgres
+  local esto falló de inmediato con "new row violates row-level security policy" — la
+  política de RLS bloquea el INSERT porque `app.tenant_id` nunca se fijó. El mismo error
+  habría ocurrido contra Neon real la primera vez que alguien corriera el seed.
+- **Qué se hizo:** el seed ahora envuelve la creación de `locations` y `users` en
+  `withTenant(tenant.id, ...)`, exactamente como cualquier otra parte de la app. Además
+  ahora crea cuentas reales de Better Auth (`auth.api.signUpEmail`) para cada persona del
+  roster, con una contraseña de desarrollo (`SEED_PASSWORD` o el default documentado) —
+  antes el seed solo creaba el perfil de negocio, sin nada contra qué iniciar sesión.
+- **Por qué:** el seed es código de la app como cualquier otro — debe respetar la misma
+  disciplina de RLS. Encontrado corriendo el script de verdad, no por inspección.
+- **Impacto:** ninguno negativo. Positivo: el bug se corrigió ANTES de que alguien lo
+  encontrara corriendo esto contra Neon en producción.
