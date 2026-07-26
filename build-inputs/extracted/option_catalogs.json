@@ -1,0 +1,3988 @@
+{
+ "Admissions": {
+  "lists": [
+   {
+    "options": [
+     "    ",
+     "          Minimal Risk",
+     "          Moderate Risk",
+     "          Significant Risk",
+     "               High Risk",
+     "          Early Intervention",
+     "          Outpatient Treatment",
+     "Intensive Outpatient Treatment",
+     "          Risk Education"
+    ],
+    "fields_count": 50,
+    "example_fields": [
+     "Dropdown2.0.0.0",
+     "Dropdown2.0.0.1.0",
+     "Dropdown2.0.0.1.1.0"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "     Active",
+     "     Completed",
+     "     Closed"
+    ],
+    "fields_count": 27,
+    "example_fields": [
+     "Dropdown3.0.0.0",
+     "Dropdown3.0.0.1.0",
+     "Dropdown3.0.0.1.1.0"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "                Active",
+     "                Complete",
+     "                Closed"
+    ],
+    "fields_count": 23,
+    "example_fields": [
+     "Dropdown1.0.0.0",
+     "Dropdown1.0.0.1",
+     "Dropdown1.0.1.0"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "ProcessControl": {
+  "lists": [
+   {
+    "options": [
+     "  ",
+     "Hispanic",
+     "American Indian/Alaskan Native",
+     "Asian",
+     "Black or African American",
+     "White",
+     "Native Hawaiian or Other Pacific Islander",
+     "Unknown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown5"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "English",
+     "Spanish"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown6"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Civil Union",
+     "Divorced",
+     "Married",
+     "Never Married",
+     "Separated",
+     "Widowed",
+     "Unknown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown8"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Employed full time",
+     "Employed part time",
+     "Retired",
+     "Student",
+     "Unemployed",
+     "Unknown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown9"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Under 7 years",
+     "High school graduate or equivalent",
+     "Some college, no degree",
+     "Associate Degree",
+     "College Bachelor Degree",
+     "Master's degree or higher",
+     "Unknown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown10"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "In progress",
+     "Completed",
+     "Suspended"
+    ],
+    "fields_count": 17,
+    "example_fields": [
+     "Dropdown1.1",
+     "Dropdown1.2",
+     "Dropdown1.3"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "Forms_1-7": {
+  "lists": [
+   {
+    "options": [
+     "  ",
+     "Central States Institute of Addictions",
+     "Social Service Department",
+     "Adult Probation Department",
+     "DuPage County",
+     "Kane County",
+     "Will County",
+     "McHenry County",
+     "Lake County",
+     "Secretary of State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Male",
+     "Female"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Under 7 years",
+     "Junior High School",
+     "High School Graduate or equivalency",
+     "Associate Degree",
+     "Some College no degree",
+     "College Bachelor Degree",
+     "Master's Degree or Higher",
+     "Unkown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown5"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Civil Union",
+     "Divorced",
+     "Married",
+     "Never married",
+     "Separated",
+     "Widowed",
+     "Unkown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown6"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Atheist",
+     "Buddhism",
+     "Christian",
+     "Hinduism",
+     "Islam",
+     "Judaism",
+     "Nonreligious",
+     "Other",
+     "Unkown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Disable",
+     "Employed full time",
+     "Employed part time",
+     "Retired",
+     "Student",
+     "Unemployed",
+     "Unkown"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown8"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Cell",
+     "Home",
+     "Work",
+     "Other"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown4.0",
+     "Dropdown4.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "08",
+     "10",
+     "12",
+     "14",
+     "18",
+     "20",
+     "22",
+     "24"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "RE0003"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "06",
+     "08",
+     "10",
+     "12",
+     "14",
+     "16",
+     "18",
+     "20"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "EI0003"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "10",
+     "25"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "OP0005"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "20",
+     "75"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "OP0003"
+    ]
+   },
+   {
+    "options": [
+     "   ",
+     "3",
+     "6",
+     "12"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CCP0003"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Minimal Risk Program",
+     "Moderate Risk Program",
+     "Significant Risk Program",
+     "High Risk Program",
+     "Risk Education Program",
+     "Early Intervention Program",
+     "Outpatient Treatment Program"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LOI"
+    ]
+   },
+   {
+    "options": [
+     "   ",
+     "Cook",
+     "DuPage",
+     "Will",
+     "Kane",
+     "Lake",
+     "McHenry"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown9"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "Assessment": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Alcohol",
+     "Marijuana",
+     "Cocaine",
+     "Opioids",
+     "Hallucinogens",
+     "Benzodiazepine",
+     "Amphetamines",
+     "Inhalants",
+     "Other*"
+    ],
+    "fields_count": 9,
+    "example_fields": [
+     "Dim 1 Substance.0.0.0",
+     "Dim 1 Substance.0.0.1",
+     "Dim 1 Substance.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "The Patient presents no signs of intoxication or withdrawals"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "dim 1 summary"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Never",
+     "Sometimes",
+     "Frequently"
+    ],
+    "fields_count": 36,
+    "example_fields": [
+     "DSM-5 indicators.0.0",
+     "DSM-5 indicators.0.1",
+     "DSM-5 indicators.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No",
+     "I'm not sure"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "dim 1 Tolerance.0.0",
+     "dim 1 Tolerance.0.1",
+     "dim 1 Tolerance.1.0"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 45,
+    "example_fields": [
+     "BMCC",
+     "Dropdown13.0.0",
+     "Dropdown13.0.1.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 26,
+    "example_fields": [
+     "Dim 2 medical.0.0.0",
+     "Dim 2 medical.0.0.1",
+     "Dim 2 medical.1.0.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "The Patient reported no biomedical issues or conditions."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dim 2 summary"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "He appears emotionally and behaviorally stable.",
+     "The Patient has a history of a violent temper that has created difficulties in life. ",
+     "The Patient struggles with self-forgiveness because his relationship with his son was affected by his substance use.",
+     "The Patient developed an abusive drinking/using pattern, which resulted in a DUI arrest."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dim 3 Summary"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Court orders",
+     "By myself",
+     "Because I need it",
+     "My lawyer recommended I participate in a Substance Abuse Program."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown20"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes, I need treatment to help me to improve my life.",
+     "No, I do not think so.",
+     "Yes, I need help.",
+     "I want to follow the court orders.",
+     " I am still determining."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown21"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes, because I have had problems due to my drinking/using.",
+     "No. I never had an alcohol/drug-related problem.",
+     "Yes, that's why I am here.",
+     "Yes. I have had family and legal problems as a result of my drinking/using."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown24"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "My parents are worried and complain because of my alcohol and drug use.",
+     "My wife is concerned and complains because of my alcohol and drug use. ",
+     "This whole thing is affecting me and my family financially and emotionally.",
+     "No, neither myself nor my family has been affected in any way.",
+     "I have had financial problems, and my family complains.",
+     "I and my family have not been affected in any way."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown25"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I have had financial and job problems.",
+     "I do not like to see my family hurting.",
+     "It has not been a problem.",
+     "My relationship with my wife has been affected.",
+     "My life has been affected in many ways: legally, financially, job, family, etc.",
+     "I am dealing with a lot of stress and anxiety."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown26"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I do not think my drinking/using has stopped me from what I wanted to do.",
+     "I lost job opportunities.",
+     "Vocationally, financially, loss of job opportunities, etc. ",
+     "I could have improved my education.",
+     "I lost my driving privileges; I lost job opportunities."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown28"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I do not think I need to make a change.",
+     "If I do not change, I will have more problems.",
+     "I need to change because my family deserves it.",
+     "If I change, I can solve many problems.",
+     "I need to change to improve the quality of my family life.",
+     "Change is not just for me, but for the well-being of my family.",
+     "My family deserves a better life, and I am ready to make the necessary changes.",
+     "The ultimate goal of change is to enhance the quality of life for my family."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown30"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Yes, I stopped drinking/using. I am been abstinent from alcohol and drugs.",
+     "Yes, I cut down on my drinking/using. ",
+     "No, I haven't.",
+     "I quit several times in the past."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown32"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I need to stop visiting places where alcohol or drugs are available.",
+     "I need to stop hanging around with my drinkng and using peers.",
+     "I do not need to make any changes.",
+     "I need to set safe limits on my drinking and using.",
+     "I need to change my social environment.",
+     "I need to learn how to use alcohol responsibly."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown31"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I will not have problems.",
+     "I may have more problems.",
+     "I could have legal and family problems.",
+     "I see no possible consequences."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown33"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I will save problems.",
+     "I see no benefits.",
+     "My family will be happier."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown34"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "The Patient seems to be in the pre-contemplation stage.",
+     "The Patient seems to be in the contemplation stage.",
+     "The Patient seems to be in the preparation stage.",
+     "The Patient seems to be in the action stage.",
+     "The Patient seems to be in the maintenance stage."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dim 4 Summary"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Yes, I can.",
+     "My co-workers have substance abuse problems.",
+     "No, my social environment is drug-infested and very harmful.",
+     "My family members abuse alcohol/drugs."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown35"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "No",
+     "No, I am not.",
+     "Yes, I am experiencing desires or cravings to drink or use."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown36"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "I do not know.",
+     "I have no cravings.",
+     "I talk to my sponsor.",
+     "I talk to my spouse.",
+     "I pray and attend church.",
+     "I attend the close support meeting",
+     "I go to places to distract myself."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown37"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "If I go back to my old drinking/using friends.",
+     "If I got too angry, lonely, tired, and hungry.",
+     "If I visit bars or drinking establishments.",
+     "If I stop paying attention to my emotions.",
+     "If I stop attending my support group."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown38"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "The Patient seems to have the skills and a social and family environment to maintain abstinence.",
+     "The Patient has been unable to interrupt alcohol and drug use, and attempts to control have been unsuccessful.",
+     "The Patient is currently at high risk for relapsing due to poor coping skills and a limited support system.",
+     "The Patient is currently at high risk for relapsing due to euphoric/romantic associations with alcohol and drugs.",
+     "The Patient's previous attempt at recovery was partial and unsuccessful. ",
+     "The Patient was unable to interrupt alcohol and drug use.",
+     "The Patient is exposed to triggers and situations that risk sobriety.",
+     "The Patient is currently at high risk for relapsing because of a lack of awareness of the consequences.",
+     "The Patient has a history of multiple treatment attempts and relapse.",
+     "Interpersonal conflicts place the Patient at high risk for relapsing."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dim 5 summary"
+    ]
+   },
+   {
+    "options": [
+     "   ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown27"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Z03.89 No Diagnosis",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "Diagnosis.0.0.0.0.0",
+     "Diagnosis.0.0.0.0.1",
+     "Diagnosis.0.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Counselor list 01"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     " Patient is married and lives with his family. He is unemployed and does not have adequate social support system.",
+     "Patient is married and lives with her family. She is unemployed and does not have adequate social support system.",
+     "Patient lives in an environment in which there is a high risk for relapse.",
+     "Patient lives with his father. He lacks a structured support system, and his social environment interferes with treatment."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dim 6 summary"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Recovery Residence - RR Recovery Residence",
+     "Level 1- Outpatient Services",
+     "Level 1- Outpatient Services / 1.0- Long-Term Remission Monitoring",
+     "Level 1- Outpatient Services / 1.5- Outpatient Therapy",
+     "Level 1- Outpatient Services / 1.7- Medically Managed Outpatient",
+     "Level 2- IOP/HIOP",
+     "Level 2- IOP/HIOP / Level 2.1- Intensive Outpatient (IOP)",
+     "Level 2- IOP/HIOP / Level 2.5- High-Intensive Outpatient (HIOP)",
+     "Level 2- IOP/HIOP / Level 2.7- Medically Managed Intensive Outpatient",
+     "Level 3- Residential",
+     "Level 3- Residential / 3.1- Clinically Managed Low-Intensity Residential",
+     "Level 3- Residential / 3.5- Clinically Managed High-Intensity Residential",
+     "Level 3- Residential / 3.7- Medically Managed Residential",
+     "Level 4-Inpatient",
+     "Level 4-Inpatient / 4-Medically Managed Inpatient"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown11.1"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "TreatmentPlan": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 5,
+    "example_fields": [
+     "Diagnosis 1 2024.3.0",
+     "Diagnosis 1 2024.3.1",
+     "Diagnosis 1 2024.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Counselor list"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient lacks education related to sexually transmitted diseases and how alcohol/drug abuse places people at risk."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown32"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "To increase Patient\u2019s awareness about sexually transmitted diseases to reduce the risk of exposure."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown33"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown36"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient is to participate in six months of continuing care, attending once per month, minimally.",
+     "Patient is to participate in eight months of continuing care, attending once per month, minimally.",
+     "Patient is to participate in twelve months of continuing care, attending once per month, minimally."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown38"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient reported no biomedical issues or conditions at this time.",
+     "Patient was diagnosed with cirrhosis and had a history of continued drinking.",
+     "Patient reported chronic back pain.",
+     "Patient reported kidney problems.",
+     "Patient was diagnosed with diabetes."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown5"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient self-disclosure and medical history.",
+     "Patient self-disclosure."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown6"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to reduce the relapse potential and return to normal levels of functioning.",
+     "Patient is to gain awareness over current medical conditions.",
+     "Patient is to understand how physical pain can lead to continued alcohol/drug use.",
+     "Patient is to acknowledge life areas affected by alcohol use beyond the medical complications.",
+     "Patient is to understand and participate in the medical management of biomedical problems.",
+     "Patient is to learn about the negative consequences of using alcohol or drugs on medical conditions.",
+     "Patient is to reduce the impact of medical problems on recovery."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient is to explain the powerlessness and unmanageability that result from drinking/using to cope with medical problems.",
+     "Patient is to make a list of the negative consequences of drinking or using drugs on medical conditions.",
+     "Patient is to verbalize personal commitment to remain abstinent to fellow members.",
+     "Patient is to explain the connection between alcohol and drug use and medical complications.",
+     "Patient is to describe the reason for wanting abstinence other than health reasons.",
+     "Patient is to write a committed plan for managing medical conditions and using the health services system.",
+     "Patient is to verbalize the need to maintain abstinence from alcohol and drugs."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown8.0",
+     "Dropdown8.1",
+     "Dropdown8.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient will share with the group how substance abuse impacts medical conditions.",
+     "Patient will present to fellow members a lecture on the harmful effects of alcohol and drug abuse on the body.",
+     "Patient will explain to fellow members past and current medical conditions.",
+     "Patient will explain to fellow members how alcohol and drugs can exacerbate medical conditions.",
+     "Patient will attend a pain clinic for medical and psychological management of pain.",
+     "Patient will follow through with medical recommendations."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown12.0.0",
+     "Dropdown12.0.1",
+     "Dropdown12.0.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient developed an abusive alcohol use pattern that created problems in life.",
+     "Patient developed an abusive drug use pattern that created problems in life.",
+     "Patient has a history of a violent temper that created difficulties in life. ",
+     "Patient presents emotionally and behaviorally stable at this time.",
+     "Patient reported no emotional or behavioral complications at this time.",
+     "Patient reported symptoms of major depression.",
+     "Patient reported symptoms of anxiety that interfered with daily activities and led to alcohol and drug use.",
+     "Patient reported a history of stress that interfered with daily activities and led to alcohol and drug use.",
+     "Patient reported feelings of guilt and shame that led to alcohol and drug use.",
+     "Patient reported recurrent legal problems due to alcohol and drug abuse."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown4"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient self-disclosure.",
+     "Alcohol and Drug Assessment findings.",
+     "Alcohol and Drug Evaluation Uniform Report findings.",
+     "Patient was arrested for driving while intoxicated.",
+     "Patient was arrested for driving while intoxicated. He reported a prior arrest for the same reason.",
+     "Patient was arrested for driving while intoxicated several times."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown11"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to change behavior and accept that problems in life are related to alcohol and drug use and subsequent actions.",
+     "The patient is to accept chemical dependency and achieve abstinence from alcohol and drugs.",
+     "The patient is to accept chemical dependency and maintain abstinence from alcohol and drugs.",
+     "Patient is to eliminate alcohol abuse and is to learn how to use alcohol socially and responsibly.",
+     "Patient is to recognize that attempts to control alcohol and drug use are futile and unattainable without support.",
+     "Patient is to understand the connection between a harmful social environment and alcohol/drug abuse.",
+     "The patient is to learn about the negative consequences of abusing alcohol and drugs and driving while intoxicated.",
+     "Patient is to understand how wrong beliefs about alcohol and drug use lead to problems in life.",
+     " Patient is to understand the need to modify lifestyle and social environment to prevent alcohol/drug-related problems. ",
+     "Patient is to recognize that recovery requires a lifelong commitment.",
+     "Patient is to understand the relationship between emotional disorders and substance abuse.",
+     "Patient is to achieve emotional and behavioral stability.",
+     "Patient is to recognize the need to forgive and to identify situations that cause people to feel guilty and shameful.",
+     "Patient is to improve mood and decrease dysfunctional thinking.",
+     "Patient is to learn how to express feelings and emotions without using alcohol or drugs.",
+     "Patient is to learn healthier responses to stressful situations.",
+     "Patient is to learn how to express anger constructively.",
+     "Patient is to comprehend the ongoing need to forgive.",
+     "Patient is to learn how alcohol and drug abuse lead people to criminal behavior.",
+     "Patient is to recognize how alcohol and drug abuse lead people to have legal problems in life."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown13"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to describe alcohol and drug use patterns and negative consequences in life.",
+     "Patient is to express a personal action plan to avoid any future alcohol/drug-related problems.",
+     "Patient is to verbalize commitment to follow treatment recommendations.",
+     "Patient is to explain how severe alcohol and drug use has been in terms of life problems created.",
+     "Patient is to verbalize commitment to use alcohol socially and responsibly.",
+     "Patient is to describe what a social and responsible drinker means.",
+     "Patient is to explain what it takes to be a social and responsible drinker.",
+     "Patient is to verbalize to fellow members commitment to abstain from alcohol and drugs.",
+     "Patient is to explain how alcohol and drug abuse can induce emotional complications.",
+     "Patient is to present a plan to avoid future alcohol/drugs-related problems and, explicitly, driving while intoxicated.",
+     "Patient is to describe shame and guilt and how these feelings contribute to separation from others.",
+     "Patient is to describe the powerlessness and unmanageability that result from alcohol and drug use to cope with depression.",
+     "Patient is to identify at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+     "Patient is to identify the presence of symptoms of emotional complications.",
+     "Patient is to explain how depression leads to drinking/using and drinking/using leads to depression.",
+     "Patient is to explain how the use of alcohol/drug abuse can induce emotional/behavioral complications."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown14.0",
+     "Dropdown14.1",
+     "Dropdown14.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to list at least five negative consequences as a direct result of drinking/using. ",
+     "Patient is to identify and describe drinking/using patterns and resulting problems.",
+     "Patient is to explain the personal acceptance of chemical dependency.",
+     "Patient is to verbalize the need for ongoing substance abuse treatment.",
+     "Patient is to verbalize that attempts to control drinking/using were futile and unattainable. ",
+     "Patient is to identify negative feelings related to addictive behavior.",
+     "Patient is to describe shame and guilt and explain how these feelings contribute to a sense of separation from others.",
+     "Patient is to verbalize commitment to follow all treatment recommendations.",
+     "Patient is to describe the seriousness of alcohol/drug consumption and resulting problems.",
+     "Patient is to explain why dependency is a disease and how to follow all treatment recommendations.",
+     "Patient is to list at least five specific aspects of life committed to change during treatment. ",
+     "Patient is to summarize the reasons to remain committed to seeking a sober way of living.",
+     "Patient is to describe the potential benefits from remaining sober.",
+     "Patient is to list five instances in the past in which alcohol/drug use created difficulties in life.",
+     "Patient is to complete a written recovery plan. ",
+     "Patient is to explain how to follow treatment recommendations.",
+     "Patient is to list at least five specific aspects of life committed to change during his treatment.",
+     "Patient is to verbalize daily commitment to follow all treatment recommendations."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown18.0",
+     "Dropdown18.1",
+     "Dropdown18.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient will discuss in group sessions how life has been affected as a result of drinking/using.",
+     "Patient will share in group sessions feelings and thoughts about accepting alcohol/drug abuse.",
+     "Patient will attend a minimum of one AA/NA group a week and obtain a sponsor.",
+     "Patient will share in group sessions the benefits, thoughts, and acceptance of chemical dependency.",
+     "Patient will share in group sessions how denial causes minimization.",
+     "Patient will share in group sessions the history of alcohol/drug use and its consequences in life.",
+     "Patient will discuss with the primary counselor the cons of continuing unchanging and the pros of changing.",
+     "Patient will prepare and review a motivational structure for change with a primary counselor.",
+     "Patient will discuss with primary counselor beliefs that tend to reduce motivation and readiness to change.",
+     "Patient will discuss with primarly counselor the stages of change and skills to produce changes.",
+     "Patient will discuss with primarly counselor the importance and benefits of changing behavior and confidence to change."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown21.0.0.0",
+     "Dropdown21.0.0.1",
+     "Dropdown21.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "To explain the types and effects of sexually transmitted diseases on the human body.",
+     "To describe the medical symptoms and problems related to sexually transmitted diseases.",
+     "To list the negative consequences that result from sexually transmitted diseases."
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown34.0.0",
+     "Dropdown34.0.1"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient will complete a minimum of 20 hours of outpatient treatment in sessions that average less than nine hours per week.",
+     "Patient will complete a minimum of 75 hours of outpatient treatment in sessions of a minimum of nine hours per week.",
+     "Patient will share with fellow members a description of how social and family environments relate to alcohol/drug use.",
+     "Patient will share with fellow members the things that continue to cause emotional pain.",
+     "Patient will be involved in a 12-step program and get a sponsor.",
+     "Patient will verbalize with fellow members the first three steps of AA/NA.",
+     "Patient will write a letter of forgiveness, including feelings of worthiness for sobriety.",
+     "Patient will write down the five things or events in life that have caused and continue to cause problems with family.",
+     "Patient will share with fellow members feelings and thoughts about alcohol and drug abuse.",
+     "Patient will follow treatment recommendations in terms of attendance and abstinence from mood-altering substances.",
+     "Patient will write a letter describing five ways life has been affected because of substance abuse.",
+     "Patient will complete a mental health assessment and will follow through with recommendations."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown3.0.0.0.0",
+     "Dropdown3.0.0.0.1",
+     "Dropdown3.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient seems to be in the stage of pre-contemplation.",
+     "Patient seems to be in the stage of contemplation.",
+     "Patient seems to be in the stage of preparation.",
+     "Patient seems to be in the stage of action.",
+     "Patient seems to be in the stage of maintenance",
+     "Patient reported no alcohol or drug-related problems.",
+     "Patient continues to blame others and minimizes the seriousness of alcohol/drug-related problems.",
+     "Patient lacks awareness of alcohol/drug abuse and tends to rationalize the negative consequences",
+     "Patient does not recognize any alcohol/drug-related problems and is in total denial.",
+     "Patient does not understand chemical dependency as a disease and believes that it is possible to control drinking/using.",
+     "Patient's primary motivation for treatment seems to be legal issues and tends to minimize alcohol/drug-related problems."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown15"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Alcohol and Drug Assessment.",
+     "Alcohol and Drug Evaluation Uniform Report.",
+     "Patient has a history of alcohol/drug-related problems that resulted in legal and family issues."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown16"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to recognize the harmful effects of alcohol/drug abuse.",
+     "Patient is to recognize the chronic nature of chemical dependency.",
+     "Patient is to recognize the reality of how serious drinking/using has been in terms of life problems created.",
+     "Patient is to realize that significant life problems relate to drinking/using and subsequent actions.",
+     "Patient is to understand the seriousness of chemical dependency and the need for treatment.",
+     "Patient is to grasp the fact that drinking/using is the reason for treatment and not outside influences.",
+     "Patient is to recognize the need for treatment and admit alcohol/drug-related problems.",
+     "Patient is to recognize that attempts to control drinking/using were futile and unattainable.",
+     "Patient is to understand that chemical dependency demands abstinence from all substances, including marijuana.",
+     "Patient is to identify and recognize the potential benefits of remaining sober.",
+     "Patient is to recognize the powerless over alcohol/drug abuse.",
+     "Patient is to recognize the severity of alcohol/drug abuse and resulting problems.",
+     "Patient is to understand that chemical dependency is a disease that needs lifelong commitment and work one day at a time."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown17"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient lives in a drug-infested neighborhood.",
+     "Patient is involved with a significant other who has a drinking/using problem.",
+     "Patient is currently homeless and has friends and associates who use illicit drugs and drink alcohol.",
+     "Patient is married and lives with wife and kids.",
+     "Patient is unemployed and does not have an adequate social support system.",
+     "Patient lacks a structured support system, and the social environment promotes alcohol/drug use.",
+     "Patient lives in a very supportive home environment.",
+     "Patient lives in a transitional house and attends a 12-step program regularly.",
+     "Patient lives in an environment in which there is a high risk for relapse.",
+     "Patient lives with an individual who is a regular user/abuser of alcohol and drugs.",
+     "Patient's social life is characterized by significant social isolation or withdrawal.",
+     "Patient lives in an environment in which there is a high risk of physical, sexual, or emotional abuse.",
+     "Patient's friends or relatives have alcohol/drug-related problems."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown27"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient self-disclosure.",
+     "Alcohol and Drug Assessment.",
+     "Alcohol and Drug Evaluation Uniform Report."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown28"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient is to understand ways to develop and build a support network.",
+     "Patient is to develop a leisure activity plan.",
+     "Patient is to understand the importance of healthy leisure involvement to prevent alcohol/drug-related problems.",
+     "Patient is to recognize the importance of maintaining a responsible lifestyle and relationship network.",
+     "Patient is to acknowledge the need for safety and stability in living environment.",
+     "Patient is to understand the pivotal role of a supportive social environment in recovery.",
+     "Patient is to recognize the crucial role of leisure involvement in recovery.",
+     "The patient is to recognize how important a recovery-oriented, active leisure life is.",
+     "Patient is to understand the need for continued structure of living situation after treatment.",
+     "Patient is to improve the social, occupational, and living situation to increase the probability of a successful recovery.",
+     "Patient is to understand the negative impact of the current environment on recovery.",
+     "Patient is to develop a peer group that is supportive of recovery.",
+     "Patient is to motivate family members to be supportive of recovery.",
+     "The patient is to achieve and maintain an alcohol/drug-free lifestyle and to reduce the negative impact of the environment."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown29"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient is to write a leisure activity plan.",
+     "Patient is to write a productive free time usage plan.",
+     "Patient is to identify changes needed in social surroundings to avoid alcohol/drug-related problems.",
+     "The patient is to describe what a social support system means. ",
+     "Patient is to identify the relationship between the present social environment and drinking/using patterns. ",
+     "Patient is to define at least three social support systems to build.",
+     "Patient is to develop a recovery plan, including productive leisure activities.",
+     "Patient is to define a plan that addresses a sober support system and living situation.",
+     "Patient is to identify three social support systems (which include friends and family members) to build.",
+     "Patient is to describe the changes needed to prevent alcohol/drug abuse."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown30.0.0",
+     "Dropdown30.0.1",
+     "Dropdown30.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will share in group sessions a leisure activity plan.",
+     "Patient will explain in group sessions how the lack of a supportive social environment relates to drinking/using problems.",
+     "Patient will describe the changes needed in the living environment in group sessions.",
+     "Patient will describe in group sessions the current living environment and its impact on the Patient's ability to remain sober.",
+     "Patient will share in group sessions why leisure activities are essential to recovery.",
+     "Patient will discuss in group sessions a productive free time usage plan."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown31.0.0",
+     "Dropdown31.0.1",
+     "Dropdown31.0.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient has been unable to interrupt alcohol/drug use, and attempts to control it have been unsuccessful.",
+     "Patient has been unable to stop alcohol/drug use because of a very harmful social environment.",
+     "Patient is currently at high risk of relapse due to poor coping skills and a limited support system.",
+     "Patient is currently at high risk of relapse due to euphoric/romantic associations with alcohol and drugs.",
+     "Patient's previous recovery attempt was partial and not able to interrupt drinking/using.",
+     "Patient has been exposed to and continues to be exposed to triggers (persons, places, situations, and things).",
+     "Patient is currently at high risk of relapse due to a lack of awareness of the negative consequences of drinking/using.",
+     "Patient has a history of multiple treatment attempts and relapse.",
+     "Patient is currently at high risk of relapse due to mental illness.",
+     "Patient is currently at high risk of relapse due to interpersonal conflicts.",
+     "Patient is currently at high risk of relapse due to negative emotions.",
+     "Patient is unaware of personal triggers and has no skills to cope and control impulses to drink/use."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown22"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient self-disclosure.",
+     "Alcohol and Drug Assessment.",
+     "Alcohol and Drug Evaluation Uniform Report.",
+     "Patient has a history of previous unsuccessful attempts of recovery.",
+     "Patient has a history of previous unsuccessful substance abuse treatment.",
+     "Patient continues driving while intoxicated."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown23"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to develop and apply a recovery and relapse prevention plan.",
+     "Patient is to recognize the connection between social surroundings and alcohol/drug use.",
+     "Patient is to understand that recovery is a lifelong process and a support group is crucial as a means to sustain sobriety.",
+     "Patient is to recognize the high risk of relapse and to develop relapse prevention skills.",
+     "Patient is to develop coping skills to apply when experiencing high-risk situations and cravings.",
+     "Patient is to understand the importance of recognizing triggers to avoid relapse.",
+     "Patient is to develop skills to cope with daily stressors.",
+     "Patient is to accept responsibility for choices and recovery behaviors.",
+     "Patient is to reduce the risk for relapse and to maintain a program of recovery.",
+     "Patient is to resolve interpersonal conflicts and learn healthy communication skills."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown24"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient is to complete a recovery and relapse prevention plan to address areas that contribute to relapse and future sobriety.",
+     "Patient is to explain the benefits of committing to a recovery and relapse prevention plan.",
+     "Patient is to explain how a recovery plan can help to prevent relapse and future sobriety.",
+     "Patient is to explain the connection between social surroundings and alcohol and drug use.",
+     "Patient is to describe at least three specific situations that led to alcohol and drug use.",
+     "Patient is to explain why past events of being arrested for driving while intoxicated.",
+     "Patient is to verbalize the reasons for previous unsuccessful substance abuse treatment.",
+     "Patient is to verbalize the reasons for previous unsuccessful attempts to recover.",
+     "Patient is to identify at least three personal triggers and ways to manage them.",
+     "Patient is to identify strategies to prevent consuming alcohol or legal drugs to the point of intoxication.",
+     "Patient is to identify strategies to prevent driving while intoxicated.",
+     "Patient is to identify strategies to prevent alcohol or legal drug abuse.",
+     "Patient is to verbalize how to cope with social surroundings to avoid alcohol/drug use.",
+     "Patient is to list at least three relapse prevention skills.",
+     "Patient is to identify how romantic/euphoric associations lead to alcohol/drug use.",
+     "Patient is to identify how romantic/euphoric associations precipitate craving and urges to drink/use.",
+     "Patient is to complete a relapse prevention plan to address areas that contribute to relapse and future sobriety.",
+     "Patient is to identify reasons for relapsing.",
+     "Patient is to identify situations and conditions that precipitate craving and urges to drink/use.",
+     "Patient is to verbalize how to recognize and interrupt cravings for alcohol/drug use.",
+     "Patient is to identify strategies to prevent relapse.",
+     "Patient is to explain the specific situations surrounding relapse.",
+     "Patient is to verbalize reasons for not continuing to attend a support group long enough to maintain abstinence.",
+     "Patient is to list five ways a higher power can assist in recovery from alcohol/drug abuse."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown25.0.0",
+     "Dropdown25.0.1",
+     "Dropdown25.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will share in group sessions a recovery and relapse prevention plan.",
+     "Patient will share in group sessions a plan to avoid driving while intoxicated.",
+     "Patient will share in group sessions a plan to avoid drinking or using legal drugs to the point of intoxication.",
+     "Patient will discuss with the primary counselor a plan to avoid drinking or using legal drugs to the point of intoxication.",
+     "Patient will explain in group sessions how blaming situations and others lead to alcohol/drug abuse.",
+     "Patient will explain in group sessions plans to deal with social surroundings to stop alcohol/drug abuse.",
+     "Patient will list and explain in group sessions at least five negative consequences of alcohol/drug abuse.",
+     "Patient will discuss with the primary counselor the warning signs that preceded drinking or using.",
+     "Patient will attend a minimum of one AA/NA group session a week and get a sponsor.",
+     "Patient will share in group sessions the most significant barriers to remaining sober. ",
+     "Patient will complete a list of the benefits of being clean and sober and discuss them in group sessions. ",
+     "Patient will list how the inability to recognize H.A.L.T. could contribute to relapse.",
+     "Patient will explain in group sessions how Patient blames situations, feelings, and people for relapsing.",
+     "Patient will share in group sessions a plan to deal with identified triggers.",
+     "Patient will share experiences of past relapses in group sessions and a prevention plan.",
+     "Patient will present to the primary counselor a trigger inventory and plans to cope with the identified triggers.",
+     "Patient will write a description of the living environment and what sort of impact it may have on recovery.",
+     "Patient will discuss in group sessions a plan to manage personal triggers.",
+     "Patient will share in group sessions why leisure activities are essential to recovery.",
+     "Patient will share in group sessions the things enjoyed (including feelings, people, events, etc.) while drinking or using.",
+     "Patient will keep a daily journal of the times that cravings occur and discuss them in group sessions once a week."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown26.0.0",
+     "Dropdown26.0.1",
+     "Dropdown26.0.2"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "CaseReview": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Continued stay",
+     "Discharge",
+     "Transfer",
+     "As needed"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown4"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown5"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient presents no signs of intoxication or withdrawals at this time."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     " Patient is making progress but has not yet achieved the planned goals. ",
+     "Patient is to continue working at current level of care.",
+     "Patient has achieved the Treatment Plan goals. ",
+     "Patient is recommended to attend a continuing care program."
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown12.0",
+     "Dropdown12.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "10 %",
+     "20 %",
+     "30 %",
+     "40 %",
+     "50 % ",
+     "60 %",
+     "70 %",
+     "80 %",
+     "90 %",
+     "100 %"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown9.0.0",
+     "Dropdown9.0.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Diagnosis.0.0.0.0",
+     "Diagnosis.0.0.0.1",
+     "Diagnosis.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown10.0.0.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient reported no medical conditions or complications at this time.",
+     "Patient listed the medical consequences that result from drinking/using to cope with medical problems. ",
+     "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+     "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+     "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+     "Patient explained the connection between using alcohol/drugs and medical complications.",
+     "Patient described reasons for wanting abstinence other than health reasons.",
+     "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+     "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+     "Patient described how the medical problems relate to substance abuse."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown6.0.0.0",
+     "Dropdown6.0.0.1",
+     "Dropdown6.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient described drinking/using patterns and negative consequences in life.",
+     "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+     "Patient verbalized commitment to follow treatment recommendations.",
+     "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+     "Patient communicated in group sessions the need for help to stop drinking/using.",
+     "Patient verbalized commitment to use alcohol socially and responsibly.",
+     "Patient described what a social and responsible drinker means.",
+     "Patient explained what it takes to be a responsible drinker.",
+     "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+     "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+     "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+     "Patient described shame and guilt and explained how these contribute to separation from others.",
+     "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+     "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+     "Patient identified the presence of symptoms of emotional complications.",
+     "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+     "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+     "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown8.0.0",
+     "Dropdown8.0.1",
+     "Dropdown8.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient listed at least five negative consequences as a direct result of drinking/using.",
+     "Patient identified drinking/using patterns and resulting problems.",
+     "Patient verbalized responsibility for substance abuse and past actions.",
+     "Patient explained personal acceptance of chemical dependency.",
+     "Patient verbalized the need for ongoing substance abuse treatment.",
+     "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+     "Patient identified negative feelings related to addictive behavior. ",
+     "Patient verbalized commitment to follow all treatment recommendations.",
+     "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+     "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+     "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+     "Patient described the potential benefits resulting from maintaining abstinence.",
+     "Patient listed five instances in the past in which behavior under the influence created problems.",
+     "Patient presented a written recovery plan.",
+     "Patient explained how to follow treatment recommendations.",
+     "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+     "Patient verbalized to commit to following all treatment recommendations daily."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown1.0.0.0",
+     "Dropdown1.0.0.1",
+     "Dropdown1.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient explained how social environment relates to alcohol/drug abuse.",
+     "Patient stated how culture and traditions influence substance use.",
+     "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+     "Patient identified at least three personal triggers and ways to manage them. ",
+     "Patient described the emotional and physical release process in the group.",
+     "Patient listed at least three relapse prevention skills.",
+     "Patient discussed in the group a relapse prevention plan.",
+     "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+     "Patient identified how romantic/euphoric associations lead to drink/use.",
+     "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+     "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+     "Patient identified reasons for relapsing.",
+     "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+     "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+     "Patient identified strategies to prevent future relapse.",
+     "Patient explained the specific situations surrounding relapse.",
+     "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+     "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+     "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+     "Patient verbalized the principles of a 12-Step program.",
+     "Patient explained the principles of recovery and the skills required to maintain sobriety."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown2.0.0",
+     "Dropdown2.0.1",
+     "Dropdown2.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient wrote a leisure activity plan.",
+     "Patient wrote a productive free time usage plan.",
+     "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+     "Patient described what a social support system means. ",
+     "Patient defined at least three social support systems to build.",
+     "Patient discussed in the group a recovery plan, including productive leisure activities.",
+     "Patient described a plan that addresses a sober support system and living situation.",
+     "Patient identified three social support systems (friends, family members, etc.) to build.",
+     "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+     "Patient described the changes needed to avoid alcohol/drug use."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown7.0.0.0",
+     "Dropdown7.0.0.1",
+     "Dropdown7.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Recovery Residence - RR Recovery Residence",
+     "Level 1- Outpatient Services",
+     "Level 1- Outpatient Services / 1.0- Long-Term Remission Monitoring",
+     "Level 1- Outpatient Services / 1.5- Outpatient Therapy",
+     "Level 1- Outpatient Services / 1.7- Medically Managed Outpatient",
+     "Level 2- IOP/HIOP",
+     "Level 2- IOP/HIOP / Level 2.1- Intensive Outpatient (IOP)",
+     "Level 2- IOP/HIOP / Level 2.5- High-Intensive Outpatient (HIOP)",
+     "Level 2- IOP/HIOP / Level 2.7- Medically Managed Intensive Outpatient",
+     "Level 3- Residential",
+     "Level 3- Residential / 3.1- Clinically Managed Low-Intensity Residential",
+     "Level 3- Residential / 3.5- Clinically Managed High-Intensity Residential",
+     "Level 3- Residential / 3.7- Medically Managed Residential",
+     "Level 4-Inpatient",
+     "Level 4-Inpatient / 4-Medically Managed Inpatient"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown11.1"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "ActivityNotes12": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "am",
+     "pm"
+    ],
+    "fields_count": 16,
+    "example_fields": [
+     "Dropdown4.0.1.0",
+     "Dropdown4.0.1.1",
+     "Dropdown4.0.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Client is a single, Caucasian, employed male. ",
+     "Client is a single, Caucasian, unemployed male.",
+     "Client is a married, Caucasian, employed male.",
+     "Client is a single, Caucasian, employed female. ",
+     "Client is a single, Caucasian, unemployed female.",
+     "Client is a single, Hispanic, employed male.",
+     "Client is a single, Hispanic, unemployed male.",
+     "Client is a single, Hispanic, employed female.",
+     "Client is a single, Hispanic, unemployed female.",
+     "Client is a single, African American, employed male.",
+     "Client is a single, African American, employed female.",
+     "Client is a single, African American, unemployed male.",
+     "Client is a single, African American, unemployed female."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "0.5",
+     "1.0",
+     "1.5",
+     "2.0",
+     "2.5",
+     "3.0",
+     "4.0",
+     "5.0",
+     "6.0",
+     "7.0",
+     "8.0",
+     "9.0",
+     "10.0",
+     "11.0",
+     "12.0"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "a.1.0",
+     "a.1.1",
+     "a.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "Dropdown10.0",
+     "Dropdown10.1.0.0",
+     "Dropdown10.1.0.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "D: Patient exhibited appropriate behavior throughout the session.",
+     "D: Patient reported increased anxiety and difficulty sleeping over the past week.",
+     "D: Patient described overwhelming stress related to work and a recent breakup.",
+     "D: Patient exhibited signs of moderate anxiety, and trouble concentrating.",
+     "D: Patient was anxious and subdued during the session. ",
+     "D: Patient was able to maintain eye contact and engage in the therapeutic process.",
+     "D: Patient was punctual and appeared well-dressed and groomed.",
+     "D:  Patient reported feeling overwhelmed and is struggling to keep up assignments.",
+     "D:  Patient discussed stress management tactics during overwhelming moments",
+     "D: Patient appeared less interested in personal appearance than usual. ",
+     "D: Patient reported cravings for \"a few drinks\" and guilty for jeopardizing sobriety. ",
+     "D: Patient explained a list of healthful activities, such as engaging in arty hobbies.",
+     "D: Patient appeared lethargic and slightly disheveled. ",
+     "D: Patient\u2019s hair was not brushed, and clothes were wrinkled. ",
+     "D: Patient reported symptoms of depression but denied suicidal intent or plan. ",
+     "D: Patient reported feeling a lot of financial and work stress. ",
+     "D: Patient reported having trouble with a romantic relationship. ",
+     "D: Patient appeared a bit agitated. ",
+     "D: Patient was fidgeting and bouncing leg. ",
+     "D: Patient reported difficulty sleeping and inability to turn off the worries.",
+     "D:  Patient did not complete the thought record homework given in the last session.",
+     "D: Patient reported experiencing sadness, hopelessness, and insomnia.",
+     "D: Patient reported the loss of a significant other and has symptoms of depression.",
+     "D: Patient reported being unsure of continuing to live \"like this.\"",
+     "D: Patient reported following through with prescribed medications and feeling better.",
+     "D: Patient reported doing and feeling generally content and optimistic. ",
+     "D: Patient explained how energized was about maintaining abstience.",
+     "D: Patient arrived on time for the session.",
+     "D: Patient was late for the session.",
+     "D: Patient appeared well-groomed and less lethargic, yet unfocused.",
+     "D: Patient noted that sleep has improved since the last session.",
+     ": Patient did not report nor show any signs of being at risk for self-harm.",
+     "D: Patient discussed antidepressants, which the patient was open to considering.",
+     "D: Patient was interested in the topic. ",
+     "D: Patient described drinking/using history and asked questions about the topic.",
+     "D: Patient was able to identify with the topic.",
+     "D: Patient shared how alcohol abuse has been part of family life.",
+     "D: Patient was interested in the group session. ",
+     "D: Patient shared experiences with alcohol/drugs and consequences in life.",
+     "D: Patient was interested in the group session and identified with the topic.",
+     "D: Patient was active in the session and described personal triggers.",
+     "D: Patient identifies how romantic associations precipitate craving.",
+     "D: Patient discussed a prevention plan to avoid alcohol-related problems.",
+     "D: Patient explained the connection between alcohol/drug use and problems in life.",
+     "D: Patient described drinking/using patterns and the implications of the abuse. ",
+     "D: Patient described the seriousness of alcohol/drug abuse.",
+     "D: Patient identified the negative consequences of abusive drinking/using."
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "Dropdown6.0.0",
+     "Dropdown6.0.1",
+     "Dropdown6.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "A: Patient seems to be more confident and less defensive. ",
+     "A: Patient seems to have difficulty focusing during session and appeared distracted.",
+     "A: Patient appears committed toward treatment objectives.",
+     "A: Patient appears motivated to address substance abuse issues.",
+     "A: Patient appears to be making progress toward program objectives.",
+     "A: Patient seems to have learned coping skills to deal with identified triggers.",
+     "A: Patient seems to lack of skills to manage cravings and intense emotions.",
+     "A: Patient appears less resistant to feedback.",
+     "A: Patient seems worried about the risks of attempting to change.",
+     "A: Patient seems to be under stress and appears more guarded.",
+     " A: Patient does not seem engaged in treatment and appears to be in denial.",
+     "A: Patient seems to be open to confronting wrong beliefs about substance use.",
+     "A: Patient appeared engaged in treatment during individual and group sessions.",
+     "A: Patient seems more involved in group session than before.",
+     "A: Patient appeared unmotivated and not progressing toward treatment goals.",
+     "A: Patient seems less involved in group session than before.",
+     "A: Patient seems reserved and less proactive than in the last session.",
+     "A: Patient\u2019s symptoms of anxiety/depression appear to have improved.",
+     "A: Patient appears to have difficulty developing ideas for an action plan.",
+     "A: Patient appears emotionally and behaviorally stable.",
+     "A: No apparent psychosocial stressors noted at this time.",
+     "A: Patient seems to be gaining understanding of implications of substance abuse.",
+     "A: Patient appears to recognize a high risk of relapse situations.",
+     "A: Patient seems to be focused on treatment goals.",
+     "A: Patient appears to be able to maintain planned abstinence from alcohol/drugs.",
+     "A: Patient seems to be able to identify the reason for past relapses.",
+     "A: Patient seems to be able to identify strategies to prevent alcohol/drug problems.",
+     "A: Patient seems to understand the negative consequences in alcohol/drug abuse.",
+     "A: Patient appears to have learned skills to drink socially and responsibly.",
+     "A: I have the impression that Patient is committed to changing behavior.",
+     "A: Patient appears to be committed to following treatment recommendations.",
+     "A: Patient appears to take responsibility for past actions.",
+     "A: Patient seems to have learned how to use healthier ways to relieve stress."
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "Dropdown9.0.0",
+     "Dropdown9.0.1",
+     "Dropdown9.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "P: To introduce and practice coping strategies.",
+     "P: To continue exploring and identify specific triggers.",
+     "P: To continue weekly sessions on cognitive-behavioral therapy (CBT) techniques",
+     "P: To continue to work and move forward to the next objective when appropriate.",
+     "P: To complete a list of coping skills and changes in social surroundings.",
+     "P: To continue participation in group sessions as planned.",
+     "P: To continue working toward Treatment Plan objectives.",
+     "P: To discuss in group relapse prevention skills to develop.",
+     "P: To continue working toward treatment goals/objectives.",
+     "P: No significant changes to the overall treatment plan.",
+     "P: To schedule a follow-up session to discuss potential triggers.",
+     "P: To transfer Patient next level of intervention. ",
+     "P: To transfer Patient to Continuing Care.",
+     "P: To encourage continued attendance and explore relapse prevention strategies.",
+     "P: To practice stress management techniques as needed.",
+     "P: To prepare a list of strategies to improve self-esteem.",
+     "P: To prepare a plan to avoid future alcohol-related problems.",
+     "P: To learn about the effects of abusing substance on individuals and families.",
+     "P: To learn about personal triggers and coping with identified stressors.",
+     "P: To continue the current level of intervention."
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "Dropdown3.0.0",
+     "Dropdown3.0.1",
+     "Dropdown3.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Substance abuse prevention plan: Strategies to prevent substance abuse.",
+     "DUI prevention plan: Safety message for impaired driving.",
+     "DUI laws: Statutory Suspension/Revocation. BAC levels. Legal implications.",
+     "Alcohol and drug abuse: Harmful or hazardous use of psychoactive substances.",
+     "Substance Use Patterns: Experimentation, regular/risky use, dependence/addiction.",
+     "Cycle of addiction: Binge/intoxication/withdrawal/effects/preoccupation/anticipation.",
+     "Physiological Effects Drugs: Hyperactivity and attention/learning/memory deficits.",
+     "Coping with stress: thoughts/behaviors recommended for managing stress.",
+     "Differences between substance use, abuse, and dependence.",
+     "Addiction causes and effects: Physical, psychological, and social factors.",
+     "Family Systems: Insight into the family dynamic to promote overall health.",
+     "Clinical disorders: risk factors for developing a substance use disorder.",
+     "Chemical dependency: Disease concept, altered brain structure and function. ",
+     "Codependency/dysfunctional roles in families: Substance use/impact on families."
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "Dropdown5.0.0",
+     "Dropdown5.0.1",
+     "Dropdown5.0.2"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "ActivityNotes20": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "am",
+     "pm"
+    ],
+    "fields_count": 28,
+    "example_fields": [
+     "Dropdown4.0.0",
+     "Dropdown4.0.1.3.0.1.1.0",
+     "Dropdown4.0.1.3.0.1.1.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "0.5",
+     "1.0",
+     "1.5",
+     "2.0",
+     "2.5",
+     "3.0",
+     "4.0",
+     "5.0",
+     "6.0",
+     "7.0",
+     "8.0",
+     "9.0",
+     "10.0",
+     "11.0",
+     "12.0"
+    ],
+    "fields_count": 14,
+    "example_fields": [
+     "a.0",
+     "a.1.3.0.1.1.0",
+     "a.1.3.0.1.1.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 13,
+    "example_fields": [
+     "Dropdown10.1.3.1.1.1.1.0",
+     "Dropdown10.1.3.1.1.1.0",
+     "Dropdown10.1.0.3.0.1.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Dimension # 2",
+     "Patient explained the powerlessness of drinking/using to cope with medical problems.",
+     "Patient made a list of the negative consequences of drinking/using on medical conditions.",
+     "Patient verbalized personal commitment to remain abstinent to fellow members.",
+     "Patient explained the connection between alcohol and drug use and medical complications.",
+     "Patient described the reason for wanting abstinence other than health reasons.",
+     "Patient wrote a committed plan for managing medical conditions and using health services.",
+     "Patient verbalized the need to maintain abstinence from alcohol and drugs.",
+     "  ",
+     "Dimension # 3",
+     "Patient described alcohol and drug use patterns and negative consequences in life.",
+     "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+     "Patient verbalized commitment to follow treatment recommendations.",
+     "Patient explained how severe alcohol and drug use has been in terms of life problems created.",
+     "Patient verbalized commitment to use alcohol socially and responsibly.",
+     "Patient described what a social and responsible drinker means.",
+     "Patient explained what it takes to be a social and responsible drinker.",
+     "   ",
+     "Dimension # 4",
+     "Patient listed at least five negative consequences as a direct result of drinking/using. ",
+     "Patient identified and described drinking/using patterns and resulting problems.",
+     "Patient explained the personal acceptance of chemical dependency.",
+     "Patient verbalized the need for ongoing substance abuse treatment.",
+     "Patient verbalized that attempts to control drinking/using were futile and unattainable. ",
+     "Patient identified negative feelings related to addictive behavior.",
+     "Patient described shame and guilt and explain how these contribute to separation from others.",
+     "Patient verbalized commitment to follow all treatment recommendations.",
+     "Patient described the seriousness of alcohol/drug consumption and resulting problems.",
+     "Patient explained why dependency is a disease and how to follow treatment recommendations.",
+     "Patient listed at least five specific aspects of life committed to change during treatment. ",
+     "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+     "Patient described the potential benefits from remaining sober.",
+     "Patient listed five instances in the past in which alcohol/drug use created difficulties in life.",
+     "Patient completed a written recovery plan. ",
+     "Patient explained how to follow treatment recommendations.",
+     "Patient listed at least five specific aspects of life committed to change during treatment.",
+     "Patient listed five ways a higher power can assist in recovery from alcohol/drug abuse.",
+     "    ",
+     "Dimension # 5",
+     "Patient completed and presented a recovery and relapse prevention plan.",
+     "Patient explained the benefits of committing to a recovery and relapse prevention plan.",
+     "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+     "Patient explained the connection between social surroundings and alcohol and drug use.",
+     "Patient described at least three specific situations that led to alcohol and drug use.",
+     "Patient explained why past events of being arrested for driving while intoxicated.",
+     "Patient verbalized the reasons for previous unsuccessful substance abuse treatment.",
+     "Patient verbalized the reasons for previous unsuccessful attempts to recover.",
+     "Patient identified at least three personal triggers and ways to manage them.",
+     "Patient identified strategies to avoid alcohol or legal drugs to the point of intoxication.",
+     "Patient identified strategies to prevent driving while intoxicated.",
+     "Patient identified strategies to prevent alcohol or legal drug abuse.",
+     "Patient verbalized how to cope with social surroundings to avoid alcohol/drug use.",
+     "Patient listed at least three relapse prevention skills.",
+     "Patient identified how romantic/euphoric associations lead to alcohol/drug use.",
+     "Patient identified how romantic/euphoric associations precipitate craving.",
+     "Patient completed a relapse prevention plan to contribute to future sobriety.",
+     "Patient identified reasons for relapsing.",
+     "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+     "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+     "Patient identified strategies to prevent relapse.",
+     "Patient explained the specific situations surrounding relapse.",
+     "Patient verbalized reasons for not continuing to attend a support group long enough.",
+     "     ",
+     "Dimension # 6",
+     "Patient wrote and explained and explained a leisure activity plan.",
+     "Patient wrote and explained a productive free time usage plan.",
+     "Patient identified changes needed in social surroundings to avoid substance-related problems.",
+     "Patient described what a social support system means. ",
+     "Patient identified the relationship between social environment and drinking/using patterns. ",
+     "Patient defined at least three social support systems to build.",
+     "Patient developed and explained a recovery plan, including productive leisure activities.",
+     "Patient defined a plan that addresses a sober support system and living situation.",
+     "Patient identified three support systems (which include friends and family members) to build.",
+     "Patient described the changes needed to prevent alcohol/drug abuse."
+    ],
+    "fields_count": 4,
+    "example_fields": [
+     "Dropdown11.0.0.1.0.0.0.0.0",
+     "Dropdown11.0.0.1.0.0.0.0.1",
+     "Dropdown11.0.0.1.0.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "D: Patient exhibited appropriate behavior throughout the session.",
+     "D: Patient reported increased anxiety and difficulty sleeping over the past week.",
+     "D: Patient described overwhelming stress related to work and a recent breakup.",
+     "D: Patient exhibited signs of moderate anxiety, and trouble concentrating.",
+     "D: Patient was anxious and subdued during the session. ",
+     "D: Patient was able to maintain eye contact and engage in the therapeutic process.",
+     "D: Patient was punctual and appeared well-dressed and groomed.",
+     "D:  Patient reported feeling overwhelmed and is struggling to keep up assignments.",
+     "D:  Patient discussed stress management tactics during overwhelming moments",
+     "D: Patient appeared less interested in personal appearance than usual. ",
+     "D: Patient reported cravings for \"a few drinks\" and guilty for jeopardizing sobriety. ",
+     "D: Patient explained a list of healthful activities, such as engaging in arty hobbies.",
+     "D: Patient appeared lethargic and slightly disheveled. ",
+     "D: Patient\u2019s hair was not brushed, and clothes were wrinkled. ",
+     "D: Patient reported symptoms of depression but denied suicidal intent or plan. ",
+     "D: Patient reported feeling a lot of financial and work stress. ",
+     "D: Patient reported having trouble with a romantic relationship. ",
+     "D: Patient appeared a bit agitated. ",
+     "D: Patient was fidgeting and bouncing leg. ",
+     "D: Patient reported difficulty sleeping and inability to turn off the worries.",
+     "D:  Patient did not complete the thought record homework given in the last session.",
+     "D: Patient reported experiencing sadness, hopelessness, and insomnia.",
+     "D: Patient reported the loss of a significant other and has symptoms of depression.",
+     "D: Patient reported being unsure of continuing to live \"like this.\"",
+     "D: Patient reported following through with prescribed medications and feeling better.",
+     "D: Patient reported doing and feeling generally content and optimistic. ",
+     "D: Patient explained how energized was about maintaining abstience.",
+     "D: Patient arrived on time for the session.",
+     "D: Patient was late for the session.",
+     "D: Patient appeared well-groomed and less lethargic, yet unfocused.",
+     "D: Patient noted that sleep has improved since the last session.",
+     ": Patient did not report nor show any signs of being at risk for self-harm.",
+     "D: Patient discussed antidepressants, which the patient was open to considering.",
+     "D: Patient was interested in the topic. ",
+     "D: Patient described drinking/using history and asked questions about the topic.",
+     "D: Patient was able to identify with the topic.",
+     "D: Patient shared how alcohol abuse has been part of family life.",
+     "D: Patient was interested in the group session. ",
+     "D: Patient shared experiences with alcohol/drugs and consequences in life.",
+     "D: Patient was interested in the group session and identified with the topic.",
+     "D: Patient was active in the session and described personal triggers.",
+     "D: Patient identifies how romantic associations precipitate craving.",
+     "D: Patient discussed a prevention plan to avoid alcohol-related problems.",
+     "D: Patient explained the connection between alcohol/drug use and problems in life.",
+     "D: Patient described drinking/using patterns and the implications of the abuse. ",
+     "D: Patient described the seriousness of alcohol/drug abuse.",
+     "D: Patient identified the negative consequences of abusive drinking/using."
+    ],
+    "fields_count": 10,
+    "example_fields": [
+     "Dropdown6.0.3.1.1",
+     "Dropdown6.0.3.1.2",
+     "Dropdown6.0.3.1.3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "A: Patient seems to be more confident and less defensive. ",
+     "A: Patient seems to have difficulty focusing during session and appeared distracted.",
+     "A: Patient appears committed toward treatment objectives.",
+     "A: Patient appears motivated to address substance abuse issues.",
+     "A: Patient appears to be making progress toward program objectives.",
+     "A: Patient seems to have learned coping skills to deal with identified triggers.",
+     "A: Patient seems to lack of skills to manage cravings and intense emotions.",
+     "A: Patient appears less resistant to feedback.",
+     "A: Patient seems worried about the risks of attempting to change.",
+     "A: Patient seems to be under stress and appears more guarded.",
+     " A: Patient does not seem engaged in treatment and appears to be in denial.",
+     "A: Patient seems to be open to confronting wrong beliefs about substance use.",
+     "A: Patient appeared engaged in treatment during individual and group sessions.",
+     "A: Patient seems more involved in group session than before.",
+     "A: Patient appeared unmotivated and not progressing toward treatment goals.",
+     "A: Patient seems less involved in group session than before.",
+     "A: Patient seems reserved and less proactive than in the last session.",
+     "A: Patient\u2019s symptoms of anxiety/depression appear to have improved.",
+     "A: Patient appears to have difficulty developing ideas for an action plan.",
+     "A: Patient appears emotionally and behaviorally stable.",
+     "A: No apparent psychosocial stressors noted at this time.",
+     "A: Patient seems to be gaining understanding of implications of substance abuse.",
+     "A: Patient appears to recognize a high risk of relapse situations.",
+     "A: Patient seems to be focused on treatment goals.",
+     "A: Patient appears to be able to maintain planned abstinence from alcohol/drugs.",
+     "A: Patient seems to be able to identify the reason for past relapses.",
+     "A: Patient seems to be able to identify strategies to prevent alcohol/drug problems.",
+     "A: Patient seems to understand the negative consequences in alcohol/drug abuse.",
+     "A: Patient appears to have learned skills to drink socially and responsibly.",
+     "A: I have the impression that Patient is committed to changing behavior.",
+     "A: Patient appears to be committed to following treatment recommendations.",
+     "A: Patient appears to take responsibility for past actions.",
+     "A: Patient seems to have learned how to use healthier ways to relieve stress."
+    ],
+    "fields_count": 10,
+    "example_fields": [
+     "Dropdown9.0.3.1.1",
+     "Dropdown9.0.3.1.2",
+     "Dropdown9.0.3.1.3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "P: To introduce and practice coping strategies.",
+     "P: To continue exploring and identify specific triggers.",
+     "P: To continue weekly sessions on cognitive-behavioral therapy (CBT) techniques",
+     "P: To continue to work and move forward to the next objective when appropriate.",
+     "P: To complete a list of coping skills and changes in social surroundings.",
+     "P: To continue participation in group sessions as planned.",
+     "P: To continue working toward Treatment Plan objectives.",
+     "P: To discuss in group relapse prevention skills to develop.",
+     "P: To continue working toward treatment goals/objectives.",
+     "P: No significant changes to the overall treatment plan.",
+     "P: To schedule a follow-up session to discuss potential triggers.",
+     "P: To transfer Patient next level of intervention. ",
+     "P: To transfer Patient to Continuing Care.",
+     "P: To encourage continued attendance and explore relapse prevention strategies.",
+     "P: To practice stress management techniques as needed.",
+     "P: To prepare a list of strategies to improve self-esteem.",
+     "P: To prepare a plan to avoid future alcohol-related problems.",
+     "P: To learn about the effects of abusing substance on individuals and families.",
+     "P: To learn about personal triggers and coping with identified stressors.",
+     "P: To continue the current level of intervention."
+    ],
+    "fields_count": 10,
+    "example_fields": [
+     "Dropdown3.0.3.1.1",
+     "Dropdown3.0.3.1.2",
+     "Dropdown3.0.3.1.3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Substance abuse prevention plan: Strategies to prevent substance abuse.",
+     "DUI prevention plan: Safety message for impaired driving.",
+     "DUI laws: Statutory Suspension/Revocation. BAC levels. Legal implications.",
+     "Alcohol and drug abuse: Harmful or hazardous use of psychoactive substances.",
+     "Substance Use Patterns: Experimentation, regular/risky use, dependence/addiction.",
+     "Cycle of addiction: Binge/intoxication/withdrawal/effects/preoccupation/anticipation.",
+     "Physiological Effects Drugs: Hyperactivity and attention/learning/memory deficits.",
+     "Coping with stress: thoughts/behaviors recommended for managing stress.",
+     "Differences between substance use, abuse, and dependence.",
+     "Addiction causes and effects: Physical, psychological, and social factors.",
+     "Family Systems: Insight into the family dynamic to promote overall health.",
+     "Clinical disorders: risk factors for developing a substance use disorder.",
+     "Chemical dependency: Disease concept, altered brain structure and function. ",
+     "Codependency/dysfunctional roles in families: Substance use/impact on families."
+    ],
+    "fields_count": 10,
+    "example_fields": [
+     "Dropdown5.0.3.1.1",
+     "Dropdown5.0.3.1.2",
+     "Dropdown5.0.3.1.3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Client is a single, Caucasian, employed male. ",
+     "Client is a single, Caucasian, unemployed male.",
+     "Client is a married, Caucasian, employed male.",
+     "Client is a single, Caucasian, employed female. ",
+     "Client is a single, Caucasian, unemployed female.",
+     "Client is a single, Hispanic, employed male.",
+     "Client is a single, Hispanic, unemployed male.",
+     "Client is a single, Hispanic, employed female.",
+     "Client is a single, Hispanic, unemployed female.",
+     "Client is a single, African American, employed male.",
+     "Client is a single, African American, employed female.",
+     "Client is a single, African American, unemployed male.",
+     "Client is a single, African American, unemployed female."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "ActivityNotes75": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "am",
+     "pm"
+    ],
+    "fields_count": 58,
+    "example_fields": [
+     "Dropdown4.0.0",
+     "Dropdown4.0.1.0.0.0",
+     "Dropdown4.0.1.0.0.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "0.5",
+     "1.0",
+     "1.5",
+     "2.0",
+     "2.5",
+     "3.0",
+     "4.0",
+     "5.0",
+     "6.0",
+     "7.0",
+     "8.0",
+     "9.0",
+     "10.0",
+     "11.0",
+     "12.0"
+    ],
+    "fields_count": 29,
+    "example_fields": [
+     "a.0",
+     "a.1.0.0.0",
+     "a.1.0.0.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 30,
+    "example_fields": [
+     "Dropdown10.1.0.3.0.1.1.0",
+     "Dropdown10.1.0.3.0.1.1.1",
+     "Dropdown10.1.0.3.0.1.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "D: Patient exhibited appropriate behavior throughout the session.",
+     "D: Patient reported increased anxiety and difficulty sleeping over the past week.",
+     "D: Patient described overwhelming stress related to work and a recent breakup.",
+     "D: Patient exhibited signs of moderate anxiety, and trouble concentrating.",
+     "D: Patient was anxious and subdued during the session. ",
+     "D: Patient was able to maintain eye contact and engage in the therapeutic process.",
+     "D: Patient was punctual and appeared well-dressed and groomed.",
+     "D:  Patient reported feeling overwhelmed and is struggling to keep up assignments.",
+     "D:  Patient discussed stress management tactics during overwhelming moments",
+     "D: Patient appeared less interested in personal appearance than usual. ",
+     "D: Patient reported cravings for \"a few drinks\" and guilty for jeopardizing sobriety. ",
+     "D: Patient explained a list of healthful activities, such as engaging in arty hobbies.",
+     "D: Patient appeared lethargic and slightly disheveled. ",
+     "D: Patient\u2019s hair was not brushed, and clothes were wrinkled. ",
+     "D: Patient reported symptoms of depression but denied suicidal intent or plan. ",
+     "D: Patient reported feeling a lot of financial and work stress. ",
+     "D: Patient reported having trouble with a romantic relationship. ",
+     "D: Patient appeared a bit agitated. ",
+     "D: Patient was fidgeting and bouncing leg. ",
+     "D: Patient reported difficulty sleeping and inability to turn off the worries.",
+     "D:  Patient did not complete the thought record homework given in the last session.",
+     "D: Patient reported experiencing sadness, hopelessness, and insomnia.",
+     "D: Patient reported the loss of a significant other and has symptoms of depression.",
+     "D: Patient reported being unsure of continuing to live \"like this.\"",
+     "D: Patient reported following through with prescribed medications and feeling better.",
+     "D: Patient reported doing and feeling generally content and optimistic. ",
+     "D: Patient explained how energized was about maintaining abstience.",
+     "D: Patient arrived on time for the session.",
+     "D: Patient was late for the session.",
+     "D: Patient appeared well-groomed and less lethargic, yet unfocused.",
+     "D: Patient noted that sleep has improved since the last session.",
+     ": Patient did not report nor show any signs of being at risk for self-harm.",
+     "D: Patient discussed antidepressants, which the patient was open to considering.",
+     "D: Patient was interested in the topic. ",
+     "D: Patient described drinking/using history and asked questions about the topic.",
+     "D: Patient was able to identify with the topic.",
+     "D: Patient shared how alcohol abuse has been part of family life.",
+     "D: Patient was interested in the group session. ",
+     "D: Patient shared experiences with alcohol/drugs and consequences in life.",
+     "D: Patient was interested in the group session and identified with the topic.",
+     "D: Patient was active in the session and described personal triggers.",
+     "D: Patient identifies how romantic associations precipitate craving.",
+     "D: Patient discussed a prevention plan to avoid alcohol-related problems.",
+     "D: Patient explained the connection between alcohol/drug use and problems in life.",
+     "D: Patient described drinking/using patterns and the implications of the abuse. ",
+     "D: Patient described the seriousness of alcohol/drug abuse.",
+     "D: Patient identified the negative consequences of abusive drinking/using."
+    ],
+    "fields_count": 25,
+    "example_fields": [
+     "Dropdown6.0.3.1.1.0",
+     "Dropdown6.0.3.1.1.1",
+     "Dropdown6.0.3.1.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "A: Patient seems to be more confident and less defensive. ",
+     "A: Patient seems to have difficulty focusing during session and appeared distracted.",
+     "A: Patient appears committed toward treatment objectives.",
+     "A: Patient appears motivated to address substance abuse issues.",
+     "A: Patient appears to be making progress toward program objectives.",
+     "A: Patient seems to have learned coping skills to deal with identified triggers.",
+     "A: Patient seems to lack of skills to manage cravings and intense emotions.",
+     "A: Patient appears less resistant to feedback.",
+     "A: Patient seems worried about the risks of attempting to change.",
+     "A: Patient seems to be under stress and appears more guarded.",
+     " A: Patient does not seem engaged in treatment and appears to be in denial.",
+     "A: Patient seems to be open to confronting wrong beliefs about substance use.",
+     "A: Patient appeared engaged in treatment during individual and group sessions.",
+     "A: Patient seems more involved in group session than before.",
+     "A: Patient appeared unmotivated and not progressing toward treatment goals.",
+     "A: Patient seems less involved in group session than before.",
+     "A: Patient seems reserved and less proactive than in the last session.",
+     "A: Patient\u2019s symptoms of anxiety/depression appear to have improved.",
+     "A: Patient appears to have difficulty developing ideas for an action plan.",
+     "A: Patient appears emotionally and behaviorally stable.",
+     "A: No apparent psychosocial stressors noted at this time.",
+     "A: Patient seems to be gaining understanding of implications of substance abuse.",
+     "A: Patient appears to recognize a high risk of relapse situations.",
+     "A: Patient seems to be focused on treatment goals.",
+     "A: Patient appears to be able to maintain planned abstinence from alcohol/drugs.",
+     "A: Patient seems to be able to identify the reason for past relapses.",
+     "A: Patient seems to be able to identify strategies to prevent alcohol/drug problems.",
+     "A: Patient seems to understand the negative consequences in alcohol/drug abuse.",
+     "A: Patient appears to have learned skills to drink socially and responsibly.",
+     "A: I have the impression that Patient is committed to changing behavior.",
+     "A: Patient appears to be committed to following treatment recommendations.",
+     "A: Patient appears to take responsibility for past actions.",
+     "A: Patient seems to have learned how to use healthier ways to relieve stress."
+    ],
+    "fields_count": 25,
+    "example_fields": [
+     "Dropdown9.0.3.1.1.0",
+     "Dropdown9.0.3.1.1.1",
+     "Dropdown9.0.3.1.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "P: To introduce and practice coping strategies.",
+     "P: To continue exploring and identify specific triggers.",
+     "P: To continue weekly sessions on cognitive-behavioral therapy (CBT) techniques",
+     "P: To continue to work and move forward to the next objective when appropriate.",
+     "P: To complete a list of coping skills and changes in social surroundings.",
+     "P: To continue participation in group sessions as planned.",
+     "P: To continue working toward Treatment Plan objectives.",
+     "P: To discuss in group relapse prevention skills to develop.",
+     "P: To continue working toward treatment goals/objectives.",
+     "P: No significant changes to the overall treatment plan.",
+     "P: To schedule a follow-up session to discuss potential triggers.",
+     "P: To transfer Patient next level of intervention. ",
+     "P: To transfer Patient to Continuing Care.",
+     "P: To encourage continued attendance and explore relapse prevention strategies.",
+     "P: To practice stress management techniques as needed.",
+     "P: To prepare a list of strategies to improve self-esteem.",
+     "P: To prepare a plan to avoid future alcohol-related problems.",
+     "P: To learn about the effects of abusing substance on individuals and families.",
+     "P: To learn about personal triggers and coping with identified stressors.",
+     "P: To continue the current level of intervention."
+    ],
+    "fields_count": 25,
+    "example_fields": [
+     "Dropdown3.0.3.1.1.0",
+     "Dropdown3.0.3.1.1.1",
+     "Dropdown3.0.3.1.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Substance abuse prevention plan: Strategies to prevent substance abuse.",
+     "DUI prevention plan: Safety message for impaired driving.",
+     "DUI laws: Statutory Suspension/Revocation. BAC levels. Legal implications.",
+     "Alcohol and drug abuse: Harmful or hazardous use of psychoactive substances.",
+     "Substance Use Patterns: Experimentation, regular/risky use, dependence/addiction.",
+     "Cycle of addiction: Binge/intoxication/withdrawal/effects/preoccupation/anticipation.",
+     "Physiological Effects Drugs: Hyperactivity and attention/learning/memory deficits.",
+     "Coping with stress: thoughts/behaviors recommended for managing stress.",
+     "Differences between substance use, abuse, and dependence.",
+     "Addiction causes and effects: Physical, psychological, and social factors.",
+     "Family Systems: Insight into the family dynamic to promote overall health.",
+     "Clinical disorders: risk factors for developing a substance use disorder.",
+     "Chemical dependency: Disease concept, altered brain structure and function. ",
+     "Codependency/dysfunctional roles in families: Substance use/impact on families."
+    ],
+    "fields_count": 25,
+    "example_fields": [
+     "Dropdown5.0.3.1.1.0",
+     "Dropdown5.0.3.1.1.1",
+     "Dropdown5.0.3.1.1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Dimension # 2",
+     "Patient explained the powerlessness of drinking/using to cope with medical problems.",
+     "Patient made a list of the negative consequences of drinking/using on medical conditions.",
+     "Patient verbalized personal commitment to remain abstinent to fellow members.",
+     "Patient explained the connection between alcohol and drug use and medical complications.",
+     "Patient described the reason for wanting abstinence other than health reasons.",
+     "Patient wrote a committed plan for managing medical conditions and using health services.",
+     "Patient verbalized the need to maintain abstinence from alcohol and drugs.",
+     "  ",
+     "Dimension # 3",
+     "Patient described alcohol and drug use patterns and negative consequences in life.",
+     "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+     "Patient verbalized commitment to follow treatment recommendations.",
+     "Patient explained how severe alcohol and drug use has been in terms of life problems created.",
+     "Patient verbalized commitment to use alcohol socially and responsibly.",
+     "Patient described what a social and responsible drinker means.",
+     "Patient explained what it takes to be a social and responsible drinker.",
+     "   ",
+     "Dimension # 4",
+     "Patient listed at least five negative consequences as a direct result of drinking/using. ",
+     "Patient identified and described drinking/using patterns and resulting problems.",
+     "Patient explained the personal acceptance of chemical dependency.",
+     "Patient verbalized the need for ongoing substance abuse treatment.",
+     "Patient verbalized that attempts to control drinking/using were futile and unattainable. ",
+     "Patient identified negative feelings related to addictive behavior.",
+     "Patient described shame and guilt and explain how these contribute to separation from others.",
+     "Patient verbalized commitment to follow all treatment recommendations.",
+     "Patient described the seriousness of alcohol/drug consumption and resulting problems.",
+     "Patient explained why dependency is a disease and how to follow treatment recommendations.",
+     "Patient listed at least five specific aspects of life committed to change during treatment. ",
+     "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+     "Patient described the potential benefits from remaining sober.",
+     "Patient listed five instances in the past in which alcohol/drug use created difficulties in life.",
+     "Patient completed a written recovery plan. ",
+     "Patient explained how to follow treatment recommendations.",
+     "Patient listed at least five specific aspects of life committed to change during treatment.",
+     "Patient listed five ways a higher power can assist in recovery from alcohol/drug abuse.",
+     "    ",
+     "Dimension # 5",
+     "Patient completed and presented a recovery and relapse prevention plan.",
+     "Patient explained the benefits of committing to a recovery and relapse prevention plan.",
+     "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+     "Patient explained the connection between social surroundings and alcohol and drug use.",
+     "Patient described at least three specific situations that led to alcohol and drug use.",
+     "Patient explained why past events of being arrested for driving while intoxicated.",
+     "Patient verbalized the reasons for previous unsuccessful substance abuse treatment.",
+     "Patient verbalized the reasons for previous unsuccessful attempts to recover.",
+     "Patient identified at least three personal triggers and ways to manage them.",
+     "Patient identified strategies to avoid alcohol or legal drugs to the point of intoxication.",
+     "Patient identified strategies to prevent driving while intoxicated.",
+     "Patient identified strategies to prevent alcohol or legal drug abuse.",
+     "Patient verbalized how to cope with social surroundings to avoid alcohol/drug use.",
+     "Patient listed at least three relapse prevention skills.",
+     "Patient identified how romantic/euphoric associations lead to alcohol/drug use.",
+     "Patient identified how romantic/euphoric associations precipitate craving.",
+     "Patient completed a relapse prevention plan to contribute to future sobriety.",
+     "Patient identified reasons for relapsing.",
+     "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+     "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+     "Patient identified strategies to prevent relapse.",
+     "Patient explained the specific situations surrounding relapse.",
+     "Patient verbalized reasons for not continuing to attend a support group long enough.",
+     "     ",
+     "Dimension # 6",
+     "Patient wrote and explained and explained a leisure activity plan.",
+     "Patient wrote and explained a productive free time usage plan.",
+     "Patient identified changes needed in social surroundings to avoid substance-related problems.",
+     "Patient described what a social support system means. ",
+     "Patient identified the relationship between social environment and drinking/using patterns. ",
+     "Patient defined at least three social support systems to build.",
+     "Patient developed and explained a recovery plan, including productive leisure activities.",
+     "Patient defined a plan that addresses a sober support system and living situation.",
+     "Patient identified three support systems (which include friends and family members) to build.",
+     "Patient described the changes needed to prevent alcohol/drug abuse."
+    ],
+    "fields_count": 9,
+    "example_fields": [
+     "Dropdown11.0.0.1.0.0.0.0.0",
+     "Dropdown11.0.0.1.0.0.0.0.1",
+     "Dropdown11.0.0.1.0.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Client is a single, Caucasian, employed male. ",
+     "Client is a single, Caucasian, unemployed male.",
+     "Client is a married, Caucasian, employed male.",
+     "Client is a single, Caucasian, employed female. ",
+     "Client is a single, Caucasian, unemployed female.",
+     "Client is a single, Hispanic, employed male.",
+     "Client is a single, Hispanic, unemployed male.",
+     "Client is a single, Hispanic, employed female.",
+     "Client is a single, Hispanic, unemployed female.",
+     "Client is a single, African American, employed male.",
+     "Client is a single, African American, employed female.",
+     "Client is a single, African American, unemployed male.",
+     "Client is a single, African American, unemployed female."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "ContinueCare": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "three months of continuing care.",
+     "six months of continuing care.",
+     "12 months of continuing care."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "To successfully complete the Continuing Care Plan, Patient will attend each session in its entirety."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Not applicable"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown6",
+     "Dropdown8"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Upon completion of a new assessment, a corresponding intervention shall be recommended."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "Will",
+     "McHenry",
+     "Not applicable"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown18"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown19"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown17"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "Diagnosis.0.0.0.1.0.0.0",
+     "Diagnosis.0.0.0.1.0.0.1",
+     "Diagnosis.0.0.0.1.0.1.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will discuss experiences in group sessions and how the treatment supports behavioral changes.",
+     "Patient will share with primarily counselor experiences and emotions that affect recovery.",
+     "Patient will share in group sessions the benefits of abstaining from alcohol and drugs.",
+     "Patient will share with the primary counselor the benefits of maintaining safe limits to alcohol/drug intake.",
+     "Patient will follow up on the recovery plan, keep a monthly journal, and share it with a counselor.",
+     "Patient will follow up on the relapse prevention plan, keep a monthly journal, and share it with a counselor."
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown4.0",
+     "Dropdown4.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will contact this agency to talk or to schedule an appointment with a primary counselor.",
+     "Patient will contact the sponsor, attend a support group meeting, and contact this agency.",
+     "Patient will contact a friend or family member of the non-traditional support group."
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "Dropdown5.0",
+     "Dropdown5.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will review and discuss a prevention plan to avoid drinking/using and driving.",
+     "Patient will share personal experiences with the primary counselor after discharge from treatment.",
+     "Patient will review and discuss the recovery and relapse prevention plan and perception of the recovery process.",
+     "Patient will share in group sessions a monthly journal and perception of the benefits of the new lifestyle.",
+     "Patient will meet with the primary counselor to discuss the recovery process.",
+     "Patient will share thoughts and feelings about participating in a support group with the primary counselor."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown2.0.0",
+     "Dropdown2.0.1",
+     "Dropdown2.0.2"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "Discharge": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Patient presents no signs of intoxication or withdrawals at this time."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient will begin actively participating in all activities specified in the continuing care plan.",
+     "Level 0.5- Early Intervention",
+     "Level 1- Outpatient Services",
+     "Level 2.1- Intensive Outpatient Services",
+     "Level 2.5- Partial Hospitalization Services",
+     "Level 3.3- Clinically Managed Population-Specific High-Intensity Residential Services",
+     "Level 3.5- Clinically Managed High-Intensity Residential Services",
+     "Level 3.7- Clinically Managed High-Intensity Residential Services",
+     "Level 4-Medically Managed Intensive Inpatient Services"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown11"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient is to complete three months of continuing care, attending one session per month minimally.",
+     "Patient is to complete six months of continuing care, attending one session per month minimally.",
+     "Patient is to complete twelve months of continuing care, attending one session per month minimally."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown15"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown17"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "Will",
+     "McHenry",
+     "Not applicable"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown18"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown19"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown21"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "Diagnosis.0.0.0.1.0.0.0",
+     "Diagnosis.0.0.0.1.0.0.1",
+     "Diagnosis.0.0.0.1.0.1.0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "During treatment, Patient successfully achieved the goals and objectives of the Individualized Treatment Plan.",
+     "Patient completed 20 hours of Outpatient Treatment and successfully achieved treatment goals.",
+     "Patient completed 75 hours of Outpatient Treatment and successfully achieved the treatment goals.",
+     "The last Treatment Plan Review reflected the successful completion of the goals and objectives.",
+     "Patient recognized that denial was one of the most significant barriers to stopping substance use.",
+     "Patient admitted that denial prevented honestly accepting behavior and recognizing substance abuse.",
+     "Patient admitted that denial prevented honestly accepting behavior and recognizing substance dependence.",
+     "Patient admitted alcohol/drug-related problems and reported lifestyle changes to prevent further problems.",
+     "Patient recognized that recovery requires a lifelong commitment.",
+     "Patient acknowledged that participation in a support group is crucial as a means of sustaining sobriety.",
+     "Patient has made lifestyle and social surroundings changes to eliminate alcohol/drug use.",
+     "Patient has gained profound knowledge and a clearer perception of substance abuse.",
+     "Patient indicated that treatment led to consider the many aspects of life affected.",
+     "Patient has gained insight into substance abuse and negative consequences.",
+     "Patient has developed a non-traditional support system of family and friends.",
+     "Patient has initiated participation in a 12-Step program and has maintained regular attendance.",
+     "Patient has developed the skills and the family and social surroundings to maintain abstinence."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown5.0.0.0",
+     "Dropdown5.0.0.1",
+     "Dropdown5.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient reached the goals of the Individualized Treatment Plan.",
+     "This achievement evidences that treatment successfully supported efforts to correct behavior.",
+     "Patient completed a minimum of 20 hours of outpatient treatment in group therapy.",
+     "Patient completed a minimum of 75 hours of outpatient treatment in group therapy.",
+     "Patient successfully identified and addressed problems related to alcohol/drug abuse.",
+     "Patient took responsibility for past actions and reported lifestyle changes to prevent further problems.",
+     "Patient reported personal benefits and behavioral changes from treatment participation.",
+     "Patient expressed commitment to continue lifestyle changes to prevent further problems."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown9.0.0",
+     "Dropdown9.0.1",
+     "Dropdown9.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient reached the objectives of the Individualized Treatment Plan.",
+     "Those objectives were measurable and evidenced the completion of treatment recommendations.",
+     "This achievement evidences Patient's commitment to following treatment recommendations. ",
+     "This achievement evidences that treatment successfully supported efforts to correct behavior.",
+     "Patient has identified negative consequences from problematic alcohol/drug use.",
+     "Patient has indicated plans that would help to avoid further alcohol/drug-related problems.",
+     "Patient presented an action plan to avoid future alcohol-related problems."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown13.0.0.0",
+     "Dropdown13.0.0.1",
+     "Dropdown13.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient's current prognosis is favorable.",
+     "Patient's current prognosis is fair.",
+     "Patient accepts personal responsibility for past actions.",
+     "Patient appears to have reduced the risk of repeating an alcohol/drug-related offense.",
+     "Patient successfully identified and addressed problems derived from alcohol/drug abuse."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown14.0.0",
+     "Dropdown14.0.1",
+     "Dropdown14.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient reported no biomedical conditions or complications at this time.",
+     "Patient explained the unmanageability to cope with medical problems using alcohol/drugs.",
+     "Patient made a list of the negative consequences of using alcohol or drugs on medical conditions.",
+     "Patient verbalized personal commitment to abstain from alcohol/drugs to his group fellow members.",
+     "Patient explained the connection between alcohol/drug abuse and medical complications.",
+     "Patient described reasons for wanting abstinence other than health reasons.",
+     "Patient wrote a committed plan to deal with medical conditions and to use the health services system.",
+     "Patient verbalized the need and importance of maintaining abstinence from alcohol/drugs.",
+     "Patient described how the medical problems result from substance abuse.",
+     "Patient listed the negative consequences that result from drinking/using to cope with medical problems. "
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown6.0.0.0.0",
+     "Dropdown6.0.0.0.1",
+     "Dropdown6.0.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient described drinking/using patterns and negative consequences in several areas of life.",
+     "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+     "Patient verbalized commitment to follow treatment recommendations.",
+     "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+     "Patient communicated in group sessions the need to reach out for help to stop drinking/using.",
+     "Patient verbalized commitment to use alcohol socially and responsibly to prevent intoxication.",
+     "Patient described what it takes to be a responsible user of alcohol/drugs.",
+     "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+     "Patient presented in group sessions a plan to avoid future alcohol/drugs-related problems.",
+     "Patient described shame and guilt and explained how these contribute to separation from others.",
+     "Patient described the powerless and unmanageability to cope with depression using alcohol/drugs.",
+     "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+     "Patient identified symptoms of emotional disorders.",
+     "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+     "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+     "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown8.0.0",
+     "Dropdown8.0.1",
+     "Dropdown8.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient listed at least five specific aspects of life committed to change during treatment.",
+     "Patient explained the stages of change and the skills required to progress.",
+     "Patient explained the current stage of change.",
+     "Patient listed at least five lifestyle aspects to change to prevent further alcohol/drug-related issues.",
+     "Patient described the potential benefits of remaining sober and the implications of not changing.",
+     "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+     "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+     "Patient described the reasons for maintaining an alcohol/drug-free lifestyle."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown1.0.0.0",
+     "Dropdown1.0.0.1",
+     "Dropdown1.0.0.2"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+     "Patient described emotional relapse as a precursor of the act of drinking or using.",
+     "Patient explained a recovery and relapse prevention plan.",
+     "Patient identified at least three personal triggers and ways to manage them. ",
+     "Patient verbalized how to cope with a harmful social environment to avoid alcohol/drug abuse.",
+     "Patient listed at least three relapse prevention skills.",
+     "Patient identified how romantic/euphoric associations lead to drink/use.",
+     "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+     "Patient completed a recovery plan to address areas that contribute to relapse and future sobriety.",
+     "Patient identified reasons for relapsing.",
+     "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+     "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+     "Patient identified strategies to prevent future relapse.",
+     "Patient explained the specific situations surrounding relapse.",
+     "Patient verbalized reasons to continue to attend a support group to maintain abstinence.",
+     "Patient explained the reasons for continued relapses.",
+     "Patient listed five ways a higher power can assist in preventing relapse.",
+     "Patient described at least three specific situations and social surroundings that lead to substance abuse."
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown2.0.0",
+     "Dropdown2.0.1",
+     "Dropdown2.0.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient explained how social environment relates to alcohol/drug abuse.",
+     "Patient summarized how culture and traditions lead to substance use and abuse.",
+     "Patient wrote a leisure activity plan.",
+     "Patient described a productive free time usage plan.",
+     "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+     "Patient described what a social support system means.",
+     "Patient presented a recovery plan, including productive leisure activities.",
+     "Patient explained a plan that addresses a sober support system and living situation.",
+     "Patient identified three social support systems (friends, family members, etc.) to build.",
+     "Patient summarized the relationship between social environment and drinking/using patterns.",
+     "Patient described what social surrounding changes are needed to avoid alcohol/drug abuse. "
+    ],
+    "fields_count": 3,
+    "example_fields": [
+     "Dropdown7.0.0",
+     "Dropdown7.0.1",
+     "Dropdown7.0.2"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "AdminControl": {
+  "lists": [
+   {
+    "options": [
+     "  ",
+     "Minimal Risk",
+     "Moderate Risk",
+     "Significant Risk",
+     "High Risk",
+     "Early Intervention",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment",
+     "Risk Education"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown7.0.0"
+    ]
+   },
+   {
+    "options": [
+     "    ",
+     "          Risk Education",
+     "          Early Intervention",
+     "     Outpatient Treatment",
+     "Intensive Outpatient Treatment"
+    ],
+    "fields_count": 38,
+    "example_fields": [
+     "service.0",
+     "service.1",
+     "service.2"
+    ]
+   }
+  ],
+  "special_actions": [
+   [
+    "Reset Form",
+    "/ResetForm"
+   ]
+  ]
+ },
+ "TreatmentVerification": {
+  "lists": [],
+  "special_actions": []
+ },
+ "StatusReport": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "UST",
+     "DUICS"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Positive",
+     "Negative"
+    ],
+    "fields_count": 5,
+    "example_fields": [
+     "Amphet result",
+     "THC result",
+     "Opiates result"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Central States Institute of Addictions",
+     "Social Service Department",
+     "Adult Probation Department"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Referal source"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "G. Tamara Perez, Substance Abuse Counselor",
+     "Sonia Perez, Intake Assistant",
+     "George Torres, BA, CADC",
+     "Rafael Carrion, Substance Abuse Counselor",
+     "Jesoly Martinez, Substance Abuse Counselor"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Name and credencials"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "McHenry",
+     "Will",
+     "Out-of-State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "COA"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Risk Education",
+     "Early Intervention",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment",
+     "Continuing Care"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LOIW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Minimal",
+     "Moderate",
+     "Significant",
+     "High",
+     "Continuing Care"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LORW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Admission completed",
+     "Enrolled and compliant",
+     "Enrolled and non-compliant",
+     "Successfully discharged",
+     "Readmission completed",
+     "Readmitted and compliant",
+     "Unsuccessfully discharged",
+     "Unsuccessfully completed"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Client's status"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "(three months)",
+     "(six months)",
+     "(12 months)"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "ACMTS"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres",
+     "Tamara Perez",
+     "Cindy Torres",
+     "Sonia Perez",
+     "George Torres"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Signature"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "CaseCoordination": {
+  "lists": [
+   {
+    "options": [
+     "  ",
+     "Maria I Torres",
+     "Tamara Perez",
+     "George Torres"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres",
+     "Tamara Perez",
+     "George Torres"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Signature"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "LetterEarlyIntervention": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "RISK EDUCATION",
+     "EARLY INTERVENTION"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LCPL"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Client has completed successfully all the recommendations of his Early Intervention Program: ",
+     "Client has completed successfully all the recommendations of her Early Intervention Program: "
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "He participated actively during group sessions and was able to identify the negative consequences of his inappropriate behavior.",
+     "She participated actively in group sessions and was able to identify the negative consequences of her inappropriate behavior.  ",
+     "He has discussed alternatives and plans that would help him to avoid future alcohol-related problems.",
+     "She has discussed alternatives and plans that would help her to avoid future alcohol-related problems.",
+     "Clients take full responsibility for his past actions and appear to have reduced the risk of repeating a DUI offense. ",
+     "Client is able to explain the relationship between his social environment and his inappropriate use of alcohol.   ",
+     "Client is able to explain the relationship between her social environment and her inappropriate use of alcohol.   ",
+     "Client understands how his wrong beliefs about his alcohol intake led him to have his DUI arrest. ",
+     "Client understands how her wrong beliefs about his alcohol intake led her to have her DUI arrest. ",
+     " He is able to explain the connection between his social environment and his inappropriate alcohol usage.",
+     " She is able to explain the connection between her social environment and her inappropriate alcohol usage."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Clients take full responsibility for his past actions and appear to have reduced the risk of repeating a DUI offense.",
+     "Clients take full responsibility for her past actions and appear to have reduced the risk of repeating a DUI offense.",
+     "Client reports personal benefits from his Early Intervention Program experience.",
+     "Client reports personal benefits from her Early Intervention Program experience."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "100 %",
+     "96 %",
+     "92 %",
+     "88 %",
+     "84 %",
+     "80 %",
+     "76 %",
+     "72 %",
+     "68 %",
+     "64 %",
+     "60 %",
+     "56 %",
+     "52 %",
+     "48 %",
+     "44 %",
+     "40 %"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "CPLEDU1",
+     "CPLEDU2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "McHenry",
+     "Will",
+     "Out-of-State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "COA"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "There are no further recommendations on behalf of this client at this time."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Comments.0"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "DUI Prevention Plan",
+     "DUI Laws",
+     "Alcohol and Drugs Abuse",
+     "Drinking and Using Patterns",
+     "Cycle of Addiction",
+     "Physiological Effects of Alcohol",
+     "Coping with Stress",
+     "Alcohol Dependency vs. Alcohol Abuse",
+     "Disease Concept of Alcoholism",
+     "Substance Abuse Consequences",
+     "Clinical Disorders and Substance Abuse",
+     "Family Systems"
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "main topic.0",
+     "main topic.1",
+     "main topic.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "George Torres, CADC",
+     " G. Tamara Perez, Substance Abuse Counselor"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Counselor and credencial"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "LetterEducation": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "RISK EDUCATION",
+     "EARLY INTERVENTION"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LCPL"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Client has completed successfully all the recommendations of his Early Intervention Program: ",
+     "Client has completed successfully all the recommendations of her Early Intervention Program: "
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY0"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "He participated actively during group sessions and was able to identify the negative consequences of his inappropriate behavior.",
+     "She participated actively in group sessions and was able to identify the negative consequences of her inappropriate behavior.  ",
+     "He has discussed alternatives and plans that would help him to avoid future alcohol-related problems.",
+     "She has discussed alternatives and plans that would help her to avoid future alcohol-related problems.",
+     "Clients take full responsibility for his past actions and appear to have reduced the risk of repeating a DUI offense. ",
+     "Client is able to explain the relationship between his social environment and his inappropriate use of alcohol.   ",
+     "Client is able to explain the relationship between her social environment and her inappropriate use of alcohol.   ",
+     "Client understands how his wrong beliefs about his alcohol intake led him to have his DUI arrest. ",
+     "Client understands how her wrong beliefs about his alcohol intake led her to have her DUI arrest. ",
+     " He is able to explain the connection between his social environment and his inappropriate alcohol usage.",
+     " She is able to explain the connection between her social environment and her inappropriate alcohol usage."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Clients take full responsibility for his past actions and appear to have reduced the risk of repeating a DUI offense.",
+     "Clients take full responsibility for her past actions and appear to have reduced the risk of repeating a DUI offense.",
+     "Client reports personal benefits from his Early Intervention Program experience.",
+     "Client reports personal benefits from her Early Intervention Program experience."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "CPLEARLY3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "100 %",
+     "96 %",
+     "92 %",
+     "88 %",
+     "84 %",
+     "80 %",
+     "76 %",
+     "72 %",
+     "68 %",
+     "64 %",
+     "60 %",
+     "56 %",
+     "52 %",
+     "48 %",
+     "44 %",
+     "40 %"
+    ],
+    "fields_count": 2,
+    "example_fields": [
+     "CPLEDU1",
+     "CPLEDU2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "McHenry",
+     "Will",
+     "Out-of-State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "COA"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "There are no further recommendations on behalf of this client at this time."
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Comments.0"
+    ]
+   },
+   {
+    "options": [
+     "  ",
+     "DUI Prevention Plan",
+     "DUI Laws",
+     "Alcohol and Drugs Abuse",
+     "Drinking and Using Patterns",
+     "Cycle of Addiction",
+     "Physiological Effects of Alcohol",
+     "Coping with Stress",
+     "Alcohol Dependency vs. Alcohol Abuse",
+     "Disease Concept of Alcoholism",
+     "Substance Abuse Consequences",
+     "Clinical Disorders and Substance Abuse",
+     "Family Systems"
+    ],
+    "fields_count": 6,
+    "example_fields": [
+     "main topic.0",
+     "main topic.1",
+     "main topic.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I Torres, CADC",
+     "G. Tamara Perez, Substance Abuse Counselor",
+     " George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Counselor and credencial"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "LetterTreatmentL1": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "DUICS"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Social Service Department",
+     "Adult Probation Department",
+     "Central States Institute of Addiction",
+     "DuPage County",
+     "Will County",
+     "Lake County",
+     "McHenry County"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment",
+     "Continuing Care"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LOIW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Significant",
+     "High"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LORW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "20 hours",
+     "75 hours"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "HOURSIG.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Six months",
+     "12 months"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "MONTHAFCRSIG"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient seems to be emotionally and behaviorally stable and denied any medical conditions at this time.",
+     "In the course of his treatment, he presented no symptoms of intoxication or withdrawals.",
+     "In the course of her treatment, she presented no symptoms of intoxication or withdrawals.",
+     "He was able to identify the causes and the negative consequences of his problematic drinking/using. ",
+     "She was able to identify the causes and the negative consequences of her problematic drinking/using.",
+     "Patient appears to have the skills and the social surroundings to avoid future alcohol/drug-related problems.",
+     "It appears that Patient has substantially reduced the potential for future alcohol/drug-related problems.",
+     "She completed the goals and objectives of her treatment in terms of attendance and participation.",
+     "Currently there are no further recommendations indicated on behalf of this Patient by this agency."
+    ],
+    "fields_count": 4,
+    "example_fields": [
+     "Comments1.0",
+     "Comments1.1",
+     "Comments1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "G. Tamara Perez",
+     " George Torres, BA, CADC"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown24"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "McHenry",
+     "Will",
+     "Out-of-State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "COA"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "Diagnosis.0.0.0.1.0.0.0.0",
+     "Diagnosis.0.0.0.1.0.0.0.1",
+     "Diagnosis.0.0.0.1.0.1.0.0"
+    ]
+   }
+  ],
+  "special_actions": []
+ },
+ "LetterTreatmentL2": {
+  "lists": [
+   {
+    "options": [
+     " ",
+     "Yes",
+     "No"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "DUICS"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Social Service Department",
+     "Adult Probation Department",
+     "Central States Institute of Addiction",
+     "DuPage County",
+     "Will County",
+     "Lake County",
+     "McHenry County"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown3"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Outpatient Treatment",
+     "Intensive Outpatient Treatment",
+     "Continuing Care"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LOIW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Significant",
+     "High"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "LORW"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "20 hours",
+     "75 hours"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "HOURSIG.1"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Six months",
+     "12 months"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "MONTHAFCRSIG"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Patient seems to be emotionally and behaviorally stable and denied any medical conditions at this time.",
+     "In the course of his treatment, he presented no symptoms of intoxication or withdrawals.",
+     "In the course of her treatment, she presented no symptoms of intoxication or withdrawals.",
+     "He was able to identify the causes and the negative consequences of his problematic drinking/using. ",
+     "She was able to identify the causes and the negative consequences of her problematic drinking/using.",
+     "Patient appears to have the skills and the social surroundings to avoid future alcohol/drug-related problems.",
+     "It appears that Patient has substantially reduced the potential for future alcohol/drug-related problems.",
+     "She completed the goals and objectives of her treatment in terms of attendance and participation.",
+     "Currently there are no further recommendations indicated on behalf of this Patient by this agency."
+    ],
+    "fields_count": 4,
+    "example_fields": [
+     "Comments1.0",
+     "Comments1.1",
+     "Comments1.2"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Maria I. Torres, CADC",
+     "George Torres, BA, CADC",
+     "G. Tamara Perez"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "Dropdown24"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "Cook",
+     "DuPage",
+     "Lake",
+     "McHenry",
+     "Will",
+     "Out-of-State"
+    ],
+    "fields_count": 1,
+    "example_fields": [
+     "COA"
+    ]
+   },
+   {
+    "options": [
+     " ",
+     "F10.10 Alcohol Use Disorder, Mild",
+     "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+     "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Moderate",
+     "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+     "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+     "F10.20 Alcohol Use Disorder, Severe",
+     "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+     "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+     "F12.10 Cannabis Use Disorder, Mild ",
+     "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+     "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Moderate",
+     "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+     "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+     "F12.20 Cannabis Use Disorder, Severe",
+     "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+     "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+     "F14.10 Cocaine Use Disorder, Mild",
+     "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+     "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Moderate",
+     " F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+     "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+     "F14.20 Cocaine Use Disorder, Severe",
+     "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+     "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+     "F11.10 Opioid Use Disorder, Mild",
+     "F11.11 Opioid Use Disorder, Mild in Early Remission",
+     "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Moderate",
+     "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+     "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+     "F11.20 Opioid Use Disorder, Severe",
+     "F11.21 Opioid Use Disorder, Severe in Early Remission",
+     "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+    ],
+    "fields_count": 8,
+    "example_fields": [
+     "Diagnosis.0.0.0.1.0.0.0.0",
+     "Diagnosis.0.0.0.1.0.0.0.1",
+     "Diagnosis.0.0.0.1.0.1.0.0"
+    ]
+   }
+  ],
+  "special_actions": []
+ }
+}

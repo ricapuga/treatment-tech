@@ -1,0 +1,8 @@
+[
+ {
+  "page": 0,
+  "annot": "Print",
+  "trigger": "/A",
+  "js": "this.print(false,this.pageNum,this.pageNum);"
+ }
+]

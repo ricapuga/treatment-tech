@@ -1,0 +1,67 @@
+[
+ {
+  "field": "Admission date",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Admission date",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "UST",
+  "trigger": "/C",
+  "js": "this.getField(\"DT\").display=display.hidden;\r\nthis.getField(\"Methamphetamine\").display=display.hidden;\r\nthis.getField(\"Amphetamine\").display=display.hidden;\r\nthis.getField(\"THC\").display=display.hidden;\r\nthis.getField(\"Meth result\").display=display.hidden;\r\nthis.getField(\"Amphet result\").display=display.hidden;\r\nthis.getField(\"THC result\").display=display.hidden;\r\nthis.getField(\"Opiates\").display=display.hidden;\r\nthis.getField(\"Cocaine\").display=display.hidden;\r\nthis.getField(\"Opiates result\").display=display.hidden;\r\nthis.getField(\"Cocaine result\").display=display.hidden;\r\nthis.getField(\"Test date\").display=display.hidden;\r\nvar UST=this.getField(\"UST\");\r\nvar DT=this.getField(\"DT\");\r\nvar Methamphetamine=this.getField(\"Methamphetamine\");\r\nvar Amphetamine=this.getField(\"Amphetamine\");\r\nvar THC=this.getField(\"THC\");\r\n\r\nif(UST.value==\"Yes\")this.getField(\"DT\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Methamphetamine\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Amphetamine\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"THC\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Opiates\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Cocaine\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Test date\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Meth result\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Amphet result\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"THC result\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Opiates result\").display=display.visible;\r\nif(UST.value==\"Yes\")this.getField(\"Cocaine result\").display=display.visible;\r\n\r\n\r\n"
+ },
+ {
+  "field": "Test date",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Test date",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Print",
+  "trigger": "/A(click)",
+  "js": "this.print(false,this.pageNum,this.pageNum);"
+ },
+ {
+  "field": "DOB",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "DOB",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Date",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Date",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "LOIW",
+  "trigger": "/C",
+  "js": "if(LOIW.value==\"Risk Education\")this.getField(\"HOURSIG.0\").display=display.visible;\r\nif(LOIW.value==\"Risk Education\")this.getField(\"DRISKEDU\").display=display.visible;\r\nif(LOIW.value==\"Risk Education\")this.getField(\"From1.0\").display=display.visible;\r\nif(LOIW.value==\"Risk Education\")this.getField(\"DATESIG1\").display=display.visible;\r\nif(LOIW.value==\"Risk Education\")this.getField(\"To1.0\").display=display.visible;\r\n\r\nif(LOIW.value==\"Early Intervention\")this.getField(\"HOURMOD\").display=display.visible;\r\nif(LOIW.value==\"Early Intervention\")this.getField(\"EARLYINT\").display=display.visible;\r\nif(LOIW.value==\"Early Intervention\")this.getField(\"FromMOD\").display=display.visible;\r\nif(LOIW.value==\"Early Intervention\")this.getField(\"DATEMOD1\").display=display.visible;\r\nif(LOIW.value==\"Early Intervention\")this.getField(\"ToMOD\").display=display.visible;\r\n\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"HOURSIG.1\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"OUTPTSIG.0\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"From1.1.\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"DATESIG2\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"To1.1.0\").display=display.visible;\r\n\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Outpatient Treatment\")this.getField(\"ACMTS\").display=display.visible;\r\n\r\n\r\n\r\n\r\n\r\n\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"HOURSIG.1\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"OUTPTSIG.0\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"From1.1.\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"DATESIG2\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"To1.1.0\").display=display.visible;\r\n\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Intensive Outpatient Treatment\")this.getField(\"ACMTS\").display=display.visible;\r\n\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LOIW.value==\"Continuing Care\")this.getField(\"ACMTS\").display=display.visible;\r\n\r\n\r\n"
+ },
+ {
+  "field": "LORW",
+  "trigger": "/C",
+  "js": "if(LORW.value==\"Minimal\")this.getField(\"HOURSIG.0\").display=display.visible;\r\nif(LORW.value==\"Minimal\")this.getField(\"DRISKEDU\").display=display.visible;\r\nif(LORW.value==\"Minimal\")this.getField(\"From1.0\").display=display.visible;\r\nif(LORW.value==\"Minimal\")this.getField(\"DATESIG1\").display=display.visible;\r\nif(LORW.value==\"Minimal\")this.getField(\"To1.0\").display=display.visible;\r\n\r\nif(LORW.value==\"Moderate\")this.getField(\"HOURSIG.0\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"DRISKEDU\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"From1.0\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"DATESIG1\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"To1.0\").display=display.visible;\r\n\r\nif(LORW.value==\"Moderate\")this.getField(\"HOURMOD\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"EARLYINT\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"FromMOD\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"DATEMOD1\").display=display.visible;\r\nif(LORW.value==\"Moderate\")this.getField(\"ToMOD\").display=display.visible;\r\n\r\nif(LORW.value==\"Significant\")this.getField(\"HOURSIG.0\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"DRISKEDU\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"From1.0\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"DATESIG1\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"To1.0.0\").display=display.visible;\r\n\r\nif(LORW.value==\"Significant\")this.getField(\"HOURSIG.1\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"OUTPTSIG.0\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"From1.1.\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"DATESIG2\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"To1.1.0\").display=display.visible;\r\n\r\nif(LORW.value==\"Significant\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LORW.value==\"Significant\")this.getField(\"ACMTS\").display=display.visible;\r\n\r\n\r\nif(LORW.value==\"High\")this.getField(\"HOURSIG.1\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"OUTPTSIG.0\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"From1.1.\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"DATESIG2\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"To1.1.0\").display=display.visible;\r\n\r\nif(LORW.value==\"High\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LORW.value==\"High\")this.getField(\"ACMTS\").display=display.visible;\r\n\r\nif(LORW.value==\"Continuing Care\")this.getField(\"MONTHAFCRSIG\").display=display.visible;\r\nif(LORW.value==\"Continuing Care\")this.getField(\"CCSIG\").display=display.visible;\r\nif(LORW.value==\"Continuing Care\")this.getField(\"From1.1.1\").display=display.visible;\r\nif(LORW.value==\"Continuing Care\")this.getField(\"DATESIG3\").display=display.visible;\r\nif(LORW.value==\"Continuing Care\")this.getField(\"To1.1.1\").display=display.visible;\r\nif(LORW.value==\"Continuing Care\")this.getField(\"ACMTS\").display=display.visible;\r\n"
+ },
+ {
+  "field": "DUICS",
+  "trigger": "/C",
+  "js": "this.getField(\"DLN\").display=display.hidden;\r\nthis.getField(\"DLNW\").display=display.hidden;\r\nthis.getField(\"LOI\").display=display.hidden;\r\nthis.getField(\"LOIW\").display=display.hidden;\r\nthis.getField(\"LOR\").display=display.hidden;\r\nthis.getField(\"LORW\").display=display.hidden;\r\nthis.getField(\"HOURSIG.0\").display=display.hidden;\r\nthis.getField(\"DRISKEDU.0\").display=display.hidden;\r\nthis.getField(\"From1.0\").display=display.hidden;\r\nthis.getField(\"DATESIG1\").display=display.hidden;\r\nthis.getField(\"To1.0\").display=display.hidden;\r\nthis.getField(\"HOURMOD\").display=display.hidden;\r\nthis.getField(\"EARLYINT\").display=display.hidden;\r\nthis.getField(\"FromMOD\").display=display.hidden;\r\nthis.getField(\"DATEMOD1\").display=display.hidden;\r\nthis.getField(\"ToMOD\").display=display.hidden;\r\nthis.getField(\"HOURSIG.1\").display=display.hidden;\r\nthis.getField(\"OUTPTSIG\").display=display.hidden;\r\nthis.getField(\"From1.1.\").display=display.hidden;\r\nthis.getField(\"DATESIG2\").display=display.hidden;\r\nthis.getField(\"To1.1\").display=display.hidden;\r\nthis.getField(\"MONTHAFCRSIG\").display=display.hidden;\r\nthis.getField(\"CCSIG\").display=display.hidden;\r\nthis.getField(\"From1.1.1\").display=display.hidden;\r\nthis.getField(\"DATESIG3\").display=display.hidden;\r\nthis.getField(\"To1.1.1\").display=display.hidden;\r\nthis.getField(\"ACMTS\").display=display.hidden;\r\n\r\nvar DUICS=this.getField(\"DUICS\");\r\nvar DLN=this.getField(\"DLN\");\r\nvar DLNW=this.getField(\"DLNW\");\r\nvar LOI=this.getField(\"LOI\");\r\nvar LOIW=this.getField(\"LOIW\");\r\nvar LOR=this.getField(\"LOR\");\r\nvar LORW=this.getField(\"LORW\");\r\n\r\nif(DUICS.value==\"Yes\")this.getField(\"DLN\").display=display.visible;\r\nif(DUICS.value==\"Yes\")this.getField(\"DLNW\").display=display.visible;\r\nif(DUICS.value==\"Yes\")this.getField(\"LOR\").display=display.visible;\r\nif(DUICS.value==\"Yes\")this.getField(\"LORW\").display=display.visible;\r\nif(DUICS.value==\"No\")this.getField(\"LOI\").display=display.visible;\r\nif(DUICS.value==\"No\")this.getField(\"LOIW\").display=display.visible;"
+ }
+]

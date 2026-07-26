@@ -1,0 +1,32 @@
+[
+ {
+  "field": "BMCC",
+  "trigger": "/C",
+  "js": "var BMCC=this.getField(\"BMCC\");\r\nvar DIM2E1=this.getField(\"DIM2E1\");\r\nvar DIM2E1NA=this.getField(\"DIM2E1NA\");\r\nvar DIM2E2=this.getField(\"DIM2E1\");\r\nvar DIM2E2NA=this.getField(\"DIM2E1NA\");\r\nvar DIM2E3=this.getField(\"DIM2E1\");\r\nvar DIM2E3NA=this.getField(\"DIM2E1NA\");\r\n\r\nthis.getField(\"DIM2E1\").display=display.hidden;\r\nif(BMCC.value==\"Yes\")this.getField(\"DIM2E1\").display=display.visible;\r\nthis.getField(\"DIM2E1NA\").display=display.hidden;\r\nif(BMCC.value==\"No\")this.getField(\"DIM2E1NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM2E2\").display=display.hidden;\r\nif(BMCC.value==\"Yes\")this.getField(\"DIM2E2\").display=display.visible;\r\nthis.getField(\"DIM2E2NA\").display=display.hidden;\r\nif(BMCC.value==\"No\")this.getField(\"DIM2E2NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM2E3\").display=display.hidden;\r\nif(BMCC.value==\"Yes\")this.getField(\"DIM2E3\").display=display.visible;\r\nthis.getField(\"DIM2E3NA\").display=display.hidden;\r\nif(BMCC.value==\"No\")this.getField(\"DIM2E3NA\").display=display.visible;"
+ },
+ {
+  "field": "DIM3PS",
+  "trigger": "/C",
+  "js": "var DIM3PS=this.getField(\"DIM3PS\");\r\nvar DIM3PSE1=this.getField(\"DIM3PSE1\");\r\nvar DIM3PSE1NA=this.getField(\"DIM3PSE1NA\");\r\nvar DIMPSHSE2=this.getField(\"DIMPSHSE2\");\r\nvar DIMPSHSE2NA=this.getField(\"DIMPSHSE2NA\");\r\nvar DIMPSHSE3=this.getField(\"DIMPSHSE3\");\r\nvar DIMPSHSE3NA=this.getField(\"DIMPSHSE3NA\");\r\nvar DIMPSHSE4=this.getField(\"DIMPSHSE4\");\r\nvar DIMPSHSE4NA=this.getField(\"DIMPSHSE4NA\");\r\n\r\n\r\nthis.getField(\"DIM3PSE1\").display=display.hidden;\r\nif(DIM3PS.value==\"Yes\")this.getField(\"DIM3PSE1\").display=display.visible;\r\nthis.getField(\"DIM3PSE1NA\").display=display.hidden;\r\nif(DIM3PS.value==\"No\")this.getField(\"DIM3PSE1NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3PSE2\").display=display.hidden;\r\nif(DIM3PS.value==\"Yes\")this.getField(\"DIM3PSE2\").display=display.visible;\r\nthis.getField(\"DIM3PSE2NA\").display=display.hidden;\r\nif(DIM3PS.value==\"No\")this.getField(\"DIM3PSE2NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3PSE3\").display=display.hidden;\r\nif(DIM3PS.value==\"Yes\")this.getField(\"DIM3PSE3\").display=display.visible;\r\nthis.getField(\"DIM3PSE3NA\").display=display.hidden;\r\nif(DIM3PS.value==\"No\")this.getField(\"DIM3PSE3NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3PSE4\").display=display.hidden;\r\nif(DIM3PS.value==\"Yes\")this.getField(\"DIM3PSE4\").display=display.visible;\r\nthis.getField(\"DIM3PSE4NA\").display=display.hidden;\r\nif(DIM3PS.value==\"No\")this.getField(\"DIM3PSE4NA\").display=display.visible;\r\n\r\n\r\n"
+ },
+ {
+  "field": "DIM3ADRA",
+  "trigger": "/C",
+  "js": "var DIM3ADRA=this.getField(\"DIM3ADRA\");\r\nvar DIM3N1=this.getField(\"DIM3N1\");\r\nvar DIM3N1NA=this.getField(\"DIM3N1NA\");\r\nvar DIM3N2=this.getField(\"DIM3N2\");\r\nvar DIM3N2NA=this.getField(\"DIM3N2NA\");\r\nvar DIM3N3=this.getField(\"DIM3N3\");\r\nvar DIM3N3NA=this.getField(\"DIM3N3NA\");\r\nvar DIM3N4=this.getField(\"DIM3N4\");\r\nvar DIM3N4NA=this.getField(\"DIM3N4NA\");\r\n\r\n\r\nthis.getField(\"DIM3N1\").display=display.hidden;\r\nif(DIM3ADRA.value==\"Yes\")this.getField(\"DIM3N1\").display=display.visible;\r\nthis.getField(\"DIM3N1NA\").display=display.hidden;\r\nif(DIM3ADRA.value==\"No\")this.getField(\"DIM3N1NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3N2\").display=display.hidden;\r\nif(DIM3ADRA.value==\"Yes\")this.getField(\"DIM3N2\").display=display.visible;\r\nthis.getField(\"DIM3N2NA\").display=display.hidden;\r\nif(DIM3ADRA.value==\"No\")this.getField(\"DIM3N2NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3N3\").display=display.hidden;\r\nif(DIM3ADRA.value==\"Yes\")this.getField(\"DIM3N3\").display=display.visible;\r\nthis.getField(\"DIM3N3NA\").display=display.hidden;\r\nif(DIM3ADRA.value==\"No\")this.getField(\"DIM3N3NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM3N4\").display=display.hidden;\r\nif(DIM3ADRA.value==\"Yes\")this.getField(\"DIM3N4\").display=display.visible;\r\nthis.getField(\"DIM3N4NA\").display=display.hidden;\r\nif(DIM3ADRA.value==\"No\")this.getField(\"DIM3N4NA\").display=display.visible;"
+ },
+ {
+  "field": "DIM5RL",
+  "trigger": "/C",
+  "js": "var DIM5RL=this.getField(\"DIM5RL\");\r\nvar DIM5RLE1=this.getField(\"DIM5RLE1\");\r\nvar DIM5RLE1NA=this.getField(\"DIM5RLE1NA\");\r\nvar DIM5RLE2=this.getField(\"DIM5RLE2\");\r\nvar DIM5RLE2NA=this.getField(\"DIM5RLE2NA\");\r\nvar DIM5RLE3=this.getField(\"DIM5RLE3\");\r\nvar DIM5RLE3NA=this.getField(\"DIM5RLE3NA\");\r\nvar DIM5RLE4=this.getField(\"DIM5RLE4\");\r\nvar DIM5RLE4NA=this.getField(\"DIM5RLE4NA\");\r\n\r\n\r\nthis.getField(\"DIM5RLE1\").display=display.hidden;\r\nif(DIM5RL.value==\"Yes\")this.getField(\"DIM5RLE1\").display=display.visible;\r\nthis.getField(\"DIM5RLE1NA\").display=display.hidden;\r\nif(DIM5RL.value==\"No\")this.getField(\"DIM5RLE1NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM5RLE2\").display=display.hidden;\r\nif(DIM5RL.value==\"Yes\")this.getField(\"DIM5RLE2\").display=display.visible;\r\nthis.getField(\"DIM5RLE2NA\").display=display.hidden;\r\nif(DIM5RL.value==\"No\")this.getField(\"DIM5RLE2NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM5RLE3\").display=display.hidden;\r\nif(DIM5RL.value==\"Yes\")this.getField(\"DIM5RLE3\").display=display.visible;\r\nthis.getField(\"DIM5RLE3NA\").display=display.hidden;\r\nif(DIM5RL.value==\"No\")this.getField(\"DIM5RLE3NA\").display=display.visible;\r\n\r\nthis.getField(\"DIM5RLE4\").display=display.hidden;\r\nif(DIM5RL.value==\"Yes\")this.getField(\"DIM5RLE4\").display=display.visible;\r\nthis.getField(\"DIM5RLE4NA\").display=display.hidden;\r\nif(DIM5RL.value==\"No\")this.getField(\"DIM5RLE4NA\").display=display.visible;\r\n"
+ },
+ {
+  "field": "Text4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ }
+]

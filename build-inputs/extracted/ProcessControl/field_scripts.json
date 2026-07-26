@@ -1,0 +1,192 @@
+[
+ {
+  "field": "Text1.0.0.1.1.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.0.0.1.1.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text3.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text3.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.0.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.0.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.0.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.0.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.3",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.3",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.6",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.6",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.7",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.1.0.7",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.2.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.2.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.2.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.2.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.3.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.3.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.3.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.3.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.4.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.4.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.4.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text12.4.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ }
+]

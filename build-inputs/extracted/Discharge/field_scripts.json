@@ -1,0 +1,32 @@
+[
+ {
+  "field": "Text16.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text16.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text16.4.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text16.4.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text16.4.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text16.4.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ }
+]

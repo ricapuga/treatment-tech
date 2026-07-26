@@ -1,0 +1,92 @@
+[
+ {
+  "field": "Text1.2.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text1.2.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.0.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.0.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.0.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.1.3.0.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.3.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ }
+]

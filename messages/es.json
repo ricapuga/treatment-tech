@@ -1,0 +1,19 @@
+{
+  "shell": {
+    "appName": "Treatment Tech",
+    "dashboard": "Tablero",
+    "cases": "Casos",
+    "logout": "Cerrar sesión",
+    "languageToggle": "English"
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Iniciar sesión",
+    "error": "Correo o contraseña inválidos"
+  },
+  "dashboard": {
+    "placeholder": "Tablero — se construye en el Milestone 5 (admisiones, etapas pendientes, consents por vencer, saldos)."
+  }
+}

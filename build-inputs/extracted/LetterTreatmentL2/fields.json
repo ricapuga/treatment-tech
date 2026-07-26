@@ -1,0 +1,206 @@
+[
+ {
+  "name": "DUI CASE ?",
+  "type": "/Tx"
+ },
+ {
+  "name": "DUICS",
+  "type": "/Ch"
+ },
+ {
+  "name": "Text2",
+  "type": "/Tx"
+ },
+ {
+  "name": "Dropdown3",
+  "type": "/Ch"
+ },
+ {
+  "name": "DLN",
+  "type": "/Tx"
+ },
+ {
+  "name": "DLNW",
+  "type": "/Tx"
+ },
+ {
+  "name": "LOI",
+  "type": "/Tx"
+ },
+ {
+  "name": "LOIW",
+  "type": "/Ch"
+ },
+ {
+  "name": "LOR",
+  "type": "/Tx"
+ },
+ {
+  "name": "LORW",
+  "type": "/Ch"
+ },
+ {
+  "name": "HOURSIG.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "HOURSIG.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "From1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "From1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "From1.1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DRISKEDU",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG1",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG2",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG4",
+  "type": "/Tx"
+ },
+ {
+  "name": "OUTPTSIG",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG5",
+  "type": "/Tx"
+ },
+ {
+  "name": "CCSIG.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG3.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG6.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "EARLYINT",
+  "type": "/Tx"
+ },
+ {
+  "name": "HOURMOD",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEMOD1",
+  "type": "/Tx"
+ },
+ {
+  "name": "ToMOD",
+  "type": "/Tx"
+ },
+ {
+  "name": "FromMOD",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEMOD2",
+  "type": "/Tx"
+ },
+ {
+  "name": "MONTHAFCRSIG",
+  "type": "/Ch"
+ },
+ {
+  "name": "Comments1.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "Comments1.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "Comments1.2",
+  "type": "/Ch"
+ },
+ {
+  "name": "Comments1.3",
+  "type": "/Ch"
+ },
+ {
+  "name": "Dropdown24",
+  "type": "/Ch"
+ },
+ {
+  "name": "Text26",
+  "type": "/Tx"
+ },
+ {
+  "name": "COA",
+  "type": "/Ch"
+ },
+ {
+  "name": "Text1.0.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.0.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "Diagnosis.0.0.0.1.0.0.0.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.1.0.0.0.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.1.0.1.0.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.1.0.1.0.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.0.0.0.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.0.0.0.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.2.0.0.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "Diagnosis.0.0.0.2.0.0.1",
+  "type": "/Ch"
+ }
+]

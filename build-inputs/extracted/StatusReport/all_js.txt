@@ -1,0 +1,223 @@
+
+===== FIELD Admission date [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Admission date [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD UST [/C] =====
+this.getField("DT").display=display.hidden;
+this.getField("Methamphetamine").display=display.hidden;
+this.getField("Amphetamine").display=display.hidden;
+this.getField("THC").display=display.hidden;
+this.getField("Meth result").display=display.hidden;
+this.getField("Amphet result").display=display.hidden;
+this.getField("THC result").display=display.hidden;
+this.getField("Opiates").display=display.hidden;
+this.getField("Cocaine").display=display.hidden;
+this.getField("Opiates result").display=display.hidden;
+this.getField("Cocaine result").display=display.hidden;
+this.getField("Test date").display=display.hidden;
+var UST=this.getField("UST");
+var DT=this.getField("DT");
+var Methamphetamine=this.getField("Methamphetamine");
+var Amphetamine=this.getField("Amphetamine");
+var THC=this.getField("THC");
+
+if(UST.value=="Yes")this.getField("DT").display=display.visible;
+if(UST.value=="Yes")this.getField("Methamphetamine").display=display.visible;
+if(UST.value=="Yes")this.getField("Amphetamine").display=display.visible;
+if(UST.value=="Yes")this.getField("THC").display=display.visible;
+if(UST.value=="Yes")this.getField("Opiates").display=display.visible;
+if(UST.value=="Yes")this.getField("Cocaine").display=display.visible;
+if(UST.value=="Yes")this.getField("Test date").display=display.visible;
+if(UST.value=="Yes")this.getField("Meth result").display=display.visible;
+if(UST.value=="Yes")this.getField("Amphet result").display=display.visible;
+if(UST.value=="Yes")this.getField("THC result").display=display.visible;
+if(UST.value=="Yes")this.getField("Opiates result").display=display.visible;
+if(UST.value=="Yes")this.getField("Cocaine result").display=display.visible;
+
+
+
+
+===== FIELD Test date [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Test date [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Print [/A(click)] =====
+this.print(false,this.pageNum,this.pageNum);
+
+===== FIELD DOB [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DOB [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Date [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Date [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD LOIW [/C] =====
+if(LOIW.value=="Risk Education")this.getField("HOURSIG.0").display=display.visible;
+if(LOIW.value=="Risk Education")this.getField("DRISKEDU").display=display.visible;
+if(LOIW.value=="Risk Education")this.getField("From1.0").display=display.visible;
+if(LOIW.value=="Risk Education")this.getField("DATESIG1").display=display.visible;
+if(LOIW.value=="Risk Education")this.getField("To1.0").display=display.visible;
+
+if(LOIW.value=="Early Intervention")this.getField("HOURMOD").display=display.visible;
+if(LOIW.value=="Early Intervention")this.getField("EARLYINT").display=display.visible;
+if(LOIW.value=="Early Intervention")this.getField("FromMOD").display=display.visible;
+if(LOIW.value=="Early Intervention")this.getField("DATEMOD1").display=display.visible;
+if(LOIW.value=="Early Intervention")this.getField("ToMOD").display=display.visible;
+
+if(LOIW.value=="Outpatient Treatment")this.getField("HOURSIG.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("OUTPTSIG.0").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("From1.1.").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG2").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("To1.1.0").display=display.visible;
+
+if(LOIW.value=="Outpatient Treatment")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("ACMTS").display=display.visible;
+
+
+
+
+
+
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("HOURSIG.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("OUTPTSIG.0").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("From1.1.").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG2").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("To1.1.0").display=display.visible;
+
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("ACMTS").display=display.visible;
+
+if(LOIW.value=="Continuing Care")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("ACMTS").display=display.visible;
+
+
+
+
+===== FIELD LORW [/C] =====
+if(LORW.value=="Minimal")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Minimal")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Minimal")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Minimal")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Minimal")this.getField("To1.0").display=display.visible;
+
+if(LORW.value=="Moderate")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Moderate")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Moderate")this.getField("To1.0").display=display.visible;
+
+if(LORW.value=="Moderate")this.getField("HOURMOD").display=display.visible;
+if(LORW.value=="Moderate")this.getField("EARLYINT").display=display.visible;
+if(LORW.value=="Moderate")this.getField("FromMOD").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATEMOD1").display=display.visible;
+if(LORW.value=="Moderate")this.getField("ToMOD").display=display.visible;
+
+if(LORW.value=="Significant")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.0.0").display=display.visible;
+
+if(LORW.value=="Significant")this.getField("HOURSIG.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("OUTPTSIG.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.1.").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG2").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.1.0").display=display.visible;
+
+if(LORW.value=="Significant")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LORW.value=="Significant")this.getField("CCSIG").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.1.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG3").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.1.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("ACMTS").display=display.visible;
+
+
+if(LORW.value=="High")this.getField("HOURSIG.1").display=display.visible;
+if(LORW.value=="High")this.getField("OUTPTSIG.0").display=display.visible;
+if(LORW.value=="High")this.getField("From1.1.").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG2").display=display.visible;
+if(LORW.value=="High")this.getField("To1.1.0").display=display.visible;
+
+if(LORW.value=="High")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LORW.value=="High")this.getField("CCSIG").display=display.visible;
+if(LORW.value=="High")this.getField("From1.1.1").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG3").display=display.visible;
+if(LORW.value=="High")this.getField("To1.1.1").display=display.visible;
+if(LORW.value=="High")this.getField("ACMTS").display=display.visible;
+
+if(LORW.value=="Continuing Care")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LORW.value=="Continuing Care")this.getField("CCSIG").display=display.visible;
+if(LORW.value=="Continuing Care")this.getField("From1.1.1").display=display.visible;
+if(LORW.value=="Continuing Care")this.getField("DATESIG3").display=display.visible;
+if(LORW.value=="Continuing Care")this.getField("To1.1.1").display=display.visible;
+if(LORW.value=="Continuing Care")this.getField("ACMTS").display=display.visible;
+
+
+===== FIELD DUICS [/C] =====
+this.getField("DLN").display=display.hidden;
+this.getField("DLNW").display=display.hidden;
+this.getField("LOI").display=display.hidden;
+this.getField("LOIW").display=display.hidden;
+this.getField("LOR").display=display.hidden;
+this.getField("LORW").display=display.hidden;
+this.getField("HOURSIG.0").display=display.hidden;
+this.getField("DRISKEDU.0").display=display.hidden;
+this.getField("From1.0").display=display.hidden;
+this.getField("DATESIG1").display=display.hidden;
+this.getField("To1.0").display=display.hidden;
+this.getField("HOURMOD").display=display.hidden;
+this.getField("EARLYINT").display=display.hidden;
+this.getField("FromMOD").display=display.hidden;
+this.getField("DATEMOD1").display=display.hidden;
+this.getField("ToMOD").display=display.hidden;
+this.getField("HOURSIG.1").display=display.hidden;
+this.getField("OUTPTSIG").display=display.hidden;
+this.getField("From1.1.").display=display.hidden;
+this.getField("DATESIG2").display=display.hidden;
+this.getField("To1.1").display=display.hidden;
+this.getField("MONTHAFCRSIG").display=display.hidden;
+this.getField("CCSIG").display=display.hidden;
+this.getField("From1.1.1").display=display.hidden;
+this.getField("DATESIG3").display=display.hidden;
+this.getField("To1.1.1").display=display.hidden;
+this.getField("ACMTS").display=display.hidden;
+
+var DUICS=this.getField("DUICS");
+var DLN=this.getField("DLN");
+var DLNW=this.getField("DLNW");
+var LOI=this.getField("LOI");
+var LOIW=this.getField("LOIW");
+var LOR=this.getField("LOR");
+var LORW=this.getField("LORW");
+
+if(DUICS.value=="Yes")this.getField("DLN").display=display.visible;
+if(DUICS.value=="Yes")this.getField("DLNW").display=display.visible;
+if(DUICS.value=="Yes")this.getField("LOR").display=display.visible;
+if(DUICS.value=="Yes")this.getField("LORW").display=display.visible;
+if(DUICS.value=="No")this.getField("LOI").display=display.visible;
+if(DUICS.value=="No")this.getField("LOIW").display=display.visible;
+
+===== PAGE 0 Print [/A] =====
+this.print(false,this.pageNum,this.pageNum);

@@ -1,0 +1,138 @@
+[
+ {
+  "name": "Name",
+  "type": "/Tx"
+ },
+ {
+  "name": "DOB",
+  "type": "/Tx"
+ },
+ {
+  "name": "Referral.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "Referral.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "Diagnosis.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "Admission date",
+  "type": "/Tx"
+ },
+ {
+  "name": "LCPL",
+  "type": "/Ch"
+ },
+ {
+  "name": "Date",
+  "type": "/Tx"
+ },
+ {
+  "name": "Case number",
+  "type": "/Tx"
+ },
+ {
+  "name": "DL",
+  "type": "/Tx"
+ },
+ {
+  "name": "CPLEARLY1",
+  "type": "/Tx"
+ },
+ {
+  "name": "CPLEARLY0",
+  "type": "/Ch"
+ },
+ {
+  "name": "CPLEARLY2",
+  "type": "/Ch"
+ },
+ {
+  "name": "CPLEARLY3",
+  "type": "/Ch"
+ },
+ {
+  "name": "DATEATT.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEATT.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEATT.2",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEATT.3",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEATT.4",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEATT.5",
+  "type": "/Tx"
+ },
+ {
+  "name": "CPLEDU1",
+  "type": "/Ch"
+ },
+ {
+  "name": "Pretest",
+  "type": "/Tx"
+ },
+ {
+  "name": "CPLEDU2",
+  "type": "/Ch"
+ },
+ {
+  "name": "Posttest",
+  "type": "/Tx"
+ },
+ {
+  "name": "COA",
+  "type": "/Ch"
+ },
+ {
+  "name": "Comments.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.0",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.1",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.2",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.3",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.4",
+  "type": "/Ch"
+ },
+ {
+  "name": "main topic.5",
+  "type": "/Ch"
+ },
+ {
+  "name": "CPLEDU",
+  "type": "/Tx"
+ },
+ {
+  "name": "Counselor and credencial",
+  "type": "/Ch"
+ }
+]

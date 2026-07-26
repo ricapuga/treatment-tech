@@ -1,0 +1,18 @@
+
+===== FIELD Text16.1.1 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text16.1.1 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD Text16.4.0 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text16.4.0 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD Text16.4.1 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text16.4.1 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");

@@ -1,0 +1,19 @@
+{
+  "shell": {
+    "appName": "Treatment Tech",
+    "dashboard": "Dashboard",
+    "cases": "Cases",
+    "logout": "Log out",
+    "languageToggle": "Español"
+  },
+  "login": {
+    "title": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "error": "Invalid email or password"
+  },
+  "dashboard": {
+    "placeholder": "Dashboard — built in Milestone 5 (admissions, pending stages, expiring consents, balances)."
+  }
+}

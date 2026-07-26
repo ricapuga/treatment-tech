@@ -1,0 +1,22 @@
+[
+ {
+  "field": "Text1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text1.4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ }
+]

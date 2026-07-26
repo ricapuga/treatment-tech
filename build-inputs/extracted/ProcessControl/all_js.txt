@@ -1,0 +1,114 @@
+
+===== FIELD Text1.0.0.1.1.2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text1.0.0.1.1.2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text3.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text3.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.0.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.0.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.0.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.0.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.3 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.3 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.4 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.4 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.5 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.5 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.6 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.6 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.7 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.1.0.7 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.2.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.2.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.2.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.2.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.3.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.3.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.3.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.3.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.4.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.4.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text12.4.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text12.4.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");

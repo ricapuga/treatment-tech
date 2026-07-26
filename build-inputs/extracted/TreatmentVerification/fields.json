@@ -1,0 +1,198 @@
+[
+ {
+  "name": "Print",
+  "type": "/Btn"
+ },
+ {
+  "name": "Reset",
+  "type": "/Btn"
+ },
+ {
+  "name": "Save",
+  "type": "/Btn"
+ },
+ {
+  "name": "11",
+  "type": "/Tx"
+ },
+ {
+  "name": "12",
+  "type": "/Tx"
+ },
+ {
+  "name": "14",
+  "type": "/Tx"
+ },
+ {
+  "name": "15",
+  "type": "/Tx"
+ },
+ {
+  "name": "16",
+  "type": "/Tx"
+ },
+ {
+  "name": "17",
+  "type": "/Tx"
+ },
+ {
+  "name": "18",
+  "type": "/Tx"
+ },
+ {
+  "name": "10",
+  "type": "/Tx"
+ },
+ {
+  "name": "13",
+  "type": "/Tx"
+ },
+ {
+  "name": "19",
+  "type": "/Tx"
+ },
+ {
+  "name": "20",
+  "type": "/Tx"
+ },
+ {
+  "name": "23",
+  "type": "/Tx"
+ },
+ {
+  "name": "1",
+  "type": "/Tx"
+ },
+ {
+  "name": "2",
+  "type": "/Tx"
+ },
+ {
+  "name": "3",
+  "type": "/Tx"
+ },
+ {
+  "name": "4",
+  "type": "/Tx"
+ },
+ {
+  "name": "5",
+  "type": "/Tx"
+ },
+ {
+  "name": "6",
+  "type": "/Tx"
+ },
+ {
+  "name": "cb1",
+  "type": "/Btn"
+ },
+ {
+  "name": "7",
+  "type": "/Tx"
+ },
+ {
+  "name": "8",
+  "type": "/Tx"
+ },
+ {
+  "name": "9",
+  "type": "/Tx"
+ },
+ {
+  "name": "cb2a",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb2b",
+  "type": "/Btn"
+ },
+ {
+  "name": "21",
+  "type": "/Tx"
+ },
+ {
+  "name": "22",
+  "type": "/Tx"
+ },
+ {
+  "name": "cb2c",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb2d",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb2e",
+  "type": "/Btn"
+ },
+ {
+  "name": "24",
+  "type": "/Tx"
+ },
+ {
+  "name": "cb3a",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb3b",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb3c",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb3d",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb3e",
+  "type": "/Btn"
+ },
+ {
+  "name": "cb3f",
+  "type": "/Btn"
+ },
+ {
+  "name": "25",
+  "type": "/Tx"
+ },
+ {
+  "name": "26",
+  "type": "/Tx"
+ },
+ {
+  "name": "27",
+  "type": "/Tx"
+ },
+ {
+  "name": "28",
+  "type": "/Tx"
+ },
+ {
+  "name": "29",
+  "type": "/Tx"
+ },
+ {
+  "name": "30",
+  "type": "/Tx"
+ },
+ {
+  "name": "31",
+  "type": "/Tx"
+ },
+ {
+  "name": "34",
+  "type": "/Tx"
+ },
+ {
+  "name": "33",
+  "type": "/Tx"
+ },
+ {
+  "name": "35",
+  "type": "/Tx"
+ }
+]

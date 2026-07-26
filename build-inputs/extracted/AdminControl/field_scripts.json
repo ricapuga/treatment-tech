@@ -1,0 +1,1522 @@
+[
+ {
+  "field": "Text5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Fee",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "Fee",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "date.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.3",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.3",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.6",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.6",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.7",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.7",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.8",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.8",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.9",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.9",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.10",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.10",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.11",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.11",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.12",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.12",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.13",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.13",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.14",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.14",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.15",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.15",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.16",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.16",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.17",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.17",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.18",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.18",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.19",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.19",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.20",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.20",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.21",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.21",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.22",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.22",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.23",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.23",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.24",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.24",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.25",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.25",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.26",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.26",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.27",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.27",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.28",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.28",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.29",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.29",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.30",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.30",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.31",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.31",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.32",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.32",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.33",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.33",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.34",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.34",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.35",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.35",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.36",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.36",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.37",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.37",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.38",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "date.38",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "paid.0",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.0",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.1",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.1",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.2",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.2",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.3",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.3",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.5",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.5",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.6",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.6",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.7",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.7",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.8",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.8",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.9",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.9",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.10",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.10",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.11",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.11",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.12",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.12",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.13",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.13",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.14",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.14",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.15",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.15",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.16",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.16",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.17",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.17",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.18",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.18",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.19",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.19",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.20",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.20",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.21",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.21",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.22",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.22",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.23",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.23",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.24",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.24",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.25",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.25",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.26",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.26",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.27",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.27",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.28",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.28",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.29",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.29",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.30",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.30",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.31",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.31",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.32",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.32",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.33",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.33",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.34",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.34",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.35",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.35",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.36",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.36",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.37",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.37",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.38",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "paid.38",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.0",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.0",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"Fee\");\r\nvar b=this.getField(\"paid.0\");\r\nvar c=this.getField(\"balance.0\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"0.0\")c.value==a.value;\r\nif(a.value==\"0.0\")c.value==\"0.0\";\r\n\r\n"
+ },
+ {
+  "field": "balance.0",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.1",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.1",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.0\");\r\nvar b=this.getField(\"paid.1\");\r\nvar c=this.getField(\"balance.1\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.1",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.2",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.2",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.1\");\r\nvar b=this.getField(\"paid.2\");\r\nvar c=this.getField(\"balance.2\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.2",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.3",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.3",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.2\");\r\nvar b=this.getField(\"paid.3\");\r\nvar c=this.getField(\"balance.3\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.3",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.5",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.5",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.3\");\r\nvar b=this.getField(\"paid.5\");\r\nvar c=this.getField(\"balance.5\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.5",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.6",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.6",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.5\");\r\nvar b=this.getField(\"paid.6\");\r\nvar c=this.getField(\"balance.6\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.6",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.7",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.7",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.6\");\r\nvar b=this.getField(\"paid.7\");\r\nvar c=this.getField(\"balance.7\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.7",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.8",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.8",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.7\");\r\nvar b=this.getField(\"paid.8\");\r\nvar c=this.getField(\"balance.8\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.8",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.9",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.9",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.8\");\r\nvar b=this.getField(\"paid.9\");\r\nvar c=this.getField(\"balance.9\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.9",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.10",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.10",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.9\");\r\nvar b=this.getField(\"paid.10\");\r\nvar c=this.getField(\"balance.10\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n\r\n"
+ },
+ {
+  "field": "balance.10",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.11",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.11",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.10\");\r\nvar b=this.getField(\"paid.11\");\r\nvar c=this.getField(\"balance.11\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.11",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.12",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.12",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.11\");\r\nvar b=this.getField(\"paid.12\");\r\nvar c=this.getField(\"balance.12\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.12",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.13",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.13",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.12\");\r\nvar b=this.getField(\"paid.13\");\r\nvar c=this.getField(\"balance.13\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.13",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.14",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.14",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.13\");\r\nvar b=this.getField(\"paid.14\");\r\nvar c=this.getField(\"balance.14\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.14",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.15",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.15",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.14\");\r\nvar b=this.getField(\"paid.15\");\r\nvar c=this.getField(\"balance.15\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.15",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.16",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.16",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.15\");\r\nvar b=this.getField(\"paid.16\");\r\nvar c=this.getField(\"balance.16\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.16",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.17",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.17",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.16\");\r\nvar b=this.getField(\"paid.17\");\r\nvar c=this.getField(\"balance.17\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.17",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.18",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.18",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.17\");\r\nvar b=this.getField(\"paid.18\");\r\nvar c=this.getField(\"balance.18\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.18",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.19",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.19",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.18\");\r\nvar b=this.getField(\"paid.19\");\r\nvar c=this.getField(\"balance.19\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.19",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.20",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.20",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.19\");\r\nvar b=this.getField(\"paid.20\");\r\nvar c=this.getField(\"balance.20\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.20",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.21",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.21",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.20\");\r\nvar b=this.getField(\"paid.21\");\r\nvar c=this.getField(\"balance.21\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.21",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.22",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.22",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.21\");\r\nvar b=this.getField(\"paid.22\");\r\nvar c=this.getField(\"balance.22\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.22",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.23",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.23",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.22\");\r\nvar b=this.getField(\"paid.23\");\r\nvar c=this.getField(\"balance.23\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.23",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.24",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.24",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.23\");\r\nvar b=this.getField(\"paid.24\");\r\nvar c=this.getField(\"balance.24\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.24",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.25",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.25",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.24\");\r\nvar b=this.getField(\"paid.25\");\r\nvar c=this.getField(\"balance.25\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.25",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.26",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.26",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.25\");\r\nvar b=this.getField(\"paid.26\");\r\nvar c=this.getField(\"balance.26\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.26",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.27",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.27",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.26\");\r\nvar b=this.getField(\"paid.27\");\r\nvar c=this.getField(\"balance.27\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.27",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.28",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.28",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.27\");\r\nvar b=this.getField(\"paid.28\");\r\nvar c=this.getField(\"balance.28\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.28",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.29",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.29",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.28\");\r\nvar b=this.getField(\"paid.29\");\r\nvar c=this.getField(\"balance.29\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.29",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.30",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.30",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.29\");\r\nvar b=this.getField(\"paid.30\");\r\nvar c=this.getField(\"balance.30\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.30",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.31",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.31",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.30\");\r\nvar b=this.getField(\"paid.31\");\r\nvar c=this.getField(\"balance.31\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.31",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.32",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.32",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.31\");\r\nvar b=this.getField(\"paid.32\");\r\nvar c=this.getField(\"balance.32\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.32",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.33",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.33",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.32\");\r\nvar b=this.getField(\"paid.33\");\r\nvar c=this.getField(\"balance.33\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.33",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.34",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.34",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.33\");\r\nvar b=this.getField(\"paid.34\");\r\nvar c=this.getField(\"balance.34\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.34",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.35",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.35",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.34\");\r\nvar b=this.getField(\"paid.35\");\r\nvar c=this.getField(\"balance.35\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.35",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.36",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.36",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.35\");\r\nvar b=this.getField(\"paid.36\");\r\nvar c=this.getField(\"balance.36\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n"
+ },
+ {
+  "field": "balance.36",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.37",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.37",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.36\");\r\nvar b=this.getField(\"paid.37\");\r\nvar c=this.getField(\"balance.37\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.37",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.38",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "balance.38",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"balance.37\");\r\nvar b=this.getField(\"paid.38\");\r\nvar c=this.getField(\"balance.38\");\r\nc.value=(a.value-b.value);\r\nif(b.value==\"\")c.value=\"\";\r\nif(a.value==\"\")c.value=\"\";\r\nif(b.value==\"0.0\")c.value=a.value;\r\n\r\n"
+ },
+ {
+  "field": "balance.38",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "Text9.0.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.3",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.3",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.3",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.3",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.0.1.1.5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.1.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.1.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.1.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mm/dd/yyyy\");"
+ },
+ {
+  "field": "Text9.0.1.6.1.1.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mm/dd/yyyy\");"
+ }
+]

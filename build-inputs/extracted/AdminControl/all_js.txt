@@ -1,0 +1,1226 @@
+
+===== FIELD Text5 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text5 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD Fee [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD Fee [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD date.0 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.0 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.1 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.1 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.2 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.2 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.3 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.3 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.5 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.5 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.6 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.6 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.7 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.7 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.8 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.8 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.9 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.9 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.10 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.10 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.11 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.11 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.12 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.12 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.13 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.13 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.14 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.14 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.15 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.15 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.16 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.16 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.17 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.17 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.18 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.18 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.19 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.19 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.20 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.20 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.21 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.21 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.22 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.22 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.23 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.23 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.24 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.24 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.25 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.25 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.26 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.26 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.27 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.27 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.28 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.28 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.29 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.29 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.30 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.30 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.31 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.31 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.32 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.32 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.33 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.33 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.34 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.34 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.35 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.35 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.36 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.36 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.37 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.37 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD date.38 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD date.38 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD paid.0 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.0 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.1 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.1 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.2 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.2 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.3 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.3 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.5 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.5 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.6 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.6 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.7 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.7 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.8 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.8 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.9 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.9 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.10 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.10 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.11 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.11 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.12 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.12 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.13 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.13 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.14 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.14 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.15 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.15 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.16 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.16 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.17 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.17 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.18 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.18 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.19 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.19 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.20 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.20 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.21 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.21 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.22 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.22 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.23 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.23 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.24 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.24 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.25 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.25 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.26 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.26 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.27 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.27 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.28 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.28 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.29 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.29 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.30 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.30 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.31 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.31 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.32 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.32 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.33 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.33 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.34 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.34 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.35 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.35 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.36 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.36 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.37 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.37 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.38 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD paid.38 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.0 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.0 [/C] =====
+var a=this.getField("Fee");
+var b=this.getField("paid.0");
+var c=this.getField("balance.0");
+c.value=(a.value-b.value);
+if(b.value=="0.0")c.value==a.value;
+if(a.value=="0.0")c.value=="0.0";
+
+
+
+===== FIELD balance.0 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.1 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.1 [/C] =====
+var a=this.getField("balance.0");
+var b=this.getField("paid.1");
+var c=this.getField("balance.1");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+===== FIELD balance.1 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.2 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.2 [/C] =====
+var a=this.getField("balance.1");
+var b=this.getField("paid.2");
+var c=this.getField("balance.2");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+
+
+
+===== FIELD balance.2 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.3 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.3 [/C] =====
+var a=this.getField("balance.2");
+var b=this.getField("paid.3");
+var c=this.getField("balance.3");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+
+
+===== FIELD balance.3 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.5 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.5 [/C] =====
+var a=this.getField("balance.3");
+var b=this.getField("paid.5");
+var c=this.getField("balance.5");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+===== FIELD balance.5 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.6 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.6 [/C] =====
+var a=this.getField("balance.5");
+var b=this.getField("paid.6");
+var c=this.getField("balance.6");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+
+===== FIELD balance.6 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.7 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.7 [/C] =====
+var a=this.getField("balance.6");
+var b=this.getField("paid.7");
+var c=this.getField("balance.7");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+===== FIELD balance.7 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.8 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.8 [/C] =====
+var a=this.getField("balance.7");
+var b=this.getField("paid.8");
+var c=this.getField("balance.8");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+
+===== FIELD balance.8 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.9 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.9 [/C] =====
+var a=this.getField("balance.8");
+var b=this.getField("paid.9");
+var c=this.getField("balance.9");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+
+===== FIELD balance.9 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.10 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.10 [/C] =====
+var a=this.getField("balance.9");
+var b=this.getField("paid.10");
+var c=this.getField("balance.10");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+
+===== FIELD balance.10 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.11 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.11 [/C] =====
+var a=this.getField("balance.10");
+var b=this.getField("paid.11");
+var c=this.getField("balance.11");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.11 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.12 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.12 [/C] =====
+var a=this.getField("balance.11");
+var b=this.getField("paid.12");
+var c=this.getField("balance.12");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.12 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.13 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.13 [/C] =====
+var a=this.getField("balance.12");
+var b=this.getField("paid.13");
+var c=this.getField("balance.13");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.13 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.14 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.14 [/C] =====
+var a=this.getField("balance.13");
+var b=this.getField("paid.14");
+var c=this.getField("balance.14");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.14 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.15 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.15 [/C] =====
+var a=this.getField("balance.14");
+var b=this.getField("paid.15");
+var c=this.getField("balance.15");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.15 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.16 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.16 [/C] =====
+var a=this.getField("balance.15");
+var b=this.getField("paid.16");
+var c=this.getField("balance.16");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.16 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.17 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.17 [/C] =====
+var a=this.getField("balance.16");
+var b=this.getField("paid.17");
+var c=this.getField("balance.17");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.17 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.18 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.18 [/C] =====
+var a=this.getField("balance.17");
+var b=this.getField("paid.18");
+var c=this.getField("balance.18");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.18 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.19 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.19 [/C] =====
+var a=this.getField("balance.18");
+var b=this.getField("paid.19");
+var c=this.getField("balance.19");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.19 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.20 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.20 [/C] =====
+var a=this.getField("balance.19");
+var b=this.getField("paid.20");
+var c=this.getField("balance.20");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.20 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.21 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.21 [/C] =====
+var a=this.getField("balance.20");
+var b=this.getField("paid.21");
+var c=this.getField("balance.21");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.21 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.22 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.22 [/C] =====
+var a=this.getField("balance.21");
+var b=this.getField("paid.22");
+var c=this.getField("balance.22");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.22 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.23 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.23 [/C] =====
+var a=this.getField("balance.22");
+var b=this.getField("paid.23");
+var c=this.getField("balance.23");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.23 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.24 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.24 [/C] =====
+var a=this.getField("balance.23");
+var b=this.getField("paid.24");
+var c=this.getField("balance.24");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.24 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.25 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.25 [/C] =====
+var a=this.getField("balance.24");
+var b=this.getField("paid.25");
+var c=this.getField("balance.25");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.25 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.26 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.26 [/C] =====
+var a=this.getField("balance.25");
+var b=this.getField("paid.26");
+var c=this.getField("balance.26");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.26 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.27 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.27 [/C] =====
+var a=this.getField("balance.26");
+var b=this.getField("paid.27");
+var c=this.getField("balance.27");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.27 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.28 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.28 [/C] =====
+var a=this.getField("balance.27");
+var b=this.getField("paid.28");
+var c=this.getField("balance.28");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.28 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.29 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.29 [/C] =====
+var a=this.getField("balance.28");
+var b=this.getField("paid.29");
+var c=this.getField("balance.29");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.29 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.30 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.30 [/C] =====
+var a=this.getField("balance.29");
+var b=this.getField("paid.30");
+var c=this.getField("balance.30");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.30 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.31 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.31 [/C] =====
+var a=this.getField("balance.30");
+var b=this.getField("paid.31");
+var c=this.getField("balance.31");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.31 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.32 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.32 [/C] =====
+var a=this.getField("balance.31");
+var b=this.getField("paid.32");
+var c=this.getField("balance.32");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.32 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.33 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.33 [/C] =====
+var a=this.getField("balance.32");
+var b=this.getField("paid.33");
+var c=this.getField("balance.33");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.33 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.34 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.34 [/C] =====
+var a=this.getField("balance.33");
+var b=this.getField("paid.34");
+var c=this.getField("balance.34");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.34 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.35 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.35 [/C] =====
+var a=this.getField("balance.34");
+var b=this.getField("paid.35");
+var c=this.getField("balance.35");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.35 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.36 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.36 [/C] =====
+var a=this.getField("balance.35");
+var b=this.getField("paid.36");
+var c=this.getField("balance.36");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+===== FIELD balance.36 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.37 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.37 [/C] =====
+var a=this.getField("balance.36");
+var b=this.getField("paid.37");
+var c=this.getField("balance.37");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.37 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.38 [/K] =====
+AFNumber_Keystroke(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD balance.38 [/C] =====
+var a=this.getField("balance.37");
+var b=this.getField("paid.38");
+var c=this.getField("balance.38");
+c.value=(a.value-b.value);
+if(b.value=="")c.value="";
+if(a.value=="")c.value="";
+if(b.value=="0.0")c.value=a.value;
+
+
+
+===== FIELD balance.38 [/F] =====
+AFNumber_Format(2, 0, 0, 0, "\u0024 ", true);
+
+===== FIELD Text9.0.1.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.3 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.3 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.4 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.4 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.5 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.5 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.3 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.3 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.4 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.4 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.5 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.0.1.1.5 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.1.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.1.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.1.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text9.0.1.6.1.1.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");

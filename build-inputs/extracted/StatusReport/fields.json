@@ -1,0 +1,234 @@
+[
+ {
+  "name": "Referral source name",
+  "type": "/Tx"
+ },
+ {
+  "name": "Fax number",
+  "type": "/Tx"
+ },
+ {
+  "name": "Client's name",
+  "type": "/Tx"
+ },
+ {
+  "name": "Admission date",
+  "type": "/Tx"
+ },
+ {
+  "name": "UST",
+  "type": "/Ch"
+ },
+ {
+  "name": "Methamphetamine",
+  "type": "/Tx"
+ },
+ {
+  "name": "Amphetamine",
+  "type": "/Tx"
+ },
+ {
+  "name": "THC",
+  "type": "/Tx"
+ },
+ {
+  "name": "Cocaine",
+  "type": "/Tx"
+ },
+ {
+  "name": "Amphet result",
+  "type": "/Ch"
+ },
+ {
+  "name": "THC result",
+  "type": "/Ch"
+ },
+ {
+  "name": "Opiates",
+  "type": "/Tx"
+ },
+ {
+  "name": "Opiates result",
+  "type": "/Ch"
+ },
+ {
+  "name": "Cocaine result",
+  "type": "/Ch"
+ },
+ {
+  "name": "Meth result",
+  "type": "/Ch"
+ },
+ {
+  "name": "DT",
+  "type": "/Tx"
+ },
+ {
+  "name": "Test date",
+  "type": "/Tx"
+ },
+ {
+  "name": "Comments",
+  "type": "/Tx"
+ },
+ {
+  "name": "Referal source",
+  "type": "/Ch"
+ },
+ {
+  "name": "Name and credencials",
+  "type": "/Ch"
+ },
+ {
+  "name": "Print",
+  "type": "/Btn"
+ },
+ {
+  "name": "Case No",
+  "type": "/Tx"
+ },
+ {
+  "name": "DOB",
+  "type": "/Tx"
+ },
+ {
+  "name": "Date",
+  "type": "/Tx"
+ },
+ {
+  "name": "COA",
+  "type": "/Ch"
+ },
+ {
+  "name": "DLN",
+  "type": "/Tx"
+ },
+ {
+  "name": "DLNW",
+  "type": "/Tx"
+ },
+ {
+  "name": "LOIW",
+  "type": "/Ch"
+ },
+ {
+  "name": "LOI",
+  "type": "/Tx"
+ },
+ {
+  "name": "LORW",
+  "type": "/Ch"
+ },
+ {
+  "name": "LOR",
+  "type": "/Tx"
+ },
+ {
+  "name": "DUICS",
+  "type": "/Ch"
+ },
+ {
+  "name": "Client's status",
+  "type": "/Ch"
+ },
+ {
+  "name": "DUI CASE ?",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1",
+  "type": "/Tx"
+ },
+ {
+  "name": "HOURSIG.0.0.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "HOURSIG.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DRISKEDU.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "From1.0.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "From1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "From1.1.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.0.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "To1.1.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "ToMOD.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATEMOD1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "FromMOD.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "EARLYINT.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "HOURMOD.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "OUTPTSIG.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG2.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "MONTHAFCRSIG",
+  "type": "/Tx"
+ },
+ {
+  "name": "CCSIG",
+  "type": "/Tx"
+ },
+ {
+  "name": "DATESIG3",
+  "type": "/Tx"
+ },
+ {
+  "name": "ACMTS",
+  "type": "/Ch"
+ },
+ {
+  "name": "Signature",
+  "type": "/Ch"
+ },
+ {
+  "name": "Text2",
+  "type": "/Tx"
+ }
+]

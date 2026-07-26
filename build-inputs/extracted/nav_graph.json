@@ -1,0 +1,298 @@
+{
+ "Admissions": [
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Clinical control - Archer - Copy (17)/01 Process control 09.pdf"
+  }
+ ],
+ "ProcessControl": [
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "03 Forms 1-7.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Assessment R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Treatment Plan R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (2).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (3).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (4).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (5).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (6).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Review R12 - Copy (7).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Activity Notes 12 hours R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Activity Notes 20 hours R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Activity Notes 75 hours R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Discharge  R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Continue Care R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Administrative control R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Treatment Verification R12.pdf"
+  }
+ ],
+ "Forms_1-7": [],
+ "Assessment": [],
+ "TreatmentPlan": [],
+ "CaseReview": [],
+ "ActivityNotes12": [],
+ "ActivityNotes20": [],
+ "ActivityNotes75": [],
+ "ContinueCare": [],
+ "Discharge": [],
+ "AdminControl": [
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (2).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (3).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (4).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (5).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (6).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Status Reports/01 status report R12 - Copy (7).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Letter of Completion Treatment Level 1 R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Letter of Completion Treatment Level 2 R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Letter of Completion Early Intevention R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Letter of Completion Education R12.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy.pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy (2).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy (3).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy (4).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy (5).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Case Coordination/Case Coordination - Copy (6).pdf"
+  },
+  {
+   "page": 1,
+   "widget": "",
+   "type": "/Link",
+   "action": "/Launch",
+   "target": "Scanned documents/01 DUI Evaluation/Alcohol and Drug Evaluation Uniform Report.pdf"
+  }
+ ],
+ "TreatmentVerification": [
+  {
+   "page": 1,
+   "widget": "Print",
+   "type": "/Widget",
+   "action": "/Named",
+   "target": "/Print"
+  },
+  {
+   "page": 1,
+   "widget": "Save",
+   "type": "/Widget",
+   "action": "/Named",
+   "target": "/SaveAs"
+  }
+ ],
+ "StatusReport": [],
+ "CaseCoordination": [],
+ "LetterEarlyIntervention": [],
+ "LetterEducation": [],
+ "LetterTreatmentL1": [],
+ "LetterTreatmentL2": []
+}

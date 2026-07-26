@@ -1,0 +1,167 @@
+[
+ {
+  "field": "Text1.0.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text1.0.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text9",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Text9",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "RE0005",
+  "trigger": "/C",
+  "js": "/** BVCALC RE0003/2 EVCALC **/event.value=AFMakeNumber(getField(\"RE0003\").value)/2"
+ },
+ {
+  "field": "RE0008",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "RE0008",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "RE0011",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "RE0011",
+  "trigger": "/C",
+  "js": "AFSimple_Calculate(\"PRD\", new Array (\"RE0005\", \"RE0008\"));"
+ },
+ {
+  "field": "RE0011",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "EI0005",
+  "trigger": "/C",
+  "js": "/** BVCALC EI0003/2 EVCALC **/event.value=AFMakeNumber(getField(\"EI0003\").value)/2"
+ },
+ {
+  "field": "EI0008",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "EI0008",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "EI0011",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "EI0011",
+  "trigger": "/C",
+  "js": "AFSimple_Calculate(\"PRD\", new Array (\"EI0005\", \"EI0008\"));"
+ },
+ {
+  "field": "EI0011",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "OP0005",
+  "trigger": "/C",
+  "js": "var a=this.getField(\"OP0003\")\r\nvar b=this.getField(\"OP0005\");\r\n\r\nif(a.value==\"\")b.value=0;\r\n\r\nif(a.value>=\"50\")b.value=a.value/3;\r\nif(a.value<\"50\")b.value=a.value/2;\r\n"
+ },
+ {
+  "field": "OP0008",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "OP0008",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "OP0011",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "OP0011",
+  "trigger": "/C",
+  "js": "AFSimple_Calculate(\"PRD\", new Array (\"OP0005\", \"OP0008\"));"
+ },
+ {
+  "field": "OP0011",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "CCP0006",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "CCP0006",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "CCP0009",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "CCP0009",
+  "trigger": "/C",
+  "js": "AFSimple_Calculate(\"PRD\", new Array (\"CCP0003\", \"CCP0006\"));"
+ },
+ {
+  "field": "CCP0009",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "TC0002",
+  "trigger": "/K",
+  "js": "AFNumber_Keystroke(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "TC0002",
+  "trigger": "/C",
+  "js": "AFSimple_Calculate(\"SUM\", new Array (\"CCP0009\", \"EI0011\", \"OP0011\", \"RE0011\"));"
+ },
+ {
+  "field": "TC0002",
+  "trigger": "/F",
+  "js": "AFNumber_Format(2, 0, 0, 0, \"\\u0024 \", true);"
+ },
+ {
+  "field": "LOI",
+  "trigger": "/C",
+  "js": "var RE0001=this.getField(\"RE0001\");\r\nvar RE0002=this.getField(\"RE0002\");\r\nvar RE0003=this.getField(\"RE0003\");\r\nvar RE0004=this.getField(\"RE0004\");\r\nvar RE0005=this.getField(\"RE0005\");\r\nvar RE0006=this.getField(\"RE0006\");\r\nvar RE0006=this.getField(\"RE0007\");\r\nvar RE0006=this.getField(\"RE0008\");\r\nvar RE0006=this.getField(\"RE0009\");\r\nvar RE0006=this.getField(\"RE0010\");\r\nvar RE0006=this.getField(\"RE0011\");\r\nvar EI0001=this.getField(\"EI0001\");\r\nvar EI0002=this.getField(\"EI0002\");\r\nvar EI0003=this.getField(\"EI0003\");\r\nvar EI0004=this.getField(\"EI0004\");\r\nvar EI0005=this.getField(\"EI0005\");\r\nvar EI0006=this.getField(\"EI0006\");\r\nvar EI0007=this.getField(\"EI0007\");\r\nvar EI0008=this.getField(\"EI0008\");\r\nvar EI0009=this.getField(\"EI0009\");\r\nvar EI0010=this.getField(\"EI0010\");\r\nvar EI0011=this.getField(\"EI0011\");\r\nvar OP0001=this.getField(\"OP0001\");\r\nvar OP0002=this.getField(\"OP0002\");\r\nvar OP0003=this.getField(\"OP0003\");\r\nvar OP0004=this.getField(\"OP0004\");\r\nvar OP0005=this.getField(\"OP0005\");\r\nvar OP0006=this.getField(\"OP0006\");\r\nvar OP0007=this.getField(\"OP0007\");\r\nvar OP0008=this.getField(\"OP0008\");\r\nvar OP0009=this.getField(\"OP0009\");\r\nvar OP0010=this.getField(\"OP0010\");\r\nvar OP0011=this.getField(\"OP0011\");\r\nvar CCP0001=this.getField(\"CCP0001\");\r\nvar CCP0002=this.getField(\"CCP0002\");\r\nvar CCP0003=this.getField(\"CCP0003\");\r\nvar CCP0004=this.getField(\"CCP0004\");\r\nvar CCP0005=this.getField(\"CCP0005\");\r\nvar CCP0006=this.getField(\"CCP0006\");\r\nvar CCP0007=this.getField(\"CCP0007\");\r\nvar CCP0008=this.getField(\"CCP0008\");\r\nvar CCP0009=this.getField(\"CCP0009\");\r\nvar LOI=this.getField(\"LOI\");\r\n\r\nthis.getField(\"RE0001\").display=display.hidden;\r\nthis.getField(\"RE0002\").display=display.hidden;\r\nthis.getField(\"RE0003\").display=display.hidden;\r\nthis.getField(\"RE0004\").display=display.hidden;\r\nthis.getField(\"RE0005\").display=display.hidden;\r\nthis.getField(\"RE0006\").display=display.hidden;\r\nthis.getField(\"RE0007\").display=display.hidden;\r\nthis.getField(\"RE0008\").display=display.hidden;\r\nthis.getField(\"RE0009\").display=display.hidden;\r\nthis.getField(\"RE0010\").display=display.hidden;\r\nthis.getField(\"RE0011\").display=display.hidden;\r\nthis.getField(\"EI0001\").display=display.hidden;\r\nthis.getField(\"EI0002\").display=display.hidden;\r\nthis.getField(\"EI0003\").display=display.hidden;\r\nthis.getField(\"EI0004\").display=display.hidden;\r\nthis.getField(\"EI0005\").display=display.hidden;\r\nthis.getField(\"EI0006\").display=display.hidden;\r\nthis.getField(\"EI0007\").display=display.hidden;\r\nthis.getField(\"EI0008\").display=display.hidden;\r\nthis.getField(\"EI0009\").display=display.hidden;\r\nthis.getField(\"EI0010\").display=display.hidden;\r\nthis.getField(\"EI0011\").display=display.hidden;\r\nthis.getField(\"OP0001\").display=display.hidden;\r\nthis.getField(\"OP0002\").display=display.hidden;\r\nthis.getField(\"OP0003\").display=display.hidden;\r\nthis.getField(\"OP0004\").display=display.hidden;\r\nthis.getField(\"OP0005\").display=display.hidden;\r\nthis.getField(\"OP0006\").display=display.hidden;\r\nthis.getField(\"OP0007\").display=display.hidden;\r\nthis.getField(\"OP0008\").display=display.hidden;\r\nthis.getField(\"OP0009\").display=display.hidden;\r\nthis.getField(\"OP0010\").display=display.hidden;\r\nthis.getField(\"OP0011\").display=display.hidden;\r\nthis.getField(\"CCP0001\").display=display.hidden;\r\nthis.getField(\"CCP0002\").display=display.hidden;\r\nthis.getField(\"CCP0003\").display=display.hidden;\r\nthis.getField(\"CCP0004\").display=display.hidden;\r\nthis.getField(\"CCP0005\").display=display.hidden;\r\nthis.getField(\"CCP0006\").display=display.hidden;\r\nthis.getField(\"CCP0007\").display=display.hidden;\r\nthis.getField(\"CCP0008\").display=display.hidden;\r\nthis.getField(\"CCP0009\").display=display.hidden;\r\n\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0001\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0002\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0003\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0004\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0005\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0006\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0007\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0008\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0009\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0010\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RE0011\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0001\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0002\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0003\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0004\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0005\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0006\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0007\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0008\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0009\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0010\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RE0011\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0001\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0002\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0003\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0004\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0005\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0006\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0007\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0008\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0009\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0010\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EI0011\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0001\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0002\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0003\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0004\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0005\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0006\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0007\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0008\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0009\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0010\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RE0011\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0001\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0002\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0003\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0004\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0005\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0006\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0007\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0008\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0009\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0010\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP0011\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0001\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0002\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0003\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0004\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0005\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0006\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0007\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0008\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP0009\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0001\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0002\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0003\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0004\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0005\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0006\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0007\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0008\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0009\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0010\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OP0011\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0001\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0002\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0003\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0004\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0005\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0006\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0007\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0008\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCP0009\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0001\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0002\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0003\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0004\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0005\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0006\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0007\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0008\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0009\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0010\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RE0011\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0001\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0002\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0003\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0004\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0005\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0006\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0007\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0008\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0009\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0010\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EI0011\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0001\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0002\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0003\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0004\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0005\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0006\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0007\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0008\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0009\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0010\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OP0011\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0001\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0002\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0003\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0004\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0005\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0006\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0007\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0008\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCP0009\").display=display.visible;\r\n\r\n\r\nvar RISKEDUCT=this.getField(\"RISKEDUCT\");\r\nvar RISKEDUC=this.getField(\"RISKEDUC\");\r\nvar EARLYINT=this.getField(\"EARLYINT\");\r\nvar EARLYINTT=this.getField(\"EARLYINTT\");\r\nvar OP=this.getField(\"OP\");\r\nvar OPT=this.getField(\"OPT\");\r\nvar CCP=this.getField(\"CCP\");\r\nvar CCPT=this.getField(\"CCPT\");\r\nvar OPHR=this.getField(\"OPHR\");\r\nvar OPHRT=this.getField(\"OPHRT\");\r\nvar CCPHR=this.getField(\"CCPHR\");\r\nvar CCPHRT=this.getField(\"CCPHRT\");\r\nvar EARLYINTONLY=this.getField(\"EARLYINTONLY\");\r\nvar EARLYINTONLYT=this.getField(\"EARLYINTONLYT\");\r\nvar LOI=this.getField(\"LOI\");\r\n\r\nthis.getField(\"RISKEDUCT\").display=display.hidden;\r\nthis.getField(\"RISKEDUC\").display=display.hidden;\r\nthis.getField(\"EARLYINTT\").display=display.hidden;\r\nthis.getField(\"EARLYINT\").display=display.hidden;\r\nthis.getField(\"OP\").display=display.hidden;\r\nthis.getField(\"OPT\").display=display.hidden;\r\nthis.getField(\"CCP\").display=display.hidden;\r\nthis.getField(\"CCPT\").display=display.hidden;\r\nthis.getField(\"OPHR\").display=display.hidden;\r\nthis.getField(\"OPHRT\").display=display.hidden;\r\nthis.getField(\"CCPHR\").display=display.hidden;\r\nthis.getField(\"CCPHRT\").display=display.hidden;\r\nthis.getField(\"EARLYINTONLY\").display=display.hidden;\r\nthis.getField(\"EARLYINTONLYT\").display=display.hidden;\r\n\r\n\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RISKEDUC\").display=display.visible;\r\nif(LOI.value==\"Minimal Risk Program\")this.getField(\"RISKEDUCT\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RISKEDUC\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"RISKEDUCT\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EARLYINT\").display=display.visible;\r\nif(LOI.value==\"Moderate Risk Program\")this.getField(\"EARLYINTT\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RISKEDUC\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"RISKEDUCT\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OP\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"OPT\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCP\").display=display.visible;\r\nif(LOI.value==\"Significant Risk Program\")this.getField(\"CCPT\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OPHR\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"OPHRT\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCPHR\").display=display.visible;\r\nif(LOI.value==\"High Risk Program\")this.getField(\"CCPHRT\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OPHR\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"OPHRT\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCPHR\").display=display.visible;\r\nif(LOI.value==\"Outpatient Treatment Program\")this.getField(\"CCPHRT\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EARLYINTONLYT\").display=display.visible;\r\nif(LOI.value==\"Early Intervention Program\")this.getField(\"EARLYINTONLY\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RISKEDUC\").display=display.visible;\r\nif(LOI.value==\"Risk Education Program\")this.getField(\"RISKEDUCT\").display=display.visible;\r\n\r\n\r\n"
+ }
+]

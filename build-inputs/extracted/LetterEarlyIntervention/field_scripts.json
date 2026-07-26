@@ -1,0 +1,97 @@
+[
+ {
+  "field": "DOB",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DOB",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Admission date",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Admission date",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "LCPL",
+  "trigger": "/C",
+  "js": "this.getField(\"CPLEDU\").display=display.hidden;\r\nthis.getField(\"Pretest\").display=display.hidden;\r\nthis.getField(\"CPLEDU1\").display=display.hidden;\r\nthis.getField(\"Posttest\").display=display.hidden;\r\nthis.getField(\"CPLEDU2\").display=display.hidden;\r\nthis.getField(\"CPLEARLY0\").display=display.hidden;\r\nthis.getField(\"CPLEARLY1\").display=display.hidden;\r\nthis.getField(\"CPLEARLY2\").display=display.hidden;\r\nthis.getField(\"CPLEARLY3\").display=display.hidden;\r\n\r\nvar LCPL=this.getField(\"LCPL\");\r\nvar CPLEDU=this.getField(\"CPLEDU\");\r\nvar Pretest=this.getField(\"Pretest\");\r\nvar CPLEDU1=this.getField(\"CPLEDU1\");\r\nvar Posttest=this.getField(\"Posttest\");\r\nvar CPLEDU2=this.getField(\"CPLEDU2\");\r\nvar CPLEARLY0=this.getField(\"CPLEARLY0\");\r\nvar CPLEARLY1=this.getField(\"CPLEARLY1\");\r\nvar CPLEARLY2=this.getField(\"CPLEARLY3\");\r\n\r\nif(LCPL.value==\"RISK EDUCATION\")this.getField(\"CPLEDU\").display=display.visible;\r\nif(LCPL.value==\"RISK EDUCATION\")this.getField(\"Pretest\").display=display.visible;\r\nif(LCPL.value==\"RISK EDUCATION\")this.getField(\"CPLEDU1\").display=display.visible;\r\nif(LCPL.value==\"RISK EDUCATION\")this.getField(\"Posttest\").display=display.visible;\r\nif(LCPL.value==\"RISK EDUCATION\")this.getField(\"CPLEDU2\").display=display.visible;\r\n\r\nif(LCPL.value==\"EARLY INTERVENTION\")this.getField(\"CPLEARLY0\").display=display.visible;\r\nif(LCPL.value==\"EARLY INTERVENTION\")this.getField(\"CPLEARLY1\").display=display.visible;\r\nif(LCPL.value==\"EARLY INTERVENTION\")this.getField(\"CPLEARLY2\").display=display.visible;\r\nif(LCPL.value==\"EARLY INTERVENTION\")this.getField(\"CPLEARLY3\").display=display.visible;\r\n"
+ },
+ {
+  "field": "Date",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "Date",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.0",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.0",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.1",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.1",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.2",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.2",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.3",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.3",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.4",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.4",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.5",
+  "trigger": "/K",
+  "js": "AFDate_KeystrokeEx(\"mmmm d, yyyy\");"
+ },
+ {
+  "field": "DATEATT.5",
+  "trigger": "/F",
+  "js": "AFDate_FormatEx(\"mmmm d, yyyy\");"
+ }
+]

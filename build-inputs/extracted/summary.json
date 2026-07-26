@@ -1,0 +1,251 @@
+{
+ "Admissions": {
+  "file": "001 Admissions R12       January.pdf",
+  "size": 5173987,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 300,
+  "field_script_count": 100,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 200,
+   "/Ch": 100
+  }
+ },
+ "ProcessControl": {
+  "file": "ProcessControl_R12.pdf",
+  "size": 3379460,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 52,
+  "field_script_count": 38,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 30,
+   "/Ch": 22
+  }
+ },
+ "Forms_1-7": {
+  "file": "Forms_1-7.pdf",
+  "size": 5688776,
+  "pages": 7,
+  "doc_js_count": 0,
+  "field_count": 98,
+  "field_script_count": 33,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 83,
+   "/Ch": 15
+  }
+ },
+ "Assessment": {
+  "file": "Assessment_R12.pdf",
+  "size": 4232969,
+  "pages": 12,
+  "doc_js_count": 0,
+  "field_count": 360,
+  "field_script_count": 6,
+  "page_script_count": 0,
+  "field_types": {
+   "/Ch": 154,
+   "/Tx": 206
+  }
+ },
+ "TreatmentPlan": {
+  "file": "TreatmentPlan_R12.pdf",
+  "size": 3449396,
+  "pages": 7,
+  "doc_js_count": 0,
+  "field_count": 78,
+  "field_script_count": 4,
+  "page_script_count": 0,
+  "field_types": {
+   "/Ch": 57,
+   "/Tx": 21
+  }
+ },
+ "CaseReview": {
+  "file": "CaseReview_R12.pdf",
+  "size": 1893041,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 30,
+  "field_script_count": 2,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 3,
+   "/Ch": 27
+  }
+ },
+ "ActivityNotes12": {
+  "file": "ActivityNotes12_R12.pdf",
+  "size": 1792600,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 102,
+  "field_script_count": 18,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 45,
+   "/Ch": 57
+  }
+ },
+ "ActivityNotes20": {
+  "file": "ActivityNotes20_R12.pdf",
+  "size": 2713574,
+  "pages": 3,
+  "doc_js_count": 0,
+  "field_count": 175,
+  "field_script_count": 30,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 75,
+   "/Ch": 100
+  }
+ },
+ "ActivityNotes75": {
+  "file": "ActivityNotes75_R12.pdf",
+  "size": 6325264,
+  "pages": 6,
+  "doc_js_count": 0,
+  "field_count": 379,
+  "field_script_count": 60,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 152,
+   "/Ch": 227
+  }
+ },
+ "ContinueCare": {
+  "file": "ContinueCare_R12.pdf",
+  "size": 1775729,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 29,
+  "field_script_count": 6,
+  "page_script_count": 0,
+  "field_types": {
+   "/Ch": 23,
+   "/Tx": 6
+  }
+ },
+ "Discharge": {
+  "file": "Discharge_R12.pdf",
+  "size": 2438601,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 57,
+  "field_script_count": 6,
+  "page_script_count": 0,
+  "field_types": {
+   "/Ch": 42,
+   "/Tx": 15
+  }
+ },
+ "AdminControl": {
+  "file": "Administrative control R12.pdf",
+  "size": 2412412,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 244,
+  "field_script_count": 304,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 204,
+   "/Ch": 39,
+   "/Btn": 1
+  }
+ },
+ "TreatmentVerification": {
+  "file": "Treatment Verification R12.pdf",
+  "size": 268188,
+  "pages": 2,
+  "doc_js_count": 0,
+  "field_count": 49,
+  "field_script_count": 0,
+  "page_script_count": 0,
+  "field_types": {
+   "/Btn": 15,
+   "/Tx": 34
+  }
+ },
+ "StatusReport": {
+  "file": "01 status report R12.pdf",
+  "size": 4613310,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 58,
+  "field_script_count": 13,
+  "page_script_count": 1,
+  "field_types": {
+   "/Tx": 42,
+   "/Ch": 15,
+   "/Btn": 1
+  }
+ },
+ "CaseCoordination": {
+  "file": "Case Coordination.pdf",
+  "size": 1631751,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 13,
+  "field_script_count": 4,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 11,
+   "/Ch": 2
+  }
+ },
+ "LetterEarlyIntervention": {
+  "file": "Letter of Completion Early Intevention R12.pdf",
+  "size": 1001145,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 34,
+  "field_script_count": 19,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 19,
+   "/Ch": 15
+  }
+ },
+ "LetterEducation": {
+  "file": "Letter of Completion Education R12.pdf",
+  "size": 991334,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 34,
+  "field_script_count": 19,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 19,
+   "/Ch": 15
+  }
+ },
+ "LetterTreatmentL1": {
+  "file": "Letter of Completion Treatment Level 1 R12.pdf",
+  "size": 2096512,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 51,
+  "field_script_count": 23,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 31,
+   "/Ch": 20
+  }
+ },
+ "LetterTreatmentL2": {
+  "file": "Letter of Completion Treatment Level 2 R12.pdf",
+  "size": 2091305,
+  "pages": 1,
+  "doc_js_count": 0,
+  "field_count": 51,
+  "field_script_count": 23,
+  "page_script_count": 0,
+  "field_types": {
+   "/Tx": 31,
+   "/Ch": 20
+  }
+ }
+}

@@ -1,0 +1,209 @@
+
+===== FIELD DUICS [/C] =====
+this.getField("DLN").display=display.hidden;
+this.getField("DLNW").display=display.hidden;
+this.getField("LOI").display=display.hidden;
+this.getField("LOIW").display=display.hidden;
+this.getField("LOR").display=display.hidden;
+this.getField("LORW").display=display.hidden;
+this.getField("HOURSIG.0").display=display.hidden;
+this.getField("HOURSIG.1").display=display.hidden;
+this.getField("MONTHAFCRSIG").display=display.hidden;
+this.getField("DRISKEDU").display=display.hidden;
+this.getField("HOURSIG.1").display=display.hidden;
+this.getField("OUTPTSIG.0").display=display.hidden;
+this.getField("CCSIG").display=display.hidden;
+this.getField("From1.0").display=display.hidden;
+this.getField("From1.1.0").display=display.hidden;
+this.getField("From1.1.1").display=display.hidden;
+this.getField("To1.0").display=display.hidden;
+this.getField("To1.1.0").display=display.hidden;
+this.getField("To1.1.1").display=display.hidden;
+this.getField("DATESIG1").display=display.hidden;
+this.getField("DATESIG2").display=display.hidden;
+this.getField("DATESIG3").display=display.hidden;
+this.getField("DATESIG4").display=display.hidden;
+this.getField("DATESIG5").display=display.hidden;
+this.getField("DATESIG6").display=display.hidden;
+this.getField("HOURMOD").display=display.hidden;
+this.getField("EARLYINT").display=display.hidden;
+this.getField("FromMOD").display=display.hidden;
+this.getField("DATEMOD1").display=display.hidden;
+this.getField("ToMOD").display=display.hidden;
+this.getField("DATEMOD2").display=display.hidden;
+
+
+var DUICS=this.getField("DUICS");
+var DLN=this.getField("DLN");
+var DLNW=this.getField("DLNW");
+var LOI=this.getField("LOI");
+var LOIW=this.getField("LOIW");
+var LOR=this.getField("LOR");
+var LORW=this.getField("LORW");
+
+if(DUICS.value=="Yes")this.getField("DLN").display=display.visible;
+if(DUICS.value=="Yes")this.getField("DLNW").display=display.visible;
+if(DUICS.value=="Yes")this.getField("LOR").display=display.visible;
+if(DUICS.value=="Yes")this.getField("LORW").display=display.visible;
+if(DUICS.value=="No")this.getField("LOI").display=display.visible;
+if(DUICS.value=="No")this.getField("LOIW").display=display.visible;
+
+
+===== FIELD Text2 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text2 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD LOIW [/C] =====
+
+if(LOIW.value=="Outpatient Treatment")this.getField("HOURSIG.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("OUTPTSIG").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("From1.1.").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG2").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("To1.1.").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG5").display=display.visible;
+
+if(LOIW.value=="Outpatient Treatment")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Outpatient Treatment")this.getField("DATESIG6").display=display.visible;
+
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("HOURSIG.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("OUTPTSIG").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("From1.1.").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG2").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("To1.1.").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG5").display=display.visible;
+
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Intensive Outpatient Treatment")this.getField("DATESIG6").display=display.visible;
+
+if(LOIW.value=="Continuing Care")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("CCSIG").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("From1.1.1").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("DATESIG3").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("To1.1.1").display=display.visible;
+if(LOIW.value=="Continuing Care")this.getField("DATESIG6").display=display.visible;
+
+
+===== FIELD LORW [/C] =====
+if(LORW.value=="Minimal")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Minimal")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Minimal")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Minimal")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Minimal")this.getField("To1.0").display=display.visible;
+if(LORW.value=="Minimal")this.getField("DATESIG4").display=display.visible;
+
+if(LORW.value=="Moderate")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Moderate")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Moderate")this.getField("To1.0").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATESIG4").display=display.visible;
+
+
+if(LORW.value=="Moderate")this.getField("HOURMOD").display=display.visible;
+if(LORW.value=="Moderate")this.getField("EARLYINT").display=display.visible;
+if(LORW.value=="Moderate")this.getField("FromMOD").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATEMOD1").display=display.visible;
+if(LORW.value=="Moderate")this.getField("ToMOD").display=display.visible;
+if(LORW.value=="Moderate")this.getField("DATEMOD2").display=display.visible;
+
+
+if(LORW.value=="Significant")this.getField("HOURSIG.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("DRISKEDU").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG1").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.0").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG4").display=display.visible;
+
+if(LORW.value=="Significant")this.getField("HOURSIG.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("OUTPTSIG").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.1.").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG2").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.1.").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG5").display=display.visible;
+
+if(LORW.value=="Significant")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LORW.value=="Significant")this.getField("CCSIG").display=display.visible;
+if(LORW.value=="Significant")this.getField("From1.1.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG3").display=display.visible;
+if(LORW.value=="Significant")this.getField("To1.1.1").display=display.visible;
+if(LORW.value=="Significant")this.getField("DATESIG6").display=display.visible;
+
+if(LORW.value=="High")this.getField("HOURSIG.1").display=display.visible;
+if(LORW.value=="High")this.getField("OUTPTSIG").display=display.visible;
+if(LORW.value=="High")this.getField("From1.1.").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG2").display=display.visible;
+if(LORW.value=="High")this.getField("To1.1.").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG5").display=display.visible;
+
+if(LORW.value=="High")this.getField("MONTHAFCRSIG").display=display.visible;
+if(LORW.value=="High")this.getField("CCSIG").display=display.visible;
+if(LORW.value=="High")this.getField("From1.1.1").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG3").display=display.visible;
+if(LORW.value=="High")this.getField("To1.1.1").display=display.visible;
+if(LORW.value=="High")this.getField("DATESIG6").display=display.visible;
+
+
+
+===== FIELD DATESIG1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATESIG2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATESIG4 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG4 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATESIG5 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG5 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATESIG3.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG3.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATESIG6.0 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATESIG6.0 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATEMOD1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATEMOD1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD DATEMOD2 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD DATEMOD2 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text26 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text26 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");

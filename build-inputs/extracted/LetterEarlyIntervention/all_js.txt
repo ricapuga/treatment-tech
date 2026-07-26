@@ -1,0 +1,87 @@
+
+===== FIELD DOB [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DOB [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD Admission date [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Admission date [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD LCPL [/C] =====
+this.getField("CPLEDU").display=display.hidden;
+this.getField("Pretest").display=display.hidden;
+this.getField("CPLEDU1").display=display.hidden;
+this.getField("Posttest").display=display.hidden;
+this.getField("CPLEDU2").display=display.hidden;
+this.getField("CPLEARLY0").display=display.hidden;
+this.getField("CPLEARLY1").display=display.hidden;
+this.getField("CPLEARLY2").display=display.hidden;
+this.getField("CPLEARLY3").display=display.hidden;
+
+var LCPL=this.getField("LCPL");
+var CPLEDU=this.getField("CPLEDU");
+var Pretest=this.getField("Pretest");
+var CPLEDU1=this.getField("CPLEDU1");
+var Posttest=this.getField("Posttest");
+var CPLEDU2=this.getField("CPLEDU2");
+var CPLEARLY0=this.getField("CPLEARLY0");
+var CPLEARLY1=this.getField("CPLEARLY1");
+var CPLEARLY2=this.getField("CPLEARLY3");
+
+if(LCPL.value=="RISK EDUCATION")this.getField("CPLEDU").display=display.visible;
+if(LCPL.value=="RISK EDUCATION")this.getField("Pretest").display=display.visible;
+if(LCPL.value=="RISK EDUCATION")this.getField("CPLEDU1").display=display.visible;
+if(LCPL.value=="RISK EDUCATION")this.getField("Posttest").display=display.visible;
+if(LCPL.value=="RISK EDUCATION")this.getField("CPLEDU2").display=display.visible;
+
+if(LCPL.value=="EARLY INTERVENTION")this.getField("CPLEARLY0").display=display.visible;
+if(LCPL.value=="EARLY INTERVENTION")this.getField("CPLEARLY1").display=display.visible;
+if(LCPL.value=="EARLY INTERVENTION")this.getField("CPLEARLY2").display=display.visible;
+if(LCPL.value=="EARLY INTERVENTION")this.getField("CPLEARLY3").display=display.visible;
+
+
+===== FIELD Date [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Date [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.0 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.0 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.1 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.1 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.2 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.2 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.3 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.3 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.4 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.4 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.5 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD DATEATT.5 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");

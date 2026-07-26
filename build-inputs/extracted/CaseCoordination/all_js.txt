@@ -1,0 +1,12 @@
+
+===== FIELD Text1.1 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text1.1 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");
+
+===== FIELD Text1.4 [/K] =====
+AFDate_KeystrokeEx("mm/dd/yyyy");
+
+===== FIELD Text1.4 [/F] =====
+AFDate_FormatEx("mm/dd/yyyy");

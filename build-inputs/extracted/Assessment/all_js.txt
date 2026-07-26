@@ -1,0 +1,130 @@
+
+===== FIELD BMCC [/C] =====
+var BMCC=this.getField("BMCC");
+var DIM2E1=this.getField("DIM2E1");
+var DIM2E1NA=this.getField("DIM2E1NA");
+var DIM2E2=this.getField("DIM2E1");
+var DIM2E2NA=this.getField("DIM2E1NA");
+var DIM2E3=this.getField("DIM2E1");
+var DIM2E3NA=this.getField("DIM2E1NA");
+
+this.getField("DIM2E1").display=display.hidden;
+if(BMCC.value=="Yes")this.getField("DIM2E1").display=display.visible;
+this.getField("DIM2E1NA").display=display.hidden;
+if(BMCC.value=="No")this.getField("DIM2E1NA").display=display.visible;
+
+this.getField("DIM2E2").display=display.hidden;
+if(BMCC.value=="Yes")this.getField("DIM2E2").display=display.visible;
+this.getField("DIM2E2NA").display=display.hidden;
+if(BMCC.value=="No")this.getField("DIM2E2NA").display=display.visible;
+
+this.getField("DIM2E3").display=display.hidden;
+if(BMCC.value=="Yes")this.getField("DIM2E3").display=display.visible;
+this.getField("DIM2E3NA").display=display.hidden;
+if(BMCC.value=="No")this.getField("DIM2E3NA").display=display.visible;
+
+===== FIELD DIM3PS [/C] =====
+var DIM3PS=this.getField("DIM3PS");
+var DIM3PSE1=this.getField("DIM3PSE1");
+var DIM3PSE1NA=this.getField("DIM3PSE1NA");
+var DIMPSHSE2=this.getField("DIMPSHSE2");
+var DIMPSHSE2NA=this.getField("DIMPSHSE2NA");
+var DIMPSHSE3=this.getField("DIMPSHSE3");
+var DIMPSHSE3NA=this.getField("DIMPSHSE3NA");
+var DIMPSHSE4=this.getField("DIMPSHSE4");
+var DIMPSHSE4NA=this.getField("DIMPSHSE4NA");
+
+
+this.getField("DIM3PSE1").display=display.hidden;
+if(DIM3PS.value=="Yes")this.getField("DIM3PSE1").display=display.visible;
+this.getField("DIM3PSE1NA").display=display.hidden;
+if(DIM3PS.value=="No")this.getField("DIM3PSE1NA").display=display.visible;
+
+this.getField("DIM3PSE2").display=display.hidden;
+if(DIM3PS.value=="Yes")this.getField("DIM3PSE2").display=display.visible;
+this.getField("DIM3PSE2NA").display=display.hidden;
+if(DIM3PS.value=="No")this.getField("DIM3PSE2NA").display=display.visible;
+
+this.getField("DIM3PSE3").display=display.hidden;
+if(DIM3PS.value=="Yes")this.getField("DIM3PSE3").display=display.visible;
+this.getField("DIM3PSE3NA").display=display.hidden;
+if(DIM3PS.value=="No")this.getField("DIM3PSE3NA").display=display.visible;
+
+this.getField("DIM3PSE4").display=display.hidden;
+if(DIM3PS.value=="Yes")this.getField("DIM3PSE4").display=display.visible;
+this.getField("DIM3PSE4NA").display=display.hidden;
+if(DIM3PS.value=="No")this.getField("DIM3PSE4NA").display=display.visible;
+
+
+
+
+===== FIELD DIM3ADRA [/C] =====
+var DIM3ADRA=this.getField("DIM3ADRA");
+var DIM3N1=this.getField("DIM3N1");
+var DIM3N1NA=this.getField("DIM3N1NA");
+var DIM3N2=this.getField("DIM3N2");
+var DIM3N2NA=this.getField("DIM3N2NA");
+var DIM3N3=this.getField("DIM3N3");
+var DIM3N3NA=this.getField("DIM3N3NA");
+var DIM3N4=this.getField("DIM3N4");
+var DIM3N4NA=this.getField("DIM3N4NA");
+
+
+this.getField("DIM3N1").display=display.hidden;
+if(DIM3ADRA.value=="Yes")this.getField("DIM3N1").display=display.visible;
+this.getField("DIM3N1NA").display=display.hidden;
+if(DIM3ADRA.value=="No")this.getField("DIM3N1NA").display=display.visible;
+
+this.getField("DIM3N2").display=display.hidden;
+if(DIM3ADRA.value=="Yes")this.getField("DIM3N2").display=display.visible;
+this.getField("DIM3N2NA").display=display.hidden;
+if(DIM3ADRA.value=="No")this.getField("DIM3N2NA").display=display.visible;
+
+this.getField("DIM3N3").display=display.hidden;
+if(DIM3ADRA.value=="Yes")this.getField("DIM3N3").display=display.visible;
+this.getField("DIM3N3NA").display=display.hidden;
+if(DIM3ADRA.value=="No")this.getField("DIM3N3NA").display=display.visible;
+
+this.getField("DIM3N4").display=display.hidden;
+if(DIM3ADRA.value=="Yes")this.getField("DIM3N4").display=display.visible;
+this.getField("DIM3N4NA").display=display.hidden;
+if(DIM3ADRA.value=="No")this.getField("DIM3N4NA").display=display.visible;
+
+===== FIELD DIM5RL [/C] =====
+var DIM5RL=this.getField("DIM5RL");
+var DIM5RLE1=this.getField("DIM5RLE1");
+var DIM5RLE1NA=this.getField("DIM5RLE1NA");
+var DIM5RLE2=this.getField("DIM5RLE2");
+var DIM5RLE2NA=this.getField("DIM5RLE2NA");
+var DIM5RLE3=this.getField("DIM5RLE3");
+var DIM5RLE3NA=this.getField("DIM5RLE3NA");
+var DIM5RLE4=this.getField("DIM5RLE4");
+var DIM5RLE4NA=this.getField("DIM5RLE4NA");
+
+
+this.getField("DIM5RLE1").display=display.hidden;
+if(DIM5RL.value=="Yes")this.getField("DIM5RLE1").display=display.visible;
+this.getField("DIM5RLE1NA").display=display.hidden;
+if(DIM5RL.value=="No")this.getField("DIM5RLE1NA").display=display.visible;
+
+this.getField("DIM5RLE2").display=display.hidden;
+if(DIM5RL.value=="Yes")this.getField("DIM5RLE2").display=display.visible;
+this.getField("DIM5RLE2NA").display=display.hidden;
+if(DIM5RL.value=="No")this.getField("DIM5RLE2NA").display=display.visible;
+
+this.getField("DIM5RLE3").display=display.hidden;
+if(DIM5RL.value=="Yes")this.getField("DIM5RLE3").display=display.visible;
+this.getField("DIM5RLE3NA").display=display.hidden;
+if(DIM5RL.value=="No")this.getField("DIM5RLE3NA").display=display.visible;
+
+this.getField("DIM5RLE4").display=display.hidden;
+if(DIM5RL.value=="Yes")this.getField("DIM5RLE4").display=display.visible;
+this.getField("DIM5RLE4NA").display=display.hidden;
+if(DIM5RL.value=="No")this.getField("DIM5RLE4NA").display=display.visible;
+
+
+===== FIELD Text4 [/K] =====
+AFDate_KeystrokeEx("mmmm d, yyyy");
+
+===== FIELD Text4 [/F] =====
+AFDate_FormatEx("mmmm d, yyyy");
