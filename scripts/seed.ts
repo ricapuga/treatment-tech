@@ -3,12 +3,24 @@
  * roster con roles, MÁS cuentas reales de Better Auth para poder iniciar sesión
  * de verdad (no solo el perfil de negocio en `users`).
  *
- * Roster tomado de build-inputs/extracted/option_catalogs.json (nombres reales
- * encontrados en los catálogos del PDF: "George Torres, BA, CADC", "Maria I. Torres,
- * CADC", "Cindy Torres"). El rol de cada quien y si el roster sigue vigente es la
- * pregunta 2 del documento "1. Entendimiento de la Plataforma y la Oportunidad.md"
- * — este seed es un punto de partida razonable, no un hecho confirmado. AJUSTAR
- * antes de dar acceso real a producción.
+ * Roster confirmado por Jorge (documento "Preguntas para Jorge — Treatment Tech",
+ * sección 5, respondido 2026-07-26): María I. Torres y Jorge Torres como consejeros
+ * clínicos, Guadalupe G Perez en lugar de Cindy Torres (rol administrativo).
+ *
+ * Jorge respondió a Jorge y María como "Consejero" en la tabla — pero Jorge se deja
+ * como `owner` aquí (decisión de Ricardo, no de este script): owner ya incluye acceso
+ * a documentos clínicos (está en CLINICAL_ROLES, ver src/lib/rbac.ts) y además
+ * necesita administrar el tenant como director de la clínica. Guadalupe queda como
+ * `admin` (decisión explícita de Ricardo, no `front_desk` como el placeholder
+ * anterior) — OJO: `admin` SÍ está en CLINICAL_ROLES, o sea que a diferencia de Cindy
+ * Torres (front_desk, sin acceso), Guadalupe SÍ va a poder abrir documentos clínicos
+ * del expediente. Si esa no es la intención real, cambiar su rol a `front_desk` aquí.
+ *
+ * Correos: los tres reales que regresó Jorge son el MISMO
+ * (duimetropolitan@gmail.com) — no sirve para login individual ni para que
+ * `audit_log` distinga quién hizo qué. Por instrucción de Ricardo se deja con
+ * placeholders `@duimetropolitan.example` por ahora; pendiente ayudarles a generar
+ * correos institucionales de dominio propio antes de dar acceso real a producción.
  *
  * Requiere DATABASE_URL apuntando al rol app_user (o al owner solo para este script
  * de bootstrap inicial, si app_user aún no existe — ver drizzle/sql/0001_rls_and_roles.sql,
@@ -89,10 +101,10 @@ async function main() {
         role: "counselor" as const,
       },
       {
-        email: "cindy.torres@duimetropolitan.example",
-        name: "Cindy Torres",
+        email: "guadalupe.perez@duimetropolitan.example",
+        name: "Guadalupe G Perez",
         credentials: null,
-        role: "front_desk" as const,
+        role: "admin" as const,
       },
     ];
 

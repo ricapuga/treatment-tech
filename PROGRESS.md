@@ -350,26 +350,33 @@ respuesta:
    sin cambios.** No requiere acción.
 10. **Pasos no documentados — ninguno.** Cerrado, no hay proceso oculto que capturar.
 
-### Roster — respuesta de Jorge recibida, PENDIENTE de aplicar (necesita decisión de Ricardo)
+### Roster — resuelto con decisión de Ricardo, aplicado y re-sembrado
 Jorge regresó el roster con un cambio real (Cindy Torres → Guadalupe G Perez, rol
-"Administrativo") y dos problemas que bloquean actualizar `scripts/seed.ts` tal cual:
-- **Los tres correos son el mismo** (`duimetropolitan@gmail.com`, compartido por María,
-  Jorge y Guadalupe). Better Auth exige email único (`users_email_unique` — ya causó un
-  bug real en esta sesión con datos de prueba, ver sección de seed no idempotente
-  arriba) y, más importante, un correo compartido rompe la trazabilidad de
-  `audit_log` (no se podría saber CUÁL de los tres hizo cada acción) — justo la
-  garantía que la Sección 42 CFR Part 2 / el diseño de auditoría de la plataforma
-  necesita. No se puede sembrar así.
-- **Jorge y María quedaron como "Consejero" en la respuesta** — pero el sistema actual
-  tiene a Jorge como `owner` (necesario para administrar el tenant, no solo para
-  documentos clínicos). No está claro si Jorge llenó la tabla pensando en su rol
-  clínico del día a día o en su acceso real al sistema.
-- **"Guadalupe G Perez — Administrativo"** — el placeholder anterior (Cindy Torres)
-  usaba el rol de sistema `front_desk`. Razonable asumir lo mismo para Guadalupe, pero
-  no confirmado.
-- [ ] No se tocó `scripts/seed.ts` todavía — pendiente de que Ricardo confirme correos
-  reales distintos por persona y los tres roles de sistema exactos antes de sembrar
-  cuentas reales.
+"Administrativo") y dos ambigüedades que Ricardo resolvió directamente:
+- **Los tres correos que regresó Jorge son el mismo** (`duimetropolitan@gmail.com`).
+  Decisión de Ricardo: dejarlo con los placeholders `@duimetropolitan.example` por
+  ahora (no se puede sembrar un correo compartido — rompe unicidad de Better Auth y
+  la trazabilidad de `audit_log`) y ayudarles después a generar correos
+  institucionales de dominio propio antes de dar acceso real a producción. **Pendiente
+  de negocio, no de código**: ayudar a Jorge a configurar correos por persona con su
+  propio dominio (ej. Google Workspace o similar) cuando estén listos.
+- **Jorge**: se mantiene como `owner` (no se baja a `counselor` aunque así respondió
+  la tabla) — owner ya incluye acceso clínico y además necesita administrar el tenant.
+- **Guadalupe G Perez**: rol `admin` (decisión explícita de Ricardo, no `front_desk`
+  como tenía el placeholder anterior). Aplicado en `scripts/seed.ts` con nota explícita
+  de que `admin` SÍ tiene acceso a documentos clínicos (está en `CLINICAL_ROLES`) — a
+  diferencia de Cindy Torres antes, que estaba en `front_desk` sin ese acceso.
+- [x] `scripts/seed.ts` actualizado y corrido contra Postgres local desde cero (DB
+  recreada, migraciones + RLS/roles + seed reaplicados) — roster real confirmado en la
+  tabla `users`: Jorge (`owner`), María I. Torres (`counselor`), Guadalupe G Perez
+  (`admin`).
+- [x] **Hueco de cobertura encontrado al quitar a Cindy Torres (front_desk) del
+  roster**: la regla de RBAC clínico (Gate M2: front_desk no puede abrir documentos
+  clínicos) solo se había verificado a mano con Playwright contra esa cuenta de
+  prueba — sin ella sembrada por defecto, nadie la vuelve a probar sin querer.
+  Agregado `tests/rbac.test.ts` (7 pruebas, cubre los 6 roles + uno inexistente) para
+  que esta regla de seguridad no dependa de que alguien recuerde sembrar una cuenta de
+  prueba. `pnpm typecheck` / `lint` / `test`: verdes, 51/51.
 
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,
