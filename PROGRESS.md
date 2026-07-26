@@ -222,11 +222,54 @@ de drizzle para `IN` dinámico con SQL crudo. Queda como nota de código en
   $700.00 en pantalla; anular uno de los pagos → saldo sube a $1,000.00 al instante,
   la fila queda marcada "anulado" y pierde el botón de anular.
 
+### Hecho (mismo día, tercera pasada de M2) — motor de formularios v1
+- [x] **`<SchemaForm/>`** (`src/components/form-engine/schema-form.tsx`): renderiza
+  cualquier `form_schemas.schema` — tipos de campo (text/textarea/number/date/select/
+  radio/checkbox), multipágina, autosave de borrador con debounce, bloqueo de edición
+  cuando el documento ya está `completed`/`signed`.
+- [x] **RN-7 (visibilidad condicional) implementada y separada del componente**:
+  `src/lib/rules/form-conditions.ts` — `computeVisibleFieldKeys()` interpreta
+  `{if, eq, show}` declarativo, más `findDanglingFieldReferences()` para detectar un
+  schema con una key de campo que no existe. 7 pruebas unitarias, incluido el caso
+  exacto del Gate M3 (responder "No" en BMCC oculta evidencia y muestra el campo N/A).
+- [x] **RBAC del Gate M2 implementado de verdad, no solo descrito**: `src/lib/rbac.ts`
+  (`canAccessClinicalDocuments`) — front_desk/billing no pueden abrir ni guardar un
+  documento clínico; el check vive en la página (antes de tocar la base) Y en las dos
+  acciones de guardado, por separado — la UI nunca es la única defensa.
+- [x] `src/lib/actions/documents.ts`: `saveDraftDocument` / `completeDocument`, ambas
+  respetan la inmutabilidad de documentos `signed` (regla no negociable de CLAUDE.md).
+- [x] Schema **`demo_intake`** sembrado (2 páginas, 4 campos, 1 condicional) —
+  EXPLÍCITAMENTE de prueba, no contenido clínico real (mismo criterio que el
+  simulador de RN-2/RN-3 del dashboard). La curación real de Forms 1-7 sigue
+  pendiente y sigue siendo trabajo con Jorge, no algo que este motor adivine.
+- [x] Verificado con Playwright en navegador real: llenar página 1 dispara el
+  condicional RN-7 en pantalla (aparece "Prior treatment details" al elegir "Yes"),
+  autosave visible ("borrador guardado"), completar el formulario → estado
+  `completed` persiste tras recargar la página (no es solo estado de React) y los
+  campos quedan bloqueados; una segunda cuenta con rol `front_desk` (Cindy Torres,
+  ya sembrada) recibe la pantalla de "Acceso restringido" al intentar abrir el mismo
+  formulario — la regla de RBAC del Gate M2 confirmada con una cuenta real, no solo
+  leyendo el código.
+- [x] 6 pruebas nuevas (`tests/rules/form-conditions.test.ts`) — 43 pruebas totales.
+
+### Bug real encontrado y corregido
+`src/lib/actions/documents.ts` (archivo `"use server"`) exportaba
+`canAccessClinicalDocuments`, una función síncrona normal — Next.js exige que TODO
+export de un módulo `"use server"` sea una Server Action async, y el build entero
+truena ("Server Actions must be async functions") en cuanto un Server Component la
+importa solo para un chequeo de rol. Encontrado corriendo la página del formulario de
+verdad (ni typecheck ni lint lo atrapan — es una regla de Next.js en tiempo de build/
+runtime, no de TypeScript). Corregido moviendo el helper de RBAC a `src/lib/rbac.ts`,
+un módulo plano sin `"use server"`, importable tanto desde acciones como desde Server
+Components. Queda como nota para no repetir el patrón: nunca exportar un helper
+síncrono desde un archivo `"use server"`.
+
 ### Pendiente de M2 (curación de contenido, no de plomería)
-- [ ] Paso 1-2: curar `form_schemas` (`forms_1_7`) contra `build-inputs/` y el motor
-  `<SchemaForm/>` — es contenido a revisar con Jorge, no algo a inventar.
-- [ ] Intake con firma (`SignaturePad`) + subida a almacenamiento — depende de que se
-  confirme DigitalOcean Spaces o, en su defecto, AWS (ver ADR-017).
+- [ ] Paso 1-2: curar `form_schemas` real (`forms_1_7`) contra `build-inputs/` — el
+  motor que lo va a renderizar ya existe y ya está probado; falta el contenido, que
+  es trabajo con Jorge, no de ingeniería.
+- [ ] Firma (`SignaturePad`) + subida a almacenamiento — depende de que se confirme
+  DigitalOcean Spaces o, en su defecto, AWS (ver ADR-017).
 - [ ] Stripe Checkout (el ledger manual ya cubre cargos/pagos a mano; falta el webhook
   de Stripe cuando exista la cuenta de prueba).
 

@@ -136,6 +136,78 @@ async function main() {
     });
   }
 
+  // Schema DEMO del motor de formularios (src/components/form-engine/) — NO es
+  // contenido clínico real de Jorge (eso se cura contra build-inputs/ en M2/M3, ver
+  // treatment-tech-blueprint.md Sección 12). Existe solo para probar en pantalla que
+  // el motor (multipágina, condicionales RN-7, autosave) funciona, con datos
+  // claramente ficticios — mismo espíritu que el simulador de RN-2/RN-3 del
+  // dashboard. form_schemas no tiene tenant_id (es contenido global) así que se
+  // inserta con el cliente sin tenant, y onConflictDoNothing() para que correr el
+  // seed dos veces no truene.
+  console.log("Seeding form_schemas: demo_intake (motor de formularios, NO contenido real) ...");
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: "demo_intake",
+      version: 1,
+      titleEn: "Demo intake (form engine test — not real content)",
+      titleEs: "Intake de prueba (motor de formularios — no es contenido real)",
+      schema: {
+        key: "demo_intake",
+        version: 1,
+        titleEn: "Demo intake (form engine test — not real content)",
+        titleEs: "Intake de prueba (motor de formularios — no es contenido real)",
+        fields: [
+          {
+            key: "referral_source",
+            type: "select",
+            labelEn: "Referral source",
+            labelEs: "Fuente de referencia",
+            required: true,
+            options: [
+              { value: "court", labelEn: "Court", labelEs: "Corte" },
+              { value: "self", labelEn: "Self-referral", labelEs: "Voluntario" },
+              { value: "employer", labelEn: "Employer", labelEs: "Empleador" },
+            ],
+          },
+          {
+            key: "prior_treatment",
+            type: "radio",
+            labelEn: "Prior treatment?",
+            labelEs: "¿Tratamiento previo?",
+            required: true,
+            options: [
+              { value: "yes", labelEn: "Yes", labelEs: "Sí" },
+              { value: "no", labelEn: "No", labelEs: "No" },
+            ],
+          },
+          {
+            key: "prior_treatment_details",
+            type: "textarea",
+            labelEn: "Prior treatment details",
+            labelEs: "Detalle del tratamiento previo",
+          },
+          {
+            key: "notes",
+            type: "textarea",
+            labelEn: "Intake notes",
+            labelEs: "Notas de admisión",
+          },
+        ],
+        pages: [
+          {
+            title: { en: "Referral", es: "Referencia" },
+            fields: ["referral_source", "prior_treatment", "prior_treatment_details"],
+          },
+          { title: { en: "Notes", es: "Notas" }, fields: ["notes"] },
+        ],
+        conditions: [
+          { if: "prior_treatment", eq: "yes", show: ["prior_treatment_details"] },
+        ],
+      },
+    })
+    .onConflictDoNothing();
+
   console.log(
     `Listo. tenant=${tenant.id} location(Archer)=${archer.id}.\n` +
       `Recuerda: los correos de arriba son placeholders — reemplázalos por los reales antes de invitar al equipo.\n` +

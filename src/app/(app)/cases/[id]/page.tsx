@@ -179,7 +179,17 @@ export default async function CaseHubPage({
                 <span className="text-sm text-ink-900">
                   {CASE_STAGE_LABEL[s.stage as CaseStage]?.es ?? s.stage}
                 </span>
-                <Badge tone={STAGE_STATUS_TONE[s.status] ?? "neutral"}>{s.status}</Badge>
+                <div className="flex items-center gap-3">
+                  {s.stage === "intake" && (
+                    <Link
+                      href={`/cases/${caseRow.id}/forms/demo_intake`}
+                      className="text-xs font-medium text-brand-600 hover:underline"
+                    >
+                      Abrir formulario (demo del motor)
+                    </Link>
+                  )}
+                  <Badge tone={STAGE_STATUS_TONE[s.status] ?? "neutral"}>{s.status}</Badge>
+                </div>
               </li>
             ))}
           </ol>
