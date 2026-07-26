@@ -273,6 +273,38 @@ síncrono desde un archivo `"use server"`.
 - [ ] Stripe Checkout (el ledger manual ya cubre cargos/pagos a mano; falta el webhook
   de Stripe cuando exista la cuenta de prueba).
 
+### Bloqueo de `build-inputs/templates-r12/` — resuelto (encontrado en el T7 Shield)
+Se creía que faltaban 11 de 19 PDFs R12 en blanco (empezando por Forms 1-7, el más
+urgente para curar). El usuario pidió revisar si ya estaban en el disco T7 antes de
+pedirlos de nuevo — sí estaban, solo que no en la carpeta
+`Treatment Tech - Build Package/` que se venía usando para entregables, sino en
+`2026 Data Base Richard Puga/001 Clinical Control - January/Process Control - January/`
+(la carpeta base sin sufijo "Copy", que es la plantilla maestra en blanco que se
+duplica para cada paciente nuevo — se confirmó que está en blanco, sin PHI, extrayendo
+texto de la primera página de cada PDF antes de copiarlo).
+
+Se localizaron y copiaron a `build-inputs/templates-r12/` los 11 módulos que faltaban:
+`forms-1-7.pdf`, `process-control.pdf`, `admin-control.pdf`, `assessment.pdf`,
+`treatment-plan.pdf`, `case-review.pdf`, `activity-notes-12.pdf`,
+`activity-notes-20.pdf`, `activity-notes-75.pdf`, `case-coordination.pdf`,
+`admissions.pdf`. `build-inputs/templates-r12/` ahora tiene los 19 módulos completos.
+
+**Hallazgo importante:** el PDF encontrado en T7 tiene MÁS campos de AcroForm que el
+`fields.json` ya extraído para esos mismos módulos (ej. Forms_1-7 pasó de 98 a 116
+campos; Assessment de 360 a 498; Admissions de 300 a 582 — el patrón se repite en los
+11). Esto indica que el `fields.json` original se extrajo de una revisión más vieja del
+formulario, no de la plantilla R12 que realmente se va a usar para Archer. Se
+regeneraron los 11 `fields.json` contra el PDF real encontrado (mismo formato: lista de
+`{name, type}`, vía `pypdf`); el `fields.json` viejo de cada uno se conservó como
+`fields.json.stale-r12-2024` por si hay curación previa que reconciliar. `field_scripts.json`
+y `option_catalogs.json` de esos 11 módulos SIGUEN sin regenerar — quedan pendientes
+antes de curar contenido con Jorge, para no perder los triggers de validación/formato.
+- [ ] Regenerar `field_scripts.json` y `option_catalogs.json` de los 11 módulos nuevos
+  contra el PDF real de `templates-r12/` (mismo método que se usó para `Forms_1-7`
+  originalmente — pendiente confirmar cuál fue).
+- [ ] Empezar la curación de labels con la plantilla real de Forms 1-7 (116 campos,
+  7 páginas) — ya no depende de material faltante.
+
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,
   no solo al final — así se atraparon los dos bugs de esta sesión.
