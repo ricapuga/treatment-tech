@@ -289,21 +289,25 @@ Se localizaron y copiaron a `build-inputs/templates-r12/` los 11 módulos que fa
 `activity-notes-20.pdf`, `activity-notes-75.pdf`, `case-coordination.pdf`,
 `admissions.pdf`. `build-inputs/templates-r12/` ahora tiene los 19 módulos completos.
 
-**Hallazgo importante:** el PDF encontrado en T7 tiene MÁS campos de AcroForm que el
-`fields.json` ya extraído para esos mismos módulos (ej. Forms_1-7 pasó de 98 a 116
-campos; Assessment de 360 a 498; Admissions de 300 a 582 — el patrón se repite en los
-11). Esto indica que el `fields.json` original se extrajo de una revisión más vieja del
-formulario, no de la plantilla R12 que realmente se va a usar para Archer. Se
-regeneraron los 11 `fields.json` contra el PDF real encontrado (mismo formato: lista de
-`{name, type}`, vía `pypdf`); el `fields.json` viejo de cada uno se conservó como
-`fields.json.stale-r12-2024` por si hay curación previa que reconciliar. `field_scripts.json`
-y `option_catalogs.json` de esos 11 módulos SIGUEN sin regenerar — quedan pendientes
-antes de curar contenido con Jorge, para no perder los triggers de validación/formato.
-- [ ] Regenerar `field_scripts.json` y `option_catalogs.json` de los 11 módulos nuevos
-  contra el PDF real de `templates-r12/` (mismo método que se usó para `Forms_1-7`
-  originalmente — pendiente confirmar cuál fue).
-- [ ] Empezar la curación de labels con la plantilla real de Forms 1-7 (116 campos,
-  7 páginas) — ya no depende de material faltante.
+**Corrección sobre un error propio (mismo día):** al comparar el PDF encontrado contra
+el `fields.json` ya extraído, reporté que el PDF real tenía más campos (ej. Forms_1-7:
+98 → 116) y concluí que la extracción original venía de una revisión vieja del
+formulario. Eso era falso — era un bug en mi propio script de comparación: usé
+`pypdf.PdfReader.get_fields()`, que además de los campos reales (con `/FT` — tipo de
+campo) también devuelve los nodos intermedios del árbol de nombres jerárquico de
+AcroForm (ej. `Text6.0.1`, que agrupa a `Text6.0.1.0` y `Text6.0.1.1`), sin `/FT` propio.
+Filtrando esos nodos intermedios (`type == "None"`), los 11 módulos coinciden EXACTO,
+campo por campo, con el `fields.json` que ya existía en `build-inputs/extracted/` desde
+antes de esta sesión — 98/98, 244/244, 360/360, etc., en los 11. **`fields.json`,
+`field_scripts.json`, `doc_js.json`, `page_scripts.json` y `option_catalogs.json` de los
+19 módulos ya estaban completos y correctos desde antes** — lo único que faltaba de
+verdad era copiar los 11 PDFs en blanco a `templates-r12/`, ya resuelto arriba. Se
+restauraron los `fields.json` originales (se habían guardado como
+`.stale-r12-2024` por precaución; ya no aplica el nombre, eran los correctos) y no se
+tocó nada más de `build-inputs/extracted/`.
+- [ ] Empezar la curación de labels con la plantilla real de Forms 1-7 (98 campos reales,
+  7 páginas, `build-inputs/extracted/Forms_1-7/fields.json` + `field_scripts.json`) — ya
+  no depende de material faltante ni de re-extracción.
 
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,

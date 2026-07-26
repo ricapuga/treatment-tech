@@ -1,62 +1,54 @@
 [
-  {
-    "name": "Text1.0",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.1",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.2",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.3",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.4",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.6",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.7",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.8",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.9",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.5.0",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.5.1",
-    "type": "/Tx"
-  },
-  {
-    "name": "Text1.5",
-    "type": "None"
-  },
-  {
-    "name": "Text1",
-    "type": "None"
-  },
-  {
-    "name": "Dropdown2",
-    "type": "/Ch"
-  },
-  {
-    "name": "Signature",
-    "type": "/Ch"
-  }
+ {
+  "name": "Text1.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.2",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.3",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.4",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.6",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.7",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.8",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.9",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.5.0",
+  "type": "/Tx"
+ },
+ {
+  "name": "Text1.5.1",
+  "type": "/Tx"
+ },
+ {
+  "name": "Dropdown2",
+  "type": "/Ch"
+ },
+ {
+  "name": "Signature",
+  "type": "/Ch"
+ }
 ]
