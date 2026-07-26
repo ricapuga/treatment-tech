@@ -2,23 +2,30 @@
  * Orden canónico de etapas del expediente — usado para sembrar `case_stages` al
  * admitir un caso y para pintar el StageMap del hub (/cases/[id]).
  *
- * Fuente: build-inputs/extracted/nav_graph.json (el orden real de navegación del
- * sistema de PDFs de Jorge: Forms 1-7 → Assessment → Treatment Plan → Case Review →
- * Activity Notes → Discharge/Continue Care) cruzado con los milestones M2-M4 del
- * blueprint, que curan cada uno de esos documentos por separado.
+ * Fuente: build-inputs/extracted/nav_graph.json, confirmado por Jorge (documento
+ * "Preguntas para Jorge — Treatment Tech", pregunta 1.1, respondido 2026-07-26):
+ * Admisión → Evaluación/Plan de tratamiento → Revisión de caso/Notas de actividad →
+ * Egreso → Plan de cuidado continuo/Finalización de servicios.
  *
- * DRAFT — a diferencia de RN-2 (LOI→programas), este orden no es una regla clínica
- * con implicación legal, así que no se bloquea el avance esperando curación. Pero si
- * Jorge usa un orden distinto en la práctica, este es el lugar a corregir (una lista,
- * no lógica dispersa) antes de que M3 empiece a curar los schemas de cada etapa.
+ * CONFIRMADO — ya no es DRAFT. El borrador original tenía `continue_care` ANTES de
+ * `discharge`; el mapa real de Process Control (y Jorge, directamente) confirman que
+ * el egreso va primero. Corregido aquí.
+ *
+ * Nota de Jorge (pregunta 1.2): "Revisión de caso" NO tiene una cadencia fija — queda
+ * a criterio del consejero, y en la práctica un mismo caso puede tener varias (hasta
+ * 7 vistas en el sistema actual). Este `case_stages.case_review` sigue representando
+ * "hay al menos una revisión en curso/completada", no cada revisión individual — las
+ * revisiones concretas viven como filas repetidas en `documents` (schemaKey
+ * "case_review"), igual que cualquier otro documento firmable. Pendiente de M3:
+ * decidir la UI para listar/crear revisiones múltiples dentro de esa misma etapa.
  */
 export const CASE_STAGE_ORDER = [
   "intake",
   "assessment",
   "treatment_plan",
   "case_review",
-  "continue_care",
   "discharge",
+  "continue_care",
 ] as const;
 
 export type CaseStage = (typeof CASE_STAGE_ORDER)[number];

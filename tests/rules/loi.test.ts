@@ -15,12 +15,13 @@ describe("RN-2: LOI -> programas", () => {
     ["Risk Education", ["RE"]],
     ["Early Intervention", ["EI"]],
     ["Outpatient", ["OP", "CCP"]],
+    ["Intensive Outpatient", ["OP", "CCP"]],
   ] as const)("%s -> %j", (loi, expected) => {
     expect(getRequiredPrograms(loi)).toEqual(expected);
   });
 
-  it("LOI sin mapeo resuelto (ej. Intensive Outpatient) lanza UnresolvedLOIError en vez de adivinar", () => {
-    expect(() => getRequiredPrograms("Intensive Outpatient")).toThrow(UnresolvedLOIError);
+  it("LOI sin mapeo resuelto lanza UnresolvedLOIError en vez de adivinar (ej. un valor futuro no confirmado con Jorge)", () => {
+    expect(() => getRequiredPrograms("Un LOI que no existe")).toThrow(UnresolvedLOIError);
   });
 
   it("rangos de horas válidos por programa", () => {

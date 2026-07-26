@@ -309,6 +309,68 @@ tocó nada más de `build-inputs/extracted/`.
   7 páginas, `build-inputs/extracted/Forms_1-7/fields.json` + `field_scripts.json`) — ya
   no depende de material faltante ni de re-extracción.
 
+### Respuestas de Jorge (documento "Preguntas para Jorge — Treatment Tech", 2026-07-26)
+Jorge respondió el documento de validación completo. Resumen y qué se hizo con cada
+respuesta:
+
+1. **Orden de etapas — confirmado, con corrección aplicada.** El orden real es
+   Admisión → Evaluación/Plan de tratamiento → Revisión de caso/Notas de actividad →
+   **Egreso → Plan de cuidado continuo**. `CASE_STAGE_ORDER`
+   (`src/lib/rules/case-stages.ts`) tenía `continue_care` ANTES de `discharge` —
+   corregido, ya no es DRAFT.
+2. **Revisión de caso — sin cadencia fija, "a criterio del consejero"**, y puede
+   repetirse (hasta 7 vistas por caso en el sistema actual). Anotado en
+   `case-stages.ts`: la etapa `case_review` representa "hay al menos una revisión",
+   no cada revisión — las revisiones concretas viven como filas repetidas en
+   `documents`. Pendiente de M3: UI para listar/crear varias dentro de la misma etapa.
+3. **Notas de actividad — nivel confirmado por horas**: Nivel 1 = 20 horas
+   (`ActivityNotes20`), Nivel 2 = 75 horas (`ActivityNotes75`); por eliminación,
+   Intervención Temprana = `ActivityNotes12`. Útil para cuando se cure el contenido
+   de esos 3 módulos — no requirió cambio de código todavía.
+4. **Treatment Verification — a solicitud, no en punto fijo.** Solo se genera si la
+   Secretaría de Estado (o el cliente) lo pide, generalmente al final. Confirma que
+   NO es parte de la secuencia obligatoria de `case_stages` — queda fuera de
+   `CASE_STAGE_ORDER` a propósito, disponible bajo demanda.
+5. **RN-2 resuelto: "Intensive Outpatient" → `[OP, CCP]`**, 75 horas (mismo combo que
+   "Outpatient", en el extremo superior de `HOURS_RANGE.OP`). Aplicado en
+   `src/lib/rules/loi.ts` — ya no lanza `UnresolvedLOIError`. Test actualizado en
+   `tests/rules/loi.test.ts`. `pnpm typecheck` / `lint` / `test` verdes (44/44).
+6. **Administrative Control — NO es obligatorio.** "La agencia tiene la opción de usar
+   la tabla de pagos o usar su propio sistema de control." Confirma que el ledger que
+   ya construimos (RN-5, `case_balances`) es la fuente de verdad de la plataforma sin
+   conflicto — la tabla de pagos del PDF no hay que replicarla funcionalmente.
+7. **Case Coordination — condicional, no default.** Solo se llena cuando el caso lo
+   requiere (ej. cliente deja el programa sin notificación). Pendiente de M3: modelar
+   como documento opcional que se agrega bajo demanda, no como etapa fija.
+8. **Firma — los 8 documentos listados SÍ se firman.** Jorge no especificó todavía
+   quién firma cada uno (paciente/consejero/ambos) — queda abierto, pero confirma que
+   la inmutabilidad de `documents.status = 'signed'` aplica a los 8, no solo a
+   algunos.
+9. **Catálogos de opciones (referido, educación, estado civil, condado) — confirmados
+   sin cambios.** No requiere acción.
+10. **Pasos no documentados — ninguno.** Cerrado, no hay proceso oculto que capturar.
+
+### Roster — respuesta de Jorge recibida, PENDIENTE de aplicar (necesita decisión de Ricardo)
+Jorge regresó el roster con un cambio real (Cindy Torres → Guadalupe G Perez, rol
+"Administrativo") y dos problemas que bloquean actualizar `scripts/seed.ts` tal cual:
+- **Los tres correos son el mismo** (`duimetropolitan@gmail.com`, compartido por María,
+  Jorge y Guadalupe). Better Auth exige email único (`users_email_unique` — ya causó un
+  bug real en esta sesión con datos de prueba, ver sección de seed no idempotente
+  arriba) y, más importante, un correo compartido rompe la trazabilidad de
+  `audit_log` (no se podría saber CUÁL de los tres hizo cada acción) — justo la
+  garantía que la Sección 42 CFR Part 2 / el diseño de auditoría de la plataforma
+  necesita. No se puede sembrar así.
+- **Jorge y María quedaron como "Consejero" en la respuesta** — pero el sistema actual
+  tiene a Jorge como `owner` (necesario para administrar el tenant, no solo para
+  documentos clínicos). No está claro si Jorge llenó la tabla pensando en su rol
+  clínico del día a día o en su acceso real al sistema.
+- **"Guadalupe G Perez — Administrativo"** — el placeholder anterior (Cindy Torres)
+  usaba el rol de sistema `front_desk`. Razonable asumir lo mismo para Guadalupe, pero
+  no confirmado.
+- [ ] No se tocó `scripts/seed.ts` todavía — pendiente de que Ricardo confirme correos
+  reales distintos por persona y los tres roles de sistema exactos antes de sembrar
+  cuentas reales.
+
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,
   no solo al final — así se atraparon los dos bugs de esta sesión.

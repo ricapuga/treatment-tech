@@ -3,13 +3,18 @@
  *
  * Minimal Risk → [RE]; Moderate Risk → [RE, EI]; Significant Risk → [RE, OP, CCP];
  * High Risk → [OP, CCP]; Risk Education → [RE]; Early Intervention → [EI];
- * Outpatient → [OP, CCP].
+ * Outpatient → [OP, CCP]; Intensive Outpatient → [OP, CCP].
  *
- * "Intensive Outpatient" aparece en el catálogo de `cases.loi` (ver Sección 7,
- * comentario del campo) pero RN-2 no especifica su mapeo de programas de forma
- * explícita. En vez de adivinar, se deja sin resolver aquí a propósito — se cura en
- * M3 contra `build-inputs/extracted/Admissions/field_scripts.json` (la lógica real
- * del dropdown), no se inventa. Ver TODO en getRequiredPrograms().
+ * "Intensive Outpatient" aparece en el catálogo de `cases.loi` (dropdown del
+ * formulario de Admisión) pero no en el dropdown de Forms 1-7, y RN-2 no
+ * especificaba su mapeo de forma explícita — se dejó sin resolver a propósito en vez
+ * de adivinar. RESUELTO por Jorge (documento "Preguntas para Jorge — Treatment Tech",
+ * pregunta 2, respondido 2026-07-26): "75 horas de tratamiento + Continuing Care" —
+ * es decir, mismo combo de programas que "Outpatient" ([OP, CCP]), con las horas en
+ * el extremo superior del rango de OP (20-75, ver HOURS_RANGE). No se modela un rango
+ * de horas distinto para Intensive Outpatient porque Jorge no describió uno — usa el
+ * mismo HOURS_RANGE.OP existente; si en la curación de Forms 1-7/Admissions aparece
+ * un piso de horas específico para este caso, ajustar ahí, no aquí.
  */
 
 export type ProgramBlock = "RE" | "EI" | "OP" | "CCP";
@@ -21,7 +26,8 @@ export type LOI =
   | "High Risk"
   | "Risk Education"
   | "Early Intervention"
-  | "Outpatient";
+  | "Outpatient"
+  | "Intensive Outpatient";
 
 const LOI_TO_PROGRAMS: Record<LOI, ProgramBlock[]> = {
   "Minimal Risk": ["RE"],
@@ -31,15 +37,15 @@ const LOI_TO_PROGRAMS: Record<LOI, ProgramBlock[]> = {
   "Risk Education": ["RE"],
   "Early Intervention": ["EI"],
   Outpatient: ["OP", "CCP"],
+  "Intensive Outpatient": ["OP", "CCP"],
 };
 
 export class UnresolvedLOIError extends Error {
   constructor(loi: string) {
     super(
       `LOI "${loi}" no tiene mapeo de programas resuelto en RN-2. No se asume — ` +
-        `revisar build-inputs/extracted/Admissions/field_scripts.json y agregar el ` +
-        `caso explícitamente a LOI_TO_PROGRAMS (ver TODO M3 en src/lib/rules/loi.ts). ` +
-        `Candidato conocido pendiente: "Intensive Outpatient".`
+        `confirmar con Jorge (mismo canal que resolvió "Intensive Outpatient", ver ` +
+        `PROGRESS.md) y agregar el caso explícitamente a LOI_TO_PROGRAMS.`
     );
     this.name = "UnresolvedLOIError";
   }
