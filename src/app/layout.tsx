@@ -17,7 +17,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-neutral-50 text-neutral-900">
+      <body className="flex min-h-full flex-col bg-background text-foreground">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>

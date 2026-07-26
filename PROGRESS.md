@@ -133,6 +133,33 @@ Con esos dos fixes:
   RN-6 gate de consent, RN-7 condicionales declarativas) — todas son candidatas a
   desarrollarse y probarse contra Postgres local sin esperar a Neon.
 
+### Hecho (2026-07-26, cuarta pasada — sistema de diseño nuevo, benchmarked contra BestNotes)
+Investigación de la competencia directa (BestNotes) — features, precios y, sobre todo,
+reseñas reales de usuarios pagando por el producto — mostró un patrón consistente: es
+funcional pero se percibe anticuado ("still feels like DOS", "very old school", "look
+& feel was also lacking"). Esa es exactamente la brecha a explotar. Resultado en dos
+partes:
+
+1. **Documento de estrategia** — `Estrategia Competitiva — Superar a BestNotes.md`,
+   entregado aparte, con el análisis completo y la hoja de ruta de diseño/producto.
+2. **El sistema de diseño ya se aplicó a la app real, no solo se describió**:
+   - `src/app/globals.css`: tokens explícitos (paleta índigo/slate + semánticos por
+     estado, radios, sombras) en vez de clases sueltas repetidas por archivo.
+   - `src/components/ui/badge.tsx` y `card.tsx` (nuevos): primitivos reutilizables,
+     los mismos que va a necesitar el hub de expediente en M2.
+   - `src/components/nav-link.tsx` (nuevo): estado activo en la navegación.
+   - Shell (`(app)/layout.tsx`), login (`login/page.tsx`, `login-form.tsx`) y
+     dashboard (`dashboard/page.tsx`, `rules-demo.tsx`) — rediseñados sobre esos
+     tokens: sidebar con iconos y marca, login split-screen con panel de marca,
+     tarjetas de KPI, badges de color por riesgo/estado en el simulador RN-2/RN-3.
+   - **Verificado con Playwright contra Postgres local + login real**: capturas de
+     `/login` (desktop y mobile) y `/dashboard` autenticado, revisadas visualmente
+     antes de entregar. `pnpm typecheck`, `pnpm lint` y `pnpm test` (31/31) en verde
+     después del cambio.
+   - No es una desviación del blueprint (no cambia arquitectura, datos ni reglas) —
+     por eso no lleva entrada en `DEVIATIONS.md`. Es una mejora de UI acumulativa
+     sobre el mismo esqueleto de M1.
+
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,
   no solo al final — así se atraparon los dos bugs de esta sesión.

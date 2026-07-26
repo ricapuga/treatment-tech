@@ -21,7 +21,7 @@ export function LocaleToggle() {
         })
       }
       className={cn(
-        "rounded border border-neutral-300 px-3 py-1 text-sm hover:bg-neutral-100",
+        "rounded-lg border border-ink-200 px-3 py-1.5 text-sm text-ink-700 transition-colors hover:bg-ink-100",
         isPending && "opacity-50"
       )}
     >

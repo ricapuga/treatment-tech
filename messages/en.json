@@ -14,6 +14,15 @@
     "error": "Invalid email or password"
   },
   "dashboard": {
-    "placeholder": "Dashboard — built in Milestone 5 (admissions, pending stages, expiring consents, balances)."
+    "title": "Dashboard",
+    "subtitle": "DUI Metropolitan Services — Archer",
+    "placeholder": "Dashboard — built in Milestone 5 (admissions, pending stages, expiring consents, balances).",
+    "stats": {
+      "activeCases": "Active cases",
+      "pendingDocs": "Pending documents",
+      "expiringConsents": "Expiring consents",
+      "completionRate": "Completion rate",
+      "comingInM5": "Real data in Milestone 5"
+    }
   }
 }

@@ -14,6 +14,15 @@
     "error": "Correo o contraseña inválidos"
   },
   "dashboard": {
-    "placeholder": "Tablero — se construye en el Milestone 5 (admisiones, etapas pendientes, consents por vencer, saldos)."
+    "title": "Tablero",
+    "subtitle": "DUI Metropolitan Services — Archer",
+    "placeholder": "Tablero — se construye en el Milestone 5 (admisiones, etapas pendientes, consents por vencer, saldos).",
+    "stats": {
+      "activeCases": "Casos activos",
+      "pendingDocs": "Documentos pendientes",
+      "expiringConsents": "Consents por vencer",
+      "completionRate": "Tasa de finalización",
+      "comingInM5": "Datos reales en Milestone 5"
+    }
   }
 }
