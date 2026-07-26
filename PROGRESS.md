@@ -206,13 +206,29 @@ existe en tiempo de ejecución contra Postgres). Corregido con
 de drizzle para `IN` dinámico con SQL crudo. Queda como nota de código en
 `src/app/(app)/cases/page.tsx` para no repetir el error si se agrega otra consulta así.
 
+### Hecho (mismo día, segunda pasada de M2) — ledger manual
+- [x] `src/lib/actions/ledger.ts`: `createLedgerEntry` / `voidLedgerEntry`. Validaciones
+  del Gate M2 ("no pagos negativos, void con motivo"): monto se valida como positivo
+  antes de tocar la base; anular exige un motivo (mín. 3 caracteres) que se guarda en
+  `audit_log.details` — no hay columna de razón en `ledger_entries` (ni en el blueprint
+  ni en el schema), la bitácora inmutable es el lugar correcto para ese dato.
+- [x] `/cases/[id]/ledger`: formulario de movimiento + tabla con anulación inline;
+  enlazado desde el hub del caso ("Ver ledger" junto al saldo).
+- [x] **`tests/ledger.test.ts` — el escenario EXACTO del Gate M2**: cargo $1,500,
+  pagos $500+$300 → saldo $700 (contra Postgres real, vía la vista `case_balances`,
+  no una reimplementación en JS del cálculo). Segunda prueba: un pago anulado no
+  cuenta en el saldo. 36 pruebas totales en verde.
+- [x] Verificado con Playwright en navegador real: agregar cargo+2 pagos → saldo
+  $700.00 en pantalla; anular uno de los pagos → saldo sube a $1,000.00 al instante,
+  la fila queda marcada "anulado" y pierde el botón de anular.
+
 ### Pendiente de M2 (curación de contenido, no de plomería)
 - [ ] Paso 1-2: curar `form_schemas` (`forms_1_7`) contra `build-inputs/` y el motor
   `<SchemaForm/>` — es contenido a revisar con Jorge, no algo a inventar.
 - [ ] Intake con firma (`SignaturePad`) + subida a almacenamiento — depende de que se
   confirme DigitalOcean Spaces o, en su defecto, AWS (ver ADR-017).
-- [ ] Ledger manual (cargos/pagos) y Stripe Checkout — el saldo ya se calcula bien
-  (case_balances) contra cero movimientos; falta la UI para crear movimientos.
+- [ ] Stripe Checkout (el ledger manual ya cubre cargos/pagos a mano; falta el webhook
+  de Stripe cuando exista la cuenta de prueba).
 
 ## Notas de verificación pendientes (no asumir, correr cuando haya DB)
 - `pnpm typecheck`, `pnpm lint` y `pnpm test`: correr después de cada bloque de cambios,

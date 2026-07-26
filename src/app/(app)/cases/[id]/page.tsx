@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { eq, asc, sql } from "drizzle-orm";
-import { CalendarDays, MapPin, UserRound, ShieldCheck } from "lucide-react";
+import { CalendarDays, MapPin, UserRound, ShieldCheck, Receipt } from "lucide-react";
 import { requireSession } from "@/lib/session";
 import { withTenant } from "@/lib/db/rls";
 import { schema } from "@/lib/db/client";
@@ -140,6 +141,13 @@ export default async function CaseHubPage({
               >
                 {centsToUsd(balanceCents)}
               </div>
+              <Link
+                href={`/cases/${caseRow.id}/ledger`}
+                className="mt-1 flex items-center justify-end gap-1 text-xs font-medium text-brand-600 hover:underline"
+              >
+                <Receipt className="h-3 w-3" />
+                Ver ledger
+              </Link>
             </div>
           </div>
 
