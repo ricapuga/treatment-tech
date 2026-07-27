@@ -1,0 +1,2245 @@
+{
+  "key": "case_review",
+  "version": 1,
+  "titleEn": "Case Review",
+  "titleEs": "Revisión de Caso",
+  "fields": [
+    {
+      "key": "patient_name",
+      "type": "text",
+      "labelEn": "Patient name",
+      "labelEs": "Nombre del paciente"
+    },
+    {
+      "key": "review_date",
+      "type": "date",
+      "labelEn": "Review date",
+      "labelEs": "Fecha de revisión"
+    },
+    {
+      "key": "review_type",
+      "type": "select",
+      "labelEn": "Type of review",
+      "labelEs": "Tipo de revisión",
+      "options": [
+        {
+          "value": "Continued stay",
+          "labelEn": "Continued stay",
+          "labelEs": "Continued stay"
+        },
+        {
+          "value": "Discharge",
+          "labelEn": "Discharge",
+          "labelEs": "Discharge"
+        },
+        {
+          "value": "Transfer",
+          "labelEn": "Transfer",
+          "labelEs": "Transfer"
+        },
+        {
+          "value": "As needed",
+          "labelEn": "As needed",
+          "labelEs": "As needed"
+        }
+      ]
+    },
+    {
+      "key": "level_of_intervention",
+      "type": "select",
+      "labelEn": "Level of intervention",
+      "labelEs": "Nivel de intervención",
+      "options": [
+        {
+          "value": "Outpatient Treatment",
+          "labelEn": "Outpatient Treatment",
+          "labelEs": "Outpatient Treatment"
+        },
+        {
+          "value": "Intensive Outpatient Treatment",
+          "labelEn": "Intensive Outpatient Treatment",
+          "labelEs": "Intensive Outpatient Treatment"
+        }
+      ]
+    },
+    {
+      "key": "dim1_status",
+      "type": "select",
+      "labelEn": "Dimension 1 — Intoxication, Withdrawal, and Addiction Medications",
+      "labelEs": "Dimensión 1 — Intoxicación, abstinencia y medicamentos de adicción",
+      "options": [
+        {
+          "value": "Patient presents no signs of intoxication or withdrawals at this time.",
+          "labelEn": "Patient presents no signs of intoxication or withdrawals at this time.",
+          "labelEs": "Patient presents no signs of intoxication or withdrawals at this time."
+        }
+      ]
+    },
+    {
+      "key": "dim2_notes_1",
+      "type": "select",
+      "labelEn": "Dimension 2 — Biomedical Conditions — progress note 1",
+      "labelEs": "Dimensión 2 — Condiciones biomédicas — nota de progreso 1",
+      "options": [
+        {
+          "value": "Patient reported no medical conditions or complications at this time.",
+          "labelEn": "Patient reported no medical conditions or complications at this time.",
+          "labelEs": "Patient reported no medical conditions or complications at this time."
+        },
+        {
+          "value": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEn": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEs": "Patient listed the medical consequences that result from drinking/using to cope with medical problems."
+        },
+        {
+          "value": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEn": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEs": "Patient explained the powerlessness to cope with medical problems with drinking/using."
+        },
+        {
+          "value": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEn": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEs": "Patient made a list of the medical consequences that result from abusing alcohol and drugs."
+        },
+        {
+          "value": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEn": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEs": "Patient verbalized commitment to remain abstinent to prevent further medical problems."
+        },
+        {
+          "value": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEn": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEs": "Patient explained the connection between using alcohol/drugs and medical complications."
+        },
+        {
+          "value": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEn": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEs": "Patient described reasons for wanting abstinence other than health reasons."
+        },
+        {
+          "value": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEn": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEs": "Patient wrote a plan to deal with medical conditions and how to use the health services system."
+        },
+        {
+          "value": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEn": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEs": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions."
+        },
+        {
+          "value": "Patient described how the medical problems relate to substance abuse.",
+          "labelEn": "Patient described how the medical problems relate to substance abuse.",
+          "labelEs": "Patient described how the medical problems relate to substance abuse."
+        }
+      ]
+    },
+    {
+      "key": "dim2_notes_2",
+      "type": "select",
+      "labelEn": "Dimension 2 — Biomedical Conditions — progress note 2",
+      "labelEs": "Dimensión 2 — Condiciones biomédicas — nota de progreso 2",
+      "options": [
+        {
+          "value": "Patient reported no medical conditions or complications at this time.",
+          "labelEn": "Patient reported no medical conditions or complications at this time.",
+          "labelEs": "Patient reported no medical conditions or complications at this time."
+        },
+        {
+          "value": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEn": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEs": "Patient listed the medical consequences that result from drinking/using to cope with medical problems."
+        },
+        {
+          "value": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEn": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEs": "Patient explained the powerlessness to cope with medical problems with drinking/using."
+        },
+        {
+          "value": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEn": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEs": "Patient made a list of the medical consequences that result from abusing alcohol and drugs."
+        },
+        {
+          "value": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEn": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEs": "Patient verbalized commitment to remain abstinent to prevent further medical problems."
+        },
+        {
+          "value": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEn": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEs": "Patient explained the connection between using alcohol/drugs and medical complications."
+        },
+        {
+          "value": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEn": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEs": "Patient described reasons for wanting abstinence other than health reasons."
+        },
+        {
+          "value": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEn": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEs": "Patient wrote a plan to deal with medical conditions and how to use the health services system."
+        },
+        {
+          "value": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEn": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEs": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions."
+        },
+        {
+          "value": "Patient described how the medical problems relate to substance abuse.",
+          "labelEn": "Patient described how the medical problems relate to substance abuse.",
+          "labelEs": "Patient described how the medical problems relate to substance abuse."
+        }
+      ]
+    },
+    {
+      "key": "dim2_notes_3",
+      "type": "select",
+      "labelEn": "Dimension 2 — Biomedical Conditions — progress note 3",
+      "labelEs": "Dimensión 2 — Condiciones biomédicas — nota de progreso 3",
+      "options": [
+        {
+          "value": "Patient reported no medical conditions or complications at this time.",
+          "labelEn": "Patient reported no medical conditions or complications at this time.",
+          "labelEs": "Patient reported no medical conditions or complications at this time."
+        },
+        {
+          "value": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEn": "Patient listed the medical consequences that result from drinking/using to cope with medical problems.",
+          "labelEs": "Patient listed the medical consequences that result from drinking/using to cope with medical problems."
+        },
+        {
+          "value": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEn": "Patient explained the powerlessness to cope with medical problems with drinking/using.",
+          "labelEs": "Patient explained the powerlessness to cope with medical problems with drinking/using."
+        },
+        {
+          "value": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEn": "Patient made a list of the medical consequences that result from abusing alcohol and drugs.",
+          "labelEs": "Patient made a list of the medical consequences that result from abusing alcohol and drugs."
+        },
+        {
+          "value": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEn": "Patient verbalized commitment to remain abstinent to prevent further medical problems.",
+          "labelEs": "Patient verbalized commitment to remain abstinent to prevent further medical problems."
+        },
+        {
+          "value": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEn": "Patient explained the connection between using alcohol/drugs and medical complications.",
+          "labelEs": "Patient explained the connection between using alcohol/drugs and medical complications."
+        },
+        {
+          "value": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEn": "Patient described reasons for wanting abstinence other than health reasons.",
+          "labelEs": "Patient described reasons for wanting abstinence other than health reasons."
+        },
+        {
+          "value": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEn": "Patient wrote a plan to deal with medical conditions and how to use the health services system.",
+          "labelEs": "Patient wrote a plan to deal with medical conditions and how to use the health services system."
+        },
+        {
+          "value": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEn": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions.",
+          "labelEs": "Patient verbalized the need to maintain abstinence from alcohol/drugs because of medical conditions."
+        },
+        {
+          "value": "Patient described how the medical problems relate to substance abuse.",
+          "labelEn": "Patient described how the medical problems relate to substance abuse.",
+          "labelEs": "Patient described how the medical problems relate to substance abuse."
+        }
+      ]
+    },
+    {
+      "key": "dim3_notes_1",
+      "type": "select",
+      "labelEn": "Dimension 3 — Psychiatric and Cognitive Conditions — progress note 1",
+      "labelEs": "Dimensión 3 — Condiciones psiquiátricas y cognitivas — nota de progreso 1",
+      "options": [
+        {
+          "value": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEn": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEs": "Patient described drinking/using patterns and negative consequences in life."
+        },
+        {
+          "value": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEn": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEs": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow treatment recommendations."
+        },
+        {
+          "value": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEn": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEs": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created."
+        },
+        {
+          "value": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEn": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEs": "Patient communicated in group sessions the need for help to stop drinking/using."
+        },
+        {
+          "value": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEn": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEs": "Patient verbalized commitment to use alcohol socially and responsibly."
+        },
+        {
+          "value": "Patient described what a social and responsible drinker means.",
+          "labelEn": "Patient described what a social and responsible drinker means.",
+          "labelEs": "Patient described what a social and responsible drinker means."
+        },
+        {
+          "value": "Patient explained what it takes to be a responsible drinker.",
+          "labelEn": "Patient explained what it takes to be a responsible drinker.",
+          "labelEs": "Patient explained what it takes to be a responsible drinker."
+        },
+        {
+          "value": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEn": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEs": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs."
+        },
+        {
+          "value": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEn": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEs": "Patient explained how the abuse of alcohol/drugs can induce emotional complications."
+        },
+        {
+          "value": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEn": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEs": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEn": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEs": "Patient described shame and guilt and explained how these contribute to separation from others."
+        },
+        {
+          "value": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEn": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEs": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using."
+        },
+        {
+          "value": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEn": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEs": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse."
+        },
+        {
+          "value": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEn": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEs": "Patient identified the presence of symptoms of emotional complications."
+        },
+        {
+          "value": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEn": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEs": "Patient explained how depression leads to drinking/using and drinking/using leads to depression."
+        },
+        {
+          "value": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEn": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEs": "Patient identified depressed mood and drinking/using as a means of escape from depression."
+        },
+        {
+          "value": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEn": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEs": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications."
+        }
+      ]
+    },
+    {
+      "key": "dim3_notes_2",
+      "type": "select",
+      "labelEn": "Dimension 3 — Psychiatric and Cognitive Conditions — progress note 2",
+      "labelEs": "Dimensión 3 — Condiciones psiquiátricas y cognitivas — nota de progreso 2",
+      "options": [
+        {
+          "value": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEn": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEs": "Patient described drinking/using patterns and negative consequences in life."
+        },
+        {
+          "value": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEn": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEs": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow treatment recommendations."
+        },
+        {
+          "value": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEn": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEs": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created."
+        },
+        {
+          "value": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEn": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEs": "Patient communicated in group sessions the need for help to stop drinking/using."
+        },
+        {
+          "value": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEn": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEs": "Patient verbalized commitment to use alcohol socially and responsibly."
+        },
+        {
+          "value": "Patient described what a social and responsible drinker means.",
+          "labelEn": "Patient described what a social and responsible drinker means.",
+          "labelEs": "Patient described what a social and responsible drinker means."
+        },
+        {
+          "value": "Patient explained what it takes to be a responsible drinker.",
+          "labelEn": "Patient explained what it takes to be a responsible drinker.",
+          "labelEs": "Patient explained what it takes to be a responsible drinker."
+        },
+        {
+          "value": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEn": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEs": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs."
+        },
+        {
+          "value": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEn": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEs": "Patient explained how the abuse of alcohol/drugs can induce emotional complications."
+        },
+        {
+          "value": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEn": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEs": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEn": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEs": "Patient described shame and guilt and explained how these contribute to separation from others."
+        },
+        {
+          "value": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEn": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEs": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using."
+        },
+        {
+          "value": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEn": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEs": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse."
+        },
+        {
+          "value": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEn": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEs": "Patient identified the presence of symptoms of emotional complications."
+        },
+        {
+          "value": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEn": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEs": "Patient explained how depression leads to drinking/using and drinking/using leads to depression."
+        },
+        {
+          "value": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEn": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEs": "Patient identified depressed mood and drinking/using as a means of escape from depression."
+        },
+        {
+          "value": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEn": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEs": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications."
+        }
+      ]
+    },
+    {
+      "key": "dim3_notes_3",
+      "type": "select",
+      "labelEn": "Dimension 3 — Psychiatric and Cognitive Conditions — progress note 3",
+      "labelEs": "Dimensión 3 — Condiciones psiquiátricas y cognitivas — nota de progreso 3",
+      "options": [
+        {
+          "value": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEn": "Patient described drinking/using patterns and negative consequences in life.",
+          "labelEs": "Patient described drinking/using patterns and negative consequences in life."
+        },
+        {
+          "value": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEn": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems.",
+          "labelEs": "Patient expressed a personal action plan to avoid any future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow treatment recommendations."
+        },
+        {
+          "value": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEn": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created.",
+          "labelEs": "Patient explained in group sessions how serious drinking/using has been in terms of life problems created."
+        },
+        {
+          "value": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEn": "Patient communicated in group sessions the need for help to stop drinking/using.",
+          "labelEs": "Patient communicated in group sessions the need for help to stop drinking/using."
+        },
+        {
+          "value": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEn": "Patient verbalized commitment to use alcohol socially and responsibly.",
+          "labelEs": "Patient verbalized commitment to use alcohol socially and responsibly."
+        },
+        {
+          "value": "Patient described what a social and responsible drinker means.",
+          "labelEn": "Patient described what a social and responsible drinker means.",
+          "labelEs": "Patient described what a social and responsible drinker means."
+        },
+        {
+          "value": "Patient explained what it takes to be a responsible drinker.",
+          "labelEn": "Patient explained what it takes to be a responsible drinker.",
+          "labelEs": "Patient explained what it takes to be a responsible drinker."
+        },
+        {
+          "value": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEn": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs.",
+          "labelEs": "Patient verbalized in group sessions a commitment to abstain from alcohol/drugs."
+        },
+        {
+          "value": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEn": "Patient explained how the abuse of alcohol/drugs can induce emotional complications.",
+          "labelEs": "Patient explained how the abuse of alcohol/drugs can induce emotional complications."
+        },
+        {
+          "value": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEn": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems.",
+          "labelEs": "Patient presented in group sessions a plan to avoid future alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEn": "Patient described shame and guilt and explained how these contribute to separation from others.",
+          "labelEs": "Patient described shame and guilt and explained how these contribute to separation from others."
+        },
+        {
+          "value": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEn": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using.",
+          "labelEs": "Patient described the powerlessness and unmanageability to cope with depression by drinking/using."
+        },
+        {
+          "value": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEn": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse.",
+          "labelEs": "Patient identified at least three behavioral and emotional problems associated with alcohol/drug abuse."
+        },
+        {
+          "value": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEn": "Patient identified the presence of symptoms of emotional complications.",
+          "labelEs": "Patient identified the presence of symptoms of emotional complications."
+        },
+        {
+          "value": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEn": "Patient explained how depression leads to drinking/using and drinking/using leads to depression.",
+          "labelEs": "Patient explained how depression leads to drinking/using and drinking/using leads to depression."
+        },
+        {
+          "value": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEn": "Patient identified depressed mood and drinking/using as a means of escape from depression.",
+          "labelEs": "Patient identified depressed mood and drinking/using as a means of escape from depression."
+        },
+        {
+          "value": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEn": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications.",
+          "labelEs": "Patient explained how alcohol/drug abuse can induce emotional/behavioral complications."
+        }
+      ]
+    },
+    {
+      "key": "dim4_notes_1",
+      "type": "select",
+      "labelEn": "Dimension 4 — Substance Use-Related Risks — progress note 1",
+      "labelEs": "Dimensión 4 — Riesgos relacionados con el uso de sustancias — nota de progreso 1",
+      "options": [
+        {
+          "value": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEn": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEs": "Patient explained how social environment relates to alcohol/drug abuse."
+        },
+        {
+          "value": "Patient stated how culture and traditions influence substance use.",
+          "labelEn": "Patient stated how culture and traditions influence substance use.",
+          "labelEs": "Patient stated how culture and traditions influence substance use."
+        },
+        {
+          "value": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEn": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEs": "Patient described at least three specific situations that led to the abuse of alcohol/drugs."
+        },
+        {
+          "value": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEn": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEs": "Patient identified at least three personal triggers and ways to manage them."
+        },
+        {
+          "value": "Patient described the emotional and physical release process in the group.",
+          "labelEn": "Patient described the emotional and physical release process in the group.",
+          "labelEs": "Patient described the emotional and physical release process in the group."
+        },
+        {
+          "value": "Patient listed at least three relapse prevention skills.",
+          "labelEn": "Patient listed at least three relapse prevention skills.",
+          "labelEs": "Patient listed at least three relapse prevention skills."
+        },
+        {
+          "value": "Patient discussed in the group a relapse prevention plan.",
+          "labelEn": "Patient discussed in the group a relapse prevention plan.",
+          "labelEs": "Patient discussed in the group a relapse prevention plan."
+        },
+        {
+          "value": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEn": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEs": "Patient explained how a recovery plan can help to prevent relapse and future sobriety."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations lead to drink/use."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEn": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEs": "Patient completed a relapse prevention plan to address areas that contribute to sobriety."
+        },
+        {
+          "value": "Patient identified reasons for relapsing.",
+          "labelEn": "Patient identified reasons for relapsing.",
+          "labelEs": "Patient identified reasons for relapsing."
+        },
+        {
+          "value": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified situations and conditions that precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEn": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEs": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use."
+        },
+        {
+          "value": "Patient identified strategies to prevent future relapse.",
+          "labelEn": "Patient identified strategies to prevent future relapse.",
+          "labelEs": "Patient identified strategies to prevent future relapse."
+        },
+        {
+          "value": "Patient explained the specific situations surrounding relapse.",
+          "labelEn": "Patient explained the specific situations surrounding relapse.",
+          "labelEs": "Patient explained the specific situations surrounding relapse."
+        },
+        {
+          "value": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEn": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEs": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence."
+        },
+        {
+          "value": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEn": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEs": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred."
+        },
+        {
+          "value": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEn": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEs": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse."
+        },
+        {
+          "value": "Patient verbalized the principles of a 12-Step program.",
+          "labelEn": "Patient verbalized the principles of a 12-Step program.",
+          "labelEs": "Patient verbalized the principles of a 12-Step program."
+        },
+        {
+          "value": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEn": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEs": "Patient explained the principles of recovery and the skills required to maintain sobriety."
+        }
+      ]
+    },
+    {
+      "key": "dim4_notes_2",
+      "type": "select",
+      "labelEn": "Dimension 4 — Substance Use-Related Risks — progress note 2",
+      "labelEs": "Dimensión 4 — Riesgos relacionados con el uso de sustancias — nota de progreso 2",
+      "options": [
+        {
+          "value": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEn": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEs": "Patient explained how social environment relates to alcohol/drug abuse."
+        },
+        {
+          "value": "Patient stated how culture and traditions influence substance use.",
+          "labelEn": "Patient stated how culture and traditions influence substance use.",
+          "labelEs": "Patient stated how culture and traditions influence substance use."
+        },
+        {
+          "value": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEn": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEs": "Patient described at least three specific situations that led to the abuse of alcohol/drugs."
+        },
+        {
+          "value": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEn": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEs": "Patient identified at least three personal triggers and ways to manage them."
+        },
+        {
+          "value": "Patient described the emotional and physical release process in the group.",
+          "labelEn": "Patient described the emotional and physical release process in the group.",
+          "labelEs": "Patient described the emotional and physical release process in the group."
+        },
+        {
+          "value": "Patient listed at least three relapse prevention skills.",
+          "labelEn": "Patient listed at least three relapse prevention skills.",
+          "labelEs": "Patient listed at least three relapse prevention skills."
+        },
+        {
+          "value": "Patient discussed in the group a relapse prevention plan.",
+          "labelEn": "Patient discussed in the group a relapse prevention plan.",
+          "labelEs": "Patient discussed in the group a relapse prevention plan."
+        },
+        {
+          "value": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEn": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEs": "Patient explained how a recovery plan can help to prevent relapse and future sobriety."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations lead to drink/use."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEn": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEs": "Patient completed a relapse prevention plan to address areas that contribute to sobriety."
+        },
+        {
+          "value": "Patient identified reasons for relapsing.",
+          "labelEn": "Patient identified reasons for relapsing.",
+          "labelEs": "Patient identified reasons for relapsing."
+        },
+        {
+          "value": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified situations and conditions that precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEn": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEs": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use."
+        },
+        {
+          "value": "Patient identified strategies to prevent future relapse.",
+          "labelEn": "Patient identified strategies to prevent future relapse.",
+          "labelEs": "Patient identified strategies to prevent future relapse."
+        },
+        {
+          "value": "Patient explained the specific situations surrounding relapse.",
+          "labelEn": "Patient explained the specific situations surrounding relapse.",
+          "labelEs": "Patient explained the specific situations surrounding relapse."
+        },
+        {
+          "value": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEn": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEs": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence."
+        },
+        {
+          "value": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEn": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEs": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred."
+        },
+        {
+          "value": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEn": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEs": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse."
+        },
+        {
+          "value": "Patient verbalized the principles of a 12-Step program.",
+          "labelEn": "Patient verbalized the principles of a 12-Step program.",
+          "labelEs": "Patient verbalized the principles of a 12-Step program."
+        },
+        {
+          "value": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEn": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEs": "Patient explained the principles of recovery and the skills required to maintain sobriety."
+        }
+      ]
+    },
+    {
+      "key": "dim4_notes_3",
+      "type": "select",
+      "labelEn": "Dimension 4 — Substance Use-Related Risks — progress note 3",
+      "labelEs": "Dimensión 4 — Riesgos relacionados con el uso de sustancias — nota de progreso 3",
+      "options": [
+        {
+          "value": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEn": "Patient explained how social environment relates to alcohol/drug abuse.",
+          "labelEs": "Patient explained how social environment relates to alcohol/drug abuse."
+        },
+        {
+          "value": "Patient stated how culture and traditions influence substance use.",
+          "labelEn": "Patient stated how culture and traditions influence substance use.",
+          "labelEs": "Patient stated how culture and traditions influence substance use."
+        },
+        {
+          "value": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEn": "Patient described at least three specific situations that led to the abuse of alcohol/drugs.",
+          "labelEs": "Patient described at least three specific situations that led to the abuse of alcohol/drugs."
+        },
+        {
+          "value": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEn": "Patient identified at least three personal triggers and ways to manage them.",
+          "labelEs": "Patient identified at least three personal triggers and ways to manage them."
+        },
+        {
+          "value": "Patient described the emotional and physical release process in the group.",
+          "labelEn": "Patient described the emotional and physical release process in the group.",
+          "labelEs": "Patient described the emotional and physical release process in the group."
+        },
+        {
+          "value": "Patient listed at least three relapse prevention skills.",
+          "labelEn": "Patient listed at least three relapse prevention skills.",
+          "labelEs": "Patient listed at least three relapse prevention skills."
+        },
+        {
+          "value": "Patient discussed in the group a relapse prevention plan.",
+          "labelEn": "Patient discussed in the group a relapse prevention plan.",
+          "labelEs": "Patient discussed in the group a relapse prevention plan."
+        },
+        {
+          "value": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEn": "Patient explained how a recovery plan can help to prevent relapse and future sobriety.",
+          "labelEs": "Patient explained how a recovery plan can help to prevent relapse and future sobriety."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations lead to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations lead to drink/use."
+        },
+        {
+          "value": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified how romantic/euphoric associations precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEn": "Patient completed a relapse prevention plan to address areas that contribute to sobriety.",
+          "labelEs": "Patient completed a relapse prevention plan to address areas that contribute to sobriety."
+        },
+        {
+          "value": "Patient identified reasons for relapsing.",
+          "labelEn": "Patient identified reasons for relapsing.",
+          "labelEs": "Patient identified reasons for relapsing."
+        },
+        {
+          "value": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEn": "Patient identified situations and conditions that precipitate craving and urges to drink/use.",
+          "labelEs": "Patient identified situations and conditions that precipitate craving and urges to drink/use."
+        },
+        {
+          "value": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEn": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use.",
+          "labelEs": "Patient verbalized how to recognize and interrupt cravings for alcohol/drug use."
+        },
+        {
+          "value": "Patient identified strategies to prevent future relapse.",
+          "labelEn": "Patient identified strategies to prevent future relapse.",
+          "labelEs": "Patient identified strategies to prevent future relapse."
+        },
+        {
+          "value": "Patient explained the specific situations surrounding relapse.",
+          "labelEn": "Patient explained the specific situations surrounding relapse.",
+          "labelEs": "Patient explained the specific situations surrounding relapse."
+        },
+        {
+          "value": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEn": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence.",
+          "labelEs": "Patient verbalized reasons for not continuing to attend a support group to maintain abstinence."
+        },
+        {
+          "value": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEn": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred.",
+          "labelEs": "Patient explained why unsuccessful attempts to reach sobriety and relapse occurred."
+        },
+        {
+          "value": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEn": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse.",
+          "labelEs": "Patient listed five ways a higher power can assist in reaching abstinence from alcohol/drug abuse."
+        },
+        {
+          "value": "Patient verbalized the principles of a 12-Step program.",
+          "labelEn": "Patient verbalized the principles of a 12-Step program.",
+          "labelEs": "Patient verbalized the principles of a 12-Step program."
+        },
+        {
+          "value": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEn": "Patient explained the principles of recovery and the skills required to maintain sobriety.",
+          "labelEs": "Patient explained the principles of recovery and the skills required to maintain sobriety."
+        }
+      ]
+    },
+    {
+      "key": "dim5_notes_1",
+      "type": "select",
+      "labelEn": "Dimension 5 — Recovery Environment Interactions — progress note 1",
+      "labelEs": "Dimensión 5 — Interacciones con el entorno de recuperación — nota de progreso 1",
+      "options": [
+        {
+          "value": "Patient wrote a leisure activity plan.",
+          "labelEn": "Patient wrote a leisure activity plan.",
+          "labelEs": "Patient wrote a leisure activity plan."
+        },
+        {
+          "value": "Patient wrote a productive free time usage plan.",
+          "labelEn": "Patient wrote a productive free time usage plan.",
+          "labelEs": "Patient wrote a productive free time usage plan."
+        },
+        {
+          "value": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEn": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEs": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described what a social support system means.",
+          "labelEn": "Patient described what a social support system means.",
+          "labelEs": "Patient described what a social support system means."
+        },
+        {
+          "value": "Patient defined at least three social support systems to build.",
+          "labelEn": "Patient defined at least three social support systems to build.",
+          "labelEs": "Patient defined at least three social support systems to build."
+        },
+        {
+          "value": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEn": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEs": "Patient discussed in the group a recovery plan, including productive leisure activities."
+        },
+        {
+          "value": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEn": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEs": "Patient described a plan that addresses a sober support system and living situation."
+        },
+        {
+          "value": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEn": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEs": "Patient identified three social support systems (friends, family members, etc.) to build."
+        },
+        {
+          "value": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEn": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEs": "Patient verbalized the relationship between a social environment and drinking/using patterns."
+        },
+        {
+          "value": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEn": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEs": "Patient described the changes needed to avoid alcohol/drug use."
+        }
+      ]
+    },
+    {
+      "key": "dim5_notes_2",
+      "type": "select",
+      "labelEn": "Dimension 5 — Recovery Environment Interactions — progress note 2",
+      "labelEs": "Dimensión 5 — Interacciones con el entorno de recuperación — nota de progreso 2",
+      "options": [
+        {
+          "value": "Patient wrote a leisure activity plan.",
+          "labelEn": "Patient wrote a leisure activity plan.",
+          "labelEs": "Patient wrote a leisure activity plan."
+        },
+        {
+          "value": "Patient wrote a productive free time usage plan.",
+          "labelEn": "Patient wrote a productive free time usage plan.",
+          "labelEs": "Patient wrote a productive free time usage plan."
+        },
+        {
+          "value": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEn": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEs": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described what a social support system means.",
+          "labelEn": "Patient described what a social support system means.",
+          "labelEs": "Patient described what a social support system means."
+        },
+        {
+          "value": "Patient defined at least three social support systems to build.",
+          "labelEn": "Patient defined at least three social support systems to build.",
+          "labelEs": "Patient defined at least three social support systems to build."
+        },
+        {
+          "value": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEn": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEs": "Patient discussed in the group a recovery plan, including productive leisure activities."
+        },
+        {
+          "value": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEn": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEs": "Patient described a plan that addresses a sober support system and living situation."
+        },
+        {
+          "value": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEn": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEs": "Patient identified three social support systems (friends, family members, etc.) to build."
+        },
+        {
+          "value": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEn": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEs": "Patient verbalized the relationship between a social environment and drinking/using patterns."
+        },
+        {
+          "value": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEn": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEs": "Patient described the changes needed to avoid alcohol/drug use."
+        }
+      ]
+    },
+    {
+      "key": "dim5_notes_3",
+      "type": "select",
+      "labelEn": "Dimension 5 — Recovery Environment Interactions — progress note 3",
+      "labelEs": "Dimensión 5 — Interacciones con el entorno de recuperación — nota de progreso 3",
+      "options": [
+        {
+          "value": "Patient wrote a leisure activity plan.",
+          "labelEn": "Patient wrote a leisure activity plan.",
+          "labelEs": "Patient wrote a leisure activity plan."
+        },
+        {
+          "value": "Patient wrote a productive free time usage plan.",
+          "labelEn": "Patient wrote a productive free time usage plan.",
+          "labelEs": "Patient wrote a productive free time usage plan."
+        },
+        {
+          "value": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEn": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems.",
+          "labelEs": "Patient identified changes needed in a social environment to avoid alcohol/drug-related problems."
+        },
+        {
+          "value": "Patient described what a social support system means.",
+          "labelEn": "Patient described what a social support system means.",
+          "labelEs": "Patient described what a social support system means."
+        },
+        {
+          "value": "Patient defined at least three social support systems to build.",
+          "labelEn": "Patient defined at least three social support systems to build.",
+          "labelEs": "Patient defined at least three social support systems to build."
+        },
+        {
+          "value": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEn": "Patient discussed in the group a recovery plan, including productive leisure activities.",
+          "labelEs": "Patient discussed in the group a recovery plan, including productive leisure activities."
+        },
+        {
+          "value": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEn": "Patient described a plan that addresses a sober support system and living situation.",
+          "labelEs": "Patient described a plan that addresses a sober support system and living situation."
+        },
+        {
+          "value": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEn": "Patient identified three social support systems (friends, family members, etc.) to build.",
+          "labelEs": "Patient identified three social support systems (friends, family members, etc.) to build."
+        },
+        {
+          "value": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEn": "Patient verbalized the relationship between a social environment and drinking/using patterns.",
+          "labelEs": "Patient verbalized the relationship between a social environment and drinking/using patterns."
+        },
+        {
+          "value": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEn": "Patient described the changes needed to avoid alcohol/drug use.",
+          "labelEs": "Patient described the changes needed to avoid alcohol/drug use."
+        }
+      ]
+    },
+    {
+      "key": "dim6_notes_1",
+      "type": "select",
+      "labelEn": "Dimension 6 — Person-Centered Considerations — progress note 1",
+      "labelEs": "Dimensión 6 — Consideraciones centradas en la persona — nota de progreso 1",
+      "options": [
+        {
+          "value": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEn": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEs": "Patient listed at least five negative consequences as a direct result of drinking/using."
+        },
+        {
+          "value": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEn": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEs": "Patient identified drinking/using patterns and resulting problems."
+        },
+        {
+          "value": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEn": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEs": "Patient verbalized responsibility for substance abuse and past actions."
+        },
+        {
+          "value": "Patient explained personal acceptance of chemical dependency.",
+          "labelEn": "Patient explained personal acceptance of chemical dependency.",
+          "labelEs": "Patient explained personal acceptance of chemical dependency."
+        },
+        {
+          "value": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEn": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEs": "Patient verbalized the need for ongoing substance abuse treatment."
+        },
+        {
+          "value": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEn": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEs": "Patient verbalized that attempts to control drinking/using were futile and unattainable."
+        },
+        {
+          "value": "Patient identified negative feelings related to addictive behavior.",
+          "labelEn": "Patient identified negative feelings related to addictive behavior.",
+          "labelEs": "Patient identified negative feelings related to addictive behavior."
+        },
+        {
+          "value": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEn": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEs": "Patient described the seriousness of alcohol/drug consumption and the resulting problems."
+        },
+        {
+          "value": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEn": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEs": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEn": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEs": "Patient summarized the reasons to remain committed to seeking a sober way of living."
+        },
+        {
+          "value": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEn": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEs": "Patient described the potential benefits resulting from maintaining abstinence."
+        },
+        {
+          "value": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEn": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEs": "Patient listed five instances in the past in which behavior under the influence created problems."
+        },
+        {
+          "value": "Patient presented a written recovery plan.",
+          "labelEn": "Patient presented a written recovery plan.",
+          "labelEs": "Patient presented a written recovery plan."
+        },
+        {
+          "value": "Patient explained how to follow treatment recommendations.",
+          "labelEn": "Patient explained how to follow treatment recommendations.",
+          "labelEs": "Patient explained how to follow treatment recommendations."
+        },
+        {
+          "value": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEn": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEs": "Patient listed at least five specific aspects of life committed to change during and after treatment."
+        },
+        {
+          "value": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEn": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEs": "Patient verbalized to commit to following all treatment recommendations daily."
+        }
+      ]
+    },
+    {
+      "key": "dim6_notes_2",
+      "type": "select",
+      "labelEn": "Dimension 6 — Person-Centered Considerations — progress note 2",
+      "labelEs": "Dimensión 6 — Consideraciones centradas en la persona — nota de progreso 2",
+      "options": [
+        {
+          "value": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEn": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEs": "Patient listed at least five negative consequences as a direct result of drinking/using."
+        },
+        {
+          "value": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEn": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEs": "Patient identified drinking/using patterns and resulting problems."
+        },
+        {
+          "value": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEn": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEs": "Patient verbalized responsibility for substance abuse and past actions."
+        },
+        {
+          "value": "Patient explained personal acceptance of chemical dependency.",
+          "labelEn": "Patient explained personal acceptance of chemical dependency.",
+          "labelEs": "Patient explained personal acceptance of chemical dependency."
+        },
+        {
+          "value": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEn": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEs": "Patient verbalized the need for ongoing substance abuse treatment."
+        },
+        {
+          "value": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEn": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEs": "Patient verbalized that attempts to control drinking/using were futile and unattainable."
+        },
+        {
+          "value": "Patient identified negative feelings related to addictive behavior.",
+          "labelEn": "Patient identified negative feelings related to addictive behavior.",
+          "labelEs": "Patient identified negative feelings related to addictive behavior."
+        },
+        {
+          "value": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEn": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEs": "Patient described the seriousness of alcohol/drug consumption and the resulting problems."
+        },
+        {
+          "value": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEn": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEs": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEn": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEs": "Patient summarized the reasons to remain committed to seeking a sober way of living."
+        },
+        {
+          "value": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEn": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEs": "Patient described the potential benefits resulting from maintaining abstinence."
+        },
+        {
+          "value": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEn": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEs": "Patient listed five instances in the past in which behavior under the influence created problems."
+        },
+        {
+          "value": "Patient presented a written recovery plan.",
+          "labelEn": "Patient presented a written recovery plan.",
+          "labelEs": "Patient presented a written recovery plan."
+        },
+        {
+          "value": "Patient explained how to follow treatment recommendations.",
+          "labelEn": "Patient explained how to follow treatment recommendations.",
+          "labelEs": "Patient explained how to follow treatment recommendations."
+        },
+        {
+          "value": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEn": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEs": "Patient listed at least five specific aspects of life committed to change during and after treatment."
+        },
+        {
+          "value": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEn": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEs": "Patient verbalized to commit to following all treatment recommendations daily."
+        }
+      ]
+    },
+    {
+      "key": "dim6_notes_3",
+      "type": "select",
+      "labelEn": "Dimension 6 — Person-Centered Considerations — progress note 3",
+      "labelEs": "Dimensión 6 — Consideraciones centradas en la persona — nota de progreso 3",
+      "options": [
+        {
+          "value": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEn": "Patient listed at least five negative consequences as a direct result of drinking/using.",
+          "labelEs": "Patient listed at least five negative consequences as a direct result of drinking/using."
+        },
+        {
+          "value": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEn": "Patient identified drinking/using patterns and resulting problems.",
+          "labelEs": "Patient identified drinking/using patterns and resulting problems."
+        },
+        {
+          "value": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEn": "Patient verbalized responsibility for substance abuse and past actions.",
+          "labelEs": "Patient verbalized responsibility for substance abuse and past actions."
+        },
+        {
+          "value": "Patient explained personal acceptance of chemical dependency.",
+          "labelEn": "Patient explained personal acceptance of chemical dependency.",
+          "labelEs": "Patient explained personal acceptance of chemical dependency."
+        },
+        {
+          "value": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEn": "Patient verbalized the need for ongoing substance abuse treatment.",
+          "labelEs": "Patient verbalized the need for ongoing substance abuse treatment."
+        },
+        {
+          "value": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEn": "Patient verbalized that attempts to control drinking/using were futile and unattainable.",
+          "labelEs": "Patient verbalized that attempts to control drinking/using were futile and unattainable."
+        },
+        {
+          "value": "Patient identified negative feelings related to addictive behavior.",
+          "labelEn": "Patient identified negative feelings related to addictive behavior.",
+          "labelEs": "Patient identified negative feelings related to addictive behavior."
+        },
+        {
+          "value": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEn": "Patient verbalized commitment to follow all treatment recommendations.",
+          "labelEs": "Patient verbalized commitment to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEn": "Patient described the seriousness of alcohol/drug consumption and the resulting problems.",
+          "labelEs": "Patient described the seriousness of alcohol/drug consumption and the resulting problems."
+        },
+        {
+          "value": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEn": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations.",
+          "labelEs": "Patient explained chemical dependency as a disease and how to follow all treatment recommendations."
+        },
+        {
+          "value": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEn": "Patient summarized the reasons to remain committed to seeking a sober way of living.",
+          "labelEs": "Patient summarized the reasons to remain committed to seeking a sober way of living."
+        },
+        {
+          "value": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEn": "Patient described the potential benefits resulting from maintaining abstinence.",
+          "labelEs": "Patient described the potential benefits resulting from maintaining abstinence."
+        },
+        {
+          "value": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEn": "Patient listed five instances in the past in which behavior under the influence created problems.",
+          "labelEs": "Patient listed five instances in the past in which behavior under the influence created problems."
+        },
+        {
+          "value": "Patient presented a written recovery plan.",
+          "labelEn": "Patient presented a written recovery plan.",
+          "labelEs": "Patient presented a written recovery plan."
+        },
+        {
+          "value": "Patient explained how to follow treatment recommendations.",
+          "labelEn": "Patient explained how to follow treatment recommendations.",
+          "labelEs": "Patient explained how to follow treatment recommendations."
+        },
+        {
+          "value": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEn": "Patient listed at least five specific aspects of life committed to change during and after treatment.",
+          "labelEs": "Patient listed at least five specific aspects of life committed to change during and after treatment."
+        },
+        {
+          "value": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEn": "Patient verbalized to commit to following all treatment recommendations daily.",
+          "labelEs": "Patient verbalized to commit to following all treatment recommendations daily."
+        }
+      ]
+    },
+    {
+      "key": "treatment_goals_progress",
+      "type": "select",
+      "labelEn": "Treatment Plan Goals — patient has reached a progress of",
+      "labelEs": "Metas del Plan de Tratamiento — el paciente ha alcanzado un progreso de",
+      "options": [
+        {
+          "value": "10 %",
+          "labelEn": "10 %",
+          "labelEs": "10 %"
+        },
+        {
+          "value": "20 %",
+          "labelEn": "20 %",
+          "labelEs": "20 %"
+        },
+        {
+          "value": "30 %",
+          "labelEn": "30 %",
+          "labelEs": "30 %"
+        },
+        {
+          "value": "40 %",
+          "labelEn": "40 %",
+          "labelEs": "40 %"
+        },
+        {
+          "value": "50 %",
+          "labelEn": "50 %",
+          "labelEs": "50 %"
+        },
+        {
+          "value": "60 %",
+          "labelEn": "60 %",
+          "labelEs": "60 %"
+        },
+        {
+          "value": "70 %",
+          "labelEn": "70 %",
+          "labelEs": "70 %"
+        },
+        {
+          "value": "80 %",
+          "labelEn": "80 %",
+          "labelEs": "80 %"
+        },
+        {
+          "value": "90 %",
+          "labelEn": "90 %",
+          "labelEs": "90 %"
+        },
+        {
+          "value": "100 %",
+          "labelEn": "100 %",
+          "labelEs": "100 %"
+        }
+      ]
+    },
+    {
+      "key": "treatment_objectives_progress",
+      "type": "select",
+      "labelEn": "Treatment Plan Objectives — patient has reached a progress of",
+      "labelEs": "Objetivos del Plan de Tratamiento — el paciente ha alcanzado un progreso de",
+      "options": [
+        {
+          "value": "10 %",
+          "labelEn": "10 %",
+          "labelEs": "10 %"
+        },
+        {
+          "value": "20 %",
+          "labelEn": "20 %",
+          "labelEs": "20 %"
+        },
+        {
+          "value": "30 %",
+          "labelEn": "30 %",
+          "labelEs": "30 %"
+        },
+        {
+          "value": "40 %",
+          "labelEn": "40 %",
+          "labelEs": "40 %"
+        },
+        {
+          "value": "50 %",
+          "labelEn": "50 %",
+          "labelEs": "50 %"
+        },
+        {
+          "value": "60 %",
+          "labelEn": "60 %",
+          "labelEs": "60 %"
+        },
+        {
+          "value": "70 %",
+          "labelEn": "70 %",
+          "labelEs": "70 %"
+        },
+        {
+          "value": "80 %",
+          "labelEn": "80 %",
+          "labelEs": "80 %"
+        },
+        {
+          "value": "90 %",
+          "labelEn": "90 %",
+          "labelEs": "90 %"
+        },
+        {
+          "value": "100 %",
+          "labelEn": "100 %",
+          "labelEs": "100 %"
+        }
+      ]
+    },
+    {
+      "key": "diagnosis_line_1",
+      "type": "select",
+      "labelEn": "DSM-5 Diagnosis (line 1)",
+      "labelEs": "Diagnóstico DSM-5 (línea 1)",
+      "options": [
+        {
+          "value": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEn": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEs": "F10.10 Alcohol Use Disorder, Mild"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEn": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEs": "F10.20 Alcohol Use Disorder, Moderate"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEn": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEs": "F10.20 Alcohol Use Disorder, Severe"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEn": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEs": "F12.10 Cannabis Use Disorder, Mild"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEn": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEs": "F12.20 Cannabis Use Disorder, Moderate"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEn": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEs": "F12.20 Cannabis Use Disorder, Severe"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEn": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEs": "F14.10 Cocaine Use Disorder, Mild"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEn": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEs": "F14.20 Cocaine Use Disorder, Moderate"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEn": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEs": "F14.20 Cocaine Use Disorder, Severe"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F11.10 Opioid Use Disorder, Mild",
+          "labelEn": "F11.10 Opioid Use Disorder, Mild",
+          "labelEs": "F11.10 Opioid Use Disorder, Mild"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEn": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEs": "F11.20 Opioid Use Disorder, Moderate"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Severe",
+          "labelEn": "F11.20 Opioid Use Disorder, Severe",
+          "labelEs": "F11.20 Opioid Use Disorder, Severe"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+        }
+      ]
+    },
+    {
+      "key": "diagnosis_line_2",
+      "type": "select",
+      "labelEn": "DSM-5 Diagnosis (line 2)",
+      "labelEs": "Diagnóstico DSM-5 (línea 2)",
+      "options": [
+        {
+          "value": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEn": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEs": "F10.10 Alcohol Use Disorder, Mild"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEn": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEs": "F10.20 Alcohol Use Disorder, Moderate"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEn": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEs": "F10.20 Alcohol Use Disorder, Severe"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEn": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEs": "F12.10 Cannabis Use Disorder, Mild"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEn": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEs": "F12.20 Cannabis Use Disorder, Moderate"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEn": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEs": "F12.20 Cannabis Use Disorder, Severe"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEn": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEs": "F14.10 Cocaine Use Disorder, Mild"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEn": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEs": "F14.20 Cocaine Use Disorder, Moderate"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEn": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEs": "F14.20 Cocaine Use Disorder, Severe"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F11.10 Opioid Use Disorder, Mild",
+          "labelEn": "F11.10 Opioid Use Disorder, Mild",
+          "labelEs": "F11.10 Opioid Use Disorder, Mild"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEn": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEs": "F11.20 Opioid Use Disorder, Moderate"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Severe",
+          "labelEn": "F11.20 Opioid Use Disorder, Severe",
+          "labelEs": "F11.20 Opioid Use Disorder, Severe"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+        }
+      ]
+    },
+    {
+      "key": "diagnosis_line_3",
+      "type": "select",
+      "labelEn": "DSM-5 Diagnosis (line 3)",
+      "labelEs": "Diagnóstico DSM-5 (línea 3)",
+      "options": [
+        {
+          "value": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEn": "F10.10 Alcohol Use Disorder, Mild",
+          "labelEs": "F10.10 Alcohol Use Disorder, Mild"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Early Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F10.11 Alcohol Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEn": "F10.20 Alcohol Use Disorder, Moderate",
+          "labelEs": "F10.20 Alcohol Use Disorder, Moderate"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEn": "F10.20 Alcohol Use Disorder, Severe",
+          "labelEs": "F10.20 Alcohol Use Disorder, Severe"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Early Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F10.21 Alcohol Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEn": "F12.10 Cannabis Use Disorder, Mild",
+          "labelEs": "F12.10 Cannabis Use Disorder, Mild"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Early Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F12.11 Cannabis Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEn": "F12.20 Cannabis Use Disorder, Moderate",
+          "labelEs": "F12.20 Cannabis Use Disorder, Moderate"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEn": "F12.20 Cannabis Use Disorder, Severe",
+          "labelEs": "F12.20 Cannabis Use Disorder, Severe"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Early Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F12.21 Cannabis Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEn": "F14.10 Cocaine Use Disorder, Mild",
+          "labelEs": "F14.10 Cocaine Use Disorder, Mild"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, Mild in Early Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEn": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission",
+          "labelEs": "F14.11 Cocaine Use Disorder, in Mild Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEn": "F14.20 Cocaine Use Disorder, Moderate",
+          "labelEs": "F14.20 Cocaine Use Disorder, Moderate"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEn": "F14.20 Cocaine Use Disorder, Severe",
+          "labelEs": "F14.20 Cocaine Use Disorder, Severe"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Early Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F14.21 Cocaine Use Disorder, Severe in Sustained Remission"
+        },
+        {
+          "value": "F11.10 Opioid Use Disorder, Mild",
+          "labelEn": "F11.10 Opioid Use Disorder, Mild",
+          "labelEs": "F11.10 Opioid Use Disorder, Mild"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Early Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Early Remission"
+        },
+        {
+          "value": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEn": "F11.11 Opioid Use Disorder, Mild in Sustained Remission",
+          "labelEs": "F11.11 Opioid Use Disorder, Mild in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEn": "F11.20 Opioid Use Disorder, Moderate",
+          "labelEs": "F11.20 Opioid Use Disorder, Moderate"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Moderate in Sustained Remission"
+        },
+        {
+          "value": "F11.20 Opioid Use Disorder, Severe",
+          "labelEn": "F11.20 Opioid Use Disorder, Severe",
+          "labelEs": "F11.20 Opioid Use Disorder, Severe"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Early Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Early Remission"
+        },
+        {
+          "value": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEn": "F11.21 Opioid Use Disorder, Severe in Sustained Remission",
+          "labelEs": "F11.21 Opioid Use Disorder, Severe in Sustained Remission"
+        }
+      ]
+    },
+    {
+      "key": "asam_recommendation",
+      "type": "select",
+      "labelEn": "Recommendations — ASAM level of care",
+      "labelEs": "Recomendaciones — nivel de cuidado ASAM",
+      "options": [
+        {
+          "value": "Recovery Residence - RR Recovery Residence",
+          "labelEn": "Recovery Residence - RR Recovery Residence",
+          "labelEs": "Recovery Residence - RR Recovery Residence"
+        },
+        {
+          "value": "Level 1- Outpatient Services",
+          "labelEn": "Level 1- Outpatient Services",
+          "labelEs": "Level 1- Outpatient Services"
+        },
+        {
+          "value": "Level 1- Outpatient Services / 1.0- Long-Term Remission Monitoring",
+          "labelEn": "Level 1- Outpatient Services / 1.0- Long-Term Remission Monitoring",
+          "labelEs": "Level 1- Outpatient Services / 1.0- Long-Term Remission Monitoring"
+        },
+        {
+          "value": "Level 1- Outpatient Services / 1.5- Outpatient Therapy",
+          "labelEn": "Level 1- Outpatient Services / 1.5- Outpatient Therapy",
+          "labelEs": "Level 1- Outpatient Services / 1.5- Outpatient Therapy"
+        },
+        {
+          "value": "Level 1- Outpatient Services / 1.7- Medically Managed Outpatient",
+          "labelEn": "Level 1- Outpatient Services / 1.7- Medically Managed Outpatient",
+          "labelEs": "Level 1- Outpatient Services / 1.7- Medically Managed Outpatient"
+        },
+        {
+          "value": "Level 2- IOP/HIOP",
+          "labelEn": "Level 2- IOP/HIOP",
+          "labelEs": "Level 2- IOP/HIOP"
+        },
+        {
+          "value": "Level 2- IOP/HIOP / Level 2.1- Intensive Outpatient (IOP)",
+          "labelEn": "Level 2- IOP/HIOP / Level 2.1- Intensive Outpatient (IOP)",
+          "labelEs": "Level 2- IOP/HIOP / Level 2.1- Intensive Outpatient (IOP)"
+        },
+        {
+          "value": "Level 2- IOP/HIOP / Level 2.5- High-Intensive Outpatient (HIOP)",
+          "labelEn": "Level 2- IOP/HIOP / Level 2.5- High-Intensive Outpatient (HIOP)",
+          "labelEs": "Level 2- IOP/HIOP / Level 2.5- High-Intensive Outpatient (HIOP)"
+        },
+        {
+          "value": "Level 2- IOP/HIOP / Level 2.7- Medically Managed Intensive Outpatient",
+          "labelEn": "Level 2- IOP/HIOP / Level 2.7- Medically Managed Intensive Outpatient",
+          "labelEs": "Level 2- IOP/HIOP / Level 2.7- Medically Managed Intensive Outpatient"
+        },
+        {
+          "value": "Level 3- Residential",
+          "labelEn": "Level 3- Residential",
+          "labelEs": "Level 3- Residential"
+        },
+        {
+          "value": "Level 3- Residential / 3.1- Clinically Managed Low-Intensity Residential",
+          "labelEn": "Level 3- Residential / 3.1- Clinically Managed Low-Intensity Residential",
+          "labelEs": "Level 3- Residential / 3.1- Clinically Managed Low-Intensity Residential"
+        },
+        {
+          "value": "Level 3- Residential / 3.5- Clinically Managed High-Intensity Residential",
+          "labelEn": "Level 3- Residential / 3.5- Clinically Managed High-Intensity Residential",
+          "labelEs": "Level 3- Residential / 3.5- Clinically Managed High-Intensity Residential"
+        },
+        {
+          "value": "Level 3- Residential / 3.7- Medically Managed Residential",
+          "labelEn": "Level 3- Residential / 3.7- Medically Managed Residential",
+          "labelEs": "Level 3- Residential / 3.7- Medically Managed Residential"
+        },
+        {
+          "value": "Level 4-Inpatient",
+          "labelEn": "Level 4-Inpatient",
+          "labelEs": "Level 4-Inpatient"
+        },
+        {
+          "value": "Level 4-Inpatient / 4-Medically Managed Inpatient",
+          "labelEn": "Level 4-Inpatient / 4-Medically Managed Inpatient",
+          "labelEs": "Level 4-Inpatient / 4-Medically Managed Inpatient"
+        }
+      ]
+    },
+    {
+      "key": "recommendations_notes",
+      "type": "textarea",
+      "labelEn": "Recommendations — notes",
+      "labelEs": "Recomendaciones — notas"
+    },
+    {
+      "key": "comments_1",
+      "type": "select",
+      "labelEn": "Comments (line 1)",
+      "labelEs": "Comentarios (línea 1)",
+      "options": [
+        {
+          "value": "Patient is making progress but has not yet achieved the planned goals.",
+          "labelEn": "Patient is making progress but has not yet achieved the planned goals.",
+          "labelEs": "Patient is making progress but has not yet achieved the planned goals."
+        },
+        {
+          "value": "Patient is to continue working at current level of care.",
+          "labelEn": "Patient is to continue working at current level of care.",
+          "labelEs": "Patient is to continue working at current level of care."
+        },
+        {
+          "value": "Patient has achieved the Treatment Plan goals.",
+          "labelEn": "Patient has achieved the Treatment Plan goals.",
+          "labelEs": "Patient has achieved the Treatment Plan goals."
+        },
+        {
+          "value": "Patient is recommended to attend a continuing care program.",
+          "labelEn": "Patient is recommended to attend a continuing care program.",
+          "labelEs": "Patient is recommended to attend a continuing care program."
+        }
+      ]
+    },
+    {
+      "key": "comments_2",
+      "type": "select",
+      "labelEn": "Comments (line 2)",
+      "labelEs": "Comentarios (línea 2)",
+      "options": [
+        {
+          "value": "Patient is making progress but has not yet achieved the planned goals.",
+          "labelEn": "Patient is making progress but has not yet achieved the planned goals.",
+          "labelEs": "Patient is making progress but has not yet achieved the planned goals."
+        },
+        {
+          "value": "Patient is to continue working at current level of care.",
+          "labelEn": "Patient is to continue working at current level of care.",
+          "labelEs": "Patient is to continue working at current level of care."
+        },
+        {
+          "value": "Patient has achieved the Treatment Plan goals.",
+          "labelEn": "Patient has achieved the Treatment Plan goals.",
+          "labelEs": "Patient has achieved the Treatment Plan goals."
+        },
+        {
+          "value": "Patient is recommended to attend a continuing care program.",
+          "labelEn": "Patient is recommended to attend a continuing care program.",
+          "labelEs": "Patient is recommended to attend a continuing care program."
+        }
+      ]
+    },
+    {
+      "key": "counselor_name",
+      "type": "select",
+      "labelEn": "Counselor name and credentials",
+      "labelEs": "Nombre y credenciales del consejero",
+      "options": [
+        {
+          "value": "Maria I. Torres, CADC",
+          "labelEn": "Maria I. Torres, CADC",
+          "labelEs": "Maria I. Torres, CADC"
+        },
+        {
+          "value": "George Torres, BA, CADC",
+          "labelEn": "George Torres, BA, CADC",
+          "labelEs": "George Torres, BA, CADC"
+        }
+      ]
+    },
+    {
+      "key": "patient_review_date",
+      "type": "date",
+      "labelEn": "Patient's signature — date",
+      "labelEs": "Firma del paciente — fecha"
+    },
+    {
+      "key": "counselor_signature_date",
+      "type": "date",
+      "labelEn": "Counselor's signature — date",
+      "labelEs": "Firma del consejero — fecha"
+    }
+  ],
+  "pages": [
+    {
+      "title": {
+        "en": "Continued Service Review",
+        "es": "Revisión de servicio continuado"
+      },
+      "fields": [
+        "patient_name",
+        "review_date",
+        "review_type",
+        "level_of_intervention",
+        "dim1_status",
+        "dim2_notes_1",
+        "dim2_notes_2",
+        "dim2_notes_3",
+        "dim3_notes_1",
+        "dim3_notes_2",
+        "dim3_notes_3",
+        "dim4_notes_1",
+        "dim4_notes_2",
+        "dim4_notes_3",
+        "dim5_notes_1",
+        "dim5_notes_2",
+        "dim5_notes_3",
+        "dim6_notes_1",
+        "dim6_notes_2",
+        "dim6_notes_3"
+      ]
+    },
+    {
+      "title": {
+        "en": "Treatment Plan Progress, ASAM Placement & Signatures",
+        "es": "Progreso del Plan de Tratamiento, colocación ASAM y firmas"
+      },
+      "fields": [
+        "patient_name",
+        "treatment_goals_progress",
+        "treatment_objectives_progress",
+        "diagnosis_line_1",
+        "diagnosis_line_2",
+        "diagnosis_line_3",
+        "asam_recommendation",
+        "recommendations_notes",
+        "comments_1",
+        "comments_2",
+        "counselor_name",
+        "patient_review_date",
+        "counselor_signature_date"
+      ]
+    }
+  ]
+}

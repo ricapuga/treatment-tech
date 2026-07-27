@@ -685,3 +685,86 @@ método de curación, pendiente uno por uno.
 
 **Próximo paso sugerido:** curar el siguiente módulo (probablemente Case Review, la
 siguiente etapa de `CASE_STAGE_ORDER`), con el mismo método.
+
+## Case Review — cuarto contenido clínico REAL curado (etapa "Revisión de caso")
+
+Cuarto módulo curado con el mismo método, contra
+`build-inputs/templates-r12/case-review.pdf`: 2 páginas, 28 campos únicos del AcroForm
+original / 33 instancias de widget. Es la "Continued Service Review" / "Outpatient
+Treatment" — una revisión periódica de las mismas 6 dimensiones ASAM, más el progreso
+del Treatment Plan y la recomendación de nivel de cuidado ASAM. Reemplaza a la etapa
+"Revisión de caso" del expediente (antes sin formulario asignado). Nota: como ya
+apuntó Jorge (pregunta 1.2, ver sección anterior), un mismo caso puede tener varias
+revisiones — este schema es el contenido de UNA revisión; la UI para listar/crear
+múltiples revisiones por caso sigue pendiente de M3 (`documents` ya soporta filas
+repetidas del mismo `schemaKey` por diseño).
+
+**Curado en 32 campos, 2 páginas, 0 condiciones RN-7** —
+`build-inputs/curated/case_review.schema.json`, generado con
+`build-inputs/curated/build_case_review_schema.py` (mismo generador con `opts()`
+cargando `option_catalogs.json` programáticamente, igual que treatment_plan).
+`field_scripts.json` de este módulo tampoco tiene lógica condicional (solo 2 scripts de
+formateo de fecha para "Text2") — mismo patrón que Treatment Plan, cero `conditions`.
+
+**Estructura real distinta de Treatment Plan, aunque comparte las 6 dimensiones ASAM:**
+en vez de Problem/Evidenced by/Goal/Objectives/Methods, aquí cada dimensión es una
+lista de notas de progreso de sesión. La Dimensión 1 tiene UN solo campo
+(`dim1_status`) — y ese campo, real, solo tiene UNA opción en todo el catálogo
+("Patient presents no signs of intoxication or withdrawals at this time.") — se dejó
+tal cual, sin inventar más opciones para completar un `<select>` de apariencia más
+"normal". Las Dimensiones 2-6 tienen TRES campos cada una (`dimN_notes_1/_2/_3`) con
+listas reales de 6 frases de progreso por dimensión.
+
+**Hallazgo de nomenclatura, resuelto con el mismo criterio que Treatment Plan:** el
+campo "Recommendations" de la página 2 está etiquetado así en el PDF, pero su lista de
+opciones real (`option_catalogs.json`) es idéntica a la escala de colocación ASAM (15
+niveles, mismo catálogo que `asam_placement` en Assessment y Treatment Plan) — se
+capturó como `asam_recommendation` preservando la etiqueta real del PDF ("Recommendations")
+en vez de renombrarlo a "ASAM Placement", porque así es como este documento específico
+lo presenta; el contenido real sigue siendo la escala ASAM. El encabezado "ASAM
+PLACEMENT" en sí es solo un título de agrupación visual — NO tiene ningún campo de
+formulario propio, no se inventó uno.
+
+**Mismo bug de sincronización "Text2" ya documentado en Treatment Plan:** el campo
+AcroForm "Text2" es el mismo nombre compartido entre "Review date" (encabezado) y las
+dos fechas de firma (paciente/consejero) en la página 2 — se resolvió igual, con keys
+distintas (`review_date`, `patient_review_date`, `counselor_signature_date`).
+"Patient name" (`Text1.0`) sí se reusa sin separar (mismo dato real en encabezado y
+firma).
+
+**Opciones reales, no inventadas** — confirmadas contra
+`option_catalogs.json["CaseReview"]`: tipo de revisión (4 opciones: Continued
+stay/Discharge/Transfer/As needed), nivel de intervención (2: Outpatient/Intensive
+Outpatient), progreso de metas/objetivos (10 opciones, 10%-100%), 36 códigos DSM-5
+(mismo catálogo que treatment_plan), 15 niveles ASAM, y la misma lista real de 2
+consejeros (con una variación menor de puntuación en este PDF: "Maria I. Torres, CADC"
+con punto, vs. "Maria I Torres, CADC" sin punto en Assessment/Treatment Plan — se
+preservó el texto exacto de CADA PDF, no se normalizó entre módulos, porque no hay
+evidencia de cuál es la forma "correcta" y unificar sería una inferencia no confirmada).
+
+**Prellenado desde el caso** (`forms/[key]/page.tsx`, `key === "case_review"`): solo
+`patient_name` (la key de este schema para el nombre, distinta de `client_name` en
+treatment_plan/assessment — el PDF real de Case Review usa "Patient name" en vez de
+"Client's name", y se preservó esa diferencia real en vez de forzar una key genérica
+compartida entre schemas).
+
+**Verificado end-to-end** (Postgres local recreado desde cero + reseed con los 5
+schemas — `demo_intake`, `forms_1_7`, `assessment`, `treatment_plan`, `case_review` —,
+servidor dev + Playwright headless contra un caso real nuevo "Carla CRVerifyTest"): el
+link "Abrir Revisión de Caso" aparece en la etapa correcta del expediente, las 2
+páginas navegan sin error, `patient_name` se prellena correctamente, autosave guarda en
+`documents.data` (`{"patient_name": "Carla CRVerifyTest"}` antes de cualquier otra
+edición). `pnpm typecheck` / `lint` / `test`: verdes, 100/100 (nuevo:
+`tests/case-review-schema.test.ts`, 10 pruebas).
+
+**Deliberadamente fuera de alcance de este paso:** los ~14 módulos restantes (Activity
+Notes x3, Continue Care, Discharge, Admin Control, Treatment Verification, Status
+Report, Case Coordination, 4 cartas) — mismo método, pendiente uno por uno. La UI para
+múltiples revisiones por caso (nota de Jorge, pregunta 1.2) sigue pendiente de M3.
+
+**Próximo paso sugerido:** curar el siguiente módulo — probablemente uno de Activity
+Notes (hay 3 variantes: 12/20/75 sesiones, mismo tipo de contenido en distinto tamaño de
+tabla) o Discharge, con el mismo método. Vale la pena revisar primero cuál de los
+módulos restantes tiene más prioridad clínica/operativa real para Jorge antes de
+asumir el orden de `CASE_STAGE_ORDER` a ciegas — Activity Notes probablemente se usa
+con más frecuencia en el día a día que Discharge.

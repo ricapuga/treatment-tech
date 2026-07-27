@@ -302,6 +302,33 @@ async function main() {
     })
     .onConflictDoNothing();
 
+  // Schema REAL de Case Review — cuarto módulo clínico real curado (blueprint M2,
+  // etapa "case_review" de CASE_STAGE_ORDER), contra
+  // build-inputs/templates-r12/case-review.pdf (2 páginas, 28 campos reales del
+  // AcroForm original). Igual que treatment_plan, NO tiene condiciones RN-7. Ver
+  // build_case_review_schema.py y PROGRESS.md para el detalle (Dimensión 1 con un
+  // solo campo de estado vs. 3 notas de progreso en las Dimensiones 2-6, el campo
+  // "Recommendations" que en realidad captura la escala ASAM, el mismo bug de
+  // sincronización "Text2" ya visto en treatment_plan). El JSON vive en
+  // build-inputs/curated/ — versionable y revisable por separado del código del seed.
+  console.log("Seeding form_schemas: case_review (contenido REAL, curado de Case Review R12) ...");
+  const caseReviewSchema = JSON.parse(
+    readFileSync(
+      new URL("../build-inputs/curated/case_review.schema.json", import.meta.url),
+      "utf-8"
+    )
+  );
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: caseReviewSchema.key,
+      version: caseReviewSchema.version,
+      titleEn: caseReviewSchema.titleEn,
+      titleEs: caseReviewSchema.titleEs,
+      schema: caseReviewSchema,
+    })
+    .onConflictDoNothing();
+
   console.log(
     `Listo. tenant=${tenant.id} location(Archer)=${archer.id}.\n` +
       `Recuerda: los correos de arriba son placeholders — reemplázalos por los reales antes de invitar al equipo.\n` +

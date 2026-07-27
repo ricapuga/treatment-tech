@@ -105,6 +105,28 @@ export default async function CaseFormPage({
         caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
       }
     }
+    if (key === "case_review") {
+      // Case Review (Continued Service Review, RN-7
+      // build-inputs/curated/case_review.schema.json) — mismo criterio que assessment
+      // y treatment_plan: solo se prellena el nombre del paciente ("patient_name" en
+      // este schema, no "client_name" — el PDF real usa esa etiqueta). El resto
+      // (tipo de revisión, consejero, progreso, diagnóstico, recomendación ASAM) es
+      // juicio clínico de la sesión de revisión, no un dato que ya exista en
+      // `cases`/`patients`.
+      const caseRows = await tx
+        .select({
+          firstName: schema.patients.firstName,
+          lastName: schema.patients.lastName,
+        })
+        .from(schema.cases)
+        .innerJoin(schema.patients, eq(schema.cases.patientId, schema.patients.id))
+        .where(eq(schema.cases.id, id))
+        .limit(1);
+      const caseRow = caseRows[0];
+      if (caseRow) {
+        caseContext = { patient_name: `${caseRow.firstName} ${caseRow.lastName}` };
+      }
+    }
     if (key === "treatment_plan") {
       // Treatment Plan (6 dimensiones ASAM + plan educativo/firmas, RN-7
       // build-inputs/curated/treatment_plan.schema.json) — mismo criterio que
