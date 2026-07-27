@@ -576,3 +576,112 @@ de admisión), es una decisión de producto nueva, no algo que el PDF original y
 
 **Próximo paso sugerido:** curar el siguiente módulo (probablemente Treatment Plan, la
 siguiente etapa de `CASE_STAGE_ORDER`), con el mismo método.
+
+## Treatment Plan — tercer contenido clínico REAL curado (etapa "Plan de tratamiento")
+
+Tercer módulo curado con el mismo método (páginas renderizadas + overlay de posición/
+nombre de widget + lectura visual + `field_scripts.json` + `option_catalogs.json`),
+contra `build-inputs/templates-r12/treatment-plan.pdf`: 7 páginas, 78 campos únicos del
+AcroForm original / 128 instancias de widget (varios campos —encabezado, fechas
+objetivo— se repiten/sincronizan por nombre en varias páginas). Es el plan de
+tratamiento ASAM de 6 dimensiones (mismas 6 que Assessment) más una página final de
+Plan Educativo, Medicamentos, Criterios de Alta y Firmas. Reemplaza a la etapa "Plan de
+tratamiento" del expediente (antes sin formulario asignado).
+
+**Curado en 85 campos, 7 páginas, 0 condiciones RN-7** —
+`build-inputs/curated/treatment_plan.schema.json`, generado con
+`build-inputs/curated/build_treatment_plan_schema.py`. A diferencia de Forms 1-7 y
+Assessment, `field_scripts.json` de este módulo NO tiene ninguna lógica condicional de
+mostrar/ocultar (solo 4 entradas, todas de formateo de fecha para los campos "Date" y
+"Text2") — por eso este schema no necesita ningún `condition` RN-7, es más plano pese a
+cubrir 7 páginas.
+
+**Novedad de método:** las ~30 listas de opciones reales de este módulo (varias con 6-7
+frases clínicas largas por Problema/Evidenciado por/Meta/Objetivos/Métodos de cada
+dimensión) se cargan PROGRAMÁTICAMENTE desde `option_catalogs.json` dentro del
+generador (`opts("Dropdown5")`, etc.) en vez de re-transcribirlas a mano como en
+`build_assessment_schema.py` — el volumen de texto era mucho mayor y transcribir a mano
+introduce riesgo real de error de copiado en contenido clínico. El generador falla
+fuerte (`KeyError`) si algún campo referenciado no existe en el catálogo, para que un
+typo no produzca en silencio un `<select>` vacío.
+
+**Hallazgo estructural real, preservado tal cual (no es un olvido de curación):** la
+Dimensión 1 (página 1) NO tiene en el AcroForm original ningún campo de "As evidenced
+by / Goal / Objectives / Methods and frequency / Comments" — solo fecha objetivo
+(`dim1_target_date`) y un campo de texto libre "Problem" (`dim1_problem`). El PDF
+imprime las etiquetas de esas secciones en la página pero sin caja de formulario
+debajo (confirmado por conteo exacto de widgets: 10 en página 1 = 3 encabezado + 5
+diagnóstico + fecha + problema). Las Dimensiones 2-6 sí siguen el patrón uniforme
+completo.
+
+**Segundo hallazgo real, resuelto con el mismo criterio de "no replicar bugs de
+nomenclatura del PDF" ya aplicado en Assessment (ahí en la dirección contraria):**
+1. El campo AcroForm "Text2" (fecha objetivo) es LITERALMENTE el mismo nombre de campo
+   compartido/sincronizado en las 7 páginas — escribir una fecha en cualquier
+   dimensión, en el PDF real, sincroniza el mismo valor en TODAS las demás. Esto no
+   tiene sentido de negocio (son 6 fechas objetivo genuinamente distintas por
+   dimensión, más la del plan educativo) — se decidió capturarlas como keys DISTINTAS
+   (`dim2_target_date` .. `dim6_target_date`, `edu_plan_target_date`) en vez de
+   replicar la sincronización accidental.
+2. El campo "Date" se repite 3 veces en la página 7 con el mismo nombre AcroForm
+   (encabezado del plan + firma del paciente + firma del consejero) — mismo problema,
+   misma solución: `plan_date` (reusa el encabezado de la página 1), y
+   `patient_review_date` / `counselor_signature_date` como keys nuevas y distintas
+   entre sí.
+3. El encabezado (`client_name`, `counselor_name`, `diagnosis_line_1..5`) SÍ se reusa
+   sin separar — a diferencia de las fechas, es genuinamente el mismo dato (mismo
+   paciente, mismo consejero, mismo diagnóstico) en las 7 páginas — mismo principio de
+   "no repetir captura" que `counselor_name` en assessment, declarado una sola vez en
+   la página 1 y reusado (no repetido) en la página 7 para el bloque de firmas.
+
+**Opciones reales, no inventadas** — confirmadas contra
+`option_catalogs.json["TreatmentPlan"]`: 36 códigos de diagnóstico DSM-5 (idénticos a
+los 37 de Assessment MENOS "Z03.89 No Diagnosis" — confirmado por diferencia de
+conjuntos: `AS only: {"Z03.89 No Diagnosis"}`, `TP only: set()`), la misma lista real
+de 2 consejeros, y las ~30 listas de frases clínicas reales por dimensión (Problema/
+Evidenciado por/Meta/Objetivos/Métodos), todas cargadas programáticamente (ver
+"Novedad de método" arriba) — ninguna opción fue escrita a mano.
+
+**Otras decisiones documentadas en el generador** (`build_treatment_plan_schema.py`,
+comentario de cabecera, 10 puntos en total): el valor por defecto visible en el PDF
+para "Problem" de Dimensión 1 (`Text11`) no se siembra como valor inicial del campo —
+el motor no tiene mecanismo de "default" y sembrar texto clínico de un caso ficticio
+sería el mismo tipo de invención que este proyecto evita; "Continued Stay Review
+Criteria" (`Text36`) se captura como bloque `info` de solo lectura (boilerplate ASAM
+PPC fijo, no dato editable por caso) en vez de campo de texto; la tabla de medicamentos
+(3 filas × Nombre/Razón/Dosis) se deja siempre visible sin condición Sí/No, fiel al PDF
+real (que tampoco la oculta pese a tener la pregunta "¿necesita medicamento?").
+
+**Prellenado desde el caso** (`forms/[key]/page.tsx`, `key === "treatment_plan"`):
+solo `client_name`, mismo criterio que assessment — `counselor_name` y los 5
+`diagnosis_line_*` son listas fijas/juicio clínico que no se pueden inferir de forma
+confiable, se dejan para selección manual del consejero.
+
+**Verificado end-to-end** (Postgres local recreado desde cero + reseed con los 4
+schemas — `demo_intake`, `forms_1_7`, `assessment`, `treatment_plan` —, servidor dev +
+Playwright headless contra un caso real nuevo "Luis TPVerifyTest"): el link "Abrir Plan
+de Tratamiento" aparece en la etapa correcta del expediente, las 7 páginas navegan sin
+error, `client_name` se prellena correctamente, autosave guarda en `documents.data`
+(`{"client_name": "Luis TPVerifyTest"}` antes de cualquier otra edición), el bloque
+`info` de "Continued Stay Review Criteria" renderiza el párrafo completo, y la tabla de
+3×3 medicamentos y el bloque de firmas de la página 7 renderizan correctamente.
+`pnpm typecheck` / `lint` / `test`: verdes, 88/88 (nuevo: `tests/treatment-plan-schema.
+test.ts`, 13 pruebas).
+
+**Checkpoint sobre la limitación de UX de "grilla" (anotada en la sección de
+Assessment):** con este tercer módulo real ya curado, la evidencia es mixta a favor de
+seguir esperando — Assessment tenía grillas grandes (DSM-5, trastornos clínicos) que se
+beneficiarían de un tipo de campo "grid", pero Treatment Plan no tiene ninguna
+estructura de grilla (sus campos repetidos son listas verticales de opciones, no
+tablas). Sigue sin haber evidencia suficiente de un patrón dominante que justifique el
+cambio de motor ahora — se mantiene la recomendación de revisitar tras 1-2 módulos más
+con mejor señal (ej. si Case Review o Activity Notes traen grillas similares a
+Assessment).
+
+**Deliberadamente fuera de alcance de este paso:** los ~15 módulos restantes del
+expediente completo (Case Review, Activity Notes x3, Continue Care, Discharge, Admin
+Control, Treatment Verification, Status Report, Case Coordination, 4 cartas) — mismo
+método de curación, pendiente uno por uno.
+
+**Próximo paso sugerido:** curar el siguiente módulo (probablemente Case Review, la
+siguiente etapa de `CASE_STAGE_ORDER`), con el mismo método.

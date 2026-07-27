@@ -274,6 +274,34 @@ async function main() {
     })
     .onConflictDoNothing();
 
+  // Schema REAL de Treatment Plan — tercer módulo clínico real curado (blueprint M2,
+  // etapa "treatment_plan" de CASE_STAGE_ORDER), contra
+  // build-inputs/templates-r12/treatment-plan.pdf (7 páginas, 78 campos reales del
+  // AcroForm original). A diferencia de assessment, este módulo NO tiene condiciones
+  // RN-7 (field_scripts.json solo trae scripts de formateo de fecha). Ver
+  // build_treatment_plan_schema.py y PROGRESS.md para el detalle de las
+  // simplificaciones/hallazgos documentados (ausencia real de campos en Dimensión 1,
+  // el bug de sincronización "Text2"/"Date" del PDF resuelto con keys distintas por
+  // dimensión, etc.). El JSON vive en build-inputs/curated/ — versionable y revisable
+  // por separado del código del seed.
+  console.log("Seeding form_schemas: treatment_plan (contenido REAL, curado de Treatment Plan R12) ...");
+  const treatmentPlanSchema = JSON.parse(
+    readFileSync(
+      new URL("../build-inputs/curated/treatment_plan.schema.json", import.meta.url),
+      "utf-8"
+    )
+  );
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: treatmentPlanSchema.key,
+      version: treatmentPlanSchema.version,
+      titleEn: treatmentPlanSchema.titleEn,
+      titleEs: treatmentPlanSchema.titleEs,
+      schema: treatmentPlanSchema,
+    })
+    .onConflictDoNothing();
+
   console.log(
     `Listo. tenant=${tenant.id} location(Archer)=${archer.id}.\n` +
       `Recuerda: los correos de arriba son placeholders — reemplázalos por los reales antes de invitar al equipo.\n` +

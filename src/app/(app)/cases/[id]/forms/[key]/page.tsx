@@ -105,6 +105,29 @@ export default async function CaseFormPage({
         caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
       }
     }
+    if (key === "treatment_plan") {
+      // Treatment Plan (6 dimensiones ASAM + plan educativo/firmas, RN-7
+      // build-inputs/curated/treatment_plan.schema.json) — mismo criterio que
+      // assessment: solo se prellena el nombre del paciente. "counselor_name" y los 5
+      // "diagnosis_line_*" del encabezado son <select> de listas fijas reales del PDF
+      // que no se pueden inferir de forma confiable (mismo consejero de dos nombres
+      // reales, y el diagnóstico DSM-5 es un juicio clínico, no un dato que ya exista
+      // en `cases`/`patients`) — se dejan para que el consejero los seleccione a mano.
+      // Tampoco se prellena "plan_date" (la fecha la pone quien llena el formulario).
+      const caseRows = await tx
+        .select({
+          firstName: schema.patients.firstName,
+          lastName: schema.patients.lastName,
+        })
+        .from(schema.cases)
+        .innerJoin(schema.patients, eq(schema.cases.patientId, schema.patients.id))
+        .where(eq(schema.cases.id, id))
+        .limit(1);
+      const caseRow = caseRows[0];
+      if (caseRow) {
+        caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
+      }
+    }
     if (key === "forms_1_7") {
       const caseRows = await tx
         .select({

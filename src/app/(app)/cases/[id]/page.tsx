@@ -196,6 +196,14 @@ export default async function CaseHubPage({
                       Abrir Evaluación
                     </Link>
                   )}
+                  {s.stage === "treatment_plan" && (
+                    <Link
+                      href={`/cases/${caseRow.id}/forms/treatment_plan`}
+                      className="text-xs font-medium text-brand-600 hover:underline"
+                    >
+                      Abrir Plan de Tratamiento
+                    </Link>
+                  )}
                   <Badge tone={STAGE_STATUS_TONE[s.status] ?? "neutral"}>{s.status}</Badge>
                 </div>
               </li>
