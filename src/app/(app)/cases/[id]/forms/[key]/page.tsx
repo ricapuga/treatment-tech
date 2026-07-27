@@ -105,6 +105,29 @@ export default async function CaseFormPage({
         caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
       }
     }
+    if (key === "activity_notes_12") {
+      // Activity Notes, variante de 12 horas (RN-7
+      // build-inputs/curated/activity_notes_12.schema.json) — solo se prellena el
+      // nombre del paciente ("client_name", mismo nombre de key que assessment/
+      // treatment_plan). El resto (fechas por sesión, consejero por sesión, notas DAP)
+      // es contenido de cada sesión real, no un dato que ya exista en `cases`/
+      // `patients`. Este módulo todavía no tiene link en el hub del expediente (ver
+      // scripts/seed.ts y PROGRESS.md) — se accede directo a esta URL mientras esa UI
+      // no se construye.
+      const caseRows = await tx
+        .select({
+          firstName: schema.patients.firstName,
+          lastName: schema.patients.lastName,
+        })
+        .from(schema.cases)
+        .innerJoin(schema.patients, eq(schema.cases.patientId, schema.patients.id))
+        .where(eq(schema.cases.id, id))
+        .limit(1);
+      const caseRow = caseRows[0];
+      if (caseRow) {
+        caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
+      }
+    }
     if (key === "case_review") {
       // Case Review (Continued Service Review, RN-7
       // build-inputs/curated/case_review.schema.json) — mismo criterio que assessment

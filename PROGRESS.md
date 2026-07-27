@@ -768,3 +768,95 @@ tabla) o Discharge, con el mismo método. Vale la pena revisar primero cuál de 
 módulos restantes tiene más prioridad clínica/operativa real para Jorge antes de
 asumir el orden de `CASE_STAGE_ORDER` a ciegas — Activity Notes probablemente se usa
 con más frecuencia en el día a día que Discharge.
+
+## Activity Notes (12 hrs) — quinto contenido clínico REAL curado (primera de 3 variantes)
+
+Quinto módulo curado, contra `build-inputs/templates-r12/activity-notes-12.pdf` ("EARLY
+INTERVENTION PROGRAM", 2 páginas, 102 campos del AcroForm original / 94 curados). Es la
+bitácora de sesiones de un programa específico — a diferencia de los 4 módulos
+anteriores, este NO tiene una etapa propia en `CASE_STAGE_ORDER`: se usa DURANTE el
+tratamiento, con potencialmente muchas notas por caso y un consejero distinto por
+sesión. Existen 3 variantes por tamaño (`ActivityNotes12`/`20`/`75`, correspondientes
+casi con certeza a distintos programas — 12 horas = Early Intervention, confirmado por
+el título impreso del PDF; 20 y 75 horas probablemente Risk Education/Outpatient, sin
+confirmar todavía). Esta curación cubre solo la variante de 12 horas; 20 y 75 quedan
+pendientes con el mismo método (misma estructura de filas, más sesiones).
+
+**Curado en 94 campos, 2 páginas, 0 condiciones RN-7** —
+`build-inputs/curated/activity_notes_12.schema.json`, generado con
+`build-inputs/curated/build_activity_notes_12_schema.py`. `field_scripts.json` de este
+módulo trae 18 scripts, todos de formateo de fecha (uno por cada uno de los 8 campos de
+fecha por fila) — sin lógica condicional real, cero `conditions`.
+
+**Estructura real de 8 filas con 3 formas distintas** (confirmada por overlay + lectura
+visual de las 2 páginas, no por convención asumida):
+1. Fila de ADMISIÓN (única en su forma): fecha/hora de/hora a/horas de servicio + un
+   `<select>` de "resumen demográfico" (13 frases reales del PDF, ej. "Client is a
+   single, Caucasian, employed male." — contenido clínico real de este documento
+   específico, curado tal cual, no inventado ni suavizado) + un párrafo narrativo libre
+   + consejero + iniciales.
+2. 6 filas de SESIÓN (Session 01..06): fecha/hora de/hora a/horas + 4 campos de nota
+   clínica real formato DAP (Topic/Data/Assessment/Plan — "D:"/"A:"/"P:" son prefijos
+   LITERALES de las opciones reales del PDF) + consejero + iniciales. A diferencia de
+   assessment/treatment_plan/case_review (un solo consejero por documento), aquí CADA
+   sesión declara su propio consejero — confirmado real por la estructura del PDF, no
+   asumido: sesiones distintas de un mismo caso pueden ser atendidas por consejeros
+   distintos.
+3. Fila de SALIDA ("Exit note", misma forma que admisión): fecha/hora de/hora a/horas +
+   párrafo narrativo libre + consejero + iniciales. Sin resumen demográfico ni Topic/
+   Data/Assessment/Plan.
+
+**Simplificación deliberada, documentada:** cada fila tiene, junto al campo real de
+"horas de servicio" (`Text5.*`, texto libre — captura el valor visible en el PDF), un
+segundo widget adyacente (`a.*`, un `<select>` con 15 valores reales de duración
+0.5–12.0) sin etiqueta propia ni script que lo conecte al primero; el PDF renderizado
+solo muestra UN valor visible en esa posición — es casi con certeza un artefacto de
+autoría del PDF (un `<select>` agregado y no limpiado). Se capturó solo `Text5.*`
+(`session_N_service_hours`, texto libre) y se omitió el `<select>` — 8 campos omitidos
+del total real de 102, documentado explícitamente en el generador, no una omisión
+silenciosa.
+
+**Corrección aplicada durante la verificación:** la primera versión del generador
+reusaba la KEY interna (snake_case, ej. `"session_01"`) como texto de la ETIQUETA
+visible ("session_01 — from" en vez de "Session 01 — from") — detectado en la captura
+de pantalla de verificación, no en las pruebas automatizadas (los tests solo revisan
+`options`/estructura, no el texto exacto de cada label). Corregido separando la key
+interna del texto legible en `add_time_block()`/`add_counselor_block()` — las 94
+etiquetas ahora muestran "Session 01", "Admission note", "Exit note", etc.
+correctamente. Vale la pena anotar como aprendizaje de proceso: la verificación visual
+(captura de pantalla real, no solo tests) siguió atrapando cosas que las pruebas
+automatizadas no cubren — la misma razón por la que este proyecto verifica con
+Playwright real en cada módulo, no solo con `pnpm test`.
+
+**Prellenado desde el caso** (`forms/[key]/page.tsx`, `key === "activity_notes_12"`):
+solo `client_name` (mismo criterio que assessment/treatment_plan).
+
+**Verificado end-to-end** (Postgres local recreado desde cero + reseed con los 6
+schemas — `demo_intake`, `forms_1_7`, `assessment`, `treatment_plan`, `case_review`,
+`activity_notes_12` —, servidor dev + Playwright headless contra un caso real nuevo
+"Ana AN12VerifyTest"): sin link en el hub todavía (ver más abajo), se navegó directo a
+la URL del formulario; las 2 páginas navegan sin error, `client_name` se prellena
+correctamente, autosave guarda en `documents.data`
+(`{"client_name": "Ana AN12VerifyTest"}`). `pnpm typecheck` / `lint` / `test`: verdes,
+111/111 (nuevo: `tests/activity-notes-12-schema.test.ts`, 11 pruebas).
+
+**Deliberadamente fuera de alcance de este paso — decisiones de producto pendientes,
+no técnicas:**
+1. Este módulo NO tiene link en el hub del expediente (`/cases/[id]`) porque no mapea a
+   ninguna etapa de `CASE_STAGE_ORDER` — es contenido repetible dentro de una etapa
+   (probablemente "treatment_plan" o una etapa nueva de "tratamiento en curso"), no una
+   etapa en sí. La UI para listar/crear múltiples notas de actividad por caso queda
+   pendiente de M3, igual que la UI de revisiones múltiples de `case_review` (ambas son
+   la misma clase de problema: "un documento que se repite N veces por caso" — vale la
+   pena resolverlas juntas cuando se aborde M3, no por separado).
+2. Sigue sin confirmarse a qué programa real corresponden las variantes de 20 y 75
+   horas, ni si hay alguna conexión con los bloques RE/EI/OP/CCP de RN-2
+   (`src/lib/rules/loi.ts`) — es una hipótesis razonable (12 hrs ya confirmado = Early
+   Intervention por el título impreso del PDF) pero no evidenciada todavía en
+   field_scripts.json ni en ningún otro documento; se confirma al curar esas 2
+   variantes o con una pregunta directa a Jorge.
+
+**Próximo paso sugerido:** curar `activity_notes_20` o `activity_notes_75` (misma
+estructura de filas, con más sesiones — 20/75 horas), o cambiar a un módulo distinto
+(Discharge, Continue Care) si se prefiere variar el tipo de contenido antes de repetir
+la misma estructura 2 veces más.

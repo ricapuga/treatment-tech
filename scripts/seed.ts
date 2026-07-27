@@ -329,6 +329,35 @@ async function main() {
     })
     .onConflictDoNothing();
 
+  // Schema REAL de Activity Notes — variante de 12 horas ("EARLY INTERVENTION
+  // PROGRAM"), quinto módulo clínico real curado, contra
+  // build-inputs/templates-r12/activity-notes-12.pdf (2 páginas, 94 campos curados de
+  // 102 reales del AcroForm original). A diferencia de los 4 módulos anteriores, este
+  // NO tiene una etapa propia en CASE_STAGE_ORDER — es una bitácora de sesiones que se
+  // usa DURANTE el tratamiento, con un consejero potencialmente distinto por sesión.
+  // Por eso NO tiene todavía un link en el hub del expediente (/cases/[id]) — la UI
+  // para listar/crear múltiples notas de actividad por caso queda pendiente de M3,
+  // igual que la UI de revisiones múltiples de case_review. Ver PROGRESS.md. Es la
+  // primera de 3 variantes por tamaño (12/20/75 horas) — las otras 2 quedan
+  // pendientes.
+  console.log("Seeding form_schemas: activity_notes_12 (contenido REAL, curado de Activity Notes 12hrs R12) ...");
+  const activityNotes12Schema = JSON.parse(
+    readFileSync(
+      new URL("../build-inputs/curated/activity_notes_12.schema.json", import.meta.url),
+      "utf-8"
+    )
+  );
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: activityNotes12Schema.key,
+      version: activityNotes12Schema.version,
+      titleEn: activityNotes12Schema.titleEn,
+      titleEs: activityNotes12Schema.titleEs,
+      schema: activityNotes12Schema,
+    })
+    .onConflictDoNothing();
+
   console.log(
     `Listo. tenant=${tenant.id} location(Archer)=${archer.id}.\n` +
       `Recuerda: los correos de arriba son placeholders — reemplázalos por los reales antes de invitar al equipo.\n` +
