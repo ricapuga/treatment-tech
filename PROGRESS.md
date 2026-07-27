@@ -386,3 +386,95 @@ Jorge regresó el roster con un cambio real (Cindy Torres → Guadalupe G Perez,
   `devpassword`, rol `app_user` / password `devapppassword` — ver `.env.local` (no se
   commitea, está en `.gitignore`). Es un entorno de desarrollo desechable, no usar estas
   credenciales para nada real.
+
+## Forms 1-7 — primer contenido clínico REAL cargado en el motor (reemplaza demo_intake)
+
+Hasta ahora el motor de formularios (`src/components/form-engine/`) solo se había
+probado con `demo_intake`, un schema de 4 campos inventado para probar el motor, no
+contenido real. Esta sesión se curó el primer módulo real: **Forms 1-7 (Admisión)**,
+contra el AcroForm original (`build-inputs/templates-r12/forms-1-7.pdf`, 7 páginas, 98
+campos reales — `Forms_1-7/fields.json` + `field_scripts.json`). Reemplaza a
+`demo_intake` como el formulario que se abre desde la etapa "Admisión" del expediente.
+
+**Cómo se curó (nuevo método, útil para los ~18 módulos que faltan):** en vez de
+transcribir a mano los nombres crípticos del PDF (`Text6.0.1`, `Dropdown8`, ...), se
+renderizaron las 7 páginas como imágenes (`pdftoppm`), se extrajo la posición (`/Rect`)
+y el nombre jerárquico resuelto de cada widget, y se dibujaron cajas de color sobre la
+imagen de cada página (rojo=texto, azul=dropdown/choice, verde=otros) con el nombre del
+campo encima — así se pudo leer visualmente qué campo real corresponde a qué etiqueta
+impresa, en vez de adivinar por el nombre técnico. Para las páginas sin texto visible
+(p. ej. página 6, "Program Requirements") el contenido real vive en el valor por
+defecto (`/V`) del campo — se extrajo de ahí. Para la lógica de mostrar/ocultar y las
+fórmulas de cuotas, se leyó `field_scripts.json` (el JavaScript real embebido en el PDF,
+disparadores `/AA`) en vez de inventar reglas — esto CONFIRMÓ que `LOI_TO_PROGRAMS` en
+`loi.ts` ya era 100% correcto contra la fuente original, y dio las fórmulas reales de
+cuotas (`AFSimple_Calculate`), capturadas en `src/lib/rules/fees.ts` (nuevo, con tests).
+
+**Qué se agregó al motor (genérico, no específico de Forms 1-7):**
+- Tipo de campo nuevo `"info"` (`form-conditions.ts` + `schema-form.tsx`) — bloque de
+  texto de solo lectura (párrafos legales/boilerplate), NO captura dato, no participa
+  en autosave, se muestra/oculta con las mismas condiciones RN-7 que cualquier otro
+  campo. Es el primer tipo de campo nuevo desde que se construyó el motor.
+- Patrón de "banderas sintéticas" para condicionar visibilidad por programa (RN-2 →
+  RN-7) SIN tocar el motor de condiciones: `program_re`/`program_ei`/`program_op`/
+  `program_ccp` se declaran en `schema.fields` (para que pase la validación de
+  referencias) pero NO se listan en ninguna página (nunca se piden al usuario) — su
+  valor real lo calcula `forms/[key]/page.tsx` con `getRequiredPrograms(case.loi)` y lo
+  inyecta en `initialData`. El motor de condiciones (`computeVisibleFieldKeys`) ya
+  soportaba esto sin cambios, porque lee `condition.if` como una llave cualquiera de
+  `FormData`, no necesariamente un campo renderizado.
+
+**Contenido de `forms_1_7` (52 campos, 3 páginas — `build-inputs/curated/
+forms_1_7.schema.json`, generado con `build-inputs/curated/build_forms_1_7_schema.py`
+para evitar errores de transcripción):**
+1. **Demographic Data** (35 campos) — datos de admisión reales, etiquetas y opciones
+   de dropdown reales (referido, educación, estado civil, condado, etc.).
+2. **Program Requirements** (4 bloques `info`) — texto legal real de cada programa
+   (Risk Education, Early Intervention, Outpatient, Continuing Care), visible solo si
+   la bandera de programa correspondiente es `true`.
+3. **Fees & Financial Responsibility** (9 campos) — horas/meses mínimos y cuota por
+   sesión de cada programa aplicable (mismo condicionamiento por bandera), más un
+   bloque `info` con las provisiones especiales (cuota de reapertura, ver `fees.ts`).
+
+**Prellenado desde el caso** (`forms/[key]/page.tsx`, específico a `key === "forms_1_7"`
+a propósito — generalizar el prellenado por schema es trabajo aparte si aparece un
+segundo caso de uso): nombre del paciente, fecha de nacimiento, número de licencia de
+conducir, nombre del coordinador de admisión (el usuario en sesión), y las 4 banderas
+de programa. El documento guardado siempre gana sobre el prellenado si ya se editó.
+
+**Decisión explícita, sin inventar:** se investigó si `employment_describe` (página 1)
+debía ocultarse/mostrarse según `employment_type` (patrón visto en otros campos) — no
+se encontró ningún disparador en `field_scripts.json` que lo respalde, así que se dejó
+SIEMPRE visible. Comentario explícito en `build_forms_1_7_schema.py` documentando que
+no se inventó esa condición.
+
+**Verificado end-to-end** (Postgres local recreado desde cero + reseed, servidor dev +
+Playwright headless contra un caso real con LOI "Significant Risk" → RE+OP+CCP, sin EI):
+prellenado correcto (nombre, DOB, licencia, coordinador), las 3 páginas navegan, la
+página 2 muestra los 3 bloques de texto correctos y oculta Early Intervention, la
+página 3 muestra los campos de cuota correctos (oculta los de EI) y el bloque de
+provisiones especiales, autosave guarda en `documents.data` (incluidas las banderas de
+programa, sin que las banderas ni los campos `info` se pidan al usuario). `pnpm
+typecheck` / `lint` / `test`: verdes, 64/64 (nuevos: `tests/rules/fees.test.ts`,
+`tests/forms-1-7-schema.test.ts`).
+
+**Deliberadamente fuera de alcance de este paso** (no es que falte, es que no es este
+paso):
+- **Páginas 2, 3, 5 del PDF original** (consentimientos/educación del paciente,
+  contenido estático compartido) y **página 4** (RN-6, divulgación 42 CFR Part 2) —
+  leídas y transcritas a notas de trabajo pero NO guardadas todavía en un archivo
+  curado del repo. Necesitan un patrón de UI distinto (consentimiento/reconocimiento
+  con firma) al de `SchemaForm`, no encajan como páginas del mismo formulario.
+  Pendiente: crear `build-inputs/curated/forms_1_7_consent_pages.md` con el texto
+  extraído antes de construir esa UI.
+- **Cálculo de cuota total en vivo en el navegador** — `fees.ts` ya tiene las
+  funciones puras (`programFeeCents`, `totalFeeCents`), pero mostrarlas recalculadas
+  mientras el consejero edita "Fee per session" es una mejora del motor a futuro, no
+  de este schema.
+- Los otros ~18 módulos del expediente completo (Forms 1-7 es solo Admisión) — mismo
+  método de curación, pendiente uno por uno.
+
+**Próximo paso sugerido:** curar el siguiente módulo (probablemente Evaluación, la
+siguiente etapa de `CASE_STAGE_ORDER`) con el mismo método de renderizado + overlay +
+`field_scripts.json`, ahora que el patrón de banderas de programa y el tipo `info` ya
+existen y son reutilizables.

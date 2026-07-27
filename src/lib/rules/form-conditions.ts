@@ -23,7 +23,8 @@ export type FieldType =
   | "date"
   | "select"
   | "radio"
-  | "checkbox";
+  | "checkbox"
+  | "info";
 
 export interface FormField {
   key: string;
@@ -33,6 +34,17 @@ export interface FormField {
   required?: boolean;
   /** Para select/radio: lista de {value, labelEn, labelEs}. */
   options?: { value: string; labelEn: string; labelEs: string }[];
+  /**
+   * Solo para type "info": texto largo de solo lectura (boilerplate legal/clínico,
+   * ej. los párrafos de "Program Requirements" de Forms 1-7 página 6). `labelEn`/
+   * `labelEs` siguen siendo el encabezado corto; `bodyEn`/`bodyEs` es el párrafo.
+   * Nunca se guarda en `documents.data` — no participa del autosave, no es un campo
+   * capturado, es contenido fijo que se muestra u oculta con las mismas condiciones
+   * RN-7 que cualquier otro campo (ej. mostrar el párrafo de Risk Education solo si
+   * el caso tiene ese programa).
+   */
+  bodyEn?: string;
+  bodyEs?: string;
 }
 
 export interface FormCondition {

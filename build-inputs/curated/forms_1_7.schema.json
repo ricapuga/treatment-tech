@@ -1,0 +1,858 @@
+{
+  "key": "forms_1_7",
+  "version": 1,
+  "titleEn": "Forms 1-7 — Intake",
+  "titleEs": "Forms 1-7 — Admisión",
+  "fields": [
+    {
+      "key": "intake_date",
+      "type": "date",
+      "labelEn": "Date",
+      "labelEs": "Fecha",
+      "required": true
+    },
+    {
+      "key": "referral_source",
+      "type": "select",
+      "labelEn": "Referral source",
+      "labelEs": "Fuente de referencia",
+      "required": true,
+      "options": [
+        {
+          "value": "central_states_institute_of_addictions",
+          "labelEn": "Central States Institute of Addictions",
+          "labelEs": "Central States Institute of Addictions"
+        },
+        {
+          "value": "social_service_department",
+          "labelEn": "Social Service Department",
+          "labelEs": "Departamento de Servicios Sociales"
+        },
+        {
+          "value": "adult_probation_department",
+          "labelEn": "Adult Probation Department",
+          "labelEs": "Departamento de Libertad Condicional de Adultos"
+        },
+        {
+          "value": "dupage_county",
+          "labelEn": "DuPage County",
+          "labelEs": "Condado de DuPage"
+        },
+        {
+          "value": "kane_county",
+          "labelEn": "Kane County",
+          "labelEs": "Condado de Kane"
+        },
+        {
+          "value": "will_county",
+          "labelEn": "Will County",
+          "labelEs": "Condado de Will"
+        },
+        {
+          "value": "mchenry_county",
+          "labelEn": "McHenry County",
+          "labelEs": "Condado de McHenry"
+        },
+        {
+          "value": "lake_county",
+          "labelEn": "Lake County",
+          "labelEs": "Condado de Lake"
+        },
+        {
+          "value": "secretary_of_state",
+          "labelEn": "Secretary of State",
+          "labelEs": "Secretaría de Estado"
+        }
+      ]
+    },
+    {
+      "key": "patient_name",
+      "type": "text",
+      "labelEn": "Name",
+      "labelEs": "Nombre",
+      "required": true
+    },
+    {
+      "key": "address",
+      "type": "text",
+      "labelEn": "Address",
+      "labelEs": "Dirección"
+    },
+    {
+      "key": "city",
+      "type": "text",
+      "labelEn": "City",
+      "labelEs": "Ciudad"
+    },
+    {
+      "key": "state",
+      "type": "text",
+      "labelEn": "State",
+      "labelEs": "Estado"
+    },
+    {
+      "key": "residence_county",
+      "type": "text",
+      "labelEn": "County (residence)",
+      "labelEs": "Condado (residencia)"
+    },
+    {
+      "key": "zip_code",
+      "type": "text",
+      "labelEn": "Zip code",
+      "labelEs": "Código postal"
+    },
+    {
+      "key": "phone_1",
+      "type": "text",
+      "labelEn": "Phone",
+      "labelEs": "Teléfono"
+    },
+    {
+      "key": "phone_1_type",
+      "type": "select",
+      "labelEn": "Phone type",
+      "labelEs": "Tipo de teléfono",
+      "options": [
+        {
+          "value": "cell",
+          "labelEn": "cell",
+          "labelEs": "cell"
+        },
+        {
+          "value": "home",
+          "labelEn": "home",
+          "labelEs": "home"
+        },
+        {
+          "value": "work",
+          "labelEn": "work",
+          "labelEs": "work"
+        },
+        {
+          "value": "other",
+          "labelEn": "other",
+          "labelEs": "other"
+        }
+      ]
+    },
+    {
+      "key": "phone_2",
+      "type": "text",
+      "labelEn": "Alternate phone",
+      "labelEs": "Teléfono alterno"
+    },
+    {
+      "key": "phone_2_type",
+      "type": "select",
+      "labelEn": "Alternate phone type",
+      "labelEs": "Tipo de teléfono alterno",
+      "options": [
+        {
+          "value": "cell",
+          "labelEn": "cell",
+          "labelEs": "cell"
+        },
+        {
+          "value": "home",
+          "labelEn": "home",
+          "labelEs": "home"
+        },
+        {
+          "value": "work",
+          "labelEn": "work",
+          "labelEs": "work"
+        },
+        {
+          "value": "other",
+          "labelEn": "other",
+          "labelEs": "other"
+        }
+      ]
+    },
+    {
+      "key": "date_of_birth",
+      "type": "date",
+      "labelEn": "Date of birth",
+      "labelEs": "Fecha de nacimiento",
+      "required": true
+    },
+    {
+      "key": "gender",
+      "type": "select",
+      "labelEn": "Gender",
+      "labelEs": "Género",
+      "options": [
+        {
+          "value": "male",
+          "labelEn": "Male",
+          "labelEs": "Masculino"
+        },
+        {
+          "value": "female",
+          "labelEn": "Female",
+          "labelEs": "Femenino"
+        }
+      ]
+    },
+    {
+      "key": "drivers_license_number",
+      "type": "text",
+      "labelEn": "Driver's license number",
+      "labelEs": "Número de licencia de conducir"
+    },
+    {
+      "key": "dependents_count",
+      "type": "number",
+      "labelEn": "Number of dependents including self",
+      "labelEs": "Número de dependientes incluyéndose"
+    },
+    {
+      "key": "race_ethnicity_language",
+      "type": "text",
+      "labelEn": "Race/ethnic origin/language preference",
+      "labelEs": "Raza/origen étnico/idioma preferido"
+    },
+    {
+      "key": "disability",
+      "type": "text",
+      "labelEn": "Physical or mental disability",
+      "labelEs": "Discapacidad física o mental"
+    },
+    {
+      "key": "education",
+      "type": "select",
+      "labelEn": "Education",
+      "labelEs": "Educación",
+      "options": [
+        {
+          "value": "under_7_years",
+          "labelEn": "Under 7 years",
+          "labelEs": "Menos de 7 años"
+        },
+        {
+          "value": "junior_high_school",
+          "labelEn": "Junior High School",
+          "labelEs": "Secundaria"
+        },
+        {
+          "value": "high_school_or_equivalency",
+          "labelEn": "High School Graduate or equivalency",
+          "labelEs": "Bachillerato o equivalente"
+        },
+        {
+          "value": "associate_degree",
+          "labelEn": "Associate Degree",
+          "labelEs": "Título asociado"
+        },
+        {
+          "value": "some_college",
+          "labelEn": "Some College no degree",
+          "labelEs": "Universidad sin título"
+        },
+        {
+          "value": "bachelor_degree",
+          "labelEn": "College Bachelor Degree",
+          "labelEs": "Licenciatura"
+        },
+        {
+          "value": "masters_or_higher",
+          "labelEn": "Master's Degree or Higher",
+          "labelEs": "Maestría o superior"
+        },
+        {
+          "value": "unknown",
+          "labelEn": "Unknown",
+          "labelEs": "Desconocido"
+        }
+      ]
+    },
+    {
+      "key": "marital_status",
+      "type": "select",
+      "labelEn": "Marital status",
+      "labelEs": "Estado civil",
+      "options": [
+        {
+          "value": "civil_union",
+          "labelEn": "Civil Union",
+          "labelEs": "Unión civil"
+        },
+        {
+          "value": "divorced",
+          "labelEn": "Divorced",
+          "labelEs": "Divorciado"
+        },
+        {
+          "value": "married",
+          "labelEn": "Married",
+          "labelEs": "Casado"
+        },
+        {
+          "value": "never_married",
+          "labelEn": "Never married",
+          "labelEs": "Nunca casado"
+        },
+        {
+          "value": "separated",
+          "labelEn": "Separated",
+          "labelEs": "Separado"
+        },
+        {
+          "value": "widowed",
+          "labelEn": "Widowed",
+          "labelEs": "Viudo"
+        },
+        {
+          "value": "unknown",
+          "labelEn": "Unknown",
+          "labelEs": "Desconocido"
+        }
+      ]
+    },
+    {
+      "key": "religion",
+      "type": "select",
+      "labelEn": "Religion",
+      "labelEs": "Religión",
+      "options": [
+        {
+          "value": "atheist",
+          "labelEn": "Atheist",
+          "labelEs": "Ateo"
+        },
+        {
+          "value": "buddhism",
+          "labelEn": "Buddhism",
+          "labelEs": "Budismo"
+        },
+        {
+          "value": "christian",
+          "labelEn": "Christian",
+          "labelEs": "Cristiano"
+        },
+        {
+          "value": "hinduism",
+          "labelEn": "Hinduism",
+          "labelEs": "Hinduismo"
+        },
+        {
+          "value": "islam",
+          "labelEn": "Islam",
+          "labelEs": "Islam"
+        },
+        {
+          "value": "judaism",
+          "labelEn": "Judaism",
+          "labelEs": "Judaísmo"
+        },
+        {
+          "value": "nonreligious",
+          "labelEn": "Nonreligious",
+          "labelEs": "No religioso"
+        },
+        {
+          "value": "other",
+          "labelEn": "Other",
+          "labelEs": "Otro"
+        },
+        {
+          "value": "unknown",
+          "labelEn": "Unknown",
+          "labelEs": "Desconocido"
+        }
+      ]
+    },
+    {
+      "key": "military_service_history",
+      "type": "text",
+      "labelEn": "Military service history",
+      "labelEs": "Historial de servicio militar"
+    },
+    {
+      "key": "employment_type",
+      "type": "select",
+      "labelEn": "Type of employment",
+      "labelEs": "Tipo de empleo",
+      "options": [
+        {
+          "value": "disabled",
+          "labelEn": "Disabled",
+          "labelEs": "Discapacitado"
+        },
+        {
+          "value": "employed_full_time",
+          "labelEn": "Employed full time",
+          "labelEs": "Empleado tiempo completo"
+        },
+        {
+          "value": "employed_part_time",
+          "labelEn": "Employed part time",
+          "labelEs": "Empleado medio tiempo"
+        },
+        {
+          "value": "retired",
+          "labelEn": "Retired",
+          "labelEs": "Jubilado"
+        },
+        {
+          "value": "student",
+          "labelEn": "Student",
+          "labelEs": "Estudiante"
+        },
+        {
+          "value": "unemployed",
+          "labelEn": "Unemployed",
+          "labelEs": "Desempleado"
+        },
+        {
+          "value": "unknown",
+          "labelEn": "Unknown",
+          "labelEs": "Desconocido"
+        }
+      ]
+    },
+    {
+      "key": "employment_describe",
+      "type": "text",
+      "labelEn": "Describe",
+      "labelEs": "Describa"
+    },
+    {
+      "key": "date_of_last_arrest",
+      "type": "date",
+      "labelEn": "Date of last arrest",
+      "labelEs": "Fecha del último arresto"
+    },
+    {
+      "key": "legal_status",
+      "type": "text",
+      "labelEn": "Legal status",
+      "labelEs": "Estatus legal"
+    },
+    {
+      "key": "reason_last_arrest",
+      "type": "text",
+      "labelEn": "Reason of last arrest",
+      "labelEs": "Motivo del último arresto"
+    },
+    {
+      "key": "county_of_last_arrest",
+      "type": "select",
+      "labelEn": "County of last arrest",
+      "labelEs": "Condado del último arresto",
+      "options": [
+        {
+          "value": "cook",
+          "labelEn": "Cook",
+          "labelEs": "Cook"
+        },
+        {
+          "value": "dupage",
+          "labelEn": "DuPage",
+          "labelEs": "DuPage"
+        },
+        {
+          "value": "will",
+          "labelEn": "Will",
+          "labelEs": "Will"
+        },
+        {
+          "value": "kane",
+          "labelEn": "Kane",
+          "labelEs": "Kane"
+        },
+        {
+          "value": "lake",
+          "labelEn": "Lake",
+          "labelEs": "Lake"
+        },
+        {
+          "value": "mchenry",
+          "labelEn": "McHenry",
+          "labelEs": "McHenry"
+        }
+      ]
+    },
+    {
+      "key": "chemical_test_description",
+      "type": "text",
+      "labelEn": "If DUI, describe chemical test",
+      "labelEs": "Si es DUI, describa la prueba química"
+    },
+    {
+      "key": "prior_arrests",
+      "type": "text",
+      "labelEn": "Prior arrests",
+      "labelEs": "Arrestos previos"
+    },
+    {
+      "key": "emergency_contact_name",
+      "type": "text",
+      "labelEn": "Emergency contact name",
+      "labelEs": "Nombre de contacto de emergencia"
+    },
+    {
+      "key": "emergency_contact_phone",
+      "type": "text",
+      "labelEn": "Emergency contact phone",
+      "labelEs": "Teléfono de contacto de emergencia"
+    },
+    {
+      "key": "emergency_contact_relationship",
+      "type": "text",
+      "labelEn": "Emergency contact relationship",
+      "labelEs": "Relación del contacto de emergencia"
+    },
+    {
+      "key": "comments",
+      "type": "textarea",
+      "labelEn": "Comments",
+      "labelEs": "Comentarios"
+    },
+    {
+      "key": "intake_coordinator_name",
+      "type": "text",
+      "labelEn": "Intake coordinator's name",
+      "labelEs": "Nombre del coordinador de admisión",
+      "required": true
+    },
+    {
+      "key": "program_re",
+      "type": "checkbox",
+      "labelEn": "Risk Education aplica",
+      "labelEs": "Risk Education aplica"
+    },
+    {
+      "key": "program_ei",
+      "type": "checkbox",
+      "labelEn": "Early Intervention aplica",
+      "labelEs": "Early Intervention aplica"
+    },
+    {
+      "key": "program_op",
+      "type": "checkbox",
+      "labelEn": "Outpatient aplica",
+      "labelEs": "Outpatient aplica"
+    },
+    {
+      "key": "program_ccp",
+      "type": "checkbox",
+      "labelEn": "Continuing Care aplica",
+      "labelEs": "Continuing Care aplica"
+    },
+    {
+      "key": "risk_education_info",
+      "type": "info",
+      "labelEn": "Risk Education Program",
+      "labelEs": "Programa de Educación sobre Riesgos",
+      "bodyEn": "Risk education courses shall have included a minimum of 10 hours of classroom instruction, divided into five sessions to be held on different days. No one of these classes is to exceed 3 hours in length. Audio-visual material may be used during these sessions of instruction, but they are not to exceed 25% of the total class time. CLASS CONTENT: The education program shall cover the following content: Information on alcohol as a drug; Physiological and pharmacological effects of alcohol and other drugs, including their residual impairment on normal levels of driving performance; Other drugs, legal and illegal, and their effects on driving when used separately and/or in combination with alcohol; Substance abuse/dependence and the effect on individuals and families; Blood alcohol concentration (BAC) level and its effect on driving performance; Information about Illinois driving under the influence laws and associated penalties; Factors that influence the formation of patterns of alcohol and drug abuse; and Information about referrals for services that can address any identified problem that may increase the risk for future alcohol/drug related difficulty. TESTING: Each student will take a test on questions relating to the class content on the first session of the cycle. That same test will be taken at the completion of the last session of the cycle and each student MUST pass the test with a minimum score of 75% in order to pass successfully.",
+      "bodyEs": "Risk education courses shall have included a minimum of 10 hours of classroom instruction, divided into five sessions to be held on different days. No one of these classes is to exceed 3 hours in length. Audio-visual material may be used during these sessions of instruction, but they are not to exceed 25% of the total class time. CLASS CONTENT: The education program shall cover the following content: Information on alcohol as a drug; Physiological and pharmacological effects of alcohol and other drugs, including their residual impairment on normal levels of driving performance; Other drugs, legal and illegal, and their effects on driving when used separately and/or in combination with alcohol; Substance abuse/dependence and the effect on individuals and families; Blood alcohol concentration (BAC) level and its effect on driving performance; Information about Illinois driving under the influence laws and associated penalties; Factors that influence the formation of patterns of alcohol and drug abuse; and Information about referrals for services that can address any identified problem that may increase the risk for future alcohol/drug related difficulty. TESTING: Each student will take a test on questions relating to the class content on the first session of the cycle. That same test will be taken at the completion of the last session of the cycle and each student MUST pass the test with a minimum score of 75% in order to pass successfully."
+    },
+    {
+      "key": "early_intervention_info",
+      "type": "info",
+      "labelEn": "Early Intervention Program",
+      "labelEs": "Programa de Intervención Temprana",
+      "bodyEn": "Early intervention services are considered sub-clinical or pre-treatment and are designed to explore and address problems or risk factors that appear to be related to substance use and to assist the client in recognizing the harmful consequences of inappropriate substance use. Client will attend a minimum of 12 hours of early intervention provided over a minimum of four weeks with no more than three hours per day in any seven consecutive days.",
+      "bodyEs": "Early intervention services are considered sub-clinical or pre-treatment and are designed to explore and address problems or risk factors that appear to be related to substance use and to assist the client in recognizing the harmful consequences of inappropriate substance use. Client will attend a minimum of 12 hours of early intervention provided over a minimum of four weeks with no more than three hours per day in any seven consecutive days."
+    },
+    {
+      "key": "outpatient_info",
+      "type": "info",
+      "labelEn": "Outpatient Treatment Program",
+      "labelEs": "Programa de Tratamiento Ambulatorio",
+      "bodyEn": "Substance Abuse Outpatient Treatment consists of face-to-face clinical services for adults only. The frequency and intensity of such treatment will depend on patient need but will be a planned regimen of regularly scheduled group and individual sessions that average less than nine hours per week. Substance Abuse Intensive Outpatient Treatment consists of face-to-face clinical services for adults only. The frequency and intensity of such treatment will depend on patient need but will be a planned regimen of scheduled sessions for a minimum of nine hours per week.",
+      "bodyEs": "Substance Abuse Outpatient Treatment consists of face-to-face clinical services for adults only. The frequency and intensity of such treatment will depend on patient need but will be a planned regimen of regularly scheduled group and individual sessions that average less than nine hours per week. Substance Abuse Intensive Outpatient Treatment consists of face-to-face clinical services for adults only. The frequency and intensity of such treatment will depend on patient need but will be a planned regimen of scheduled sessions for a minimum of nine hours per week."
+    },
+    {
+      "key": "continuing_care_info",
+      "type": "info",
+      "labelEn": "Continuing Care Program",
+      "labelEs": "Programa de Cuidado Continuo",
+      "bodyEn": "Upon completion of any and all necessary treatment, and, after discharge, active on-going participation in all activities specified in the continuing care plan.",
+      "bodyEs": "Upon completion of any and all necessary treatment, and, after discharge, active on-going participation in all activities specified in the continuing care plan."
+    },
+    {
+      "key": "re_hours",
+      "type": "select",
+      "labelEn": "Risk Education hours (minimum)",
+      "labelEs": "Horas de Risk Education (mínimo)",
+      "options": [
+        {
+          "value": "08",
+          "labelEn": "08",
+          "labelEs": "08"
+        },
+        {
+          "value": "10",
+          "labelEn": "10",
+          "labelEs": "10"
+        },
+        {
+          "value": "12",
+          "labelEn": "12",
+          "labelEs": "12"
+        },
+        {
+          "value": "14",
+          "labelEn": "14",
+          "labelEs": "14"
+        },
+        {
+          "value": "18",
+          "labelEn": "18",
+          "labelEs": "18"
+        },
+        {
+          "value": "20",
+          "labelEn": "20",
+          "labelEs": "20"
+        },
+        {
+          "value": "22",
+          "labelEn": "22",
+          "labelEs": "22"
+        },
+        {
+          "value": "24",
+          "labelEn": "24",
+          "labelEs": "24"
+        }
+      ]
+    },
+    {
+      "key": "re_fee_per_class",
+      "type": "number",
+      "labelEn": "Fee per class ($)",
+      "labelEs": "Cuota por clase ($)"
+    },
+    {
+      "key": "ei_hours",
+      "type": "select",
+      "labelEn": "Early Intervention hours (minimum)",
+      "labelEs": "Horas de Early Intervention (mínimo)",
+      "options": [
+        {
+          "value": "06",
+          "labelEn": "06",
+          "labelEs": "06"
+        },
+        {
+          "value": "08",
+          "labelEn": "08",
+          "labelEs": "08"
+        },
+        {
+          "value": "10",
+          "labelEn": "10",
+          "labelEs": "10"
+        },
+        {
+          "value": "12",
+          "labelEn": "12",
+          "labelEs": "12"
+        },
+        {
+          "value": "14",
+          "labelEn": "14",
+          "labelEs": "14"
+        },
+        {
+          "value": "16",
+          "labelEn": "16",
+          "labelEs": "16"
+        },
+        {
+          "value": "18",
+          "labelEn": "18",
+          "labelEs": "18"
+        },
+        {
+          "value": "20",
+          "labelEn": "20",
+          "labelEs": "20"
+        }
+      ]
+    },
+    {
+      "key": "ei_fee_per_class",
+      "type": "number",
+      "labelEn": "Fee per class ($)",
+      "labelEs": "Cuota por clase ($)"
+    },
+    {
+      "key": "op_hours",
+      "type": "select",
+      "labelEn": "Outpatient hours (minimum)",
+      "labelEs": "Horas de Outpatient (mínimo)",
+      "options": [
+        {
+          "value": "20",
+          "labelEn": "20",
+          "labelEs": "20"
+        },
+        {
+          "value": "75",
+          "labelEn": "75",
+          "labelEs": "75"
+        }
+      ]
+    },
+    {
+      "key": "op_fee_per_session",
+      "type": "number",
+      "labelEn": "Fee per session ($)",
+      "labelEs": "Cuota por sesión ($)"
+    },
+    {
+      "key": "ccp_months",
+      "type": "select",
+      "labelEn": "Continuing Care months",
+      "labelEs": "Meses de Continuing Care",
+      "options": [
+        {
+          "value": "3",
+          "labelEn": "3",
+          "labelEs": "3"
+        },
+        {
+          "value": "6",
+          "labelEn": "6",
+          "labelEs": "6"
+        },
+        {
+          "value": "12",
+          "labelEn": "12",
+          "labelEs": "12"
+        }
+      ]
+    },
+    {
+      "key": "ccp_fee_per_session",
+      "type": "number",
+      "labelEn": "Fee per session ($)",
+      "labelEs": "Cuota por sesión ($)"
+    },
+    {
+      "key": "special_provisions_info",
+      "type": "info",
+      "labelEn": "Special provisions",
+      "labelEs": "Provisiones especiales",
+      "bodyEn": "If the client leaves the program, against staff advice, for more than 30 days, the case will be closed and the corresponding referral source will be notified. If the client chooses to reopen the case, a fee of $ 25.00 will be applied.",
+      "bodyEs": "If the client leaves the program, against staff advice, for more than 30 days, the case will be closed and the corresponding referral source will be notified. If the client chooses to reopen the case, a fee of $ 25.00 will be applied."
+    }
+  ],
+  "pages": [
+    {
+      "title": {
+        "en": "Demographic Data",
+        "es": "Datos demográficos"
+      },
+      "fields": [
+        "intake_date",
+        "referral_source",
+        "patient_name",
+        "address",
+        "city",
+        "state",
+        "residence_county",
+        "zip_code",
+        "phone_1",
+        "phone_1_type",
+        "phone_2",
+        "phone_2_type",
+        "date_of_birth",
+        "gender",
+        "drivers_license_number",
+        "dependents_count",
+        "race_ethnicity_language",
+        "disability",
+        "education",
+        "marital_status",
+        "religion",
+        "military_service_history",
+        "employment_type",
+        "employment_describe",
+        "date_of_last_arrest",
+        "legal_status",
+        "reason_last_arrest",
+        "county_of_last_arrest",
+        "chemical_test_description",
+        "prior_arrests",
+        "emergency_contact_name",
+        "emergency_contact_phone",
+        "emergency_contact_relationship",
+        "comments",
+        "intake_coordinator_name"
+      ]
+    },
+    {
+      "title": {
+        "en": "Program Requirements",
+        "es": "Requisitos del programa"
+      },
+      "fields": [
+        "risk_education_info",
+        "early_intervention_info",
+        "outpatient_info",
+        "continuing_care_info"
+      ]
+    },
+    {
+      "title": {
+        "en": "Fees & Financial Responsibility",
+        "es": "Cuotas y responsabilidad financiera"
+      },
+      "fields": [
+        "re_hours",
+        "re_fee_per_class",
+        "ei_hours",
+        "ei_fee_per_class",
+        "op_hours",
+        "op_fee_per_session",
+        "ccp_months",
+        "ccp_fee_per_session",
+        "special_provisions_info"
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "if": "program_re",
+      "eq": true,
+      "show": [
+        "re_hours",
+        "re_fee_per_class",
+        "risk_education_info"
+      ]
+    },
+    {
+      "if": "program_ei",
+      "eq": true,
+      "show": [
+        "ei_hours",
+        "ei_fee_per_class",
+        "early_intervention_info"
+      ]
+    },
+    {
+      "if": "program_op",
+      "eq": true,
+      "show": [
+        "op_hours",
+        "op_fee_per_session",
+        "outpatient_info"
+      ]
+    },
+    {
+      "if": "program_ccp",
+      "eq": true,
+      "show": [
+        "ccp_months",
+        "ccp_fee_per_session",
+        "continuing_care_info"
+      ]
+    }
+  ]
+}

@@ -34,6 +34,7 @@
  * Correr: pnpm db:seed
  */
 import { config as loadEnv } from "dotenv";
+import { readFileSync } from "node:fs";
 
 // Cargar .env.local ANTES de importar cualquier módulo que lea process.env.DATABASE_URL
 // a nivel de módulo (src/lib/db/client.ts, src/lib/auth.ts). Por eso los imports de
@@ -217,6 +218,33 @@ async function main() {
           { if: "prior_treatment", eq: "yes", show: ["prior_treatment_details"] },
         ],
       },
+    })
+    .onConflictDoNothing();
+
+  // Schema REAL de Forms 1-7 (blueprint M2 paso 2, curado en esta sesión contra
+  // build-inputs/templates-r12/forms-1-7.pdf — 52 campos, 3 páginas: Demographic
+  // Data, Program Requirements, Fees & Financial Responsibility). Reemplaza a
+  // demo_intake como el formulario real de la etapa "intake" — ver PROGRESS.md
+  // sección de curación de Forms 1-7 para el detalle de cada decisión (por qué LOI
+  // no es un campo editable aquí, por qué sesiones/costo se calculan y no se
+  // capturan, qué condiciones son evidencia real de field_scripts.json vs cuáles se
+  // dejaron sin inventar). El JSON vive en build-inputs/curated/ — versionable y
+  // revisable por separado del código del seed.
+  console.log("Seeding form_schemas: forms_1_7 (contenido REAL, curado de Forms 1-7 R12) ...");
+  const forms17Schema = JSON.parse(
+    readFileSync(
+      new URL("../build-inputs/curated/forms_1_7.schema.json", import.meta.url),
+      "utf-8"
+    )
+  );
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: forms17Schema.key,
+      version: forms17Schema.version,
+      titleEn: forms17Schema.titleEn,
+      titleEs: forms17Schema.titleEs,
+      schema: forms17Schema,
     })
     .onConflictDoNothing();
 

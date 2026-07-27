@@ -139,6 +139,18 @@ export function SchemaForm({
           const label = locale === "es" ? field.labelEs : field.labelEn;
           const value = data[key] ?? "";
 
+          // "info": párrafo de solo lectura (boilerplate legal/clínico) — nunca se
+          // captura en `data`, así que no lleva <label>/onChange como los demás.
+          if (field.type === "info") {
+            const body = locale === "es" ? field.bodyEs : field.bodyEn;
+            return (
+              <div key={key} className="rounded-lg border border-border-subtle bg-ink-50 p-4">
+                <div className="text-sm font-semibold text-ink-900">{label}</div>
+                <p className="mt-1.5 whitespace-pre-line text-sm text-ink-600">{body}</p>
+              </div>
+            );
+          }
+
           return (
             <label key={key} className="flex flex-col gap-1.5 text-sm">
               <span className="font-medium text-ink-700">

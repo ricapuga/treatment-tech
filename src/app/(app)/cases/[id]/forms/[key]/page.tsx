@@ -6,7 +6,8 @@ import { requireSession } from "@/lib/session";
 import { withTenant } from "@/lib/db/rls";
 import { db, schema } from "@/lib/db/client";
 import { canAccessClinicalDocuments } from "@/lib/rbac";
-import type { FormSchema } from "@/lib/rules/form-conditions";
+import type { FormSchema, FormData as SchemaFormData } from "@/lib/rules/form-conditions";
+import { getRequiredPrograms, UnresolvedLOIError, type ProgramBlock } from "@/lib/rules/loi";
 import { Card, CardHeader, CardBody } from "@/components/ui/card";
 import { SchemaForm } from "@/components/form-engine/schema-form";
 
@@ -64,14 +65,70 @@ export default async function CaseFormPage({
 
   const formSchema = schemaRow.schema as FormSchema;
 
-  const document = await withTenant(session.tenantId, async (tx) => {
-    const rows = await tx
+  const { document, caseContext } = await withTenant(session.tenantId, async (tx) => {
+    const docRows = await tx
       .select()
       .from(schema.documents)
       .where(and(eq(schema.documents.caseId, id), eq(schema.documents.schemaKey, key)))
       .limit(1);
-    return rows[0] ?? null;
+
+    // Prellenar con lo que ya se capturó en la admisión (RN: no repetir captura de
+    // datos que el sistema ya tiene) + las banderas de programa de RN-2 (program_re/
+    // ei/op/ccp), que las páginas "Program Requirements" y "Fees" de forms_1_7 usan
+    // como disparador de sus condiciones RN-7 — ver build-inputs/curated/
+    // forms_1_7.schema.json. Específico a "forms_1_7" a propósito: cada schema
+    // tendría su propio mapeo de qué campos vienen del caso, no hay uno genérico
+    // todavía (generalizarlo es trabajo aparte si aparece un segundo caso de uso).
+    let caseContext: SchemaFormData = {};
+    if (key === "forms_1_7") {
+      const caseRows = await tx
+        .select({
+          loi: schema.cases.loi,
+          referralSource: schema.cases.referralSource,
+          firstName: schema.patients.firstName,
+          lastName: schema.patients.lastName,
+          dob: schema.patients.dob,
+          driversLicense: schema.patients.driversLicense,
+        })
+        .from(schema.cases)
+        .innerJoin(schema.patients, eq(schema.cases.patientId, schema.patients.id))
+        .where(eq(schema.cases.id, id))
+        .limit(1);
+      const caseRow = caseRows[0];
+      if (caseRow) {
+        let programs: ProgramBlock[] = [];
+        if (caseRow.loi) {
+          try {
+            programs = getRequiredPrograms(caseRow.loi);
+          } catch (err) {
+            if (!(err instanceof UnresolvedLOIError)) throw err;
+            // Sin mapeo resuelto (RN-2): no se asume ningún programa — la página de
+            // Program Requirements/Fees simplemente no muestra ningún bloque hasta
+            // que se resuelva, en vez de adivinar.
+          }
+        }
+        caseContext = {
+          patient_name: `${caseRow.firstName} ${caseRow.lastName}`,
+          date_of_birth: caseRow.dob,
+          drivers_license_number: caseRow.driversLicense ?? "",
+          intake_coordinator_name: session.name,
+          program_re: programs.includes("RE"),
+          program_ei: programs.includes("EI"),
+          program_op: programs.includes("OP"),
+          program_ccp: programs.includes("CCP"),
+        };
+      }
+    }
+
+    return { document: docRows[0] ?? null, caseContext };
   });
+
+  // El documento guardado siempre gana sobre el prellenado del caso — si el
+  // consejero ya editó "patient_name" a mano, no lo pisamos en cada carga.
+  const initialData: SchemaFormData = {
+    ...caseContext,
+    ...((document?.data as SchemaFormData) ?? {}),
+  };
 
   return (
     <div className="flex flex-col gap-6">
@@ -93,7 +150,7 @@ export default async function CaseFormPage({
             schema={formSchema}
             caseId={id}
             locale={locale}
-            initialData={(document?.data as Record<string, string | number | boolean>) ?? {}}
+            initialData={initialData}
             initialStatus={
               (document?.status as "draft" | "completed" | "signed" | "voided") ?? "draft"
             }

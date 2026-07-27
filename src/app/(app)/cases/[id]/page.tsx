@@ -182,10 +182,10 @@ export default async function CaseHubPage({
                 <div className="flex items-center gap-3">
                   {s.stage === "intake" && (
                     <Link
-                      href={`/cases/${caseRow.id}/forms/demo_intake`}
+                      href={`/cases/${caseRow.id}/forms/forms_1_7`}
                       className="text-xs font-medium text-brand-600 hover:underline"
                     >
-                      Abrir formulario (demo del motor)
+                      Abrir Forms 1-7
                     </Link>
                   )}
                   <Badge tone={STAGE_STATUS_TONE[s.status] ?? "neutral"}>{s.status}</Badge>
