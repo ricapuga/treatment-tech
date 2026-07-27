@@ -248,6 +248,32 @@ async function main() {
     })
     .onConflictDoNothing();
 
+  // Schema REAL de Assessment (Biopsychosocial Assessment, ASAM 6 dimensiones) —
+  // segundo módulo clínico real curado (blueprint M2, etapa "assessment" de
+  // CASE_STAGE_ORDER), contra build-inputs/templates-r12/assessment.pdf (12 páginas,
+  // ~360 campos reales del AcroForm original). Ver PROGRESS.md sección de curación de
+  // Assessment para el detalle de las simplificaciones documentadas (tablas de
+  // episodios N/A colapsadas, campos sin lista de opciones confirmada dejados como
+  // texto libre, etc.). El JSON vive en build-inputs/curated/ — versionable y
+  // revisable por separado del código del seed.
+  console.log("Seeding form_schemas: assessment (contenido REAL, curado de Assessment R12) ...");
+  const assessmentSchema = JSON.parse(
+    readFileSync(
+      new URL("../build-inputs/curated/assessment.schema.json", import.meta.url),
+      "utf-8"
+    )
+  );
+  await db
+    .insert(schema.formSchemas)
+    .values({
+      key: assessmentSchema.key,
+      version: assessmentSchema.version,
+      titleEn: assessmentSchema.titleEn,
+      titleEs: assessmentSchema.titleEs,
+      schema: assessmentSchema,
+    })
+    .onConflictDoNothing();
+
   console.log(
     `Listo. tenant=${tenant.id} location(Archer)=${archer.id}.\n` +
       `Recuerda: los correos de arriba son placeholders — reemplázalos por los reales antes de invitar al equipo.\n` +

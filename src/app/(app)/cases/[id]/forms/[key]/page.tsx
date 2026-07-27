@@ -80,6 +80,31 @@ export default async function CaseFormPage({
     // tendría su propio mapeo de qué campos vienen del caso, no hay uno genérico
     // todavía (generalizarlo es trabajo aparte si aparece un segundo caso de uso).
     let caseContext: SchemaFormData = {};
+    if (key === "assessment") {
+      // Assessment (Dimensión 1-6, RN-7 build-inputs/curated/assessment.schema.json)
+      // solo prellena el nombre del paciente — a diferencia de forms_1_7, el
+      // "counselor_name" aquí es un <select> de dos valores fijos reales del PDF
+      // ("Maria I Torres, CADC" / "George Torres, BA, CADC") que no coinciden
+      // byte-a-byte con `session.name` ("Maria I. Torres", "George (Jorge) Torres")
+      // — adivinar cuál corresponde es exactamente el tipo de invención que este
+      // proyecto evita (ver disciplina de "no inventar" en loi.ts/forms_1_7); se deja
+      // que el consejero lo seleccione a mano. Tampoco se prellena "assessment_date"
+      // (mismo criterio que forms_1_7: la fecha la pone quien llena el formulario, no
+      // la fecha de admisión del caso).
+      const caseRows = await tx
+        .select({
+          firstName: schema.patients.firstName,
+          lastName: schema.patients.lastName,
+        })
+        .from(schema.cases)
+        .innerJoin(schema.patients, eq(schema.cases.patientId, schema.patients.id))
+        .where(eq(schema.cases.id, id))
+        .limit(1);
+      const caseRow = caseRows[0];
+      if (caseRow) {
+        caseContext = { client_name: `${caseRow.firstName} ${caseRow.lastName}` };
+      }
+    }
     if (key === "forms_1_7") {
       const caseRows = await tx
         .select({

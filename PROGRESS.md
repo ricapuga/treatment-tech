@@ -474,7 +474,105 @@ paso):
 - Los otros ~18 módulos del expediente completo (Forms 1-7 es solo Admisión) — mismo
   método de curación, pendiente uno por uno.
 
-**Próximo paso sugerido:** curar el siguiente módulo (probablemente Evaluación, la
-siguiente etapa de `CASE_STAGE_ORDER`) con el mismo método de renderizado + overlay +
-`field_scripts.json`, ahora que el patrón de banderas de programa y el tipo `info` ya
-existen y son reutilizables.
+**Próximo paso sugerido (cumplido, ver siguiente sección):** curar el siguiente módulo
+(Evaluación, la siguiente etapa de `CASE_STAGE_ORDER`) con el mismo método de
+renderizado + overlay + `field_scripts.json`.
+
+## Assessment — segundo contenido clínico REAL curado (etapa "Evaluación")
+
+Segundo módulo curado con el mismo método que Forms 1-7, pero mucho más grande: 12
+páginas, ~360 campos reales del AcroForm original
+(`build-inputs/templates-r12/assessment.pdf`) — es el "Biopsychosocial Assessment for
+Client Placement" estándar ASAM, con las 6 dimensiones (Intoxicación/abstinencia,
+Condiciones biomédicas, Condiciones psiquiátricas y cognitivas, Riesgos relacionados al
+uso de sustancias, Interacciones con el entorno de recuperación, Consideraciones
+centradas en la persona), conclusiones de la evaluación, diagnóstico DSM-5, colocación
+ASAM y firma de consejero/médico.
+
+**Curado en 351 campos, 12 páginas, 8 condiciones RN-7** —
+`build-inputs/curated/assessment.schema.json`, generado con
+`build-inputs/curated/build_assessment_schema.py` (mismo patrón de generador Python que
+`forms_1_7`, con loops para las estructuras repetitivas — tabla de sustancias, grilla
+DSM-5, grilla de trastornos clínicos, tablas de episodios). Reemplaza a la etapa
+"Evaluación" del expediente (antes sin formulario asignado).
+
+**Hallazgo importante que confirma la disciplina de "no inventar":** la página 12 tiene
+un campo "ASAM Placement, 4th Edition" (nivel de cuidado ASAM: Level 1/2/3/4) que a
+primera vista parece redundante con `cases.loi` (RN-2). Se investigó en
+`field_scripts.json` si hay algún trigger que los conecte — no lo hay. Son conceptos
+distintos en el PDF real: `cases.loi` es la escala de riesgo DUI específica de Illinois
+que ya existe (RN-2, `loi.ts`), mientras que "ASAM Placement" es la escala estándar de
+nivel de cuidado clínico ASAM, capturada aquí como dato del assessment sin ninguna
+automatización hacia `cases.loi` — no se inventó esa conexión.
+
+**Simplificaciones deliberadas frente al PDF original (documentadas en el propio
+generador, `build_assessment_schema.py`):**
+1. Los 4 patrones reales "¿Sí/No? → tabla de episodios o N/A" (hospitalizaciones
+   médicas, hospitalizaciones psiquiátricas, arrestos, tratamiento previo — confirmados
+   en `field_scripts.json`: `BMCC`, `DIM3PS`, `DIM3ADRA`, `DIM5RL`) tenían 3-4 campos
+   "N/A" vacíos separados en el PDF original; aquí se colapsan a un solo campo de texto
+   "no aplica" por sección — no pierde contenido clínico (los N/A del PDF no llevan
+   información distinguible entre sí).
+2. Un campo sin lista de opciones confirmada en `option_catalogs.json`
+   (`dim4_support_network`, "¿Sus amigos/familia apoyan su tratamiento?") se dejó como
+   texto libre en vez de inventar opciones — mismo criterio que `employment_describe`
+   en forms_1_7.
+3. Los títulos de dimensión IMPRESOS en el PDF se usan como fuente de verdad para
+   agrupar contenido (coinciden exactamente con la sección "ASSESSMENT CONCLUSIONS" de
+   la página 11), no los prefijos internos de nombre de campo del AcroForm — algunos no
+   coinciden entre sí (ej. los campos de la página 7, impresa como "DIMENSION 4", usan
+   internamente el prefijo `DIM5RL`; es una inconsistencia del PDF original, no un
+   error de esta curación).
+4. La firma real (trazo, `signature_pad`) no se captura — igual que forms_1_7, sigue
+   pendiente como tarea aparte del motor.
+5. `Counselor list 01` aparece con el mismo nombre de campo AcroForm en la página 1 y
+   la página 12 del PDF (mismo campo sincronizado) → se declara una sola vez
+   (`counselor_name`, página 1) y no se repite, mismo principio de "no repetir captura"
+   ya aplicado en forms_1_7.
+
+**Opciones reales, no inventadas** — confirmadas contra
+`option_catalogs.json["Assessment"]`: la grilla DSM-5 (36 campos "Never/Sometimes/
+Frequently" + 8 campos "Yes/No/I'm not sure" para Tolerancia/Abstinencia), 38 códigos
+de diagnóstico DSM-5 reales (F10.x Alcohol, F12.x Cannabis, F14.x Cocaine, F11.x
+Opioid — únicamente estas 4 sustancias tienen código en el PDF real, no se inventaron
+las demás), 15 opciones reales de colocación ASAM, y la lista real de consejeros
+("Maria I Torres, CADC" / "George Torres, BA, CADC" — coincide con el roster
+confirmado por Jorge).
+
+**Prellenado desde el caso** (`forms/[key]/page.tsx`, específico a `key ===
+"assessment"`): solo `client_name` (nombre del paciente). A diferencia de forms_1_7, NO
+se intentó adivinar cuál de los 2 valores fijos de `counselor_name` corresponde a
+`session.name` (no coinciden byte a byte: "George (Jorge) Torres" vs "George Torres,
+BA, CADC") — se deja que el consejero lo seleccione a mano, documentado explícitamente
+en el código como una decisión de "no inventar" en vez de un olvido.
+
+**Verificado end-to-end** (Postgres local recreado desde cero + reseed con los 3
+schemas — `demo_intake`, `forms_1_7`, `assessment` —, servidor dev + Playwright
+headless contra un caso real nuevo con LOI "Moderate Risk"): el link "Abrir Evaluación"
+aparece en la etapa correcta del expediente, las 12 páginas navegan sin error, el
+nombre del paciente se prellena correctamente, autosave guarda en `documents.data`, el
+campo `dim2_hospitalizations_na` y la tabla de episodios permanecen ambos ocultos
+cuando la pregunta Sí/No no se ha respondido (comportamiento RN-7 correcto, no asume
+nada), y la página final (diagnóstico DSM-5 + colocación ASAM + firma) muestra las
+listas reales completas. `pnpm typecheck` / `lint` / `test`: verdes, 75/75 (nuevo:
+`tests/assessment-schema.test.ts`, 11 pruebas).
+
+**Limitación de UX conocida, no nueva de este módulo:** el motor `SchemaForm` no tiene
+un layout de "tabla/grilla" — cada celda de la grilla DSM-5 (11 criterios × 4 columnas)
+se renderiza como un campo independiente con su etiqueta repetida, en vez de una tabla
+visual compacta. Ya era así en el motor desde que se construyó; aquí se nota más por el
+tamaño de la grilla (44 campos). Candidato razonable para una mejora futura del motor
+(un tipo de campo "grid" que agrupe N campos bajo una sola fila con columnas) si se
+sigue curando contenido con esta forma — anotado, no construido todavía (fuera de
+alcance de "curar contenido", es cambio de motor).
+
+**Deliberadamente fuera de alcance de este paso:** los otros ~17 módulos restantes del
+expediente completo (Treatment Plan, Case Review, Activity Notes x3, Continue Care,
+Discharge, Admin Control, Treatment Verification, Status Report, Case Coordination, 4
+cartas) — mismo método de curación, pendiente uno por uno. El campo "ASAM Placement" no
+se conecta a ningún flujo downstream todavía (es solo dato capturado) — si en el futuro
+se decide que debería influir en algo (ej. mostrar una alerta si diverge mucho del LOI
+de admisión), es una decisión de producto nueva, no algo que el PDF original ya hace.
+
+**Próximo paso sugerido:** curar el siguiente módulo (probablemente Treatment Plan, la
+siguiente etapa de `CASE_STAGE_ORDER`), con el mismo método.
