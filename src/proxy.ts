@@ -8,8 +8,14 @@ import { getSessionCookie } from "better-auth/cookies";
  * request); la validación completa de rol/tenant/activo ocurre en el layout de
  * (app) vía auth.api.getSession(), que sí consulta la tabla `users` de negocio y
  * puede rechazar a un usuario desactivado con sesión aún vigente.
+ *
+ * /api/setup queda pública a propósito: es la ruta de bootstrap/reset del pilot
+ * (src/app/api/setup/bootstrap/route.ts), pensada para usarse ANTES de que exista
+ * ninguna sesión — se protege sola con su propio SETUP_TOKEN por query param, no con
+ * cookie de sesión. Sin esta excepción, el proxy la redirige a /login antes de que el
+ * route handler siquiera corra.
  */
-const PUBLIC_PATHS = ["/login", "/api/auth"];
+const PUBLIC_PATHS = ["/login", "/api/auth", "/api/setup"];
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
