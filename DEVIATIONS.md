@@ -165,3 +165,34 @@ withTenant()
   preparación, no requiere ningún cambio de lógica de negocio.
 - **Impacto:** ninguno — el componente sigue existiendo en el repo por si se necesita
   para verificación interna; basta reimportarlo si hace falta de nuevo.
+
+## 2026-07-31 — Dashboard: datos reales adelantados de Milestone 5 (parcial)
+- **Qué decía el blueprint:** el dashboard con métricas reales (admisiones, etapas
+  pendientes, consents por vencer, saldos) es explícitamente Milestone 5, al final del
+  roadmap — antes de esto la pantalla solo mostraba 4 tarjetas con "—" fijo y la
+  leyenda "Datos reales en Milestone 5".
+- **Qué se hizo:** Ricardo compartió referencias visuales de diseño (mockups de página
+  de marketing) y, tras aclarar que una página pública de ventas no aplica todavía
+  (Jorge ya es el cliente, no un prospecto — ver hilo de conversación 2026-07-31),
+  eligió aprovechar el estilo visual en el dashboard real en vez de construir un sitio
+  de marketing. Se implementaron 4 métricas reales con consultas directas
+  (`count()` de Drizzle) dentro de `withTenant()`: casos activos, documentos en
+  borrador, consents por vencer en 30 días, y tasa de finalización de etapas
+  (`case_stages` completadas / total) — más una tarjeta de "Admisiones recientes" con
+  las últimas 5 admisiones, enlazadas al expediente de cada caso. Traducciones nuevas
+  en `messages/es.json` y `messages/en.json` (`dashboard.stats.captions`,
+  `dashboard.recentCases`); se quitó la clave `comingInM5` (ya no aplica) y
+  `dashboard.placeholder` (nunca se usaba en el código).
+- **Qué NO se adelantó de M5:** saldos por vencer, alertas de cumplimiento
+  accionables, gráfica de reporting mensual — se dejaron fuera a propósito para no
+  inventar funcionalidad solo por parecerse más a la referencia visual; quedan como
+  parte de M5 cuando le toque.
+- **Verificado localmente antes de subir:** Postgres local, caso de prueba insertado a
+  mano (1 caso activo, 1 documento en borrador, 1 consent por vencer en 10 días, 2/4
+  etapas completadas) — el dashboard reportó los 4 números correctos y la tarjeta de
+  admisiones recientes con el join a paciente/ubicación correcto; caso de prueba
+  borrado después de verificar (scripts temporales, no se subieron al repo).
+  `pnpm typecheck` / `pnpm lint` / `pnpm test`: verdes, 111/111.
+- **Impacto:** ninguno negativo — M5 sigue teniendo trabajo real pendiente (lo NO
+  adelantado arriba), esto solo reduce ese alcance en 4 métricas + 1 tarjeta, ya
+  verificadas funcionando.

@@ -923,3 +923,40 @@ entorno del proyecto (`DATABASE_URL`, `DATABASE_URL_MIGRATIONS`, `APP_USER_PASSW
 `BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `NEXT_PUBLIC_APP_URL`, `SETUP_TOKEN`) y primer
 deploy. Ver mensaje a Ricardo para el valor exacto de cada variable (no se documentan
 aquí — este archivo si se sube al repo).
+
+## Piloto en vivo confirmado + pulido pre-demo con Jorge (2026-07-31)
+
+**Piloto confirmado funcionando de extremo a extremo** en
+`https://treatment-tech.vercel.app`: login corregido (bug real de
+`.replace()` vs `.replaceAll()` en el password de `app_user`, ver
+DEVIATIONS.md), bootstrap/reset del tenant confirmado por Ricardo (cuentas
+sembradas, password `Rene2026`), primer caso de prueba creado a través del
+flujo real de admisión.
+
+**Pulido antes de mostrarle el pilot a Jorge** (Ricardo pidió avanzar un poco
+más de desarrollo primero, no enseñarlo tal cual estaba):
+- Login: tagline en inglés provisto por Ricardo, franjas de marca de borde a
+  borde, logo revertido a "TT" + fondo de puntos original (Ricardo mandará un
+  logo mejor más adelante).
+- "Nuevo caso": el campo Condado pasó de texto libre a catálogo cerrado de 5
+  condados (mismo catálogo que Forms 1-7, curado del PDF real de Jorge) — bug
+  real encontrado por Ricardo probando el flujo, no en revisión de código.
+- Dashboard: se quitó el "Simulador de reglas clínicas (RN-2/RN-3)" que vivía
+  ahí como herramienta de QA interna — confundía como primera pantalla tras
+  iniciar sesión. Se adelantaron 4 métricas reales de Milestone 5 (casos
+  activos, documentos en borrador, consents por vencer, tasa de finalización
+  de etapas) más una tarjeta de admisiones recientes, inspiradas en
+  referencias visuales que Ricardo compartió — decisión explícita de invertir
+  ese estilo en el producto real en vez de una página pública de marketing,
+  que no aplica todavía (Jorge ya es el cliente, no un prospecto).
+
+Ver DEVIATIONS.md (entradas del 2026-07-31) para el detalle técnico completo
+de cada cambio. `pnpm typecheck` / `pnpm lint` / `pnpm test`: verdes, 111/111
+en cada paso.
+
+**Pendiente:** confirmar con Ricardo que el dashboard con datos reales se ve
+bien en el pilot desplegado; correr la demo guiada con Jorge (un caso real,
+no acceso libre — ver recomendación en el hilo de conversación); Ricardo
+enviará un logo nuevo para reintentar el swap de imagen en el login; 8 de los
+13 módulos de contenido curado siguen pendientes; desactivar `SETUP_TOKEN` en
+Vercel antes de cargar PHI real.

@@ -16,13 +16,33 @@
   "dashboard": {
     "title": "Dashboard",
     "subtitle": "DUI Metropolitan Services — Archer",
-    "placeholder": "Dashboard — built in Milestone 5 (admissions, pending stages, expiring consents, balances).",
     "stats": {
       "activeCases": "Active cases",
       "pendingDocs": "Pending documents",
       "expiringConsents": "Expiring consents",
       "completionRate": "Completion rate",
-      "comingInM5": "Real data in Milestone 5"
+      "captions": {
+        "activeCases": "of {total} total",
+        "noCasesYet": "no cases yet",
+        "pendingDocs": "to complete",
+        "expiringConsents": "in the next 30 days",
+        "completionRate": "average across case stages",
+        "noStagesYet": "no stages yet"
+      }
+    },
+    "recentCases": {
+      "title": "Recent admissions",
+      "description": "Latest cases admitted in the pilot",
+      "viewAll": "View all",
+      "empty": "No cases yet.",
+      "newCase": "Admit patient",
+      "columns": {
+        "caseNumber": "Case #",
+        "patient": "Patient",
+        "location": "Location",
+        "admissionDate": "Admission",
+        "status": "Status"
+      }
     }
   }
 }
