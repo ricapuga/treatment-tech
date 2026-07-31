@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { ShieldCheck } from "lucide-react";
 import { LoginForm } from "./login-form";
@@ -15,33 +16,33 @@ export default async function LoginPage({
       {/* Panel de marca — visible solo en pantallas medianas+; en móvil el formulario
           ocupa todo el ancho. Refuerza identidad de producto desde el primer segundo,
           en vez de una pantalla de login genérica de formulario suelto. */}
-      <div className="brand-dot-grid relative hidden flex-1 flex-col justify-between overflow-hidden bg-brand-700 p-10 text-brand-50 md:flex">
-        {/* Fondo sólido detrás del logo y del bloque de texto: mismo color que el
-            panel (bg-brand-700), así que no se nota como una "caja" — solo tapa los
-            puntos de brand-dot-grid en esas franjas para que el logo y la frase se
-            lean sin el patrón detrás compitiendo con ellos. */}
-        <div className="inline-flex w-fit items-center gap-2.5 rounded-lg bg-brand-700 py-1 pr-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15 text-sm font-semibold text-white">
-            TT
-          </div>
+      <div className="brand-dot-grid relative hidden flex-1 flex-col justify-between overflow-hidden bg-brand-700 py-10 text-brand-50 md:flex">
+        {/* Franjas completas (borde a borde del panel, -mx-* cancela el padding
+            horizontal del contenedor) en sólido bg-brand-700 — tapan la textura de
+            "T" detrás del logo y de la frase para que no se pierdan, en vez de una
+            caja flotante del ancho del contenido. */}
+        <div className="-mx-10 flex items-center gap-3 bg-brand-700 px-10 py-1">
+          <Image src="/logo-mark.png" alt="Treatment Tech" width={59} height={100} className="h-9 w-auto" priority />
           <div className="text-sm font-semibold text-white">Treatment Tech</div>
         </div>
 
-        <div className="max-w-md rounded-xl bg-brand-700 py-4">
-          <h1 className="text-4xl font-bold leading-tight text-white">
-            Simplify compliance. Strengthen care.
-          </h1>
-          <p className="mt-4 text-sm text-brand-100">
-            Manage assessments, documentation, treatment plans, billing, and
-            reporting from one secure platform built for DUI treatment providers.
-          </p>
-          <div className="mt-6 flex items-center gap-2 text-xs text-brand-100">
-            <ShieldCheck className="h-4 w-4" />
-            Piloto activo — DUI Metropolitan Services, Archer
+        <div className="-mx-10 bg-brand-700 px-10 py-6">
+          <div className="max-w-md">
+            <h1 className="text-4xl font-bold leading-tight text-white">
+              Simplify compliance. Strengthen care.
+            </h1>
+            <p className="mt-4 text-sm text-brand-100">
+              Manage assessments, documentation, treatment plans, billing, and
+              reporting from one secure platform built for DUI treatment providers.
+            </p>
+            <div className="mt-6 flex items-center gap-2 text-xs text-brand-100">
+              <ShieldCheck className="h-4 w-4" />
+              Piloto activo — DUI Metropolitan Services, Archer
+            </div>
           </div>
         </div>
 
-        <div className="text-xs text-brand-200">
+        <div className="px-10 text-xs text-brand-200">
           © {new Date().getFullYear()} Treatment Tech
         </div>
       </div>
@@ -49,9 +50,7 @@ export default async function LoginPage({
       <div className="flex flex-1 items-center justify-center bg-background p-6">
         <div className="w-full max-w-sm">
           <div className="mb-8 flex items-center gap-2.5 md:hidden">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-sm font-semibold text-white">
-              TT
-            </div>
+            <Image src="/logo-mark.png" alt="Treatment Tech" width={59} height={100} className="h-8 w-auto" priority />
             <div className="text-sm font-semibold text-ink-900">Treatment Tech</div>
           </div>
 

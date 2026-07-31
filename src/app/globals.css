@@ -139,9 +139,11 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Fondo con textura sutil de puntos para el panel de marca del login — nada de
-   gradientes genéricos de plantilla; refuerza estructura sin distraer. */
+/* Fondo con textura sutil de "T" repetida para el panel de marca del login — mismo
+   motivo del logo (public/logo-mark.png), no puntos genéricos de plantilla; refuerza
+   identidad de marca sin distraer. SVG inline en base64 (dos rectángulos redondeados
+   formando una T), blanco a 9% de opacidad, repetido cada 32px. */
 .brand-dot-grid {
-  background-image: radial-gradient(currentColor 1px, transparent 1px);
-  background-size: 18px 18px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij48cmVjdCB4PSI1IiB5PSI2IiB3aWR0aD0iMTgiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMDkiLz48cmVjdCB4PSIxMSIgeT0iOSIgd2lkdGg9IjYiIGhlaWdodD0iMTYiIHJ4PSIzIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjA5Ii8+PC9zdmc+");
+  background-size: 32px 32px;
 }
