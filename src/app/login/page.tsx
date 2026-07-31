@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { ShieldCheck } from "lucide-react";
 import { LoginForm } from "./login-form";
@@ -21,8 +20,10 @@ export default async function LoginPage({
             horizontal del contenedor) en sólido bg-brand-700 — tapan la textura de
             "T" detrás del logo y de la frase para que no se pierdan, en vez de una
             caja flotante del ancho del contenido. */}
-        <div className="-mx-10 flex items-center gap-3 bg-brand-700 px-10 py-1">
-          <Image src="/logo-mark.png" alt="Treatment Tech" width={59} height={100} className="h-9 w-auto" priority />
+        <div className="-mx-10 flex items-center gap-2.5 bg-brand-700 px-10 py-1">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15 text-sm font-semibold text-white">
+            TT
+          </div>
           <div className="text-sm font-semibold text-white">Treatment Tech</div>
         </div>
 
@@ -50,7 +51,9 @@ export default async function LoginPage({
       <div className="flex flex-1 items-center justify-center bg-background p-6">
         <div className="w-full max-w-sm">
           <div className="mb-8 flex items-center gap-2.5 md:hidden">
-            <Image src="/logo-mark.png" alt="Treatment Tech" width={59} height={100} className="h-8 w-auto" priority />
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-sm font-semibold text-white">
+              TT
+            </div>
             <div className="text-sm font-semibold text-ink-900">Treatment Tech</div>
           </div>
 
