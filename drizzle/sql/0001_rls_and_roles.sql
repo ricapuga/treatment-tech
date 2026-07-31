@@ -9,10 +9,25 @@
 -- 1) Rol dedicado NO-owner para la aplicación. (Debe crearse ANTES que cualquier
 -- GRANT que lo referencie — orden real, no solo lógico: un GRANT a un rol
 -- inexistente falla la migración completa a medio camino.)
+--
+-- El ELSE (ALTER ROLE) no es cosmético: sin él, este script solo fija el password la
+-- PRIMERA vez que corre. Si DATABASE_URL de la app y el password real del rol alguna
+-- vez se desincronizan (ej. build de Vercel corrido con un valor de APP_USER_PASSWORD
+-- que luego se corrigió en las variables de entorno), correr este script de nuevo NO
+-- lo arregla — el rol ya existe, así que el IF NOT EXISTS lo salta en silencio y el
+-- login sigue roto con "password authentication failed" (mismo mensaje genérico de
+-- Postgres para "no existe" y "password incorrecto", por diseño anti-enumeración).
+-- Con el ALTER ROLE, cada corrida de este script — o sea cada build en Vercel, ver
+-- scripts/deploy-migrate.ts — deja el password del rol exactamente igual al de
+-- APP_USER_PASSWORD, sin importar el estado previo. Encontrado así en el primer
+-- deploy real al pilot (2026-07-31): la creación del rol corrió sin error pero el
+-- login fallaba por esta causa — ver DEVIATIONS.md.
 DO $$
 BEGIN
   IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'app_user') THEN
     CREATE ROLE app_user LOGIN PASSWORD '<APP_USER_PASSWORD>';
+  ELSE
+    ALTER ROLE app_user WITH LOGIN PASSWORD '<APP_USER_PASSWORD>';
   END IF;
 END
 $$;

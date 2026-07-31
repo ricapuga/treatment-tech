@@ -78,3 +78,23 @@ withTenant()
   disciplina de RLS. Encontrado corriendo el script de verdad, no por inspección.
 - **Impacto:** ninguno negativo. Positivo: el bug se corrigió ANTES de que alguien lo
   encontrara corriendo esto contra Neon en producción.
+
+## 2026-07-31 — `drizzle/sql/0001_rls_and_roles.sql`: bug real corregido — password de `app_user` no se resincronizaba
+- **Qué pasaba:** el bloque que crea el rol `app_user` usaba `IF NOT EXISTS ... CREATE
+  ROLE ... PASSWORD '<APP_USER_PASSWORD>'` — correcto para la primera corrida, pero si el
+  rol ya existía, el script no tocaba el password aunque `APP_USER_PASSWORD` cambiara. En
+  el primer deploy real al pilot de Vercel + Neon, el build corrió este script sin ningún
+  error ("RLS + rol app_user OK.") pero el login en producción falló con "password
+  authentication failed for user 'app_user'" — el rol existía, pero su password real no
+  coincidía con el que traía `DATABASE_URL` en tiempo de ejecución (Postgres da el mismo
+  mensaje genérico para "rol inexistente" y "password incorrecto", por diseño
+  anti-enumeración, así que el mensaje de error no distinguía cuál de los dos era).
+- **Qué se hizo:** se agregó una rama `ELSE ALTER ROLE app_user WITH LOGIN PASSWORD
+  '<APP_USER_PASSWORD>'` — ahora cada corrida de este script (o sea cada build en Vercel,
+  ver `scripts/deploy-migrate.ts`) deja el password del rol forzosamente sincronizado con
+  la variable de entorno actual, sin importar el estado previo.
+- **Por qué:** un script "idempotente" que solo actúa la primera vez no es realmente
+  idempotente para el caso de credenciales — debe converger al estado deseado en cada
+  corrida, no solo crear una vez y nunca más tocar.
+- **Impacto:** ninguno negativo. Corregido antes de confirmar el pilot como funcional —
+  ver PROGRESS.md.
