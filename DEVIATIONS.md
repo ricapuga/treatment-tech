@@ -98,3 +98,18 @@ withTenant()
   corrida, no solo crear una vez y nunca más tocar.
 - **Impacto:** ninguno negativo. Corregido antes de confirmar el pilot como funcional —
   ver PROGRESS.md.
+- **Corrección (mismo día, después de redeployar):** el `ALTER ROLE` de arriba no
+  arregló el login — mismo error exacto después de subirlo. Causa raíz real, encontrada
+  al revisar `scripts/deploy-migrate.ts`: el archivo SQL menciona el placeholder
+  `<APP_USER_PASSWORD>` primero en un COMENTARIO (línea 6, explica qué hace el archivo)
+  y solo después en las líneas de `CREATE ROLE`/`ALTER ROLE` que de verdad importan.
+  `rlsSqlRaw.replace("<APP_USER_PASSWORD>", appUserPassword)` — `.replace()` de un solo
+  string sustituye SOLO la primera aparición — sustituía la del comentario y dejaba las
+  líneas de `CREATE`/`ALTER ROLE` con el texto literal `"<APP_USER_PASSWORD>"` (con los
+  símbolos `<>` incluidos) como password real del rol, nunca el secreto verdadero. Este
+  bug existía desde el primer deploy (antes incluso del `ALTER ROLE` de arriba) — el
+  diagnóstico de "password no resincronizado entre builds" de la entrada anterior era
+  incompleto: el password nunca fue el correcto, ni siquiera la primera vez. Corregido
+  cambiando a `rlsSqlRaw.replaceAll(...)`. El `ALTER ROLE` de la entrada anterior sigue
+  siendo correcto tenerlo (buena práctica de convergencia), solo no era la causa de
+  este error específico.

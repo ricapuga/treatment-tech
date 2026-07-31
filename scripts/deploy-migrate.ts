@@ -54,7 +54,15 @@ async function main() {
       path.join(process.cwd(), "drizzle/sql/0001_rls_and_roles.sql"),
       "utf-8"
     );
-    const rlsSql = rlsSqlRaw.replace("<APP_USER_PASSWORD>", appUserPassword);
+    // replaceAll, NO replace: el archivo SQL menciona <APP_USER_PASSWORD> más de una
+    // vez (también en comentarios que explican el placeholder, antes de las líneas
+    // que de verdad lo usan) — .replace() de un solo string solo sustituye la PRIMERA
+    // aparición. Con solo un comentario antes del CREATE/ALTER ROLE real, ese primero
+    // era el del comentario, dejando el password real de la app como el texto literal
+    // "<APP_USER_PASSWORD>" en vez del secreto — causa raíz del "password
+    // authentication failed" en el primer deploy real al pilot (2026-07-31), ver
+    // DEVIATIONS.md.
+    const rlsSql = rlsSqlRaw.replaceAll("<APP_USER_PASSWORD>", appUserPassword);
     // Protocolo simple de `pg` (una sola llamada .query con el archivo completo) sí
     // soporta múltiples statements + bloques DO $$ ... $$ separados por ';' — a
     // diferencia del protocolo extendido (parametrizado), que no lo permite.

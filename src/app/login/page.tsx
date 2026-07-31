@@ -24,12 +24,12 @@ export default async function LoginPage({
         </div>
 
         <div className="max-w-md">
-          <h1 className="text-3xl font-semibold leading-tight text-white">
-            Un expediente clínico que se siente tan claro como el proceso de Jorge.
+          <h1 className="text-4xl font-bold leading-tight text-white">
+            Simplify compliance. Strengthen care.
           </h1>
           <p className="mt-4 text-sm text-brand-100">
-            Casos, etapas de tratamiento, consentimientos y balances — en un solo
-            lugar, con aislamiento de datos por clínica desde el primer registro.
+            Manage assessments, documentation, treatment plans, billing, and
+            reporting from one secure platform built for DUI treatment providers.
           </p>
           <div className="mt-6 flex items-center gap-2 text-xs text-brand-100">
             <ShieldCheck className="h-4 w-4" />
