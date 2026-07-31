@@ -16,14 +16,18 @@ export default async function LoginPage({
           ocupa todo el ancho. Refuerza identidad de producto desde el primer segundo,
           en vez de una pantalla de login genérica de formulario suelto. */}
       <div className="brand-dot-grid relative hidden flex-1 flex-col justify-between overflow-hidden bg-brand-700 p-10 text-brand-50 md:flex">
-        <div className="flex items-center gap-2.5">
+        {/* Fondo sólido detrás del logo y del bloque de texto: mismo color que el
+            panel (bg-brand-700), así que no se nota como una "caja" — solo tapa los
+            puntos de brand-dot-grid en esas franjas para que el logo y la frase se
+            lean sin el patrón detrás compitiendo con ellos. */}
+        <div className="inline-flex w-fit items-center gap-2.5 rounded-lg bg-brand-700 py-1 pr-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/15 text-sm font-semibold text-white">
             TT
           </div>
           <div className="text-sm font-semibold text-white">Treatment Tech</div>
         </div>
 
-        <div className="max-w-md">
+        <div className="max-w-md rounded-xl bg-brand-700 py-4">
           <h1 className="text-4xl font-bold leading-tight text-white">
             Simplify compliance. Strengthen care.
           </h1>
