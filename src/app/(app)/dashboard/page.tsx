@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Users, FileText, Clock, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { RulesDemo } from "./rules-demo";
 
 /**
  * Tarjetas de KPI — datos de ejemplo, etiquetados explícitamente como tal. El tablero
@@ -52,8 +51,6 @@ export default async function DashboardPage() {
           </Card>
         ))}
       </div>
-
-      <RulesDemo />
     </div>
   );
 }

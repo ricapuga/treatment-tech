@@ -134,3 +134,34 @@ withTenant()
   de cargar PHI real — no es un mecanismo que deba sobrevivir a M5. Si hace falta un
   reset de contraseña real más adelante, el camino correcto es el flujo de Better Auth
   (forgot-password + `RESEND_API_KEY`), pendiente de esas credenciales.
+
+## 2026-07-31 — Condado en "Nuevo caso": texto libre → catálogo cerrado (bug real, no desviación de blueprint)
+- **Qué pasaba:** `src/app/(app)/cases/new/admission-form.tsx` capturaba `county` como
+  texto libre, mientras que Forms 1-7 (curado del PDF real de Jorge) ya tenía un
+  catálogo cerrado de 5 condados (DuPage, Kane, Will, McHenry, Lake —
+  `build-inputs/curated/forms_1_7.schema.json`). Dos lugares del sistema tratando el
+  mismo dato de forma distinta — encontrado por Ricardo probando el flujo de admisión
+  en el pilot, no en revisión de código.
+- **Qué se hizo:** se cambió el campo a `<select>` con el mismo catálogo de 5 condados.
+  `county` sigue siendo `text` opcional en `cases` (sin migración de esquema) — el
+  cambio es solo de UI/validación de captura.
+- **Impacto:** ninguno negativo. Ningún caso real había sido creado todavía en el
+  pilot (tenant recién reseteado), así que no hay datos previos con texto libre que
+  limpiar.
+
+## 2026-07-31 — Dashboard: se quitó el "Simulador de reglas clínicas (RN-2/RN-3)" antes de mostrar el pilot a Jorge
+- **Qué pasaba:** `src/app/(app)/dashboard/rules-demo.tsx` (`<RulesDemo />`) es una
+  herramienta de QA interna, ya documentada en su propio comentario como "esto NO es
+  parte del producto final" — pensada para verificar visualmente que las reglas de
+  RN-2/RN-3 quedaron bien capturadas, sin leer código ni pruebas. Ricardo la vio como
+  primera pantalla después de iniciar sesión y no entendió qué era ("Tampoco entendí
+  el simulador inicial") — riesgo real de confusión si Jorge la ve antes de que el
+  producto tenga el hub real de casos (M2/M3) que la reemplaza.
+- **Qué se hizo:** se quitó `<RulesDemo />` de `src/app/(app)/dashboard/page.tsx`
+  (import y uso). El archivo `rules-demo.tsx` NO se borró — sigue disponible para
+  verificación de desarrollo, solo dejó de renderizarse en la app.
+- **Por qué:** Ricardo pidió avanzar el desarrollo un poco más antes de mostrarle el
+  pilot a Jorge — quitar herramienta de debug visible del camino es parte de esa
+  preparación, no requiere ningún cambio de lógica de negocio.
+- **Impacto:** ninguno — el componente sigue existiendo en el repo por si se necesita
+  para verificación interna; basta reimportarlo si hace falta de nuevo.

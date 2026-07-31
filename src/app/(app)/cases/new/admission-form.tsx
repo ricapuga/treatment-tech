@@ -15,6 +15,18 @@ const LOI_OPTIONS = [
   "Outpatient",
 ] as const;
 
+// Mismo catálogo cerrado de condados que Forms 1-7 (curado del PDF original de Jorge —
+// build-inputs/curated/forms_1_7.schema.json, campo "county"). Antes este campo era
+// texto libre aquí, lo que permitía capturar un condado que no coincide con ninguno de
+// los que Jorge realmente maneja. Un solo catálogo, dos lugares — evita ese desfase.
+const COUNTY_OPTIONS = [
+  "DuPage County",
+  "Kane County",
+  "Will County",
+  "McHenry County",
+  "Lake County",
+] as const;
+
 const initialState: AdmissionState = { error: null };
 
 const inputClass =
@@ -120,7 +132,14 @@ export function AdmissionForm({
         </label>
         <label className="flex flex-col gap-1.5">
           <span className={labelClass}>Condado</span>
-          <input name="county" className={inputClass} />
+          <select name="county" className={inputClass} defaultValue="">
+            <option value="">—</option>
+            {COUNTY_OPTIONS.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
         </label>
         <label className="flex flex-col gap-1.5">
           <span className={labelClass}>Fuente de referencia</span>
