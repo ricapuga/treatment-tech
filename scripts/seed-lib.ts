@@ -14,6 +14,91 @@
  * sí solos (violarían constraints únicos / signUpEmail fallaría con email duplicado),
  * por eso el guard de "ya existe" cubre TODO el bloque, no solo una parte.
  */
+
+/**
+ * resetTenant — borra el tenant "DUI Metropolitan Services, Inc." (por licenseNumber)
+ * y TODO lo que cuelga de él (casos, documentos, roster, cuentas de Better Auth), en
+ * el orden correcto para no violar los FK (RESTRICT por default — este schema no usa
+ * ON DELETE CASCADE salvo Better Auth session/account -> user).
+ *
+ * Existe para poder recrear las cuentas sembradas con un SEED_PASSWORD distinto sin
+ * tocar la base a mano (el sandbox de Claude no tiene salida de red hacia Neon) —
+ * runSeed() no actualiza el password de cuentas que ya existen, solo crea de cero.
+ * Solo se usa desde la ruta de bootstrap (?reset=1), protegida por el mismo
+ * SETUP_TOKEN. No falla si el tenant no existe (no-op).
+ *
+ * EXCEPCIÓN DELIBERADA a "toda tabla con PHI se toca SOLO vía withTenant()" de
+ * CLAUDE.md: usa `DATABASE_URL_MIGRATIONS` (rol owner) con `pg` directo, NO el cliente
+ * normal de la app. Encontrado corriendo esto contra Postgres local: `app_user` tiene
+ * GRANT SELECT/INSERT/UPDATE pero NO DELETE en las tablas clínicas (deliberado —
+ * drizzle/sql/0001_rls_and_roles.sql, protección real contra borrado accidental desde
+ * la app, no un descuido) — intentarlo vía `db`/`withTenant()` normal falla con
+ * "permission denied". Owner sí puede, y es exactamente para esto (setup/mantenimiento
+ * fuera del flujo normal de la app, igual que scripts/deploy-migrate.ts). Herramienta
+ * de admin de piloto, no código de negocio — desactivar junto con SETUP_TOKEN antes de
+ * cargar PHI real (ver M5 hardening).
+ */
+export async function resetTenant(): Promise<{ deleted: boolean; tenantId: string | null }> {
+  const ownerUrl = process.env.DATABASE_URL_MIGRATIONS;
+  if (!ownerUrl) {
+    throw new Error(
+      "resetTenant() requiere DATABASE_URL_MIGRATIONS (rol owner) — no configurada."
+    );
+  }
+
+  const { Pool } = await import("pg");
+  const pool = new Pool({ connectionString: ownerUrl });
+
+  try {
+    const LICENSE_NUMBER = "A-2854-0004-A";
+    const { rows } = await pool.query<{ id: string }>(
+      `SELECT id FROM tenants WHERE license_number = $1 LIMIT 1`,
+      [LICENSE_NUMBER]
+    );
+    if (!rows[0]) {
+      return { deleted: false, tenantId: null };
+    }
+    const tenantId = rows[0].id;
+
+    // Hijos sin tenant_id propio primero (vía document_id/case_id), luego el resto
+    // por tenant_id directo — cases al final de sus hijos, locations/patients/users
+    // al final de cases, tenant al final de todo.
+    await pool.query(
+      `DELETE FROM signatures WHERE document_id IN (SELECT id FROM documents WHERE tenant_id = $1)`,
+      [tenantId]
+    );
+    await pool.query(
+      `DELETE FROM case_stages WHERE case_id IN (SELECT id FROM cases WHERE tenant_id = $1)`,
+      [tenantId]
+    );
+    for (const table of [
+      "attendance_sessions",
+      "ledger_entries",
+      "consents",
+      "urine_screens",
+      "files",
+      "documents",
+      "cases",
+      "patients",
+      "locations",
+      "users",
+      "audit_log",
+      "catalogs",
+      "content_library",
+      "case_number_seq",
+    ]) {
+      await pool.query(`DELETE FROM ${table} WHERE tenant_id = $1`, [tenantId]);
+    }
+    // Better Auth: "user" -> cascada real a session/account (onDelete: "cascade" en
+    // auth-schema.ts), así que basta borrar "user" por tenant_id.
+    await pool.query(`DELETE FROM "user" WHERE tenant_id = $1`, [tenantId]);
+    await pool.query(`DELETE FROM tenants WHERE id = $1`, [tenantId]);
+
+    return { deleted: true, tenantId };
+  } finally {
+    await pool.end();
+  }
+}
 export async function runSeed(): Promise<{
   already: boolean;
   tenantId: string;

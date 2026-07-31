@@ -113,3 +113,24 @@ withTenant()
   cambiando a `rlsSqlRaw.replaceAll(...)`. El `ALTER ROLE` de la entrada anterior sigue
   siendo correcto tenerlo (buena práctica de convergencia), solo no era la causa de
   este error específico.
+
+## 2026-07-31 — `scripts/seed-lib.ts` (`resetTenant()`): excepción deliberada a "solo vía `withTenant()`"
+- **Qué pasaba:** para poder recrear las cuentas sembradas del pilot con un password
+  distinto (`SEED_PASSWORD` nuevo), hacía falta poder borrar el tenant existente y
+  volver a sembrar — `runSeed()` no actualiza cuentas que ya existen. Al escribir
+  `resetTenant()` con el cliente normal de la app (`db`, rol `app_user`, el mismo que
+  usa cualquier código de negocio), falló con "permission denied for table
+  attendance_sessions" — `app_user` solo tiene GRANT SELECT/INSERT/UPDATE en las
+  tablas clínicas, nunca DELETE (`drizzle/sql/0001_rls_and_roles.sql`), a propósito:
+  protección real contra borrado accidental desde la aplicación, no un descuido.
+- **Qué se hizo:** `resetTenant()` usa `DATABASE_URL_MIGRATIONS` (rol owner) con `pg`
+  directo, igual que `scripts/deploy-migrate.ts` — NO el `db`/`withTenant()` normal de
+  CLAUDE.md ("toda tabla con PHI se toca SOLO vía `withTenant()`").
+- **Por qué es una excepción aceptable:** es herramienta de administración de piloto
+  (setup/mantenimiento fuera del flujo normal de la app), no código de negocio — mismo
+  espíritu que las migraciones. Gateada por el mismo `SETUP_TOKEN` que el resto de
+  `/api/setup/bootstrap`.
+- **Impacto / pendiente:** desactivar esta ruta (quitar `SETUP_TOKEN` de Vercel) antes
+  de cargar PHI real — no es un mecanismo que deba sobrevivir a M5. Si hace falta un
+  reset de contraseña real más adelante, el camino correcto es el flujo de Better Auth
+  (forgot-password + `RESEND_API_KEY`), pendiente de esas credenciales.

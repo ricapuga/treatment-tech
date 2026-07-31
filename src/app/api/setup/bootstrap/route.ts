@@ -15,17 +15,32 @@ import { NextRequest } from "next/server";
  *
  * Una vez confirmado el pilot, esta ruta puede desactivarse quitando SETUP_TOKEN de
  * Vercel (vuelve a responder 404) — no hace falta borrar el código para "cerrarla".
+ *
+ * ?reset=1 (mismo token) — borra el tenant existente y todo lo que cuelga de él
+ * (scripts/seed-lib.ts, resetTenant()) ANTES de sembrar de nuevo. Existe para poder
+ * recrear las cuentas con un SEED_PASSWORD distinto: runSeed() no actualiza cuentas
+ * ya creadas, solo inserta de cero. No-op si no hay tenant que borrar.
  */
 export async function GET(req: NextRequest) {
   const expected = process.env.SETUP_TOKEN;
   const provided = req.nextUrl.searchParams.get("token");
+  const shouldReset = req.nextUrl.searchParams.get("reset") === "1";
 
   if (!expected || !provided || provided !== expected) {
     return new Response("Not found", { status: 404 });
   }
 
   try {
-    const { runSeed } = await import("../../../../../scripts/seed-lib");
+    const { runSeed, resetTenant } = await import("../../../../../scripts/seed-lib");
+
+    let resetInfo = "";
+    if (shouldReset) {
+      const resetResult = await resetTenant();
+      resetInfo = resetResult.deleted
+        ? `<p>Tenant anterior borrado (${resetResult.tenantId}) — sembrando de nuevo.</p>`
+        : `<p>No había tenant que borrar — sembrando de cero.</p>`;
+    }
+
     const result = await runSeed();
 
     const rosterHtml = result.roster
@@ -40,6 +55,7 @@ code{background:#f4f4f4;padding:2px 6px;border-radius:4px}
 .ok{color:#0a7a2f} ul{padding-left:20px}</style></head>
 <body>
 <h1>Treatment Tech — Setup del pilot</h1>
+${resetInfo}
 ${
   result.already
     ? `<p class="ok">Los datos de prueba ya estaban sembrados (tenant existente). No se repitió nada.</p>`
