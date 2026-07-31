@@ -860,3 +860,66 @@ no técnicas:**
 estructura de filas, con más sesiones — 20/75 horas), o cambiar a un módulo distinto
 (Discharge, Continue Care) si se prefiere variar el tipo de contenido antes de repetir
 la misma estructura 2 veces más.
+
+## Setup de deploy — piloto en Vercel + Neon (2026-07-31)
+
+Ricardo pidió pausar la curación de contenido para llegar a un piloto que pueda ver él
+mismo en un navegador, no solo verificación local. Decisión de base de datos (Neon vs.
+Supabase, ver conversación con Ricardo): **Neon**, confirmado además por CLAUDE.md
+("Stack rápido" ya lo declaraba desde el inicio) — cero riesgo de adaptación, el
+mecanismo de RLS bajo connection pooling (`src/lib/db/rls.ts`) ya está verificado
+específicamente contra el driver `drizzle-orm/neon-serverless`. No requiere el tier
+pagado de BAA todavía (solo datos de prueba, sin PHI real).
+
+**Hallazgo de infraestructura:** el sandbox donde corre esta sesión de Claude no tiene
+salida de red hacia dominios arbitrarios (Neon, Vercel, GitHub API vía HTTPS directa) —
+solo un allowlist de registries de paquetes (npm, pypi, etc.) más `github.com` para
+git. Esto invalidó dos planes iniciales: (1) correr `drizzle-kit migrate`/`psql`
+directo desde este shell contra Neon (bloqueado — ni siquiera abre el puerto 5432), y
+(2) usar la herramienta MCP `deploy_to_vercel` (sube archivos directo, sin git) para
+subir el proyecto completo — técnicamente el MCP sí tiene salida propia hacia Vercel,
+pero el payload completo (~100+ archivos) tendría que construirse como texto literal
+dentro de una sola llamada de herramienta, un volumen impráctico. Se optó por la ruta
+que Ricardo ya usa en otros proyectos: **GitHub → Vercel** (repo
+`ricapuga/treatment-tech`, privado) — `git push` sí tiene salida de red desde este
+sandbox, y Vercel se conecta al repo desde su propio dashboard (deploy real con
+CI/CD, no un truco temporal — coincide con lo que blueprint Sección 15 planea a largo
+plazo).
+
+**Piezas nuevas para que el setup de base de datos corra en el build de Vercel (que sí
+tiene salida de red completa, a diferencia de este sandbox), sin intervención manual:**
+- `scripts/deploy-migrate.ts` — corre dentro de `vercel-build` (nuevo script en
+  `package.json`, antes de `next build`). Aplica las migraciones de drizzle-kit de
+  forma programática (`drizzle-orm/node-postgres/migrator`) contra
+  `DATABASE_URL_MIGRATIONS` (rol owner), y luego `drizzle/sql/0001_rls_and_roles.sql`
+  (creación de `app_user`, RLS, políticas), sustituyendo `<APP_USER_PASSWORD>` por la
+  variable de entorno `APP_USER_PASSWORD`. 100% idempotente — correr esto en cada
+  deploy futuro no rompe nada (drizzle-kit rastrea qué migraciones ya se aplicaron;
+  el SQL de RLS usa `IF NOT EXISTS`/`DROP POLICY IF EXISTS`/`CREATE OR REPLACE`).
+- `scripts/seed-lib.ts` — la lógica de `scripts/seed.ts` extraída a una función
+  reusable `runSeed()`, con un guard nuevo: si el tenant "DUI Metropolitan Services,
+  Inc." (por `licenseNumber`) ya existe, no repite nada (`already: true`). El seed
+  original NO era idempotente por sí solo (el insert de `tenants`/`users`/las cuentas
+  de Better Auth vía `signUpEmail` truenan en un segundo intento) — de ahí el guard.
+  `scripts/seed.ts` queda como wrapper delgado de CLI para desarrollo local
+  (`pnpm db:seed`), sin cambios de comportamiento.
+- `src/app/api/setup/bootstrap/route.ts` (nueva ruta) — dispara `runSeed()` vía HTTP,
+  protegida por `?token=` contra la variable `SETUP_TOKEN` (404 si no coincide o si
+  `SETUP_TOKEN` no está configurada). Existe porque el seed sí necesita correr con el
+  rol `app_user` (no el owner) y este sandbox tampoco puede llamarlo directo — se
+  dispara con un clic desde un navegador normal (el de Ricardo, o vía la herramienta
+  `web_fetch_vercel_url` del lado de Claude). Segura de llamar más de una vez.
+
+**Verificado localmente antes de subir:** Postgres local recreado desde cero
+(`DROP DATABASE` + `CREATE DATABASE` + `DROP ROLE app_user`), `pnpm db:migrate` +
+`drizzle/sql/0001_rls_and_roles.sql` a mano + `pnpm db:seed` (inserta todo, primera
+corrida) + `pnpm db:seed` otra vez (detecta tenant existente, no repite nada) — ambos
+caminos de `seed-lib.ts` confirmados. `pnpm typecheck` / `pnpm lint` / `pnpm test`:
+verdes, 111/111 (sin cambios de contenido, solo refactor de infraestructura).
+
+**Pendiente al momento de este commit:** push a `ricapuga/treatment-tech`, conectar el
+repo en Vercel (Ricardo, vía dashboard — Import Project), configurar variables de
+entorno del proyecto (`DATABASE_URL`, `DATABASE_URL_MIGRATIONS`, `APP_USER_PASSWORD`,
+`BETTER_AUTH_SECRET`, `BETTER_AUTH_URL`, `NEXT_PUBLIC_APP_URL`, `SETUP_TOKEN`) y primer
+deploy. Ver mensaje a Ricardo para el valor exacto de cada variable (no se documentan
+aquí — este archivo si se sube al repo).
